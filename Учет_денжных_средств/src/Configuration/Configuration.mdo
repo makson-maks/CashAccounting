@@ -35,6 +35,5 @@
     <comment></comment>
     <languageCode>ru</languageCode>
   </languages>
-  <commonModules>CommonModule.ОбщийМодуль</commonModules>
   <commonForms>CommonForm.ФормаНачальнойСтраницы</commonForms>
 </mdclass:Configuration>
