@@ -42,6 +42,5 @@
   <commonForms>CommonForm.ФормаНачальнойСтраницы</commonForms>
   <documents>Document.РасходДенежныхСредств</documents>
   <documents>Document.ПриходДенежныхСредств</documents>
-  <dataProcessors>DataProcessor.Обработка</dataProcessors>
   <accumulationRegisters>AccumulationRegister.ОстаткиДенежныхСредств</accumulationRegisters>
 </mdclass:Configuration>
