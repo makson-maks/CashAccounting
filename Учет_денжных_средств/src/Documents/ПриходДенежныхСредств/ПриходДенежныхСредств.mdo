@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ffeb7827-a423-4cbf-a854-ac34dd2d7722">
+  <producedTypes>
+    <objectType typeId="6ab262d3-3914-4566-8661-92dbd30eabe0" valueTypeId="0197411e-4982-4453-a916-8b7018e8012c"/>
+    <refType typeId="8debba16-99c3-4db2-a0ef-bf239d635956" valueTypeId="ab89a908-c9e3-4d5e-96b4-55349511a037"/>
+    <selectionType typeId="6ce7a2b2-15e1-4837-8d42-0c0037066951" valueTypeId="4b282d55-04b7-41e7-b5f8-2aadfdcbf048"/>
+    <listType typeId="24712055-7cb4-4151-8a84-cd4a419d6cb7" valueTypeId="83bbdd5b-32ae-4a2f-acdb-2f95165357cd"/>
+    <managerType typeId="80426ea5-049f-4cb5-9cc4-8d16144af6c8" valueTypeId="cc80730e-773a-4efd-9877-fd0f8cb0ab0a"/>
+  </producedTypes>
+  <name>ПриходДенежныхСредств</name>
+  <synonym>
+    <key>ru</key>
+    <value>Приход денежных средств</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.ПриходДенежныхСредств.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <registerRecords>AccumulationRegister.ОстаткиДенежныхСредств</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="f7827708-01ec-474a-97b0-4bb1af4dd1a1">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:Document>

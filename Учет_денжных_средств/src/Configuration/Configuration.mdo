@@ -18,7 +18,7 @@
   <usePurposes>MobileDevice</usePurposes>
   <scriptVariant>Russian</scriptVariant>
   <vendor></vendor>
-  <version></version>
+  <version>1.0.0</version>
   <updateCatalogAddress></updateCatalogAddress>
   <defaultLanguage>Language.Русский</defaultLanguage>
   <dataLockControlMode>Managed</dataLockControlMode>
@@ -35,4 +35,9 @@
     <comment></comment>
     <languageCode>ru</languageCode>
   </languages>
+  <constants>Constant.ЛимитДенежныхСредств</constants>
+  <commonForms>CommonForm.ФормаНачальнойСтраницы</commonForms>
+  <documents>Document.РасходДенежныхСредств</documents>
+  <documents>Document.ПриходДенежныхСредств</documents>
+  <accumulationRegisters>AccumulationRegister.ОстаткиДенежныхСредств</accumulationRegisters>
 </mdclass:Configuration>

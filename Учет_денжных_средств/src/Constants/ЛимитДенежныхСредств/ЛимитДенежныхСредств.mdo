@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6734b57d-5e25-402a-9de0-f7bebe7abe6c">
+  <producedTypes>
+    <managerType typeId="bf4129fa-abd5-4484-9708-82818db0ba55" valueTypeId="0ffde6f8-846d-4691-ba33-5e2b755679b6"/>
+    <valueManagerType typeId="d26c5711-b210-434f-96da-644764b196c0" valueTypeId="92475e73-6dc8-4001-8690-07b2093412a4"/>
+  </producedTypes>
+  <name>ЛимитДенежныхСредств</name>
+  <synonym>
+    <key>ru</key>
+    <value>Лимит денежных средств</value>
+  </synonym>
+  <type>
+    <types>Number</types>
+    <numberQualifiers>
+      <precision>10</precision>
+      <nonNegative>true</nonNegative>
+    </numberQualifiers>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>
