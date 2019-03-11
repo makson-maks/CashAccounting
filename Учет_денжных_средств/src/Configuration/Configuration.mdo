@@ -35,9 +35,13 @@
     <comment></comment>
     <languageCode>ru</languageCode>
   </languages>
+  <commonModules>CommonModule.ОбщегоНазначенияКлиентСервер</commonModules>
+  <commonModules>CommonModule.ОбщегоНазначенийВызовСервера</commonModules>
+  <commonModules>CommonModule.ОбщегоНазначенияСервер</commonModules>
   <constants>Constant.ЛимитДенежныхСредств</constants>
   <commonForms>CommonForm.ФормаНачальнойСтраницы</commonForms>
   <documents>Document.РасходДенежныхСредств</documents>
   <documents>Document.ПриходДенежныхСредств</documents>
+  <dataProcessors>DataProcessor.Обработка</dataProcessors>
   <accumulationRegisters>AccumulationRegister.ОстаткиДенежныхСредств</accumulationRegisters>
 </mdclass:Configuration>

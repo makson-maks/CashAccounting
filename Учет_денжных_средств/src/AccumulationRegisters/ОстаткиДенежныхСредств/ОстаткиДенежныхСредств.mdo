@@ -30,19 +30,4 @@
     </type>
     <fullTextSearch>Use</fullTextSearch>
   </resources>
-  <dimensions uuid="0fc6c502-cddf-42e1-9521-d2efbd555597">
-    <name>ДатаОстатков</name>
-    <synonym>
-      <key>ru</key>
-      <value>Дата остатков</value>
-    </synonym>
-    <type>
-      <types>Date</types>
-      <dateQualifiers>
-        <dateFractions>Date</dateFractions>
-      </dateQualifiers>
-    </type>
-    <fullTextSearch>Use</fullTextSearch>
-    <useInTotals>true</useInTotals>
-  </dimensions>
 </mdclass:AccumulationRegister>
