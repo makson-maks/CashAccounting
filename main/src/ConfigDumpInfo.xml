@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ConfigDumpInfo xmlns="http://v8.1c.ru/8.3/xcf/dumpinfo" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" format="Hierarchical" version="2.7">
+	<ConfigVersions>
+		<Metadata name="AccumulationRegister.ПланируемыеОстаткиДенежныхСредств" id="25fe94a5-fed5-464f-9d49-05dd9d803344" configVersion="23a28bfb97857c479a06e123ac2d19eb00000000">
+			<Metadata name="AccumulationRegister.ПланируемыеОстаткиДенежныхСредств.Resource.Сумма" id="89767c74-eaff-46c7-9306-b0ad0b59631c"/>
+		</Metadata>
+		<Metadata name="AccumulationRegister.ФактическиеОстаткиДенежныхСредств" id="3d0329f9-42d1-4e82-8be5-757a2c4e7ea8" configVersion="03edec279c30244192c9d3b8b919b30700000000">
+			<Metadata name="AccumulationRegister.ФактическиеОстаткиДенежныхСредств.Resource.Сумма" id="5c26dbdb-09c8-42c1-97f8-57a0c754a34a"/>
+		</Metadata>
+		<Metadata name="CommonForm.ФормаНачальнойСтраницы" id="807fe82d-8f56-4f81-8f0b-113cadb57ef3" configVersion="bc50ab94f3f0be448f8bd4bf9e1d1c2800000000"/>
+		<Metadata name="CommonForm.ФормаНачальнойСтраницы.Form" id="807fe82d-8f56-4f81-8f0b-113cadb57ef3.0" configVersion="b7928c636b99954da50cbee6829bcee400000000"/>
+		<Metadata name="CommonModule.ОбщегоНазначенийВызовСервера" id="50d0db7f-b1c3-4e41-9e14-75dda3ea8f9f" configVersion="ac8f6925aaad804ea54de423f45b328200000000"/>
+		<Metadata name="CommonModule.ОбщегоНазначенийВызовСервера.Module" id="50d0db7f-b1c3-4e41-9e14-75dda3ea8f9f.0" configVersion="a847d1c95cecfe4e9c2023b0513f709100000000"/>
+		<Metadata name="CommonModule.ОбщегоНазначенияКлиентСервер" id="517ef80c-a33b-4101-9251-2eab467ea929" configVersion="70a8d52527ecc247afb5cd3fc4b9dab400000000"/>
+		<Metadata name="CommonModule.ОбщегоНазначенияКлиентСервер.Module" id="517ef80c-a33b-4101-9251-2eab467ea929.0" configVersion="45fb55f77e13f64bb91dc9ab20beaf9600000000"/>
+		<Metadata name="CommonModule.ОбщегоНазначенияСервер" id="ea0bdeea-5d15-485f-9e10-53ff61264267" configVersion="afa056848bfd3b46ace3c3872b1d2db600000000"/>
+		<Metadata name="CommonModule.ОбщегоНазначенияСервер.Module" id="ea0bdeea-5d15-485f-9e10-53ff61264267.0" configVersion="4dbc12e702385e4ebc34ec57afbbdb6400000000"/>
+		<Metadata name="Configuration.УчетДенежныхСредств" id="08cc8678-290f-4ee5-9316-06bf602cf55a" configVersion="8e8d855bde2d4b468c5fd0876a8132f100000000"/>
+		<Metadata name="Configuration.УчетДенежныхСредств.HomePageWorkArea" id="eddd66c0-8cf9-41cc-b517-9dc67f52ff59.8" configVersion="a68f9927ee478e4dbd169a5232c9566c00000000"/>
+		<Metadata name="Constant.ЛимитДенежныхСредств" id="6734b57d-5e25-402a-9de0-f7bebe7abe6c" configVersion="c2c0ec102138594e84cbf2caddde55ea00000000"/>
+		<Metadata name="Document.ПланируемыйРасходДенежныхСредств" id="d3a060b6-ba08-46b8-8063-bbd6023227a9" configVersion="e265c95318f5bd4fb3beeda872bb4d4900000000">
+			<Metadata name="Document.ПланируемыйРасходДенежныхСредств.Attribute.Сумма" id="64d574b8-cee5-47c8-8b23-1ff85d22ed19"/>
+		</Metadata>
+		<Metadata name="Document.ПланируемыйРасходДенежныхСредств.Form.ФормаДокумента" id="fce63051-bba2-447e-8330-90426740eba1" configVersion="aa14199581b98346a1321cb6d52ff2ea00000000"/>
+		<Metadata name="Document.ПланируемыйРасходДенежныхСредств.Form.ФормаДокумента.Form" id="fce63051-bba2-447e-8330-90426740eba1.0" configVersion="594dae5ff346b84eb22c872c23f7029b00000000"/>
+		<Metadata name="Document.ПланируемыйРасходДенежныхСредств.ObjectModule" id="d3a060b6-ba08-46b8-8063-bbd6023227a9.0" configVersion="58e3670701654c43b1aac15313b070ce00000000"/>
+		<Metadata name="Document.ФактическийПриходДенежныхСредств" id="ffeb7827-a423-4cbf-a854-ac34dd2d7722" configVersion="e48012ef1efa004f8997d3c6802e432c00000000">
+			<Metadata name="Document.ФактическийПриходДенежныхСредств.Attribute.Сумма" id="f7827708-01ec-474a-97b0-4bb1af4dd1a1"/>
+		</Metadata>
+		<Metadata name="Document.ФактическийПриходДенежныхСредств.Form.ФормаДокумента" id="9369f3d0-750c-4be1-a942-f4a2daa254c8" configVersion="29a7bd95881eec4a957e128e44b6f7a800000000"/>
+		<Metadata name="Document.ФактическийПриходДенежныхСредств.Form.ФормаДокумента.Form" id="9369f3d0-750c-4be1-a942-f4a2daa254c8.0" configVersion="6a13c510b636424cb7cf1c0447e7197d00000000"/>
+		<Metadata name="Document.ФактическийПриходДенежныхСредств.ObjectModule" id="ffeb7827-a423-4cbf-a854-ac34dd2d7722.0" configVersion="3713be2635c1944e9f0b0bf313b341b600000000"/>
+		<Metadata name="Document.ФактическийРасходДенежныхСредств" id="34b9f4b5-14b9-489c-9cb3-02747b4b0bec" configVersion="af65ecd75315de4ead518a68e583c3e900000000">
+			<Metadata name="Document.ФактическийРасходДенежныхСредств.Attribute.Сумма" id="9ec24191-a236-4116-8b1c-09c4ce5a836d"/>
+		</Metadata>
+		<Metadata name="Document.ФактическийРасходДенежныхСредств.Form.ФормаДокумента" id="6954f9f0-3a71-48a8-ac16-5c05f644f86c" configVersion="03b925ccb6a4734585a19c07ff1edb8a00000000"/>
+		<Metadata name="Document.ФактическийРасходДенежныхСредств.Form.ФормаДокумента.Form" id="6954f9f0-3a71-48a8-ac16-5c05f644f86c.0" configVersion="0c314b1bf3ce7749868f8faa4f1ac32e00000000"/>
+		<Metadata name="Document.ФактическийРасходДенежныхСредств.ObjectModule" id="34b9f4b5-14b9-489c-9cb3-02747b4b0bec.0" configVersion="bbaec615b609d74a966d1be1b8d91b6300000000"/>
+		<Metadata name="Language.Русский" id="a2e45361-6ee7-466a-b0dd-da1b72a5dba2" configVersion="43ddea63bae73a45a0a74fe0703d89b100000000"/>
+	</ConfigVersions>
+</ConfigDumpInfo>
