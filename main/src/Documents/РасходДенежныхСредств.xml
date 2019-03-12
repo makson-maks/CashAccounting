@@ -2,33 +2,33 @@
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
 	<Document uuid="34b9f4b5-14b9-489c-9cb3-02747b4b0bec">
 		<InternalInfo>
-			<xr:GeneratedType name="DocumentObject.ФактическийРасходДенежныхСредств" category="Object">
+			<xr:GeneratedType name="DocumentObject.РасходДенежныхСредств" category="Object">
 				<xr:TypeId>72fd7b16-0c69-47bd-955f-743ac224802b</xr:TypeId>
 				<xr:ValueId>127037bf-f56c-4f5a-86fd-f0eef89df20e</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="DocumentRef.ФактическийРасходДенежныхСредств" category="Ref">
+			<xr:GeneratedType name="DocumentRef.РасходДенежныхСредств" category="Ref">
 				<xr:TypeId>942a7cda-bb6b-4da0-948d-28436c645148</xr:TypeId>
 				<xr:ValueId>476e53c2-28fe-45b1-8917-04b716a655c0</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="DocumentSelection.ФактическийРасходДенежныхСредств" category="Selection">
+			<xr:GeneratedType name="DocumentSelection.РасходДенежныхСредств" category="Selection">
 				<xr:TypeId>3e157eb6-6d58-4b36-bad5-a2f6ac0609b0</xr:TypeId>
 				<xr:ValueId>2f87acef-73f2-4428-80f7-fab75439fc8c</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="DocumentList.ФактическийРасходДенежныхСредств" category="List">
+			<xr:GeneratedType name="DocumentList.РасходДенежныхСредств" category="List">
 				<xr:TypeId>a94f6729-90e7-4071-b71a-99f0628ae814</xr:TypeId>
 				<xr:ValueId>026b65c2-46fd-48ac-bdd3-17276e209795</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="DocumentManager.ФактическийРасходДенежныхСредств" category="Manager">
+			<xr:GeneratedType name="DocumentManager.РасходДенежныхСредств" category="Manager">
 				<xr:TypeId>901b3f91-de08-4011-9427-44e278f47feb</xr:TypeId>
 				<xr:ValueId>45f60034-a465-42f0-8d90-e74aa98c9031</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
-			<Name>ФактическийРасходДенежныхСредств</Name>
+			<Name>РасходДенежныхСредств</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Фактический расход денежных средств</v8:content>
+					<v8:content>Расход денежных средств</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
@@ -43,24 +43,25 @@
 			<Characteristics/>
 			<BasedOn/>
 			<InputByString>
-				<xr:Field>Document.ФактическийРасходДенежныхСредств.StandardAttribute.Number</xr:Field>
+				<xr:Field>Document.РасходДенежныхСредств.StandardAttribute.Number</xr:Field>
 			</InputByString>
 			<CreateOnInput>Use</CreateOnInput>
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
-			<DefaultObjectForm>Document.ФактическийРасходДенежныхСредств.Form.ФормаДокумента</DefaultObjectForm>
-			<DefaultListForm>Document.ФактическийРасходДенежныхСредств.Form.ФормаСписка</DefaultListForm>
+			<DefaultObjectForm>Document.РасходДенежныхСредств.Form.ФормаДокумента</DefaultObjectForm>
+			<DefaultListForm>Document.РасходДенежныхСредств.Form.ФормаСписка</DefaultListForm>
 			<DefaultChoiceForm/>
 			<AuxiliaryObjectForm/>
 			<AuxiliaryListForm/>
 			<AuxiliaryChoiceForm/>
 			<Posting>Allow</Posting>
-			<RealTimePosting>Allow</RealTimePosting>
-			<RegisterRecordsDeletion>AutoDeleteOnUnpost</RegisterRecordsDeletion>
+			<RealTimePosting>Deny</RealTimePosting>
+			<RegisterRecordsDeletion>AutoDeleteOff</RegisterRecordsDeletion>
 			<RegisterRecordsWritingOnPost>WriteSelected</RegisterRecordsWritingOnPost>
 			<SequenceFilling>AutoFill</SequenceFilling>
 			<RegisterRecords>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ПланируемыеОстаткиДенежныхСредств</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ФактическиеОстаткиДенежныхСредств</xr:Item>
 			</RegisterRecords>
 			<PostInPrivilegedMode>true</PostInPrivilegedMode>
@@ -108,6 +109,88 @@
 					<MaxValue xsi:nil="true"/>
 					<FillFromFillingValue>false</FillFromFillingValue>
 					<FillValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<Indexing>DontIndex</Indexing>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="111426c8-d83c-4499-9557-492f64eda52e">
+				<Properties>
+					<Name>ВидРасхода</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид расхода</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>cfg:EnumRef.ВидыРасходов</v8:Type>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillFromFillingValue>true</FillFromFillingValue>
+					<FillValue xsi:type="xr:DesignTimeRef">Enum.ВидыРасходов.EnumValue.Фактический</FillValue>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<Indexing>DontIndex</Indexing>
+					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="b466e8b8-04ec-406f-8997-bc9387eced09">
+				<Properties>
+					<Name>Назначение</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Назначение</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillFromFillingValue>false</FillFromFillingValue>
+					<FillValue xsi:type="xs:string"/>
 					<FillChecking>DontCheck</FillChecking>
 					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 					<ChoiceParameterLinks/>

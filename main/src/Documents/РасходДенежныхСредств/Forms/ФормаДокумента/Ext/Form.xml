@@ -6,6 +6,8 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
 		<InputField name="Дата" id="4">
@@ -20,11 +22,21 @@
 			<ContextMenu name="СуммаКонтекстноеМеню" id="8"/>
 			<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="9"/>
 		</InputField>
+		<InputField name="Назначение" id="15">
+			<DataPath>Объект.Назначение</DataPath>
+			<ContextMenu name="НазначениеКонтекстноеМеню" id="16"/>
+			<ExtendedTooltip name="НазначениеРасширеннаяПодсказка" id="17"/>
+		</InputField>
+		<Button name="ПодтвердитьФактическийРасход" id="13">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПодтвердитьФактическийРасход</CommandName>
+			<ExtendedTooltip name="ПодтвердитьФактическийРасходРасширеннаяПодсказка" id="14"/>
+		</Button>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
 			<Type>
-				<v8:Type>cfg:DocumentObject.ФактическийРасходДенежныхСредств</v8:Type>
+				<v8:Type>cfg:DocumentObject.РасходДенежныхСредств</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
@@ -33,4 +45,21 @@
 			</UseAlways>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="ПодтвердитьФактическийРасход" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подтвердить фактический расход</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подтвердить фактический расход</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодтвердитьФактическийРасход</Action>
+		</Command>
+	</Commands>
 </Form>

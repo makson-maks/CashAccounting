@@ -43,7 +43,9 @@
 				<v8:Value xsi:type="app:ApplicationUsePurpose">MobilePlatformApplication</v8:Value>
 			</UsePurposes>
 			<ScriptVariant>Russian</ScriptVariant>
-			<DefaultRoles/>
+			<DefaultRoles>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПолныеПрава</xr:Item>
+			</DefaultRoles>
 			<Vendor/>
 			<Version>1.0.0</Version>
 			<UpdateCatalogAddress/>
@@ -138,16 +140,19 @@
 		</Properties>
 		<ChildObjects>
 			<Language>Русский</Language>
-			<CommonModule>ОбщегоНазначенияКлиентСервер</CommonModule>
+			<Role>ПолныеПрава</Role>
 			<CommonModule>ОбщегоНазначенийВызовСервера</CommonModule>
+			<CommonModule>ОбщегоНазначенияКлиентСервер</CommonModule>
 			<CommonModule>ОбщегоНазначенияСервер</CommonModule>
+			<CommonModule>ПроведениеСервер</CommonModule>
+			<CommonModule>СтроковыеФункцииКлиентСервер</CommonModule>
 			<Constant>ЛимитДенежныхСредств</Constant>
 			<CommonForm>ФормаНачальнойСтраницы</CommonForm>
-			<Document>ПланируемыйРасходДенежныхСредств</Document>
+			<Document>РасходДенежныхСредств</Document>
 			<Document>ФактическийПриходДенежныхСредств</Document>
-			<Document>ФактическийРасходДенежныхСредств</Document>
-			<AccumulationRegister>ФактическиеОстаткиДенежныхСредств</AccumulationRegister>
+			<Enum>ВидыРасходов</Enum>
 			<AccumulationRegister>ПланируемыеОстаткиДенежныхСредств</AccumulationRegister>
+			<AccumulationRegister>ФактическиеОстаткиДенежныхСредств</AccumulationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
