@@ -21,11 +21,15 @@ Documents\ПланируемыйРасходДенежныхСредств\Forms
 Documents\ПланируемыйРасходДенежныхСредств\Forms\ФормаДокумента\Ext\Form\Module.bsl-->Documents\ПланируемыйРасходДенежныхСредств\Forms\ФормаДокумента\Ext\Form\Module.bsl
 Documents\ФактическийПриходДенежныхСредств\Ext\ObjectModule.bsl-->Documents\ФактическийПриходДенежныхСредств\Ext\ObjectModule.bsl
 Documents\ФактическийПриходДенежныхСредств\Forms\ФормаДокумента.xml-->Documents\ФактическийПриходДенежныхСредств\Forms\ФормаДокумента.xml
+Documents\ФактическийПриходДенежныхСредств\Forms\ФормаСписка.xml-->Documents\ФактическийПриходДенежныхСредств\Forms\ФормаСписка.xml
 Documents\ФактическийПриходДенежныхСредств\Forms\ФормаДокумента\Ext\Form.xml-->Documents\ФактическийПриходДенежныхСредств\Forms\ФормаДокумента\Ext\Form.xml
 Documents\ФактическийПриходДенежныхСредств\Forms\ФормаДокумента\Ext\Form\Module.bsl-->Documents\ФактическийПриходДенежныхСредств\Forms\ФормаДокумента\Ext\Form\Module.bsl
+Documents\ФактическийПриходДенежныхСредств\Forms\ФормаСписка\Ext\Form.xml-->Documents\ФактическийПриходДенежныхСредств\Forms\ФормаСписка\Ext\Form.xml
 Documents\ФактическийРасходДенежныхСредств\Ext\ObjectModule.bsl-->Documents\ФактическийРасходДенежныхСредств\Ext\ObjectModule.bsl
 Documents\ФактическийРасходДенежныхСредств\Forms\ФормаДокумента.xml-->Documents\ФактическийРасходДенежныхСредств\Forms\ФормаДокумента.xml
+Documents\ФактическийРасходДенежныхСредств\Forms\ФормаСписка.xml-->Documents\ФактическийРасходДенежныхСредств\Forms\ФормаСписка.xml
 Documents\ФактическийРасходДенежныхСредств\Forms\ФормаДокумента\Ext\Form.xml-->Documents\ФактическийРасходДенежныхСредств\Forms\ФормаДокумента\Ext\Form.xml
 Documents\ФактическийРасходДенежныхСредств\Forms\ФормаДокумента\Ext\Form\Module.bsl-->Documents\ФактическийРасходДенежныхСредств\Forms\ФормаДокумента\Ext\Form\Module.bsl
+Documents\ФактическийРасходДенежныхСредств\Forms\ФормаСписка\Ext\Form.xml-->Documents\ФактическийРасходДенежныхСредств\Forms\ФормаСписка\Ext\Form.xml
 Ext\HomePageWorkArea.xml-->Ext\HomePageWorkArea.xml
 Languages\Русский.xml-->Languages\Русский.xml

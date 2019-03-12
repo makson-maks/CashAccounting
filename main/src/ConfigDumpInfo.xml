@@ -24,17 +24,21 @@
 		<Metadata name="Document.ПланируемыйРасходДенежныхСредств.Form.ФормаДокумента" id="fce63051-bba2-447e-8330-90426740eba1" configVersion="aa14199581b98346a1321cb6d52ff2ea00000000"/>
 		<Metadata name="Document.ПланируемыйРасходДенежныхСредств.Form.ФормаДокумента.Form" id="fce63051-bba2-447e-8330-90426740eba1.0" configVersion="594dae5ff346b84eb22c872c23f7029b00000000"/>
 		<Metadata name="Document.ПланируемыйРасходДенежныхСредств.ObjectModule" id="d3a060b6-ba08-46b8-8063-bbd6023227a9.0" configVersion="58e3670701654c43b1aac15313b070ce00000000"/>
-		<Metadata name="Document.ФактическийПриходДенежныхСредств" id="ffeb7827-a423-4cbf-a854-ac34dd2d7722" configVersion="e48012ef1efa004f8997d3c6802e432c00000000">
+		<Metadata name="Document.ФактическийПриходДенежныхСредств" id="ffeb7827-a423-4cbf-a854-ac34dd2d7722" configVersion="42f2afa9933e5446bd2c13195e7d35c400000000">
 			<Metadata name="Document.ФактическийПриходДенежныхСредств.Attribute.Сумма" id="f7827708-01ec-474a-97b0-4bb1af4dd1a1"/>
 		</Metadata>
-		<Metadata name="Document.ФактическийПриходДенежныхСредств.Form.ФормаДокумента" id="9369f3d0-750c-4be1-a942-f4a2daa254c8" configVersion="29a7bd95881eec4a957e128e44b6f7a800000000"/>
-		<Metadata name="Document.ФактическийПриходДенежныхСредств.Form.ФормаДокумента.Form" id="9369f3d0-750c-4be1-a942-f4a2daa254c8.0" configVersion="6a13c510b636424cb7cf1c0447e7197d00000000"/>
+		<Metadata name="Document.ФактическийПриходДенежныхСредств.Form.ФормаДокумента" id="9369f3d0-750c-4be1-a942-f4a2daa254c8" configVersion="3855612309647f4bb647fd6c7600389d00000000"/>
+		<Metadata name="Document.ФактическийПриходДенежныхСредств.Form.ФормаДокумента.Form" id="9369f3d0-750c-4be1-a942-f4a2daa254c8.0" configVersion="96068d97e3594b4da1cb7e575c7f593000000000"/>
+		<Metadata name="Document.ФактическийПриходДенежныхСредств.Form.ФормаСписка" id="24585bb5-4976-402c-9831-35c70359817f" configVersion="572d737449bee0499b084551f468361c00000000"/>
+		<Metadata name="Document.ФактическийПриходДенежныхСредств.Form.ФормаСписка.Form" id="24585bb5-4976-402c-9831-35c70359817f.0" configVersion="5a19af89b3320844be9c38bec5a5f2e800000000"/>
 		<Metadata name="Document.ФактическийПриходДенежныхСредств.ObjectModule" id="ffeb7827-a423-4cbf-a854-ac34dd2d7722.0" configVersion="3713be2635c1944e9f0b0bf313b341b600000000"/>
-		<Metadata name="Document.ФактическийРасходДенежныхСредств" id="34b9f4b5-14b9-489c-9cb3-02747b4b0bec" configVersion="af65ecd75315de4ead518a68e583c3e900000000">
+		<Metadata name="Document.ФактическийРасходДенежныхСредств" id="34b9f4b5-14b9-489c-9cb3-02747b4b0bec" configVersion="baeb3aaea49bb04c8d9096cb425dd03700000000">
 			<Metadata name="Document.ФактическийРасходДенежныхСредств.Attribute.Сумма" id="9ec24191-a236-4116-8b1c-09c4ce5a836d"/>
 		</Metadata>
-		<Metadata name="Document.ФактическийРасходДенежныхСредств.Form.ФормаДокумента" id="6954f9f0-3a71-48a8-ac16-5c05f644f86c" configVersion="03b925ccb6a4734585a19c07ff1edb8a00000000"/>
-		<Metadata name="Document.ФактическийРасходДенежныхСредств.Form.ФормаДокумента.Form" id="6954f9f0-3a71-48a8-ac16-5c05f644f86c.0" configVersion="0c314b1bf3ce7749868f8faa4f1ac32e00000000"/>
+		<Metadata name="Document.ФактическийРасходДенежныхСредств.Form.ФормаДокумента" id="6954f9f0-3a71-48a8-ac16-5c05f644f86c" configVersion="1c150f70eed56540b2df1158c65f814200000000"/>
+		<Metadata name="Document.ФактическийРасходДенежныхСредств.Form.ФормаДокумента.Form" id="6954f9f0-3a71-48a8-ac16-5c05f644f86c.0" configVersion="81f7fc0c69f6544aa6e26381e33bdd5400000000"/>
+		<Metadata name="Document.ФактическийРасходДенежныхСредств.Form.ФормаСписка" id="1e04a263-ae0a-415e-be04-2f428402634e" configVersion="ba3988fc31e718438c53864935ca0c0300000000"/>
+		<Metadata name="Document.ФактическийРасходДенежныхСредств.Form.ФормаСписка.Form" id="1e04a263-ae0a-415e-be04-2f428402634e.0" configVersion="c5448d6b24fcb648b0971f29b415ee4900000000"/>
 		<Metadata name="Document.ФактическийРасходДенежныхСредств.ObjectModule" id="34b9f4b5-14b9-489c-9cb3-02747b4b0bec.0" configVersion="bbaec615b609d74a966d1be1b8d91b6300000000"/>
 		<Metadata name="Language.Русский" id="a2e45361-6ee7-466a-b0dd-da1b72a5dba2" configVersion="43ddea63bae73a45a0a74fe0703d89b100000000"/>
 	</ConfigVersions>
