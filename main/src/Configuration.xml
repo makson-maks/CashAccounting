@@ -146,13 +146,17 @@
 			<CommonModule>ОбщегоНазначенияСервер</CommonModule>
 			<CommonModule>ПроведениеСервер</CommonModule>
 			<CommonModule>СтроковыеФункцииКлиентСервер</CommonModule>
+			<CommonModule>УчетДенежныхСредствВызовСервера</CommonModule>
+			<CommonModule>УчетДенежныхСредствСервер</CommonModule>
 			<Constant>ЛимитДенежныхСредств</Constant>
 			<CommonForm>ФормаНачальнойСтраницы</CommonForm>
+			<Document>ПриходДенежныхСредств</Document>
 			<Document>РасходДенежныхСредств</Document>
-			<Document>ФактическийПриходДенежныхСредств</Document>
 			<Enum>ВидыРасходов</Enum>
+			<InformationRegister>ЛимитДенежныхСредств</InformationRegister>
 			<AccumulationRegister>ПланируемыеОстаткиДенежныхСредств</AccumulationRegister>
-			<AccumulationRegister>ФактическиеОстаткиДенежныхСредств</AccumulationRegister>
+			<AccumulationRegister>ДенежныеСредства</AccumulationRegister>
+			<AccumulationRegister>ОстатокЛимитаДенежныхСредств</AccumulationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

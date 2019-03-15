@@ -2,33 +2,33 @@
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
 	<Document uuid="ffeb7827-a423-4cbf-a854-ac34dd2d7722">
 		<InternalInfo>
-			<xr:GeneratedType name="DocumentObject.ФактическийПриходДенежныхСредств" category="Object">
+			<xr:GeneratedType name="DocumentObject.ПриходДенежныхСредств" category="Object">
 				<xr:TypeId>6ab262d3-3914-4566-8661-92dbd30eabe0</xr:TypeId>
 				<xr:ValueId>0197411e-4982-4453-a916-8b7018e8012c</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="DocumentRef.ФактическийПриходДенежныхСредств" category="Ref">
+			<xr:GeneratedType name="DocumentRef.ПриходДенежныхСредств" category="Ref">
 				<xr:TypeId>8debba16-99c3-4db2-a0ef-bf239d635956</xr:TypeId>
 				<xr:ValueId>ab89a908-c9e3-4d5e-96b4-55349511a037</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="DocumentSelection.ФактическийПриходДенежныхСредств" category="Selection">
+			<xr:GeneratedType name="DocumentSelection.ПриходДенежныхСредств" category="Selection">
 				<xr:TypeId>6ce7a2b2-15e1-4837-8d42-0c0037066951</xr:TypeId>
 				<xr:ValueId>4b282d55-04b7-41e7-b5f8-2aadfdcbf048</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="DocumentList.ФактическийПриходДенежныхСредств" category="List">
+			<xr:GeneratedType name="DocumentList.ПриходДенежныхСредств" category="List">
 				<xr:TypeId>24712055-7cb4-4151-8a84-cd4a419d6cb7</xr:TypeId>
 				<xr:ValueId>83bbdd5b-32ae-4a2f-acdb-2f95165357cd</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="DocumentManager.ФактическийПриходДенежныхСредств" category="Manager">
+			<xr:GeneratedType name="DocumentManager.ПриходДенежныхСредств" category="Manager">
 				<xr:TypeId>80426ea5-049f-4cb5-9cc4-8d16144af6c8</xr:TypeId>
 				<xr:ValueId>cc80730e-773a-4efd-9877-fd0f8cb0ab0a</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
-			<Name>ФактическийПриходДенежныхСредств</Name>
+			<Name>ПриходДенежныхСредств</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Фактический приход денежных средств</v8:content>
+					<v8:content>Приход денежных средств</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
@@ -43,14 +43,14 @@
 			<Characteristics/>
 			<BasedOn/>
 			<InputByString>
-				<xr:Field>Document.ФактическийПриходДенежныхСредств.StandardAttribute.Number</xr:Field>
+				<xr:Field>Document.ПриходДенежныхСредств.StandardAttribute.Number</xr:Field>
 			</InputByString>
 			<CreateOnInput>Use</CreateOnInput>
 			<SearchStringModeOnInputByString>Begin</SearchStringModeOnInputByString>
 			<FullTextSearchOnInputByString>DontUse</FullTextSearchOnInputByString>
 			<ChoiceDataGetModeOnInputByString>Directly</ChoiceDataGetModeOnInputByString>
-			<DefaultObjectForm>Document.ФактическийПриходДенежныхСредств.Form.ФормаДокумента</DefaultObjectForm>
-			<DefaultListForm>Document.ФактическийПриходДенежныхСредств.Form.ФормаСписка</DefaultListForm>
+			<DefaultObjectForm>Document.ПриходДенежныхСредств.Form.ФормаДокумента</DefaultObjectForm>
+			<DefaultListForm>Document.ПриходДенежныхСредств.Form.ФормаСписка</DefaultListForm>
 			<DefaultChoiceForm/>
 			<AuxiliaryObjectForm/>
 			<AuxiliaryListForm/>
@@ -61,7 +61,8 @@
 			<RegisterRecordsWritingOnPost>WriteSelected</RegisterRecordsWritingOnPost>
 			<SequenceFilling>AutoFill</SequenceFilling>
 			<RegisterRecords>
-				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ФактическиеОстаткиДенежныхСредств</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ДенежныеСредства</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ОстатокЛимитаДенежныхСредств</xr:Item>
 			</RegisterRecords>
 			<PostInPrivilegedMode>true</PostInPrivilegedMode>
 			<UnpostInPrivilegedMode>true</UnpostInPrivilegedMode>
