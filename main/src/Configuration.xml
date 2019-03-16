@@ -140,6 +140,7 @@
 		</Properties>
 		<ChildObjects>
 			<Language>Русский</Language>
+			<Subsystem>УчетДенежныхСредств</Subsystem>
 			<Role>ПолныеПрава</Role>
 			<CommonModule>ОбщегоНазначенийВызовСервера</CommonModule>
 			<CommonModule>ОбщегоНазначенияКлиентСервер</CommonModule>
@@ -148,10 +149,14 @@
 			<CommonModule>СтроковыеФункцииКлиентСервер</CommonModule>
 			<CommonModule>УчетДенежныхСредствВызовСервера</CommonModule>
 			<CommonModule>УчетДенежныхСредствСервер</CommonModule>
-			<Constant>ЛимитДенежныхСредств</Constant>
+			<CommonModule>УчетДенежныхСредствКлиент</CommonModule>
+			<CommonCommand>ОткрытьСписокПланируемыхРасходов</CommonCommand>
+			<CommonCommand>ОткрытьСписокФактическихРасходов</CommonCommand>
+			<Constant>ПоследняяДатаРасчетаФактическогоОстаткаЛимита</Constant>
 			<CommonForm>ФормаНачальнойСтраницы</CommonForm>
 			<Document>ПриходДенежныхСредств</Document>
 			<Document>РасходДенежныхСредств</Document>
+			<Document>КорректировкаРегистров</Document>
 			<Enum>ВидыРасходов</Enum>
 			<InformationRegister>ЛимитДенежныхСредств</InformationRegister>
 			<AccumulationRegister>ПланируемыеОстаткиДенежныхСредств</AccumulationRegister>
