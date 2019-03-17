@@ -3,6 +3,7 @@
 	<AutoTitle>false</AutoTitle>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -59,6 +60,7 @@
 			<Representation>List</Representation>
 			<CommandBarLocation>None</CommandBarLocation>
 			<DefaultItem>true</DefaultItem>
+			<Footer>true</Footer>
 			<UseAlternationRowColor>true</UseAlternationRowColor>
 			<InitialTreeView>ExpandTopLevel</InitialTreeView>
 			<EnableStartDrag>true</EnableStartDrag>
@@ -109,21 +111,41 @@
 			</SearchControlAddition>
 			<ChildItems>
 				<LabelField name="Дата" id="16">
-					<DataPath>Список.Date</DataPath>
+					<DataPath>Список.Дата</DataPath>
 					<DefaultItem>true</DefaultItem>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</Format>
 					<ContextMenu name="ДатаКонтекстноеМеню" id="17"/>
 					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="18"/>
 				</LabelField>
-				<LabelField name="Сумма" id="19">
-					<DataPath>Список.Сумма</DataPath>
-					<ContextMenu name="СуммаКонтекстноеМеню" id="20"/>
-					<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="21"/>
-				</LabelField>
-				<LabelField name="Назначение" id="22">
-					<DataPath>Список.Назначение</DataPath>
-					<ContextMenu name="НазначениеКонтекстноеМеню" id="23"/>
-					<ExtendedTooltip name="НазначениеРасширеннаяПодсказка" id="24"/>
-				</LabelField>
+				<ColumnGroup name="Группа1" id="34">
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="35"/>
+					<ChildItems>
+						<LabelField name="Назначение" id="22">
+							<DataPath>Список.Назначение</DataPath>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<FooterText>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ИТОГО:</v8:content>
+								</v8:item>
+							</FooterText>
+							<ContextMenu name="НазначениеКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="НазначениеРасширеннаяПодсказка" id="24"/>
+						</LabelField>
+						<LabelField name="Сумма" id="19">
+							<DataPath>Список.Сумма</DataPath>
+							<FooterDataPath>Items.Список.CurrentData.ИтоговаяСумма</FooterDataPath>
+							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ContextMenu name="СуммаКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="21"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
 			</ChildItems>
 		</Table>
 	</ChildItems>
@@ -133,9 +155,58 @@
 				<v8:Type>cfg:DynamicList</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.ИтоговаяСумма</Field>
+				<Field>Список.Ссылка</Field>
+			</UseAlways>
 			<Settings xsi:type="DynamicList">
-				<ManualQuery>false</ManualQuery>
+				<ManualQuery>true</ManualQuery>
 				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ДокументРасходДенежныхСредств.Ссылка КАК Ссылка,
+	ДокументРасходДенежныхСредств.ПометкаУдаления КАК ПометкаУдаления,
+	ДокументРасходДенежныхСредств.Номер КАК Номер,
+	ДокументРасходДенежныхСредств.Дата КАК Дата,
+	ДокументРасходДенежныхСредств.Проведен КАК Проведен,
+	ДокументРасходДенежныхСредств.Сумма КАК Сумма,
+	ДокументРасходДенежныхСредств.ВидРасхода КАК ВидРасхода,
+	ДокументРасходДенежныхСредств.Назначение КАК Назначение,
+	ДокументРасходДенежныхСредств.МоментВремени КАК МоментВремени
+ПОМЕСТИТЬ ВТ_ОсновнаяТаблица
+ИЗ
+	Документ.РасходДенежныхСредств КАК ДокументРасходДенежныхСредств
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СУММА(ВТ_ОсновнаяТаблица.Сумма) КАК ИтоговаяСумма
+ПОМЕСТИТЬ ВТ_ИтоговаяСумма
+ИЗ
+	ВТ_ОсновнаяТаблица КАК ВТ_ОсновнаяТаблица
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	РасходДенежныхСредств.Ссылка КАК Ссылка,
+	РасходДенежныхСредств.ПометкаУдаления КАК ПометкаУдаления,
+	РасходДенежныхСредств.Номер КАК Номер,
+	РасходДенежныхСредств.Дата КАК Дата,
+	РасходДенежныхСредств.Проведен КАК Проведен,
+	РасходДенежныхСредств.Сумма КАК Сумма,
+	РасходДенежныхСредств.ВидРасхода КАК ВидРасхода,
+	РасходДенежныхСредств.Назначение КАК Назначение,
+	РасходДенежныхСредств.МоментВремени КАК МоментВремени,
+	ВТ_ИтоговаяСумма.ИтоговаяСумма КАК ИтоговаяСумма
+ИЗ
+	Документ.РасходДенежныхСредств КАК РасходДенежныхСредств
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ИтоговаяСумма КАК ВТ_ИтоговаяСумма
+		ПО (ИСТИНА)
+ГДЕ
+	РасходДенежныхСредств.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_ОсновнаяТаблица.Ссылка КАК Ссылка
+			ИЗ
+				ВТ_ОсновнаяТаблица КАК ВТ_ОсновнаяТаблица)</QueryText>
 				<MainTable>Document.РасходДенежныхСредств</MainTable>
 				<ListSettings>
 					<dcsset:filter>
