@@ -6,6 +6,43 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
+		<UsualGroup name="ОтборПериод" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор период</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор период</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ОтборПериодРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<Button name="СдвинутьПериодНазад" id="30">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СдвинутьПериодНазад</CommandName>
+					<ExtendedTooltip name="СдвинутьПериодНазадРасширеннаяПодсказка" id="31"/>
+				</Button>
+				<LabelField name="ПредставлениеПериода" id="27">
+					<DataPath>ПредставлениеПериода</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<ContextMenu name="ПредставлениеПериодаКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="ПредставлениеПериодаРасширеннаяПодсказка" id="29"/>
+				</LabelField>
+				<Button name="СдвинутьПериодВперед" id="32">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.СдвинутьПериодВперед</CommandName>
+					<ExtendedTooltip name="СдвинутьПериодВпередРасширеннаяПодсказка" id="33"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
 			<Title>
 				<v8:item>
@@ -118,5 +155,80 @@
 				</ListSettings>
 			</Settings>
 		</Attribute>
+		<Attribute name="ДатаНачалаПериода" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата начала периода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаОкончанияПериода" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата окончания периода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставлениеПериода" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Представление периода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="СдвинутьПериодНазад" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;&lt;</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сдвинуть период назад</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СдвинутьПериодНазад</Action>
+		</Command>
+		<Command name="СдвинутьПериодВперед" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&gt;&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сдвинуть период вперед</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СдвинутьПериодВперед</Action>
+		</Command>
+	</Commands>
 </Form>
