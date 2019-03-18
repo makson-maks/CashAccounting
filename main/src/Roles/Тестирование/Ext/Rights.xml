@@ -3,11 +3,4 @@
 	<setForNewObjects>true</setForNewObjects>
 	<setForAttributesByDefault>true</setForAttributesByDefault>
 	<independentRightsOfChildObjects>false</independentRightsOfChildObjects>
-	<object>
-		<name>CommonCommand.ОткрытьФормуНачальнойСтраницы</name>
-		<right>
-			<name>View</name>
-			<value>false</value>
-		</right>
-	</object>
 </Rights>

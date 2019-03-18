@@ -7,6 +7,7 @@
 			<Height>10</Height>
 			<Visibility>
 				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.Тестирование">false</xr:Value>
 			</Visibility>
 		</Item>
 	</LeftColumn>

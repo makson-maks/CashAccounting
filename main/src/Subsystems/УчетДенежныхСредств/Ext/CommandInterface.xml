@@ -6,14 +6,19 @@
 				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="Document.КорректировкаРегистров.StandardCommand.OpenList">
+		<Command name="Document.РасходДенежныхСредств.StandardCommand.OpenList">
 			<Visibility>
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
-		<Command name="Document.РасходДенежныхСредств.StandardCommand.OpenList">
+		<Command name="Document.КорректировкаРегистров.StandardCommand.OpenList">
 			<Visibility>
-				<xr:Common>false</xr:Common>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="InformationRegister.ЛимитДенежныхСредств.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
 		<Command name="Constant.ПоследняяДатаРасчетаФактическогоОстаткаЛимита.StandardCommand.Open">
@@ -27,19 +32,34 @@
 			<CommandGroup>NavigationPanelImportant</CommandGroup>
 			<Placement>Auto</Placement>
 		</Command>
+		<Command name="Document.КорректировкаРегистров.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="InformationRegister.ЛимитДенежныхСредств.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
 	</CommandsPlacement>
 	<CommandsOrder>
+		<Command name="Document.ПриходДенежныхСредств.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
 		<Command name="CommonCommand.ОткрытьСписокПланируемыхРасходов">
 			<CommandGroup>NavigationPanelImportant</CommandGroup>
 		</Command>
 		<Command name="CommonCommand.ОткрытьСписокФактическихРасходов">
 			<CommandGroup>NavigationPanelImportant</CommandGroup>
 		</Command>
-		<Command name="Document.ПриходДенежныхСредств.StandardCommand.OpenList">
-			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		<Command name="Document.КорректировкаРегистров.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+		<Command name="InformationRegister.ЛимитДенежныхСредств.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
 		</Command>
 	</CommandsOrder>
 	<GroupsOrder>
 		<Group>NavigationPanelImportant</Group>
+		<Group>NavigationPanelSeeAlso</Group>
 	</GroupsOrder>
 </CommandInterface>

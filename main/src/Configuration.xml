@@ -142,6 +142,7 @@
 			<Language>Русский</Language>
 			<Subsystem>УчетДенежныхСредств</Subsystem>
 			<Role>ПолныеПрава</Role>
+			<Role>Тестирование</Role>
 			<CommonModule>ОбщегоНазначенийВызовСервера</CommonModule>
 			<CommonModule>ОбщегоНазначенияКлиентСервер</CommonModule>
 			<CommonModule>ОбщегоНазначенияСервер</CommonModule>
@@ -152,7 +153,10 @@
 			<CommonModule>УчетДенежныхСредствКлиент</CommonModule>
 			<CommonCommand>ОткрытьСписокПланируемыхРасходов</CommonCommand>
 			<CommonCommand>ОткрытьСписокФактическихРасходов</CommonCommand>
+			<CommonCommand>ОткрытьФормуНачальнойСтраницы</CommonCommand>
 			<Constant>ПоследняяДатаРасчетаФактическогоОстаткаЛимита</Constant>
+			<Constant>ДатаТестирования</Constant>
+			<Constant>РежимТестирования</Constant>
 			<CommonForm>ФормаНачальнойСтраницы</CommonForm>
 			<Document>ПриходДенежныхСредств</Document>
 			<Document>РасходДенежныхСредств</Document>

@@ -11,67 +11,101 @@
 			<ContextMenu name="ДатаКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="3"/>
 		</InputField>
-		<Table name="ДвиженияОстатокЛимитаДенежныхСредств" id="4">
-			<AutoInsertNewRow>true</AutoInsertNewRow>
-			<EnableStartDrag>true</EnableStartDrag>
-			<EnableDrag>true</EnableDrag>
-			<DataPath>Объект.RegisterRecords.ОстатокЛимитаДенежныхСредств</DataPath>
-			<RowFilter xsi:nil="true"/>
-			<ContextMenu name="ДвиженияОстатокЛимитаДенежныхСредствКонтекстноеМеню" id="5"/>
-			<AutoCommandBar name="ДвиженияОстатокЛимитаДенежныхСредствКоманднаяПанель" id="6"/>
-			<ExtendedTooltip name="ДвиженияОстатокЛимитаДенежныхСредствРасширеннаяПодсказка" id="7"/>
-			<SearchStringAddition name="ДвиженияОстатокЛимитаДенежныхСредствСтрокаПоиска" id="8">
-				<AdditionSource>
-					<Item>ДвиженияОстатокЛимитаДенежныхСредств</Item>
-					<Type>SearchStringRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="ДвиженияОстатокЛимитаДенежныхСредствСтрокаПоискаКонтекстноеМеню" id="9"/>
-				<ExtendedTooltip name="ДвиженияОстатокЛимитаДенежныхСредствСтрокаПоискаРасширеннаяПодсказка" id="10"/>
-			</SearchStringAddition>
-			<ViewStatusAddition name="ДвиженияОстатокЛимитаДенежныхСредствСостояниеПросмотра" id="11">
-				<AdditionSource>
-					<Item>ДвиженияОстатокЛимитаДенежныхСредств</Item>
-					<Type>ViewStatusRepresentation</Type>
-				</AdditionSource>
-				<ContextMenu name="ДвиженияОстатокЛимитаДенежныхСредствСостояниеПросмотраКонтекстноеМеню" id="12"/>
-				<ExtendedTooltip name="ДвиженияОстатокЛимитаДенежныхСредствСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
-			</ViewStatusAddition>
-			<SearchControlAddition name="ДвиженияОстатокЛимитаДенежныхСредствУправлениеПоиском" id="14">
-				<AdditionSource>
-					<Item>ДвиженияОстатокЛимитаДенежныхСредств</Item>
-					<Type>SearchControl</Type>
-				</AdditionSource>
-				<ContextMenu name="ДвиженияОстатокЛимитаДенежныхСредствУправлениеПоискомКонтекстноеМеню" id="15"/>
-				<ExtendedTooltip name="ДвиженияОстатокЛимитаДенежныхСредствУправлениеПоискомРасширеннаяПодсказка" id="16"/>
-			</SearchControlAddition>
+		<Pages name="Страницы" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="30"/>
 			<ChildItems>
-				<LabelField name="ДвиженияОстатокЛимитаДенежныхСредствНомерСтроки" id="17">
-					<DataPath>Объект.RegisterRecords.ОстатокЛимитаДенежныхСредств.LineNumber</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДвиженияОстатокЛимитаДенежныхСредствНомерСтрокиКонтекстноеМеню" id="18"/>
-					<ExtendedTooltip name="ДвиженияОстатокЛимитаДенежныхСредствНомерСтрокиРасширеннаяПодсказка" id="19"/>
-				</LabelField>
-				<InputField name="ДвиженияОстатокЛимитаДенежныхСредствПериод" id="20">
-					<DataPath>Объект.RegisterRecords.ОстатокЛимитаДенежныхСредств.Period</DataPath>
-					<Visible>false</Visible>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДвиженияОстатокЛимитаДенежныхСредствПериодКонтекстноеМеню" id="21"/>
-					<ExtendedTooltip name="ДвиженияОстатокЛимитаДенежныхСредствПериодРасширеннаяПодсказка" id="22"/>
-				</InputField>
-				<InputField name="ДвиженияОстатокЛимитаДенежныхСредствВидДвижения" id="23">
-					<DataPath>Объект.RegisterRecords.ОстатокЛимитаДенежныхСредств.RecordType</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДвиженияОстатокЛимитаДенежныхСредствВидДвиженияКонтекстноеМеню" id="24"/>
-					<ExtendedTooltip name="ДвиженияОстатокЛимитаДенежныхСредствВидДвиженияРасширеннаяПодсказка" id="25"/>
-				</InputField>
-				<InputField name="ДвиженияОстатокЛимитаДенежныхСредствСумма" id="26">
-					<DataPath>Объект.RegisterRecords.ОстатокЛимитаДенежныхСредств.Сумма</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ДвиженияОстатокЛимитаДенежныхСредствСуммаКонтекстноеМеню" id="27"/>
-					<ExtendedTooltip name="ДвиженияОстатокЛимитаДенежныхСредствСуммаРасширеннаяПодсказка" id="28"/>
-				</InputField>
+				<Page name="СтраницаДвиженияОстатокЛимитаДенежныхСредств" id="31">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остаток лимита денежных средств</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница движения остаток лимита денежных средств</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаДвиженияОстатокЛимитаДенежныхСредствРасширеннаяПодсказка" id="32"/>
+					<ChildItems>
+						<Table name="ДвиженияОстатокЛимитаДенежныхСредств" id="4">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.RegisterRecords.ОстатокЛимитаДенежныхСредств</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ДвиженияОстатокЛимитаДенежныхСредствКонтекстноеМеню" id="5"/>
+							<AutoCommandBar name="ДвиженияОстатокЛимитаДенежныхСредствКоманднаяПанель" id="6"/>
+							<ExtendedTooltip name="ДвиженияОстатокЛимитаДенежныхСредствРасширеннаяПодсказка" id="7"/>
+							<SearchStringAddition name="ДвиженияОстатокЛимитаДенежныхСредствСтрокаПоиска" id="8">
+								<AdditionSource>
+									<Item>ДвиженияОстатокЛимитаДенежныхСредств</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДвиженияОстатокЛимитаДенежныхСредствСтрокаПоискаКонтекстноеМеню" id="9"/>
+								<ExtendedTooltip name="ДвиженияОстатокЛимитаДенежныхСредствСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДвиженияОстатокЛимитаДенежныхСредствСостояниеПросмотра" id="11">
+								<AdditionSource>
+									<Item>ДвиженияОстатокЛимитаДенежныхСредств</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДвиженияОстатокЛимитаДенежныхСредствСостояниеПросмотраКонтекстноеМеню" id="12"/>
+								<ExtendedTooltip name="ДвиженияОстатокЛимитаДенежныхСредствСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДвиженияОстатокЛимитаДенежныхСредствУправлениеПоиском" id="14">
+								<AdditionSource>
+									<Item>ДвиженияОстатокЛимитаДенежныхСредств</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДвиженияОстатокЛимитаДенежныхСредствУправлениеПоискомКонтекстноеМеню" id="15"/>
+								<ExtendedTooltip name="ДвиженияОстатокЛимитаДенежныхСредствУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ДвиженияОстатокЛимитаДенежныхСредствНомерСтроки" id="17">
+									<DataPath>Объект.RegisterRecords.ОстатокЛимитаДенежныхСредств.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДвиженияОстатокЛимитаДенежныхСредствНомерСтрокиКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="ДвиженияОстатокЛимитаДенежныхСредствНомерСтрокиРасширеннаяПодсказка" id="19"/>
+								</LabelField>
+								<InputField name="ДвиженияОстатокЛимитаДенежныхСредствПериод" id="20">
+									<DataPath>Объект.RegisterRecords.ОстатокЛимитаДенежныхСредств.Period</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДвиженияОстатокЛимитаДенежныхСредствПериодКонтекстноеМеню" id="21"/>
+									<ExtendedTooltip name="ДвиженияОстатокЛимитаДенежныхСредствПериодРасширеннаяПодсказка" id="22"/>
+								</InputField>
+								<InputField name="ДвиженияОстатокЛимитаДенежныхСредствВидДвижения" id="23">
+									<DataPath>Объект.RegisterRecords.ОстатокЛимитаДенежныхСредств.RecordType</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДвиженияОстатокЛимитаДенежныхСредствВидДвиженияКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ДвиженияОстатокЛимитаДенежныхСредствВидДвиженияРасширеннаяПодсказка" id="25"/>
+								</InputField>
+								<InputField name="ДвиженияОстатокЛимитаДенежныхСредствСумма" id="26">
+									<DataPath>Объект.RegisterRecords.ОстатокЛимитаДенежныхСредств.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДвиженияОстатокЛимитаДенежныхСредствСуммаКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ДвиженияОстатокЛимитаДенежныхСредствСуммаРасширеннаяПодсказка" id="28"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
 			</ChildItems>
-		</Table>
+		</Pages>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
