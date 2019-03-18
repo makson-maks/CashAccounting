@@ -25,7 +25,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Document.КорректировкаРегистров</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ПланируемыеОстаткиДенежныхСредств</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ДенежныеСредства</xr:Item>
-				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.ОстатокЛимитаДенежныхСредств</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">e5e83737-6419-4f95-857f-429c101b8201</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.ОткрытьФормуНачальнойСтраницы</xr:Item>
 			</Content>
 		</Properties>

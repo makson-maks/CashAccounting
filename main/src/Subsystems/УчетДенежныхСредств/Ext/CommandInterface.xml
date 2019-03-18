@@ -13,7 +13,7 @@
 		</Command>
 		<Command name="Document.КорректировкаРегистров.StandardCommand.OpenList">
 			<Visibility>
-				<xr:Common>true</xr:Common>
+				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
 		<Command name="InformationRegister.ЛимитДенежныхСредств.StandardCommand.OpenList">
@@ -49,6 +49,9 @@
 			<CommandGroup>NavigationPanelImportant</CommandGroup>
 		</Command>
 		<Command name="CommonCommand.ОткрытьСписокФактическихРасходов">
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+		</Command>
+		<Command name="CommonCommand.ОткрытьФормуНачальнойСтраницы">
 			<CommandGroup>NavigationPanelImportant</CommandGroup>
 		</Command>
 		<Command name="Document.КорректировкаРегистров.StandardCommand.OpenList">

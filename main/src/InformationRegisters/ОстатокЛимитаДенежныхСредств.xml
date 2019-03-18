@@ -1,30 +1,34 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
-	<AccumulationRegister uuid="e5e83737-6419-4f95-857f-429c101b8201">
+	<InformationRegister uuid="68537aa7-63b3-4e44-9370-38e5863e9f45">
 		<InternalInfo>
-			<xr:GeneratedType name="AccumulationRegisterRecord.ОстатокЛимитаДенежныхСредств" category="Record">
-				<xr:TypeId>41d50217-3d1c-4e41-aed8-474b3284ba74</xr:TypeId>
-				<xr:ValueId>b259aa78-28e1-4d15-adb8-1a5e7c272962</xr:ValueId>
+			<xr:GeneratedType name="InformationRegisterRecord.ОстатокЛимитаДенежныхСредств" category="Record">
+				<xr:TypeId>79b3bb2d-ab71-4a02-9528-ac479d0776b4</xr:TypeId>
+				<xr:ValueId>74d1970b-4334-49cb-94c7-3c9cb4f660eb</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="AccumulationRegisterManager.ОстатокЛимитаДенежныхСредств" category="Manager">
-				<xr:TypeId>3f97a8eb-7998-4149-9d3a-6fd36fb5c80b</xr:TypeId>
-				<xr:ValueId>6be89d11-60c9-468f-96ab-15cd532f4d62</xr:ValueId>
+			<xr:GeneratedType name="InformationRegisterManager.ОстатокЛимитаДенежныхСредств" category="Manager">
+				<xr:TypeId>884d67da-2e86-4fec-936e-ebe03e0249bb</xr:TypeId>
+				<xr:ValueId>cdb65a84-807a-4cae-b179-8382319bb5c4</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="AccumulationRegisterSelection.ОстатокЛимитаДенежныхСредств" category="Selection">
-				<xr:TypeId>3dbeeb0e-355c-4118-a35c-460ae8e85878</xr:TypeId>
-				<xr:ValueId>d4a2c2a1-cb60-45cd-b4fe-9eb0d19877a1</xr:ValueId>
+			<xr:GeneratedType name="InformationRegisterSelection.ОстатокЛимитаДенежныхСредств" category="Selection">
+				<xr:TypeId>ef869ac1-757b-45c2-898c-808c64c6bcb1</xr:TypeId>
+				<xr:ValueId>36b168e8-544f-4ab7-8ea1-fdc8ed66130b</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="AccumulationRegisterList.ОстатокЛимитаДенежныхСредств" category="List">
-				<xr:TypeId>d3b9b57c-4944-4c3e-9877-dccac51d46d3</xr:TypeId>
-				<xr:ValueId>aea1b892-92e6-4c05-907b-401daf136ebf</xr:ValueId>
+			<xr:GeneratedType name="InformationRegisterList.ОстатокЛимитаДенежныхСредств" category="List">
+				<xr:TypeId>1b686128-ba7d-4a01-ae61-8ee612dc2f46</xr:TypeId>
+				<xr:ValueId>ffe242b3-c25d-4465-8de7-d8a6ac103c41</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="AccumulationRegisterRecordSet.ОстатокЛимитаДенежныхСредств" category="RecordSet">
-				<xr:TypeId>7da48f39-c2e6-4a70-bfa5-7a89452292c2</xr:TypeId>
-				<xr:ValueId>4776a120-2879-4c9f-804a-fa7108332220</xr:ValueId>
+			<xr:GeneratedType name="InformationRegisterRecordSet.ОстатокЛимитаДенежныхСредств" category="RecordSet">
+				<xr:TypeId>7283616d-daa1-494f-8b6e-a2a0907250c1</xr:TypeId>
+				<xr:ValueId>c3aa7c85-62aa-47d2-a00a-c444fe9e146c</xr:ValueId>
 			</xr:GeneratedType>
-			<xr:GeneratedType name="AccumulationRegisterRecordKey.ОстатокЛимитаДенежныхСредств" category="RecordKey">
-				<xr:TypeId>c891cb41-952b-4b62-abe3-152c0498426b</xr:TypeId>
-				<xr:ValueId>8ffce64b-55da-4ad2-8d02-17aff409a475</xr:ValueId>
+			<xr:GeneratedType name="InformationRegisterRecordKey.ОстатокЛимитаДенежныхСредств" category="RecordKey">
+				<xr:TypeId>acf109ea-9abe-437a-8373-d4c99cf855a9</xr:TypeId>
+				<xr:ValueId>bd62f06f-ba77-4416-98c3-d3bc2fc68cc3</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="InformationRegisterRecordManager.ОстатокЛимитаДенежныхСредств" category="RecordManager">
+				<xr:TypeId>86729f6f-0acc-4826-ae80-30e57cbfe3c6</xr:TypeId>
+				<xr:ValueId>f942cc90-395f-4ae6-ac6c-b2827ee20d89</xr:ValueId>
 			</xr:GeneratedType>
 		</InternalInfo>
 		<Properties>
@@ -37,19 +41,28 @@
 			</Synonym>
 			<Comment/>
 			<UseStandardCommands>true</UseStandardCommands>
+			<EditType>InDialog</EditType>
+			<DefaultRecordForm/>
 			<DefaultListForm/>
+			<AuxiliaryRecordForm/>
 			<AuxiliaryListForm/>
-			<RegisterType>Balance</RegisterType>
+			<InformationRegisterPeriodicity>Nonperiodical</InformationRegisterPeriodicity>
+			<WriteMode>Independent</WriteMode>
+			<MainFilterOnPeriod>false</MainFilterOnPeriod>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<DataLockControlMode>Managed</DataLockControlMode>
 			<FullTextSearch>DontUse</FullTextSearch>
-			<EnableTotalsSplitting>true</EnableTotalsSplitting>
+			<EnableTotalsSliceFirst>false</EnableTotalsSliceFirst>
+			<EnableTotalsSliceLast>false</EnableTotalsSliceLast>
+			<RecordPresentation/>
+			<ExtendedRecordPresentation/>
 			<ListPresentation/>
 			<ExtendedListPresentation/>
 			<Explanation/>
+			<DataHistory>DontUse</DataHistory>
 		</Properties>
 		<ChildObjects>
-			<Resource uuid="8d4512e4-2135-452b-9ac8-2eeded9b0fac">
+			<Resource uuid="06a0d581-bfdc-4aa9-b5af-6874cc7a149f">
 				<Properties>
 					<Name>Сумма</Name>
 					<Synonym>
@@ -77,6 +90,8 @@
 					<ExtendedEdit>false</ExtendedEdit>
 					<MinValue xsi:nil="true"/>
 					<MaxValue xsi:nil="true"/>
+					<FillFromFillingValue>false</FillFromFillingValue>
+					<FillValue xsi:nil="true"/>
 					<FillChecking>DontCheck</FillChecking>
 					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
 					<ChoiceParameterLinks/>
@@ -86,9 +101,11 @@
 					<ChoiceForm/>
 					<LinkByType/>
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+					<Indexing>DontIndex</Indexing>
 					<FullTextSearch>Use</FullTextSearch>
+					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Resource>
 		</ChildObjects>
-	</AccumulationRegister>
+	</InformationRegister>
 </MetaDataObject>

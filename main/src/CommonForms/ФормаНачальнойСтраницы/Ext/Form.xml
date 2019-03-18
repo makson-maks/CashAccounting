@@ -52,15 +52,27 @@
 					<v8:content>Группа фактический остаток лимита денежных средств</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Group>AlwaysHorizontal</Group>
+			<Group>Vertical</Group>
 			<Representation>None</Representation>
 			<BackColor>web:PeachPuff</BackColor>
 			<ExtendedTooltip name="ГруппаФактическийОстатокЛимитаДенежныхСредствРасширеннаяПодсказка" id="11"/>
 			<ChildItems>
-				<UsualGroup name="Группа1" id="35">
+				<UsualGroup name="ГруппаФактическийОстатокЛимита" id="35">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа фактический остаток лимита</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа фактический остаток лимита</v8:content>
+						</v8:item>
+					</ToolTip>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="36"/>
+					<ExtendedTooltip name="ГруппаФактическийОстатокЛимитаРасширеннаяПодсказка" id="36"/>
 					<ChildItems>
 						<LabelField name="ФактическийОстатокЛимита" id="32">
 							<DataPath>ФактическийОстатокЛимита</DataPath>
@@ -77,23 +89,30 @@
 								<Event name="Click">ФактическийОстатокЛимитаНажатие</Event>
 							</Events>
 						</LabelField>
-						<LabelField name="ПлановыйОстатокЛимита" id="29">
-							<DataPath>ПлановыйОстатокЛимита</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>план</v8:content>
-								</v8:item>
-							</Title>
-							<Hiperlink>true</Hiperlink>
-							<ContextMenu name="ПлановыйОстатокЛимитаКонтекстноеМеню" id="30"/>
-							<ExtendedTooltip name="ПлановыйОстатокЛимитаРасширеннаяПодсказка" id="31"/>
-							<Events>
-								<Event name="Click">ПлановыйОстатокЛимитаНажатие</Event>
-							</Events>
-						</LabelField>
+						<Button name="РедактироватьФактическийОстатокЛимита" id="37">
+							<Type>UsualButton</Type>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<CommandName>Form.Command.РедактироватьФактическийОстатокЛимита</CommandName>
+							<PictureLocation>Right</PictureLocation>
+							<ExtendedTooltip name="РедактироватьФактическийОстатокЛимитаРасширеннаяПодсказка" id="38"/>
+						</Button>
 					</ChildItems>
 				</UsualGroup>
+				<LabelField name="ПлановыйОстатокЛимита" id="29">
+					<DataPath>ПлановыйОстатокЛимита</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>план</v8:content>
+						</v8:item>
+					</Title>
+					<Hiperlink>true</Hiperlink>
+					<ContextMenu name="ПлановыйОстатокЛимитаКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ПлановыйОстатокЛимитаРасширеннаяПодсказка" id="31"/>
+					<Events>
+						<Event name="Click">ПлановыйОстатокЛимитаНажатие</Event>
+					</Events>
+				</LabelField>
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="ГруппаВводПриходаРасхода" id="18">
@@ -247,6 +266,25 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ДобавитьПланируемыйРасход</Action>
+		</Command>
+		<Command name="РедактироватьФактическийОстатокЛимита" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать фактический остаток лимита</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать фактический остаток лимита</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Representation>Picture</Representation>
 		</Command>
 	</Commands>
 </Form>

@@ -163,9 +163,9 @@
 			<Document>КорректировкаРегистров</Document>
 			<Enum>ВидыРасходов</Enum>
 			<InformationRegister>ЛимитДенежныхСредств</InformationRegister>
+			<InformationRegister>ОстатокЛимитаДенежныхСредств</InformationRegister>
 			<AccumulationRegister>ПланируемыеОстаткиДенежныхСредств</AccumulationRegister>
 			<AccumulationRegister>ДенежныеСредства</AccumulationRegister>
-			<AccumulationRegister>ОстатокЛимитаДенежныхСредств</AccumulationRegister>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

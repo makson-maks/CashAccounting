@@ -1,7 +1,6 @@
 ﻿ConfigDumpInfo.xml-->ConfigDumpInfo.xml
 Configuration.xml-->Configuration.xml
 AccumulationRegisters\ДенежныеСредства.xml-->AccumulationRegisters\ДенежныеСредства.xml
-AccumulationRegisters\ОстатокЛимитаДенежныхСредств.xml-->AccumulationRegisters\ОстатокЛимитаДенежныхСредств.xml
 AccumulationRegisters\ПланируемыеОстаткиДенежныхСредств.xml-->AccumulationRegisters\ПланируемыеОстаткиДенежныхСредств.xml
 AccumulationRegisters\ДенежныеСредства\Ext\RecordSetModule.bsl-->AccumulationRegisters\ДенежныеСредства\Ext\RecordSetModule.bsl
 AccumulationRegisters\ПланируемыеОстаткиДенежныхСредств\Ext\RecordSetModule.bsl-->AccumulationRegisters\ПланируемыеОстаткиДенежныхСредств\Ext\RecordSetModule.bsl
@@ -57,6 +56,7 @@ Ext\HomePageWorkArea.xml-->Ext\HomePageWorkArea.xml
 Ext\ManagedApplicationModule.bsl-->Ext\ManagedApplicationModule.bsl
 Ext\SessionModule.bsl-->Ext\SessionModule.bsl
 InformationRegisters\ЛимитДенежныхСредств.xml-->InformationRegisters\ЛимитДенежныхСредств.xml
+InformationRegisters\ОстатокЛимитаДенежныхСредств.xml-->InformationRegisters\ОстатокЛимитаДенежныхСредств.xml
 Languages\Русский.xml-->Languages\Русский.xml
 Roles\ПолныеПрава.xml-->Roles\ПолныеПрава.xml
 Roles\Тестирование.xml-->Roles\Тестирование.xml
