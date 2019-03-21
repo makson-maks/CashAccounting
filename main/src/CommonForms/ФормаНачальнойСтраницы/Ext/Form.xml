@@ -284,6 +284,7 @@
 				<xr:Ref>StdPicture.Change</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
+			<Action>РедактироватьФактическийОстатокЛимита</Action>
 			<Representation>Picture</Representation>
 		</Command>
 	</Commands>

@@ -15,8 +15,8 @@
 		<Metadata name="CommonCommand.ОткрытьСписокФактическихРасходов.CommandModule" id="06c97d2e-3c43-4495-8a88-3197077e45ef.2" configVersion="fcaa3f789648d94abdc0f2db24c5e1ff00000000"/>
 		<Metadata name="CommonCommand.ОткрытьФормуНачальнойСтраницы" id="f502331b-c25a-4c37-a44d-858dda405822" configVersion="e22cd36d1cc4d349bafb05dd498861bd00000000"/>
 		<Metadata name="CommonCommand.ОткрытьФормуНачальнойСтраницы.CommandModule" id="f502331b-c25a-4c37-a44d-858dda405822.2" configVersion="2e71c4a4c554d840a480faddf240da2b00000000"/>
-		<Metadata name="CommonForm.ФормаНачальнойСтраницы" id="807fe82d-8f56-4f81-8f0b-113cadb57ef3" configVersion="0086ea0995788e4d8f50bbfac31ce07c00000000"/>
-		<Metadata name="CommonForm.ФормаНачальнойСтраницы.Form" id="807fe82d-8f56-4f81-8f0b-113cadb57ef3.0" configVersion="102ff70b17985a45b9326617f6c96b8e00000000"/>
+		<Metadata name="CommonForm.ФормаНачальнойСтраницы" id="807fe82d-8f56-4f81-8f0b-113cadb57ef3" configVersion="90769509097c12458c610fdfee17fffa00000000"/>
+		<Metadata name="CommonForm.ФормаНачальнойСтраницы.Form" id="807fe82d-8f56-4f81-8f0b-113cadb57ef3.0" configVersion="1df2a3e91c07e046b68447219b08691b00000000"/>
 		<Metadata name="CommonModule.ОбщегоНазначенийВызовСервера" id="50d0db7f-b1c3-4e41-9e14-75dda3ea8f9f" configVersion="ac8f6925aaad804ea54de423f45b328200000000"/>
 		<Metadata name="CommonModule.ОбщегоНазначенийВызовСервера.Module" id="50d0db7f-b1c3-4e41-9e14-75dda3ea8f9f.0" configVersion="a847d1c95cecfe4e9c2023b0513f709100000000"/>
 		<Metadata name="CommonModule.ОбщегоНазначенияКлиентСервер" id="517ef80c-a33b-4101-9251-2eab467ea929" configVersion="ad71f016802f7f4aa464209b2041385e00000000"/>
@@ -66,18 +66,20 @@
 			<Metadata name="Enum.ВидыРасходов.EnumValue.Планируемый" id="98dcb466-20ce-40e2-8ca2-185bb6bc3cde"/>
 			<Metadata name="Enum.ВидыРасходов.EnumValue.Фактический" id="98f1765c-3605-4b22-b52c-97da1efc562f"/>
 		</Metadata>
-		<Metadata name="InformationRegister.ЛимитДенежныхСредств" id="019d1c0a-6646-4693-ae09-376348cefb0c" configVersion="ef968ac2888c2b459cc5de88b5266feb00000000">
+		<Metadata name="InformationRegister.ЛимитДенежныхСредств" id="019d1c0a-6646-4693-ae09-376348cefb0c" configVersion="97b9ae27e1fd474c8ba2eb06b214ad3800000000">
 			<Metadata name="InformationRegister.ЛимитДенежныхСредств.Resource.Сумма" id="6ed5aedd-60b5-454b-b331-2a823d07cb33"/>
 		</Metadata>
-		<Metadata name="InformationRegister.ОстатокЛимитаДенежныхСредств" id="68537aa7-63b3-4e44-9370-38e5863e9f45" configVersion="955487c284f52242b90c9ec9c41f7c3e00000000">
+		<Metadata name="InformationRegister.ОстатокЛимитаДенежныхСредств" id="68537aa7-63b3-4e44-9370-38e5863e9f45" configVersion="f1270357a1f2b9428c207e55268ca05b00000000">
 			<Metadata name="InformationRegister.ОстатокЛимитаДенежныхСредств.Resource.Сумма" id="06a0d581-bfdc-4aa9-b5af-6874cc7a149f"/>
 		</Metadata>
+		<Metadata name="InformationRegister.ОстатокЛимитаДенежныхСредств.Form.ФормаРедактированияЛимита" id="38128af4-9ffc-4958-97fa-5bc7ad824596" configVersion="6ecc0911299b2f4f93f506eda3ece1b500000000"/>
+		<Metadata name="InformationRegister.ОстатокЛимитаДенежныхСредств.Form.ФормаРедактированияЛимита.Form" id="38128af4-9ffc-4958-97fa-5bc7ad824596.0" configVersion="650247cd7b06934d88b8a2d76100e0a100000000"/>
 		<Metadata name="Language.Русский" id="a2e45361-6ee7-466a-b0dd-da1b72a5dba2" configVersion="43ddea63bae73a45a0a74fe0703d89b100000000"/>
 		<Metadata name="Role.ПолныеПрава" id="6a743ef3-5ea6-4014-887e-c43af6403bfd" configVersion="9de7f8c903437d4f92c5277c6a99eeef00000000"/>
 		<Metadata name="Role.ПолныеПрава.Rights" id="6a743ef3-5ea6-4014-887e-c43af6403bfd.0" configVersion="64cd9c50a871cf47abe6b6a228970bff00000000"/>
 		<Metadata name="Role.Тестирование" id="4838f842-5845-412a-896f-5ff8a000d641" configVersion="8944c27bd0b82b45bd1a34ebbf394b0d00000000"/>
 		<Metadata name="Role.Тестирование.Rights" id="4838f842-5845-412a-896f-5ff8a000d641.0" configVersion="99ca6a0f1f4624478c831bfaada4e77e00000000"/>
-		<Metadata name="Subsystem.УчетДенежныхСредств" id="f1ebf94d-9531-49eb-8ded-46b15edd2ee9" configVersion="676370d44f5cc348b5fe5dda8d716f4000000000"/>
-		<Metadata name="Subsystem.УчетДенежныхСредств.CommandInterface" id="f1ebf94d-9531-49eb-8ded-46b15edd2ee9.1" configVersion="ba58e527ecbbfb42963f6b39d16b66a600000000"/>
+		<Metadata name="Subsystem.УчетДенежныхСредств" id="f1ebf94d-9531-49eb-8ded-46b15edd2ee9" configVersion="268ed0658bc20a4396a2d9e98ec6221600000000"/>
+		<Metadata name="Subsystem.УчетДенежныхСредств.CommandInterface" id="f1ebf94d-9531-49eb-8ded-46b15edd2ee9.1" configVersion="565c7c8103d39d4084ee85b73c2e5a0800000000"/>
 	</ConfigVersions>
 </ConfigDumpInfo>

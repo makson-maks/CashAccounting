@@ -21,6 +21,11 @@
 				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
+		<Command name="InformationRegister.ОстатокЛимитаДенежныхСредств.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>true</xr:Common>
+			</Visibility>
+		</Command>
 		<Command name="Constant.ПоследняяДатаРасчетаФактическогоОстаткаЛимита.StandardCommand.Open">
 			<Visibility>
 				<xr:Common>false</xr:Common>
@@ -37,6 +42,10 @@
 			<Placement>Auto</Placement>
 		</Command>
 		<Command name="InformationRegister.ЛимитДенежныхСредств.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Placement>Auto</Placement>
+		</Command>
+		<Command name="InformationRegister.ОстатокЛимитаДенежныхСредств.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
 			<Placement>Auto</Placement>
 		</Command>
@@ -58,6 +67,9 @@
 			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
 		</Command>
 		<Command name="InformationRegister.ЛимитДенежныхСредств.StandardCommand.OpenList">
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+		</Command>
+		<Command name="InformationRegister.ОстатокЛимитаДенежныхСредств.StandardCommand.OpenList">
 			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
 		</Command>
 	</CommandsOrder>

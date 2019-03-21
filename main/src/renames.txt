@@ -57,6 +57,9 @@ Ext\ManagedApplicationModule.bsl-->Ext\ManagedApplicationModule.bsl
 Ext\SessionModule.bsl-->Ext\SessionModule.bsl
 InformationRegisters\ЛимитДенежныхСредств.xml-->InformationRegisters\ЛимитДенежныхСредств.xml
 InformationRegisters\ОстатокЛимитаДенежныхСредств.xml-->InformationRegisters\ОстатокЛимитаДенежныхСредств.xml
+InformationRegisters\ОстатокЛимитаДенежныхСредств\Forms\ФормаРедактированияЛимита.xml-->InformationRegisters\ОстатокЛимитаДенежныхСредств\Forms\ФормаРедактированияЛимита.xml
+InformationRegisters\ОстатокЛимитаДенежныхСредств\Forms\ФормаРедактированияЛимита\Ext\Form.xml-->InformationRegisters\ОстатокЛимитаДенежныхСредств\Forms\ФормаРедактированияЛимита\Ext\Form.xml
+InformationRegisters\ОстатокЛимитаДенежныхСредств\Forms\ФормаРедактированияЛимита\Ext\Form\Module.bsl-->InformationRegisters\ОстатокЛимитаДенежныхСредств\Forms\ФормаРедактированияЛимита\Ext\Form\Module.bsl
 Languages\Русский.xml-->Languages\Русский.xml
 Roles\ПолныеПрава.xml-->Roles\ПолныеПрава.xml
 Roles\Тестирование.xml-->Roles\Тестирование.xml
