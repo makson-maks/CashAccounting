@@ -33,7 +33,7 @@
 		<Metadata name="CommonModule.УчетДенежныхСредствКлиент.Module" id="d6aa73f4-615e-4c07-95fc-2e6fdb5feb59.0" configVersion="589eeb090fd13646b07f7d040860832000000000"/>
 		<Metadata name="CommonModule.УчетДенежныхСредствСервер" id="4d05c93c-ad5f-4177-a2da-830caffdfed7" configVersion="c5fdc52f60e75b4a8594d689f0f1a07000000000"/>
 		<Metadata name="CommonModule.УчетДенежныхСредствСервер.Module" id="4d05c93c-ad5f-4177-a2da-830caffdfed7.0" configVersion="dec23da3c542744c80c8a26c3c5c06d500000000"/>
-		<Metadata name="Configuration.УчетДенежныхСредств" id="08cc8678-290f-4ee5-9316-06bf602cf55a" configVersion="6204fa6eda1dab489fdd114debdb942900000000"/>
+		<Metadata name="Configuration.УчетДенежныхСредств" id="08cc8678-290f-4ee5-9316-06bf602cf55a" configVersion="b21855b1f63e8142bb768fe2da4ea8d900000000"/>
 		<Metadata name="Configuration.УчетДенежныхСредств.HomePageWorkArea" id="eddd66c0-8cf9-41cc-b517-9dc67f52ff59.8" configVersion="bfa57c478826324e9f94871a41ac655a00000000"/>
 		<Metadata name="Configuration.УчетДенежныхСредств.ManagedApplicationModule" id="eddd66c0-8cf9-41cc-b517-9dc67f52ff59.6" configVersion="128ab9ce90b2294daca755d5a63c2a2600000000"/>
 		<Metadata name="Configuration.УчетДенежныхСредств.SessionModule" id="eddd66c0-8cf9-41cc-b517-9dc67f52ff59.7" configVersion="f89f703c6028d54bb10d98e642e8cb2400000000"/>
