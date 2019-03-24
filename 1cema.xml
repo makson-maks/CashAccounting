@@ -1,0 +1,3013 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MobileApp xmlns="http://v8.1c.ru/8.3/mobile-application/app" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:bsch="http://v8.1c.ru/8.2/data/bsl" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:chm="http://v8.1c.ru/8.2/data/chart" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dl="http://v8.1c.ru/8.2/managed-application/dynamic-list" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:mf="http://v8.1c.ru/8.3/mobile-application/form" xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet" xmlns:pl="http://v8.1c.ru/8.3/data/planner" xmlns:role="http://v8.1c.ru/8.2/roles" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="УчетДенежныхСредств" id="eddd66c0-8cf9-41cc-b517-9dc67f52ff59" formatVersion="2" platformVersion="8.3.13.1644" containerID="08cc8678-290f-4ee5-9316-06bf602cf55a" defaultLanguage="Language.Русский" version="1.0.2" scriptVariant="Russian">
+	<synonym>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Учет денежных средств</v8:content>
+		</v8:item>
+	</synonym>
+	<language name="Русский" id="a2e45361-6ee7-466a-b0dd-da1b72a5dba2" languageCode="ru">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Русский</v8:content>
+			</v8:item>
+		</synonym>
+	</language>
+	<vendor>makson_maks</vendor>
+	<mainModule version="1" startAddr="0">
+		<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+		<bsch:cmdOperand>0,0</bsch:cmdOperand>
+	</mainModule>
+	<sessionModule version="1">
+		<bsch:cmdOpCode>22</bsch:cmdOpCode>
+		<bsch:cmdOperand>0</bsch:cmdOperand>
+	</sessionModule>
+	<startPageWorkingArea>
+		<workingAreaTemplate>TwoColumnsEqualWidth</workingAreaTemplate>
+		<leftColumn>
+			<form>CommonForm.ФормаНачальнойСтраницы</form>
+			<height>10</height>
+			<visibility>
+				<mf:value name="Role.Тестирование">false</mf:value>
+			</visibility>
+		</leftColumn>
+	</startPageWorkingArea>
+	<defaultRole>Role.ПолныеПрава</defaultRole>
+	<subsystem name="УчетДенежныхСредств" id="f1ebf94d-9531-49eb-8ded-46b15edd2ee9">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Учет денежных средств</v8:content>
+			</v8:item>
+		</synonym>
+		<commandInterface>
+			<CommandVisibility name="Document.ПриходДенежныхСредств.StandardCommand.OpenList"/>
+			<CommandVisibility name="Document.РасходДенежныхСредств.StandardCommand.OpenList">
+				<Visibility2>
+					<mf:common>false</mf:common>
+				</Visibility2>
+			</CommandVisibility>
+			<CommandVisibility name="Document.КорректировкаРегистров.StandardCommand.OpenList">
+				<Visibility2>
+					<mf:common>false</mf:common>
+				</Visibility2>
+			</CommandVisibility>
+			<CommandVisibility name="InformationRegister.ЛимитДенежныхСредств.StandardCommand.OpenList"/>
+			<CommandVisibility name="InformationRegister.ОстатокЛимитаДенежныхСредств.StandardCommand.OpenList"/>
+			<CommandVisibility name="Constant.ПоследняяДатаРасчетаФактическогоОстаткаЛимита.StandardCommand.Open">
+				<Visibility2>
+					<mf:common>false</mf:common>
+				</Visibility2>
+			</CommandVisibility>
+			<CommandPlacement>
+				<Command>Document.ПриходДенежныхСредств.StandardCommand.OpenList</Command>
+				<CommandGroup>NavigationPanelImportant</CommandGroup>
+				<Palcement>Auto</Palcement>
+			</CommandPlacement>
+			<CommandPlacement>
+				<Command>Document.КорректировкаРегистров.StandardCommand.OpenList</Command>
+				<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+				<Palcement>Auto</Palcement>
+			</CommandPlacement>
+			<CommandPlacement>
+				<Command>InformationRegister.ЛимитДенежныхСредств.StandardCommand.OpenList</Command>
+				<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+				<Palcement>Auto</Palcement>
+			</CommandPlacement>
+			<CommandPlacement>
+				<Command>InformationRegister.ОстатокЛимитаДенежныхСредств.StandardCommand.OpenList</Command>
+				<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+				<Palcement>Auto</Palcement>
+			</CommandPlacement>
+			<CommandOrder>
+				<CommandGroup>NavigationPanelImportant</CommandGroup>
+				<Command>Document.ПриходДенежныхСредств.StandardCommand.OpenList</Command>
+			</CommandOrder>
+			<CommandOrder>
+				<CommandGroup>NavigationPanelImportant</CommandGroup>
+				<Command>CommonCommand.ОткрытьСписокПланируемыхРасходов</Command>
+			</CommandOrder>
+			<CommandOrder>
+				<CommandGroup>NavigationPanelImportant</CommandGroup>
+				<Command>CommonCommand.ОткрытьСписокФактическихРасходов</Command>
+			</CommandOrder>
+			<CommandOrder>
+				<CommandGroup>NavigationPanelImportant</CommandGroup>
+				<Command>CommonCommand.ОткрытьФормуНачальнойСтраницы</Command>
+			</CommandOrder>
+			<CommandOrder>
+				<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+				<Command>Document.КорректировкаРегистров.StandardCommand.OpenList</Command>
+			</CommandOrder>
+			<CommandOrder>
+				<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+				<Command>InformationRegister.ЛимитДенежныхСредств.StandardCommand.OpenList</Command>
+			</CommandOrder>
+			<CommandOrder>
+				<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+				<Command>InformationRegister.ОстатокЛимитаДенежныхСредств.StandardCommand.OpenList</Command>
+			</CommandOrder>
+			<ManualOrderEditGroup>NavigationPanelImportant</ManualOrderEditGroup>
+			<ManualOrderEditGroup>NavigationPanelSeeAlso</ManualOrderEditGroup>
+		</commandInterface>
+		<content>CommonCommand.ОткрытьСписокПланируемыхРасходов</content>
+		<content>CommonCommand.ОткрытьСписокФактическихРасходов</content>
+		<content>InformationRegister.ЛимитДенежныхСредств</content>
+		<content>CommonForm.ФормаНачальнойСтраницы</content>
+		<content>Constant.ПоследняяДатаРасчетаФактическогоОстаткаЛимита</content>
+		<content>Document.ПриходДенежныхСредств</content>
+		<content>Document.РасходДенежныхСредств</content>
+		<content>Document.КорректировкаРегистров</content>
+		<content>AccumulationRegister.ПланируемыеОстаткиДенежныхСредств</content>
+		<content>AccumulationRegister.ДенежныеСредства</content>
+		<content>CommonCommand.ОткрытьФормуНачальнойСтраницы</content>
+		<content>InformationRegister.ОстатокЛимитаДенежныхСредств</content>
+	</subsystem>
+	<commonModule name="ОбщегоНазначенийВызовСервера" id="50d0db7f-b1c3-4e41-9e14-75dda3ea8f9f">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Общего назначений вызов сервера</v8:content>
+			</v8:item>
+		</synonym>
+		<serverModule version="1">
+			<bsch:cmdOpCode>1,2,3,3,3,18,21,5,1,17,45,39,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>4,0,0,1,2,3,0,0,4,0,0,12,6,0,0</bsch:cmdOperand>
+			<bsch:constant>SДобавитьКДате</bsch:constant>
+			<bsch:variable name="ОбщегоНазначенияСервер" isExternal="true"/>
+			<bsch:procedure name="ДобавитьКДате" isFunction="true" isExported="true" parametersCount="3" startAddr="0">
+				<bsch:variable name="ДатаНачала" isLocal="true" isParam="true"/>
+				<bsch:variable name="КоличествоПериодов" isLocal="true" isParam="true"/>
+				<bsch:variable name="ТипПериода" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+		</serverModule>
+		<serverCall>true</serverCall>
+	</commonModule>
+	<commonModule name="ОбщегоНазначенияКлиентСервер" id="517ef80c-a33b-4101-9251-2eab467ea929">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Общего назначения клиент сервер</v8:content>
+			</v8:item>
+		</synonym>
+		<clientModule version="1">
+			<bsch:cmdOpCode>1,3,91,17,45,39,1,22,1,3,92,17,45,39,1,22,1,3,8,33,40,1,3,2,12,16,39,1,1,3,2,12,33,40,1,3,3,12,12,12,16,39,1,3,3,12,12,12,16,1,1,3,3,3,3,3,3,3,3,18,19,1,1,22,1,3,3,3,3,3,3,3,3,3,18,19,5,1,16,1,3,4,33,40,1,3,8,33,40,1,3,107,4,108,33,31,3,107,4,108,33,69,31,3,107,4,108,33,69,40,1,3,2,12,16,39,1,3,2,12,16,1,39,1,1,3,8,33,40,1,3,2,12,16,39,1,1,3,3,3,3,3,3,3,3,18,19,1,39,1,1,22,1,3,18,19,5,1,40,1,3,3,18,51,16,1,3,4,16,39,1,3,4,16,1,3,3,16,1,1,3,18,51,16,1,3,12,3,3,3,18,19,1,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,8,34,40,1,3,12,3,18,51,16,39,1,1,3,8,34,40,1,3,12,3,16,39,1,1,3,8,34,40,1,3,12,3,16,39,1,1,3,8,34,40,1,3,12,3,16,39,1,1,3,8,34,40,1,3,12,3,16,39,1,1,3,8,34,40,1,3,12,3,16,39,1,1,3,8,34,40,1,3,12,3,16,39,1,1,39,50,3,8,16,3,8,16,1,3,18,21,5,1,17,45,39,1,22,1,3,3,12,4,108,18,21,5,1,16,1,3,12,3,18,51,16,1,3,12,3,16,1,3,8,33,40,1,3,12,2,12,16,39,1,3,12,3,16,1,1,3,8,34,40,1,3,12,3,16,39,1,1,3,8,34,40,1,3,12,3,16,39,1,1,3,8,34,40,1,3,12,3,16,39,1,1,3,8,34,40,1,3,12,3,16,39,1,3,12,2,12,34,40,1,3,12,3,16,39,1,1,3,17,45,39,1,22,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,107,4,108,33,40,1,3,4,33,40,1,3,12,3,33,40,1,3,3,18,20,1,39,1,39,1,3,4,33,40,1,3,12,3,33,40,1,3,3,18,20,1,39,1,39,1,39,1,3,12,3,3,3,18,19,1,1,3,4,33,30,3,12,3,33,69,40,1,3,3,18,20,1,39,1,1,1,39,50,3,8,16,3,8,16,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>4,0,0,0,0,6,6,0,10,0,0,0,0,14,12,0,52,6,0,0,27,53,6,0,0,0,27,54,56,6,0,0,0,42,57,8,0,1,2,3,0,49,59,8,0,1,4,3,0,60,62,8,1,2,3,4,5,6,7,8,3,62,72,0,97,8,0,1,4,2,3,5,6,7,8,4,0,97,0,100,8,5,0,149,101,3,0,0,123,102,2,0,6,0,0,102,2,0,7,0,0,0,109,2,0,8,0,0,0,116,105,3,1,9,0,121,107,3,1,10,0,108,123,109,110,6,0,0,135,111,6,0,0,0,135,112,113,0,1,3,2,4,5,6,7,8,5,113,149,115,117,0,138,1,1,6,0,138,170,139,8,1,1,11,0,140,9,12,0,178,142,9,13,0,143,8,2,0,144,146,10,0,6,0,148,0,14,10,9,8,4,7,148,150,0,0,10,0,0,150,12,0,0,12,0,300,11,12,0,12,0,0,151,1,0,0,225,152,11,15,1,1,11,0,225,153,154,2,0,0,237,155,11,16,2,0,237,156,157,5,0,0,249,158,11,17,5,0,249,159,160,4,0,0,261,161,11,18,4,0,261,162,163,3,0,0,273,164,11,19,3,0,273,165,166,6,0,0,285,167,11,20,6,0,285,168,169,7,0,0,297,170,11,21,7,0,297,171,172,199,1,12,0,0,12,0,0,174,10,0,22,0,174,0,0,316,176,0,201,8,0,14,24,0,1,23,0,201,0,202,8,15,1,1,11,0,203,8,18,2,0,205,6,0,0,353,206,8,20,0,0,0,358,208,8,20,6,0,209,211,3,0,0,370,212,8,19,3,0,370,213,215,4,0,0,382,216,8,16,4,0,382,217,219,5,0,0,394,220,8,17,5,0,394,221,226,7,0,0,406,227,8,21,7,0,419,228,8,20,0,0,0,419,229,8,21,1,0,419,230,232,8,0,0,425,234,0,241,0,0,0,0,0,241,5,0,0,5,0,526,4,5,0,5,0,0,243,4,0,24,0,0,495,245,2,12,0,473,246,4,15,3,0,471,247,1,4,1,23,247,471,248,493,249,2,13,0,493,250,4,16,3,0,491,251,1,4,1,23,251,491,252,493,253,523,256,4,14,1,2,3,4,7,256,258,2,13,0,514,4,16,3,0,0,522,259,1,4,1,23,259,522,260,262,264,433,1,5,0,0,5,0,0,266,0,0</bsch:cmdOperand>
+			<bsch:constant>SНедоступный</bsch:constant>
+			<bsch:constant>SКомпоновщикНастроек</bsch:constant>
+			<bsch:constant>SФиксированныеНастройки</bsch:constant>
+			<bsch:constant>SОтбор</bsch:constant>
+			<bsch:constant>SНастройки</bsch:constant>
+			<bsch:constant>N0</bsch:constant>
+			<bsch:constant>SМассив</bsch:constant>
+			<bsch:constant>SФиксированныйМассив</bsch:constant>
+			<bsch:constant>SСписокЗначений</bsch:constant>
+			<bsch:constant>SВСписке</bsch:constant>
+			<bsch:constant>SРавно</bsch:constant>
+			<bsch:constant>SПолеКомпоновкиДанных</bsch:constant>
+			<bsch:constant>N1</bsch:constant>
+			<bsch:constant>N2</bsch:constant>
+			<bsch:constant>SЭлементы</bsch:constant>
+			<bsch:constant>SЛевоеЗначение</bsch:constant>
+			<bsch:constant>SПредставление</bsch:constant>
+			<bsch:constant>SИспользование</bsch:constant>
+			<bsch:constant>SВидСравнения</bsch:constant>
+			<bsch:constant>SПравоеЗначение</bsch:constant>
+			<bsch:constant>SРежимОтображения</bsch:constant>
+			<bsch:constant>SИдентификаторПользовательскойНастройки</bsch:constant>
+			<bsch:constant>SКоличество</bsch:constant>
+			<bsch:constant>SДобавить</bsch:constant>
+			<bsch:constant>SЭлементОтбораКомпоновкиДанных</bsch:constant>
+			<bsch:variable name="РежимОтображенияЭлементаНастройкиКомпоновкиДанных" isExternal="true"/>
+			<bsch:variable name="ВидСравненияКомпоновкиДанных" isExternal="true"/>
+			<bsch:procedure name="ПолучитьДатуНачалаПериода" isFunction="true" isExported="true" parametersCount="1" startAddr="0">
+				<bsch:variable name="Дата" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ПолучитьДатуОкончанияПериода" isFunction="true" isExported="true" parametersCount="1" startAddr="8">
+				<bsch:variable name="Дата" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="УстановитьЭлементОтбораДинамическогоСписка" isExported="true" parametersCount="8" startAddr="16">
+				<bsch:variable name="ДинамическийСписок" isLocal="true" isParam="true"/>
+				<bsch:variable name="ИмяПоля" isLocal="true" isParam="true"/>
+				<bsch:variable name="ПравоеЗначение" isLocal="true" isParam="true"/>
+				<bsch:variable name="ВидСравнения" isLocal="true" isParam="true"/>
+				<bsch:variable name="Представление" isLocal="true" isParam="true"/>
+				<bsch:variable name="Использование" isLocal="true" isParam="true"/>
+				<bsch:variable name="РежимОтображения" isLocal="true" isParam="true"/>
+				<bsch:variable name="ИдентификаторПользовательскойНастройки" isLocal="true" isParam="true"/>
+				<bsch:variable name="ОтборДинамическогоСписка" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="УстановитьЭлементОтбора" isExported="true" parametersCount="8" startAddr="64">
+				<bsch:variable name="ОбластьПоискаДобавления" isLocal="true" isParam="true"/>
+				<bsch:variable name="ИмяПоля" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ПравоеЗначение" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ВидСравнения" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Представление" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Использование" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="РежимОтображения" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ИдентификаторПользовательскойНастройки" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ЧислоИзмененных" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="ИзменитьЭлементыОтбора" isFunction="true" isExported="true" parametersCount="8" startAddr="152">
+				<bsch:variable name="ОбластьПоиска" isLocal="true" isParam="true"/>
+				<bsch:variable name="ИмяПоля" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Представление" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ПравоеЗначение" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ВидСравнения" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Использование" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="РежимОтображения" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ИдентификаторПользовательскойНастройки" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ЗначениеПоиска" isLocal="true"/>
+				<bsch:variable name="СпособПоиска" isLocal="true"/>
+				<bsch:variable name="МассивЭлементов" isLocal="true"/>
+				<bsch:variable name="Элемент" isLocal="true"/>
+				<bsch:variable name="0Элемент" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="ДобавитьЭлементКомпоновки" isFunction="true" isExported="true" parametersCount="8" startAddr="318">
+				<bsch:variable name="ОбластьДобавления" isLocal="true" isParam="true"/>
+				<bsch:variable name="ИмяПоля" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ВидСравнения" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ПравоеЗначение" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Представление" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Использование" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="РежимОтображения" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ИдентификаторПользовательскойНастройки" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Элемент" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="ЗначениеЗаполнено" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
+			<bsch:procedure name="НайтиРекурсивно" parametersCount="4" startAddr="427">
+				<bsch:variable name="КоллекцияЭлементов" isLocal="true" isParam="true"/>
+				<bsch:variable name="МассивЭлементов" isLocal="true" isParam="true"/>
+				<bsch:variable name="СпособПоиска" isLocal="true" isParam="true"/>
+				<bsch:variable name="ЗначениеПоиска" isLocal="true" isParam="true"/>
+				<bsch:variable name="ЭлементОтбора" isLocal="true"/>
+				<bsch:variable name="0ЭлементОтбора" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+		</clientModule>
+		<serverModule version="1">
+			<bsch:cmdOpCode>1,3,91,17,45,39,1,22,1,3,92,17,45,39,1,22,1,3,8,33,40,1,3,2,12,16,39,1,1,3,2,12,33,40,1,3,3,12,12,12,16,39,1,3,3,12,12,12,16,1,1,3,3,3,3,3,3,3,3,18,19,1,1,22,1,3,3,3,3,3,3,3,3,3,18,19,5,1,16,1,3,4,33,40,1,3,8,33,40,1,3,107,4,108,33,31,3,107,4,108,33,69,31,3,107,4,108,33,69,40,1,3,2,12,16,39,1,3,2,12,16,1,39,1,1,3,8,33,40,1,3,2,12,16,39,1,1,3,3,3,3,3,3,3,3,18,19,1,39,1,1,22,1,3,18,19,5,1,40,1,3,3,18,51,16,1,3,4,16,39,1,3,4,16,1,3,3,16,1,1,3,18,51,16,1,3,12,3,3,3,18,19,1,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,8,34,40,1,3,12,3,18,51,16,39,1,1,3,8,34,40,1,3,12,3,16,39,1,1,3,8,34,40,1,3,12,3,16,39,1,1,3,8,34,40,1,3,12,3,16,39,1,1,3,8,34,40,1,3,12,3,16,39,1,1,3,8,34,40,1,3,12,3,16,39,1,1,3,8,34,40,1,3,12,3,16,39,1,1,39,50,3,8,16,3,8,16,1,3,18,21,5,1,17,45,39,1,22,1,3,3,12,4,108,18,21,5,1,16,1,3,12,3,18,51,16,1,3,12,3,16,1,3,8,33,40,1,3,12,2,12,16,39,1,3,12,3,16,1,1,3,8,34,40,1,3,12,3,16,39,1,1,3,8,34,40,1,3,12,3,16,39,1,1,3,8,34,40,1,3,12,3,16,39,1,1,3,8,34,40,1,3,12,3,16,39,1,3,12,2,12,34,40,1,3,12,3,16,39,1,1,3,17,45,39,1,22,1,48,49,3,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,107,4,108,33,40,1,3,4,33,40,1,3,12,3,33,40,1,3,3,18,20,1,39,1,39,1,3,4,33,40,1,3,12,3,33,40,1,3,3,18,20,1,39,1,39,1,39,1,3,12,3,3,3,18,19,1,1,3,4,33,30,3,12,3,33,69,40,1,3,3,18,20,1,39,1,1,1,39,50,3,8,16,3,8,16,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>4,0,0,0,0,6,6,0,10,0,0,0,0,14,12,0,52,6,0,0,27,53,6,0,0,0,27,54,56,6,0,0,0,42,57,8,0,1,2,3,0,49,59,8,0,1,4,3,0,60,62,8,1,2,3,4,5,6,7,8,3,62,72,0,97,8,0,1,4,2,3,5,6,7,8,4,0,97,0,100,8,5,0,149,101,3,0,0,123,102,2,0,6,0,0,102,2,0,7,0,0,0,109,2,0,8,0,0,0,116,105,3,1,9,0,121,107,3,1,10,0,108,123,109,110,6,0,0,135,111,6,0,0,0,135,112,113,0,1,3,2,4,5,6,7,8,5,113,149,115,117,0,138,1,1,6,0,138,170,139,8,1,1,11,0,140,9,12,0,178,142,9,13,0,143,8,2,0,144,146,10,0,6,0,148,0,14,10,9,8,4,7,148,150,0,0,10,0,0,150,12,0,0,12,0,300,11,12,0,12,0,0,151,1,0,0,225,152,11,15,1,1,11,0,225,153,154,2,0,0,237,155,11,16,2,0,237,156,157,5,0,0,249,158,11,17,5,0,249,159,160,4,0,0,261,161,11,18,4,0,261,162,163,3,0,0,273,164,11,19,3,0,273,165,166,6,0,0,285,167,11,20,6,0,285,168,169,7,0,0,297,170,11,21,7,0,297,171,172,199,1,12,0,0,12,0,0,174,10,0,22,0,174,0,0,316,176,0,201,8,0,14,24,0,1,23,0,201,0,202,8,15,1,1,11,0,203,8,18,2,0,205,6,0,0,353,206,8,20,0,0,0,358,208,8,20,6,0,209,211,3,0,0,370,212,8,19,3,0,370,213,215,4,0,0,382,216,8,16,4,0,382,217,219,5,0,0,394,220,8,17,5,0,394,221,226,7,0,0,406,227,8,21,7,0,419,228,8,20,0,0,0,419,229,8,21,1,0,419,230,232,8,0,0,425,234,0,241,0,0,0,0,0,241,5,0,0,5,0,526,4,5,0,5,0,0,243,4,0,24,0,0,495,245,2,12,0,473,246,4,15,3,0,471,247,1,4,1,23,247,471,248,493,249,2,13,0,493,250,4,16,3,0,491,251,1,4,1,23,251,491,252,493,253,523,256,4,14,1,2,3,4,7,256,258,2,13,0,514,4,16,3,0,0,522,259,1,4,1,23,259,522,260,262,264,433,1,5,0,0,5,0,0,266,0,0</bsch:cmdOperand>
+			<bsch:constant>SНедоступный</bsch:constant>
+			<bsch:constant>SКомпоновщикНастроек</bsch:constant>
+			<bsch:constant>SФиксированныеНастройки</bsch:constant>
+			<bsch:constant>SОтбор</bsch:constant>
+			<bsch:constant>SНастройки</bsch:constant>
+			<bsch:constant>N0</bsch:constant>
+			<bsch:constant>SМассив</bsch:constant>
+			<bsch:constant>SФиксированныйМассив</bsch:constant>
+			<bsch:constant>SСписокЗначений</bsch:constant>
+			<bsch:constant>SВСписке</bsch:constant>
+			<bsch:constant>SРавно</bsch:constant>
+			<bsch:constant>SПолеКомпоновкиДанных</bsch:constant>
+			<bsch:constant>N1</bsch:constant>
+			<bsch:constant>N2</bsch:constant>
+			<bsch:constant>SЭлементы</bsch:constant>
+			<bsch:constant>SЛевоеЗначение</bsch:constant>
+			<bsch:constant>SПредставление</bsch:constant>
+			<bsch:constant>SИспользование</bsch:constant>
+			<bsch:constant>SВидСравнения</bsch:constant>
+			<bsch:constant>SПравоеЗначение</bsch:constant>
+			<bsch:constant>SРежимОтображения</bsch:constant>
+			<bsch:constant>SИдентификаторПользовательскойНастройки</bsch:constant>
+			<bsch:constant>SКоличество</bsch:constant>
+			<bsch:constant>SДобавить</bsch:constant>
+			<bsch:constant>SЭлементОтбораКомпоновкиДанных</bsch:constant>
+			<bsch:variable name="РежимОтображенияЭлементаНастройкиКомпоновкиДанных" isExternal="true"/>
+			<bsch:variable name="ВидСравненияКомпоновкиДанных" isExternal="true"/>
+			<bsch:procedure name="ПолучитьДатуНачалаПериода" isFunction="true" isExported="true" parametersCount="1" startAddr="0">
+				<bsch:variable name="Дата" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ПолучитьДатуОкончанияПериода" isFunction="true" isExported="true" parametersCount="1" startAddr="8">
+				<bsch:variable name="Дата" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="УстановитьЭлементОтбораДинамическогоСписка" isExported="true" parametersCount="8" startAddr="16">
+				<bsch:variable name="ДинамическийСписок" isLocal="true" isParam="true"/>
+				<bsch:variable name="ИмяПоля" isLocal="true" isParam="true"/>
+				<bsch:variable name="ПравоеЗначение" isLocal="true" isParam="true"/>
+				<bsch:variable name="ВидСравнения" isLocal="true" isParam="true"/>
+				<bsch:variable name="Представление" isLocal="true" isParam="true"/>
+				<bsch:variable name="Использование" isLocal="true" isParam="true"/>
+				<bsch:variable name="РежимОтображения" isLocal="true" isParam="true"/>
+				<bsch:variable name="ИдентификаторПользовательскойНастройки" isLocal="true" isParam="true"/>
+				<bsch:variable name="ОтборДинамическогоСписка" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="УстановитьЭлементОтбора" isExported="true" parametersCount="8" startAddr="64">
+				<bsch:variable name="ОбластьПоискаДобавления" isLocal="true" isParam="true"/>
+				<bsch:variable name="ИмяПоля" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ПравоеЗначение" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ВидСравнения" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Представление" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Использование" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="РежимОтображения" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ИдентификаторПользовательскойНастройки" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ЧислоИзмененных" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="ИзменитьЭлементыОтбора" isFunction="true" isExported="true" parametersCount="8" startAddr="152">
+				<bsch:variable name="ОбластьПоиска" isLocal="true" isParam="true"/>
+				<bsch:variable name="ИмяПоля" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Представление" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ПравоеЗначение" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ВидСравнения" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Использование" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="РежимОтображения" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ИдентификаторПользовательскойНастройки" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ЗначениеПоиска" isLocal="true"/>
+				<bsch:variable name="СпособПоиска" isLocal="true"/>
+				<bsch:variable name="МассивЭлементов" isLocal="true"/>
+				<bsch:variable name="Элемент" isLocal="true"/>
+				<bsch:variable name="0Элемент" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="ДобавитьЭлементКомпоновки" isFunction="true" isExported="true" parametersCount="8" startAddr="318">
+				<bsch:variable name="ОбластьДобавления" isLocal="true" isParam="true"/>
+				<bsch:variable name="ИмяПоля" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ВидСравнения" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ПравоеЗначение" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Представление" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Использование" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="РежимОтображения" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ИдентификаторПользовательскойНастройки" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Элемент" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="ЗначениеЗаполнено" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
+			<bsch:procedure name="НайтиРекурсивно" parametersCount="4" startAddr="427">
+				<bsch:variable name="КоллекцияЭлементов" isLocal="true" isParam="true"/>
+				<bsch:variable name="МассивЭлементов" isLocal="true" isParam="true"/>
+				<bsch:variable name="СпособПоиска" isLocal="true" isParam="true"/>
+				<bsch:variable name="ЗначениеПоиска" isLocal="true" isParam="true"/>
+				<bsch:variable name="ЭлементОтбора" isLocal="true"/>
+				<bsch:variable name="0ЭлементОтбора" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+		</serverModule>
+	</commonModule>
+	<commonModule name="ОбщегоНазначенияСервер" id="ea0bdeea-5d15-485f-9e10-53ff61264267">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Общего назначения сервер</v8:content>
+			</v8:item>
+		</synonym>
+		<serverModule version="1">
+			<bsch:cmdOpCode>1,3,4,16,1,3,3,4,3,100,16,1,3,3,4,3,100,16,1,3,18,51,16,1,3,4,3,18,20,1,1,3,12,3,16,1,3,3,18,21,5,1,18,21,5,1,16,1,3,18,20,1,1,3,12,17,45,39,1,22,1,3,4,16,1,3,3,4,3,100,16,1,3,18,51,16,1,3,4,3,18,20,1,1,3,4,3,18,20,1,1,3,12,3,16,1,3,3,18,21,5,1,18,21,5,1,16,1,3,18,20,1,1,3,12,17,45,39,1,22,1,2,12,18,21,5,1,40,1,2,12,18,21,5,1,17,45,39,39,1,99,17,45,39,1,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>4,3,0,0,8,3,3,1,2,0,0,9,3,3,2,1,0,0,11,4,0,3,0,12,4,5,0,2,4,12,13,4,6,3,0,15,5,4,0,7,0,15,0,8,0,15,0,16,5,0,9,16,18,5,10,0,0,58,20,0,24,3,11,0,28,3,3,1,2,0,0,30,4,0,3,0,31,4,5,0,2,4,31,32,4,12,1,2,4,32,33,4,6,3,0,35,5,4,0,7,0,35,0,8,0,35,0,36,5,0,9,36,38,5,13,0,0,118,40,0,44,0,14,0,15,0,44,139,45,0,16,0,15,0,45,0,0,145,144,47,0,0,0,145,48,50,0,0</bsch:cmdOperand>
+			<bsch:constant>SВЫБРАТЬ
+	ДОБАВИТЬКДАТЕ(&amp;ДатаНачала, ТипПериода, КоличествоПериодов) КАК НоваяДата</bsch:constant>
+			<bsch:constant>SТипПериода</bsch:constant>
+			<bsch:constant>SКоличествоПериодов</bsch:constant>
+			<bsch:constant>SЗапрос</bsch:constant>
+			<bsch:constant>SУстановитьПараметр</bsch:constant>
+			<bsch:constant>SДатаНачала</bsch:constant>
+			<bsch:constant>SТекст</bsch:constant>
+			<bsch:constant>SВыполнить</bsch:constant>
+			<bsch:constant>SВыбрать</bsch:constant>
+			<bsch:constant>SСледующий</bsch:constant>
+			<bsch:constant>SНоваяДата</bsch:constant>
+			<bsch:constant>SВЫБРАТЬ
+	РазностьДат(&amp;ДатаНачала, &amp;ДатаОкончания, ТипПериода) КАК РазностьДат</bsch:constant>
+			<bsch:constant>SДатаОкончания</bsch:constant>
+			<bsch:constant>SРазностьДат</bsch:constant>
+			<bsch:constant>SРежимТестирования</bsch:constant>
+			<bsch:constant>SПолучить</bsch:constant>
+			<bsch:constant>SДатаТестирования</bsch:constant>
+			<bsch:variable name="Константы" isExternal="true"/>
+			<bsch:procedure name="ДобавитьКДате" isFunction="true" isExported="true" parametersCount="3" startAddr="0">
+				<bsch:variable name="ДатаНачала" isLocal="true" isParam="true"/>
+				<bsch:variable name="КоличествоПериодов" isLocal="true" isParam="true"/>
+				<bsch:variable name="ТипПериода" isLocal="true" isParam="true"/>
+				<bsch:variable name="ТекстЗапроса" isLocal="true"/>
+				<bsch:variable name="Запрос" isLocal="true"/>
+				<bsch:variable name="Выборка" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="РазностьДат" isFunction="true" isExported="true" parametersCount="3" startAddr="60">
+				<bsch:variable name="ДатаНачала" isLocal="true" isParam="true"/>
+				<bsch:variable name="ДатаОкончания" isLocal="true" isParam="true"/>
+				<bsch:variable name="ТипПериода" isLocal="true" isParam="true"/>
+				<bsch:variable name="ТекстЗапроса" isLocal="true"/>
+				<bsch:variable name="Запрос" isLocal="true"/>
+				<bsch:variable name="Выборка" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ПолучитьИспользуемуюДату" isFunction="true" isExported="true" parametersCount="0" startAddr="120"/>
+		</serverModule>
+	</commonModule>
+	<commonModule name="ПроведениеСервер" id="d25d72c2-8ebe-4b8b-964b-997f04568cb6">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Проведение сервер</v8:content>
+			</v8:item>
+		</synonym>
+		<serverModule version="1">
+			<bsch:cmdOpCode>1,3,18,19,1,1,22,1,3,18,19,1,1,22,1,48,49,3,12,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,12,7,16,1,39,50,3,8,16,3,8,16,1,3,12,18,20,1,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>6,0,1,1,6,8,0,12,0,1,1,12,14,0,22,0,0,0,0,0,0,22,2,0,0,2,0,41,1,2,0,2,0,0,23,1,1,0,0,24,21,1,2,0,0,2,0,0,26,0,0,0,2,26,28,0,0</bsch:cmdOperand>
+			<bsch:constant>SДвижения</bsch:constant>
+			<bsch:constant>SЗаписывать</bsch:constant>
+			<bsch:constant>SЗаписать</bsch:constant>
+			<bsch:procedure name="ПодготовитьНаборыЗаписейКПроведению" isExported="true" parametersCount="2" startAddr="0">
+				<bsch:variable name="Объект" isLocal="true" isParam="true"/>
+				<bsch:variable name="ВыборочноОчищатьРегистры" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>Btrue</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="ОчиститьДвижения" parametersCount="1" startAddr="14">
+				<bsch:variable name="Объект" isLocal="true" isParam="true"/>
+				<bsch:variable name="НаборЗаписей" isLocal="true"/>
+				<bsch:variable name="0НаборЗаписей" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ПодготовитьНаборыЗаписейКОтменеПроведения" isExported="true" parametersCount="1" startAddr="7">
+				<bsch:variable name="Объект" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+		</serverModule>
+	</commonModule>
+	<commonModule name="СтроковыеФункцииКлиентСервер" id="145bab27-42e7-4a4f-b54f-9022ef710faf">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Строковые функции клиент сервер</v8:content>
+			</v8:item>
+		</synonym>
+		<clientModule version="1">
+			<bsch:cmdOpCode>1,3,3,4,18,19,5,1,31,3,4,18,19,5,1,69,31,3,4,18,19,5,1,69,31,3,4,18,19,5,1,69,31,3,4,18,19,5,1,69,31,3,4,18,19,5,1,69,31,3,4,18,19,5,1,69,31,3,4,18,19,5,1,69,31,3,4,18,19,5,1,69,16,1,3,40,1,3,3,3,3,3,3,3,3,3,3,3,18,19,5,1,16,39,1,3,3,4,3,100,16,1,3,3,4,3,100,16,1,3,3,4,3,100,16,1,3,3,4,3,100,16,1,3,3,4,3,100,16,1,3,3,4,3,100,16,1,3,3,4,3,100,16,1,3,3,4,3,100,16,1,3,3,4,3,100,16,1,1,3,17,45,39,1,22,1,3,4,16,1,3,3,4,18,19,5,1,16,1,3,4,35,1,40,1,3,3,3,3,4,25,57,24,16,1,3,3,3,4,24,4,59,16,1,3,4,16,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,1,3,4,33,40,1,3,3,4,24,16,1,3,3,3,4,24,4,59,16,39,1,3,3,3,24,16,1,3,3,3,4,24,4,59,16,1,1,3,3,4,18,19,5,1,16,1,39,1,3,3,3,24,16,1,3,17,45,39,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>25,10,1,0,2,1,0,26,16,2,0,2,1,0,27,0,24,3,0,2,1,0,28,0,32,4,0,2,1,0,29,0,40,5,0,2,1,0,30,0,48,6,0,2,1,0,31,0,56,7,0,2,1,0,32,0,64,8,0,2,1,0,33,0,72,9,0,2,1,0,34,0,0,36,10,94,37,0,0,1,2,3,4,5,6,7,8,9,10,2,0,37,0,157,40,0,0,1,1,0,0,41,0,0,2,2,0,0,42,0,0,3,3,0,0,43,0,0,4,4,0,0,44,0,0,5,5,0,0,45,0,0,6,6,0,0,46,0,0,7,7,0,0,47,0,0,8,8,0,0,48,0,0,9,9,0,0,49,51,0,0,0,163,52,0,64,10,10,0,65,11,0,0,2,1,0,65,0,66,11,11,0,66,346,67,10,10,0,11,12,0,0,0,0,68,12,0,11,12,0,12,0,0,69,13,10,0,70,12,13,0,217,71,13,1,0,297,72,12,14,0,227,73,13,2,0,297,74,12,15,0,237,75,13,3,0,297,76,12,16,0,247,77,13,4,0,297,78,12,17,0,257,79,13,5,0,297,80,12,18,0,267,81,13,6,0,297,82,12,19,0,277,83,13,7,0,297,84,12,20,0,287,85,13,8,0,297,86,12,21,0,297,87,13,9,0,297,88,89,13,10,0,319,90,10,10,0,0,0,91,0,0,11,12,0,22,0,0,334,93,10,10,13,0,0,94,0,0,11,23,0,22,0,0,95,96,11,0,0,2,1,0,96,0,97,178,98,10,10,0,0,0,100,10,0,0,357,101,0,0</bsch:cmdOperand>
+			<bsch:constant>S%</bsch:constant>
+			<bsch:constant>S%1</bsch:constant>
+			<bsch:constant>S%2</bsch:constant>
+			<bsch:constant>S%3</bsch:constant>
+			<bsch:constant>S%4</bsch:constant>
+			<bsch:constant>S%5</bsch:constant>
+			<bsch:constant>S%6</bsch:constant>
+			<bsch:constant>S%7</bsch:constant>
+			<bsch:constant>S%8</bsch:constant>
+			<bsch:constant>S%9</bsch:constant>
+			<bsch:constant>S</bsch:constant>
+			<bsch:constant>N0</bsch:constant>
+			<bsch:constant>N1</bsch:constant>
+			<bsch:constant>S1</bsch:constant>
+			<bsch:constant>S2</bsch:constant>
+			<bsch:constant>S3</bsch:constant>
+			<bsch:constant>S4</bsch:constant>
+			<bsch:constant>S5</bsch:constant>
+			<bsch:constant>S6</bsch:constant>
+			<bsch:constant>S7</bsch:constant>
+			<bsch:constant>S8</bsch:constant>
+			<bsch:constant>S9</bsch:constant>
+			<bsch:constant>N-1</bsch:constant>
+			<bsch:constant>N2</bsch:constant>
+			<bsch:procedure name="ПодставитьПараметрыВСтроку" isFunction="true" isExported="true" parametersCount="10" startAddr="0">
+				<bsch:variable name="СтрокаПодстановки" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр1" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр2" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр3" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр4" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр5" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр6" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр7" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр8" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр9" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ИспользоватьАльтернативныйАлгоритм" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="СтрНайти" isFunction="true" isExternal="true" parametersCount="5" startAddr="0"/>
+			<bsch:procedure name="ПодставитьПараметрыВСтрокуАльтернативныйАлгоритм" isFunction="true" parametersCount="10" startAddr="165">
+				<bsch:variable name="СтрокаПодстановки" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр1" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр2" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр3" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр4" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр5" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр6" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр7" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр8" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр9" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Результат" isLocal="true"/>
+				<bsch:variable name="Позиция" isLocal="true"/>
+				<bsch:variable name="СимволПослеПроцента" isLocal="true"/>
+				<bsch:variable name="ПодставляемыйПараметр" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+			</bsch:procedure>
+		</clientModule>
+		<serverModule version="1">
+			<bsch:cmdOpCode>1,3,3,4,18,19,5,1,31,3,4,18,19,5,1,69,31,3,4,18,19,5,1,69,31,3,4,18,19,5,1,69,31,3,4,18,19,5,1,69,31,3,4,18,19,5,1,69,31,3,4,18,19,5,1,69,31,3,4,18,19,5,1,69,31,3,4,18,19,5,1,69,16,1,3,40,1,3,3,3,3,3,3,3,3,3,3,3,18,19,5,1,16,39,1,3,3,4,3,100,16,1,3,3,4,3,100,16,1,3,3,4,3,100,16,1,3,3,4,3,100,16,1,3,3,4,3,100,16,1,3,3,4,3,100,16,1,3,3,4,3,100,16,1,3,3,4,3,100,16,1,3,3,4,3,100,16,1,1,3,17,45,39,1,22,1,3,4,16,1,3,3,4,18,19,5,1,16,1,3,4,35,1,40,1,3,3,3,3,4,25,57,24,16,1,3,3,3,4,24,4,59,16,1,3,4,16,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,3,4,33,40,1,3,3,16,39,1,1,3,4,33,40,1,3,3,4,24,16,1,3,3,3,4,24,4,59,16,39,1,3,3,3,24,16,1,3,3,3,4,24,4,59,16,1,1,3,3,4,18,19,5,1,16,1,39,1,3,3,3,24,16,1,3,17,45,39,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>25,10,1,0,2,1,0,26,16,2,0,2,1,0,27,0,24,3,0,2,1,0,28,0,32,4,0,2,1,0,29,0,40,5,0,2,1,0,30,0,48,6,0,2,1,0,31,0,56,7,0,2,1,0,32,0,64,8,0,2,1,0,33,0,72,9,0,2,1,0,34,0,0,36,10,94,37,0,0,1,2,3,4,5,6,7,8,9,10,2,0,37,0,157,40,0,0,1,1,0,0,41,0,0,2,2,0,0,42,0,0,3,3,0,0,43,0,0,4,4,0,0,44,0,0,5,5,0,0,45,0,0,6,6,0,0,46,0,0,7,7,0,0,47,0,0,8,8,0,0,48,0,0,9,9,0,0,49,51,0,0,0,163,52,0,64,10,10,0,65,11,0,0,2,1,0,65,0,66,11,11,0,66,346,67,10,10,0,11,12,0,0,0,0,68,12,0,11,12,0,12,0,0,69,13,10,0,70,12,13,0,217,71,13,1,0,297,72,12,14,0,227,73,13,2,0,297,74,12,15,0,237,75,13,3,0,297,76,12,16,0,247,77,13,4,0,297,78,12,17,0,257,79,13,5,0,297,80,12,18,0,267,81,13,6,0,297,82,12,19,0,277,83,13,7,0,297,84,12,20,0,287,85,13,8,0,297,86,12,21,0,297,87,13,9,0,297,88,89,13,10,0,319,90,10,10,0,0,0,91,0,0,11,12,0,22,0,0,334,93,10,10,13,0,0,94,0,0,11,23,0,22,0,0,95,96,11,0,0,2,1,0,96,0,97,178,98,10,10,0,0,0,100,10,0,0,357,101,0,0</bsch:cmdOperand>
+			<bsch:constant>S%</bsch:constant>
+			<bsch:constant>S%1</bsch:constant>
+			<bsch:constant>S%2</bsch:constant>
+			<bsch:constant>S%3</bsch:constant>
+			<bsch:constant>S%4</bsch:constant>
+			<bsch:constant>S%5</bsch:constant>
+			<bsch:constant>S%6</bsch:constant>
+			<bsch:constant>S%7</bsch:constant>
+			<bsch:constant>S%8</bsch:constant>
+			<bsch:constant>S%9</bsch:constant>
+			<bsch:constant>S</bsch:constant>
+			<bsch:constant>N0</bsch:constant>
+			<bsch:constant>N1</bsch:constant>
+			<bsch:constant>S1</bsch:constant>
+			<bsch:constant>S2</bsch:constant>
+			<bsch:constant>S3</bsch:constant>
+			<bsch:constant>S4</bsch:constant>
+			<bsch:constant>S5</bsch:constant>
+			<bsch:constant>S6</bsch:constant>
+			<bsch:constant>S7</bsch:constant>
+			<bsch:constant>S8</bsch:constant>
+			<bsch:constant>S9</bsch:constant>
+			<bsch:constant>N-1</bsch:constant>
+			<bsch:constant>N2</bsch:constant>
+			<bsch:procedure name="ПодставитьПараметрыВСтроку" isFunction="true" isExported="true" parametersCount="10" startAddr="0">
+				<bsch:variable name="СтрокаПодстановки" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр1" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр2" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр3" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр4" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр5" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр6" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр7" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр8" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр9" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="ИспользоватьАльтернативныйАлгоритм" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="СтрНайти" isFunction="true" isExternal="true" parametersCount="5" startAddr="0"/>
+			<bsch:procedure name="ПодставитьПараметрыВСтрокуАльтернативныйАлгоритм" isFunction="true" parametersCount="10" startAddr="165">
+				<bsch:variable name="СтрокаПодстановки" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр1" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр2" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр3" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр4" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр5" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр6" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр7" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр8" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Параметр9" isLocal="true" isParam="true" isByValue="true"/>
+				<bsch:variable name="Результат" isLocal="true"/>
+				<bsch:variable name="Позиция" isLocal="true"/>
+				<bsch:variable name="СимволПослеПроцента" isLocal="true"/>
+				<bsch:variable name="ПодставляемыйПараметр" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+			</bsch:procedure>
+		</serverModule>
+	</commonModule>
+	<commonModule name="УчетДенежныхСредствВызовСервера" id="deafa011-8f3e-4a88-9f1e-ba4e168c01af">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Учет денежных средств вызов сервера</v8:content>
+			</v8:item>
+		</synonym>
+		<serverModule version="1">
+			<bsch:cmdOpCode>22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0</bsch:cmdOperand>
+		</serverModule>
+		<serverCall>true</serverCall>
+	</commonModule>
+	<commonModule name="УчетДенежныхСредствСервер" id="4d05c93c-ad5f-4177-a2da-830caffdfed7">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Учет денежных средств сервер</v8:content>
+			</v8:item>
+		</synonym>
+		<serverModule version="1">
+			<bsch:cmdOpCode>1,3,18,51,16,1,3,12,4,16,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,18,20,1,1,3,12,18,19,5,1,40,1,3,12,17,45,39,39,1,4,17,45,39,1,1,22,1,3,2,2,18,21,5,1,18,21,5,1,16,1,3,18,51,16,1,3,12,4,16,1,3,4,3,18,20,1,1,3,4,2,18,21,5,1,18,20,1,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,18,20,1,1,3,12,8,33,40,1,3,4,16,39,1,3,3,12,16,1,1,3,17,45,39,1,22,1,3,18,51,16,1,3,12,4,16,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,18,20,1,1,3,12,8,33,40,1,3,4,16,39,1,3,3,12,16,1,1,3,17,45,39,1,22,1,3,2,3,18,21,5,1,16,1,3,2,3,3,4,18,21,5,1,16,1,3,4,33,40,1,4,17,45,39,39,1,1,3,18,19,5,1,16,1,3,3,3,27,66,16,1,3,3,18,103,3,26,17,45,39,1,22,1,3,18,51,16,1,3,12,4,16,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,18,20,1,1,3,12,8,33,40,1,3,4,16,39,1,3,3,12,16,1,1,3,17,45,39,1,22,1,3,18,19,5,1,16,1,3,2,2,18,21,5,1,18,21,5,1,16,1,3,2,12,18,21,5,1,16,1,3,3,33,40,1,3,17,45,39,39,1,1,3,18,19,5,1,16,1,3,18,19,5,1,16,1,3,3,3,24,16,1,3,3,35,40,1,3,3,35,40,1,3,3,25,4,18,19,1,39,1,3,3,36,40,1,3,3,25,4,18,19,1,39,1,39,1,3,3,38,40,1,3,3,25,4,18,19,1,39,1,1,2,12,3,18,20,1,1,3,18,19,5,1,16,1,3,17,45,39,1,22,1,3,8,33,40,1,3,2,2,18,21,5,1,18,21,5,1,16,39,1,1,3,8,33,40,1,3,2,2,18,21,5,1,18,21,5,1,16,39,1,1,3,18,51,16,1,3,12,4,16,1,3,4,3,18,20,1,1,3,4,3,18,20,1,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,18,20,1,1,3,12,8,33,40,1,3,4,16,39,1,3,3,12,16,1,1,3,17,45,39,1,22,1,3,2,18,21,5,1,16,1,3,2,12,18,21,5,1,16,1,3,12,3,3,24,16,1,3,18,20,1,1,22,1,3,2,18,21,5,1,16,1,3,2,12,18,21,5,1,16,1,3,12,3,3,25,16,1,3,18,20,1,1,22,1,3,2,2,18,21,5,1,18,21,5,1,16,1,3,2,2,18,21,5,1,18,21,5,1,16,1,3,2,3,3,4,18,21,5,1,4,24,16,1,3,18,19,5,1,16,1,3,3,3,27,66,16,1,3,17,45,39,1,22,1,3,4,33,40,1,45,39,39,1,1,3,4,33,40,1,3,18,19,1,39,1,3,4,33,40,1,3,18,19,1,39,1,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>6,0,0,0,0,7,0,1,2,0,13,1,0,0,3,0,13,0,15,2,1,0,4,0,15,0,17,2,0,5,17,19,2,6,1,1,0,19,46,20,2,6,0,0,52,51,22,7,0,0,52,23,25,0,29,0,0,1,0,9,0,29,1,8,0,29,0,31,1,0,0,0,32,1,1,10,0,38,1,12,0,2,11,38,39,1,13,1,0,9,0,39,2,11,39,41,2,1,0,3,0,41,0,43,3,2,0,4,0,43,0,44,3,0,5,44,46,3,14,0,0,127,47,4,7,0,132,49,4,3,14,0,50,52,4,0,0,138,54,0,58,0,0,0,0,59,0,1,15,0,65,1,0,0,3,0,65,0,67,2,1,0,4,0,67,0,69,2,0,5,69,71,2,16,0,0,182,72,3,7,0,187,74,3,2,16,0,75,77,3,0,0,193,79,0,83,2,0,1,1,17,0,83,0,85,3,1,1,2,19,3,18,0,85,0,87,3,7,0,226,88,7,0,0,251,226,89,91,4,0,5,0,91,0,92,5,0,3,0,0,0,94,4,5,2,0,3,0,0,0,251,96,0,100,0,0,0,0,101,0,1,20,0,107,1,0,0,3,0,107,0,109,2,1,0,4,0,109,0,111,2,0,5,111,113,2,6,0,0,295,114,3,7,0,300,116,3,2,6,0,117,119,3,0,0,306,121,0,125,0,0,0,0,125,0,127,1,0,1,0,9,0,127,1,8,0,127,0,129,2,2,21,0,22,0,129,0,131,1,2,0,348,132,0,0,0,438,348,133,135,3,0,3,0,135,0,136,4,0,6,0,136,0,137,5,3,0,0,0,138,5,4,0,404,139,4,0,0,388,140,4,0,0,23,2,8,140,402,141,4,0,0,402,142,0,4,0,24,2,8,142,402,143,418,144,5,4,0,418,145,5,0,0,23,2,8,145,418,146,148,2,21,1,1,25,148,150,0,0,0,0,150,0,152,0,0,0,438,154,0,158,0,0,0,459,159,0,0,1,0,9,0,159,1,8,0,159,0,459,160,162,1,0,0,479,163,1,0,1,0,9,0,163,1,17,0,163,0,479,164,166,2,0,0,0,167,2,1,26,0,173,2,12,0,2,11,173,174,2,13,1,2,11,174,176,3,2,0,3,0,176,0,178,4,3,0,4,0,178,0,179,4,0,5,179,181,4,27,0,0,536,182,5,7,0,541,184,5,4,27,0,185,187,5,0,0,547,189,0,193,1,3,0,28,0,193,0,195,2,4,29,0,30,0,195,0,196,2,16,1,0,0,0,197,2,0,31,197,199,0,203,1,3,0,28,0,203,0,205,2,4,29,0,30,0,205,0,206,2,16,1,0,0,0,207,2,0,31,207,209,0,217,0,0,1,0,9,0,217,1,8,0,217,0,218,1,0,1,0,9,0,218,1,17,0,218,0,220,2,1,0,1,19,3,18,0,220,32,0,0,222,3,0,3,0,222,0,224,4,3,2,0,0,0,226,4,0,0,669,228,0,232,0,7,0,680,233,0,704,680,234,236,1,23,0,692,237,0,1,10,237,703,238,1,24,0,703,239,0,1,11,239,703,240,242,0,0</bsch:cmdOperand>
+			<bsch:constant>SЗапрос</bsch:constant>
+			<bsch:constant>SТекст</bsch:constant>
+			<bsch:constant>SВЫБРАТЬ
+	СУММА(ЛимитДенежныхСредствОстатки.Сумма) КАК СуммаОстаток
+ИЗ
+	РегистрСведений.ОстатокЛимитаДенежныхСредств КАК ЛимитДенежныхСредствОстатки</bsch:constant>
+			<bsch:constant>SВыполнить</bsch:constant>
+			<bsch:constant>SВыбрать</bsch:constant>
+			<bsch:constant>SСледующий</bsch:constant>
+			<bsch:constant>SСуммаОстаток</bsch:constant>
+			<bsch:constant>N0</bsch:constant>
+			<bsch:constant>SПолучитьДатуНачалаПериода</bsch:constant>
+			<bsch:constant>SПолучитьИспользуемуюДату</bsch:constant>
+			<bsch:constant>SВЫБРАТЬ
+	ДенежныеСредства.СуммаРасход КАК СуммаРасход
+ИЗ
+	РегистрНакопления.ДенежныеСредства.Обороты(&amp;ДатаНачала, &amp;ДатаОкончания, , ) КАК ДенежныеСредства</bsch:constant>
+			<bsch:constant>SУстановитьПараметр</bsch:constant>
+			<bsch:constant>SДатаНачала</bsch:constant>
+			<bsch:constant>SДатаОкончания</bsch:constant>
+			<bsch:constant>SСуммаРасход</bsch:constant>
+			<bsch:constant>SВЫБРАТЬ
+	ЛимитДенежныхСредств.Сумма КАК Сумма
+ИЗ
+	РегистрСведений.ЛимитДенежныхСредств.СрезПоследних КАК ЛимитДенежныхСредств</bsch:constant>
+			<bsch:constant>SСумма</bsch:constant>
+			<bsch:constant>SПолучитьДатуОкончанияПериода</bsch:constant>
+			<bsch:constant>SРазностьДат</bsch:constant>
+			<bsch:constant>SДЕНЬ</bsch:constant>
+			<bsch:constant>SВЫБРАТЬ
+	ОстаткиДенежныхСредствОстатки.СуммаОстаток
+ИЗ
+	РегистрНакопления.ДенежныеСредства.Остатки КАК ОстаткиДенежныхСредствОстатки</bsch:constant>
+			<bsch:constant>SПоследняяДатаРасчетаФактическогоОстаткаЛимита</bsch:constant>
+			<bsch:constant>SПолучить</bsch:constant>
+			<bsch:constant>SПриход</bsch:constant>
+			<bsch:constant>SРасход</bsch:constant>
+			<bsch:constant>SУстановить</bsch:constant>
+			<bsch:constant>SВЫБРАТЬ
+	ПланируемыеОстаткиДенежныхСредствОбороты.СуммаОборот КАК СуммаОборот
+ИЗ
+	РегистрНакопления.ПланируемыеОстаткиДенежныхСредств.Обороты(&amp;ДатаНачала, &amp;ДатаОкончания, , ) КАК ПланируемыеОстаткиДенежныхСредствОбороты</bsch:constant>
+			<bsch:constant>SСуммаОборот</bsch:constant>
+			<bsch:constant>SПолучитьОстатокЛимитаДенежныхСредств</bsch:constant>
+			<bsch:constant>SОстатокЛимитаДенежныхСредств</bsch:constant>
+			<bsch:constant>SСоздатьМенеджерЗаписи</bsch:constant>
+			<bsch:constant>SЗаписать</bsch:constant>
+			<bsch:constant>N1</bsch:constant>
+			<bsch:variable name="ОбщегоНазначенияКлиентСервер" isExternal="true"/>
+			<bsch:variable name="ОбщегоНазначенияСервер" isExternal="true"/>
+			<bsch:variable name="Константы" isExternal="true"/>
+			<bsch:variable name="УчетДенежныхСредствСервер" isExternal="true"/>
+			<bsch:variable name="РегистрыСведений" isExternal="true"/>
+			<bsch:procedure name="ПолучитьОстатокЛимитаДенежныхСредств" isFunction="true" isExported="true" parametersCount="0" startAddr="0">
+				<bsch:variable name="Запрос" isLocal="true"/>
+				<bsch:variable name="РезультатЗапроса" isLocal="true"/>
+				<bsch:variable name="ВыборкаДетальныеЗаписи" isLocal="true"/>
+			</bsch:procedure>
+			<bsch:procedure name="ЗначениеЗаполнено" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
+			<bsch:procedure name="ПолучитьРасходыЗаТекущийПериод" isFunction="true" isExported="true" parametersCount="0" startAddr="54">
+				<bsch:variable name="ДатаНачалаПериода" isLocal="true"/>
+				<bsch:variable name="Запрос" isLocal="true"/>
+				<bsch:variable name="РезультатЗапроса" isLocal="true"/>
+				<bsch:variable name="ВыборкаДетальныеЗаписи" isLocal="true"/>
+				<bsch:variable name="СуммаРасход" isLocal="true"/>
+			</bsch:procedure>
+			<bsch:procedure name="ПолучитьЛимит" isFunction="true" isExported="true" parametersCount="0" startAddr="140">
+				<bsch:variable name="Запрос" isLocal="true"/>
+				<bsch:variable name="РезультатЗапроса" isLocal="true"/>
+				<bsch:variable name="ВыборкаДетальныеЗаписи" isLocal="true"/>
+				<bsch:variable name="Сумма" isLocal="true"/>
+			</bsch:procedure>
+			<bsch:procedure name="ПолучитьСуммуПоОставшимсяДням" isFunction="true" isExported="true" parametersCount="2" startAddr="195">
+				<bsch:variable name="Сумма" isLocal="true" isParam="true"/>
+				<bsch:variable name="Дата" isLocal="true" isParam="true"/>
+				<bsch:variable name="ДатаОкончанияПериода" isLocal="true"/>
+				<bsch:variable name="КоличествоДней" isLocal="true"/>
+				<bsch:variable name="ЛимитНаДень" isLocal="true"/>
+				<bsch:variable name="НаДеньПоСумме" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ПолучитьЛимитНаДень" isFunction="true" parametersCount="0" startAddr="611">
+				<bsch:variable name="ДатаНачалаПериода" isLocal="true"/>
+				<bsch:variable name="ДатаОкончанияПериода" isLocal="true"/>
+				<bsch:variable name="КоличествоДней" isLocal="true"/>
+				<bsch:variable name="ЛимитНаПериод" isLocal="true"/>
+				<bsch:variable name="ЛимитНаДень" isLocal="true"/>
+			</bsch:procedure>
+			<bsch:procedure name="ПолучитьОстатокДенежныхСредств" isFunction="true" isExported="true" parametersCount="0" startAddr="253">
+				<bsch:variable name="Запрос" isLocal="true"/>
+				<bsch:variable name="РезультатЗапроса" isLocal="true"/>
+				<bsch:variable name="ВыборкаДетальныеЗаписи" isLocal="true"/>
+				<bsch:variable name="СуммаОстаток" isLocal="true"/>
+			</bsch:procedure>
+			<bsch:procedure name="РассчитатьФактическийОстатокЛимитаДенежныхСредствНаПериод" isFunction="true" isExported="true" parametersCount="0" startAddr="308">
+				<bsch:variable name="ОстатокЛимита" isLocal="true"/>
+				<bsch:variable name="ДатаНачалаПериода" isLocal="true"/>
+				<bsch:variable name="ПоследняяДатаРасчета" isLocal="true"/>
+				<bsch:variable name="ЛимитДенежныхСредств" isLocal="true"/>
+				<bsch:variable name="ТекущийОстаток" isLocal="true"/>
+				<bsch:variable name="НовыйОстатокЛимита" isLocal="true"/>
+			</bsch:procedure>
+			<bsch:procedure name="ДобавитьКорректировкуРегистраОстатокЛимитаДенежныхСредств" parametersCount="2" startAddr="671">
+				<bsch:variable name="Сумма" isLocal="true" isParam="true"/>
+				<bsch:variable name="ВидДвижения" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ПолучитьПланируемыеРасходаЗаПериод" isFunction="true" isExported="true" parametersCount="2" startAddr="440">
+				<bsch:variable name="ДатаНачалаПериода" isLocal="true" isParam="true"/>
+				<bsch:variable name="ДатаОкончанияПериода" isLocal="true" isParam="true"/>
+				<bsch:variable name="Запрос" isLocal="true"/>
+				<bsch:variable name="РезультатЗапроса" isLocal="true"/>
+				<bsch:variable name="ВыборкаДетальныеЗаписи" isLocal="true"/>
+				<bsch:variable name="СуммаОборот" isLocal="true"/>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+				<bsch:paramsDefValue>U</bsch:paramsDefValue>
+			</bsch:procedure>
+			<bsch:procedure name="СформироватьПриходПоРегиструОстатокЛимитаДенежныхСредств" isExported="true" parametersCount="1" startAddr="549">
+				<bsch:variable name="Сумма" isLocal="true" isParam="true"/>
+				<bsch:variable name="ОстатокЛимита" isLocal="true"/>
+				<bsch:variable name="МенеджерЗаписи" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="СформироватьРасходПоРегиструОстатокЛимитаДенежныхСредств" isExported="true" parametersCount="1" startAddr="580">
+				<bsch:variable name="Сумма" isLocal="true" isParam="true"/>
+				<bsch:variable name="ОстатокЛимита" isLocal="true"/>
+				<bsch:variable name="МенеджерЗаписи" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+		</serverModule>
+	</commonModule>
+	<commonModule name="УчетДенежныхСредствКлиент" id="d6aa73f4-615e-4c07-95fc-2e6fdb5feb59">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Учет денежных средств клиент</v8:content>
+			</v8:item>
+		</synonym>
+		<clientModule version="1">
+			<bsch:cmdOpCode>1,3,18,51,16,1,3,4,4,18,19,5,1,18,20,1,1,3,18,51,16,1,3,4,7,18,20,1,1,3,4,3,18,20,1,1,4,3,10,4,18,19,1,1,22,1,3,18,51,16,1,3,4,4,18,19,5,1,18,20,1,1,3,18,51,16,1,3,4,7,18,20,1,1,3,4,3,18,20,1,1,4,3,10,4,18,19,1,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>4,0,0,0,0,5,0,2,3,1,1,0,5,2,1,5,7,1,0,0,0,8,1,4,0,2,1,8,9,1,5,0,2,1,9,11,6,1,0,7,4,2,11,13,0,17,0,0,0,0,18,0,2,8,1,1,0,18,2,1,18,20,1,0,0,0,21,1,4,0,2,1,21,22,1,5,0,2,1,22,24,6,1,0,9,4,2,24,26,0,0</bsch:cmdOperand>
+			<bsch:constant>SСтруктура</bsch:constant>
+			<bsch:constant>SВставить</bsch:constant>
+			<bsch:constant>SВидРасхода</bsch:constant>
+			<bsch:constant>SПеречисление.ВидыРасходов.Планируемый</bsch:constant>
+			<bsch:constant>SОтборПоДате</bsch:constant>
+			<bsch:constant>SОтбор</bsch:constant>
+			<bsch:constant>SДокумент.РасходДенежныхСредств.Форма.ФормаСписка</bsch:constant>
+			<bsch:constant>SПланируемый</bsch:constant>
+			<bsch:constant>SПеречисление.ВидыРасходов.Фактический</bsch:constant>
+			<bsch:constant>SФактический</bsch:constant>
+			<bsch:procedure name="ОткрытьФормуСпискаПланируемыхРасходов" isExported="true" parametersCount="0" startAddr="0">
+				<bsch:variable name="Отбор" isLocal="true"/>
+				<bsch:variable name="ПараметрыФормы" isLocal="true"/>
+			</bsch:procedure>
+			<bsch:procedure name="ПредопределенноеЗначение" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
+			<bsch:procedure name="ОткрытьФорму" isFunction="true" isExternal="true" parametersCount="8" startAddr="0"/>
+			<bsch:procedure name="ОткрытьФормуСпискаФактическихРасходов" isExported="true" parametersCount="0" startAddr="45">
+				<bsch:variable name="Отбор" isLocal="true"/>
+				<bsch:variable name="ПараметрыФормы" isLocal="true"/>
+			</bsch:procedure>
+		</clientModule>
+	</commonModule>
+	<commonForm name="ФормаНачальнойСтраницы" id="807fe82d-8f56-4f81-8f0b-113cadb57ef3">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Форма начальной страницы</v8:content>
+			</v8:item>
+		</synonym>
+		<form>
+			<mf:serverModule version="1" startAddr="38">
+				<bsch:cmdOpCode>1,18,19,1,1,22,1,2,2,18,21,5,1,16,1,2,2,18,21,5,1,16,1,3,2,18,21,5,1,16,1,2,2,3,25,16,1,22,22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>7,0,1,7,9,0,97,0,1,0,0,0,97,0,98,2,1,0,1,0,98,0,99,0,1,0,2,0,99,0,101,3,2,0,0,0,103,0,0,0</bsch:cmdOperand>
+				<bsch:constant>SПолучитьОстатокДенежныхСредств</bsch:constant>
+				<bsch:constant>SРассчитатьФактическийОстатокЛимитаДенежныхСредствНаПериод</bsch:constant>
+				<bsch:constant>SПолучитьПланируемыеРасходаЗаПериод</bsch:constant>
+				<bsch:variable name="ТекущийОстатокДенежныхСредств" isExternal="true"/>
+				<bsch:variable name="УчетДенежныхСредствСервер" isExternal="true"/>
+				<bsch:variable name="ФактическийОстатокЛимита" isExternal="true"/>
+				<bsch:variable name="ПлановыйОстатокЛимита" isExternal="true"/>
+				<bsch:procedure name="ПриСозданииНаСервере" parametersCount="2" startAddr="0">
+					<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+					<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
+					<bsch:paramsDefValue/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+				<bsch:procedure name="ПересчитатьОстатки" parametersCount="0" startAddr="6">
+					<bsch:variable name="ПланируемыеРасходы" isLocal="true"/>
+				</bsch:procedure>
+			</mf:serverModule>
+			<mf:clientModule version="1" startAddr="111">
+				<bsch:cmdOpCode>1,3,4,33,40,1,18,19,1,39,1,1,22,1,3,6,16,1,2,18,20,1,1,22,1,3,6,16,1,2,18,20,1,1,22,1,18,19,1,1,22,1,4,18,19,1,1,22,1,4,18,19,1,1,22,1,3,18,51,16,1,3,4,4,18,19,5,1,18,20,1,1,3,18,51,16,1,3,4,3,18,20,1,1,4,3,18,19,1,1,22,1,3,18,51,16,1,3,4,2,18,20,1,1,4,3,18,19,1,1,22,22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>14,0,0,0,10,15,0,1,15,10,16,18,0,27,1,0,0,29,0,0,1,29,31,0,36,1,0,0,38,0,0,2,38,40,0,49,0,1,49,51,0,56,3,1,6,56,58,0,63,4,1,6,63,65,0,70,1,0,5,0,71,1,7,8,1,9,0,71,2,6,71,73,2,0,5,0,74,2,9,1,2,6,74,76,4,2,2,6,76,78,0,83,1,0,5,0,84,1,10,1,2,6,84,86,11,1,2,6,86,88,0,0,0</bsch:cmdOperand>
+				<bsch:constant>SИзменениеОстатков</bsch:constant>
+				<bsch:constant>SОткрытьФормуСпискаФактическихРасходов</bsch:constant>
+				<bsch:constant>SОткрытьФормуСпискаПланируемыхРасходов</bsch:constant>
+				<bsch:constant>SДокумент.ПриходДенежныхСредств.Форма.ФормаДокумента</bsch:constant>
+				<bsch:constant>SДокумент.РасходДенежныхСредств.Форма.ФормаДокумента</bsch:constant>
+				<bsch:constant>SСтруктура</bsch:constant>
+				<bsch:constant>SВставить</bsch:constant>
+				<bsch:constant>SВидРасхода</bsch:constant>
+				<bsch:constant>SПеречисление.ВидыРасходов.Планируемый</bsch:constant>
+				<bsch:constant>SЗначенияЗаполнения</bsch:constant>
+				<bsch:constant>SТекущийОстатокЛимита</bsch:constant>
+				<bsch:constant>SРегистрСведений.ОстатокЛимитаДенежныхСредств.Форма.ФормаРедактированияЛимита</bsch:constant>
+				<bsch:variable name="УчетДенежныхСредствКлиент" isExternal="true"/>
+				<bsch:variable name="ФактическийОстатокЛимита" isExternal="true"/>
+				<bsch:procedure name="ОбработкаОповещения" parametersCount="3" startAddr="0">
+					<bsch:variable name="ИмяСобытия" isLocal="true" isParam="true"/>
+					<bsch:variable name="Параметр" isLocal="true" isParam="true"/>
+					<bsch:variable name="Источник" isLocal="true" isParam="true"/>
+					<bsch:paramsDefValue/>
+					<bsch:paramsDefValue/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+				<bsch:procedure name="ПересчитатьОстатки" isExternal="true" parametersCount="0" startAddr="0"/>
+				<bsch:procedure name="ФактическийОстатокЛимитаНажатие" parametersCount="2" startAddr="13">
+					<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+					<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
+					<bsch:paramsDefValue/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+				<bsch:procedure name="ПлановыйОстатокЛимитаНажатие" parametersCount="2" startAddr="24">
+					<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+					<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
+					<bsch:paramsDefValue/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+				<bsch:procedure name="ОбновитьТекущийОстатокДенежныхСредств" parametersCount="1" startAddr="35">
+					<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+				<bsch:procedure name="ДобавитьПриход" parametersCount="1" startAddr="41">
+					<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+				<bsch:procedure name="ОткрытьФорму" isFunction="true" isExternal="true" parametersCount="8" startAddr="0"/>
+				<bsch:procedure name="ДобавитьРасход" parametersCount="1" startAddr="48">
+					<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+				<bsch:procedure name="ДобавитьПланируемыйРасход" parametersCount="1" startAddr="55">
+					<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+					<bsch:variable name="ЗначенияЗаполнения" isLocal="true"/>
+					<bsch:variable name="ПараметрыФормы" isLocal="true"/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+				<bsch:procedure name="ПредопределенноеЗначение" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
+				<bsch:procedure name="РедактироватьФактическийОстатокЛимита" parametersCount="1" startAddr="91">
+					<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+					<bsch:variable name="ПараметрыФормы" isLocal="true"/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+			</mf:clientModule>
+			<mf:serverWOContextModule version="1">
+				<bsch:cmdOpCode>22</bsch:cmdOpCode>
+				<bsch:cmdOperand>0</bsch:cmdOperand>
+			</mf:serverWOContextModule>
+			<mf:clientServerWOContextModule version="1">
+				<bsch:cmdOpCode>22</bsch:cmdOpCode>
+				<bsch:cmdOperand>0</bsch:cmdOperand>
+			</mf:clientServerWOContextModule>
+			<mf:attributes>
+				<mf:attribute name="ТекущийОстатокДенежныхСредств">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущий остаток</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>0</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</mf:type>
+				</mf:attribute>
+				<mf:attribute name="ПлановыйОстатокЛимита">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Плановый остаток лимита</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</mf:type>
+				</mf:attribute>
+				<mf:attribute name="ФактическийОстатокЛимита">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фактический остаток лимита</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</mf:type>
+				</mf:attribute>
+			</mf:attributes>
+			<mf:command name="ОбновитьТекущийОстатокДенежныхСредств">
+				<mf:title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Обновить текущий остаток денежных средств</v8:content>
+					</v8:item>
+				</mf:title>
+				<mf:handlerName>ОбновитьТекущийОстатокДенежныхСредств</mf:handlerName>
+				<mf:picture ref="v8ui:Refresh"/>
+				<mf:tooltip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Обновить текущий остаток денежных средств</v8:content>
+					</v8:item>
+				</mf:tooltip>
+				<mf:representation>Picture</mf:representation>
+			</mf:command>
+			<mf:command name="ДобавитьРасход">
+				<mf:title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Добавить фактический расход</v8:content>
+					</v8:item>
+				</mf:title>
+				<mf:handlerName>ДобавитьРасход</mf:handlerName>
+				<mf:tooltip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Добавить расход</v8:content>
+					</v8:item>
+				</mf:tooltip>
+			</mf:command>
+			<mf:command name="ДобавитьПриход">
+				<mf:title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Добавить приход</v8:content>
+					</v8:item>
+				</mf:title>
+				<mf:handlerName>ДобавитьПриход</mf:handlerName>
+				<mf:tooltip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Добавить приход</v8:content>
+					</v8:item>
+				</mf:tooltip>
+			</mf:command>
+			<mf:command name="ДобавитьПланируемыйРасход">
+				<mf:title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Добавить планируемый расход</v8:content>
+					</v8:item>
+				</mf:title>
+				<mf:handlerName>ДобавитьПланируемыйРасход</mf:handlerName>
+				<mf:tooltip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Добавить планируемый расход</v8:content>
+					</v8:item>
+				</mf:tooltip>
+			</mf:command>
+			<mf:command name="РедактироватьФактическийОстатокЛимита">
+				<mf:title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Редактировать фактический остаток лимита</v8:content>
+					</v8:item>
+				</mf:title>
+				<mf:handlerName>РедактироватьФактическийОстатокЛимита</mf:handlerName>
+				<mf:picture ref="v8ui:Change"/>
+				<mf:tooltip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Редактировать фактический остаток лимита</v8:content>
+					</v8:item>
+				</mf:tooltip>
+				<mf:representation>Picture</mf:representation>
+			</mf:command>
+			<mf:mainElement>
+				<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar">
+					<mf:autoMenuData>
+						<mf:autofill>false</mf:autofill>
+					</mf:autoMenuData>
+				</mf:autoCommandBar>
+				<mf:event handler="ОбработкаОповещения" name="NotificationProcessing"/>
+				<mf:event handler="ПриОткрытии" name="OnOpen"/>
+				<mf:event handler="ПриСозданииНаСервере" name="OnCreateAtServer"/>
+				<mf:group name="ГруппаТекущийОстатокДенежныхСредств" type="UsualGroup">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа текущий остаток денежных средств</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа текущий остаток денежных средств</v8:content>
+						</v8:item>
+					</mf:tooltip>
+					<mf:usualData group="AlwaysHorizontal" representation="None">
+						<mf:showTitle>false</mf:showTitle>
+					</mf:usualData>
+					<mf:field name="ТекущийОстатокДенежныхСредств" kind="LabelField" dataPath="ТекущийОстатокДенежныхСредств">
+						<mf:contextMenu name="ТекущийОстатокДенежныхСредствКонтекстноеМеню" type="ContextMenu"/>
+					</mf:field>
+					<mf:button name="ОбновитьТекущийОстатокДенежныхСредств" type="UsualButton" commandName="Form.Command.ОбновитьТекущийОстатокДенежныхСредств"/>
+				</mf:group>
+				<mf:group name="ГруппаФактическийОстатокЛимитаДенежныхСредств" type="UsualGroup">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остаток лимита</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа фактический остаток лимита денежных средств</v8:content>
+						</v8:item>
+					</mf:tooltip>
+					<mf:usualData group="Vertical" representation="None">
+						<mf:backColor>web:PeachPuff</mf:backColor>
+					</mf:usualData>
+					<mf:group name="ГруппаФактическийОстатокЛимита" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа фактический остаток лимита</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:tooltip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа фактический остаток лимита</v8:content>
+							</v8:item>
+						</mf:tooltip>
+						<mf:usualData representation="None">
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+						<mf:field name="ФактическийОстатокЛимита" kind="LabelField" dataPath="ФактическийОстатокЛимита">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>факт</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:contextMenu name="ФактическийОстатокЛимитаКонтекстноеМеню" type="ContextMenu"/>
+							<mf:textData hyperlink="true">
+								<mf:event handler="ФактическийОстатокЛимитаНажатие" name="Click"/>
+							</mf:textData>
+						</mf:field>
+						<mf:button name="РедактироватьФактическийОстатокЛимита" type="UsualButton" commandName="Form.Command.РедактироватьФактическийОстатокЛимита">
+							<mf:groupHorizontalAlign>Right</mf:groupHorizontalAlign>
+							<mf:pictureLocation>Right</mf:pictureLocation>
+						</mf:button>
+					</mf:group>
+					<mf:field name="ПлановыйОстатокЛимита" kind="LabelField" dataPath="ПлановыйОстатокЛимита">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>план</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:contextMenu name="ПлановыйОстатокЛимитаКонтекстноеМеню" type="ContextMenu"/>
+						<mf:textData hyperlink="true">
+							<mf:event handler="ПлановыйОстатокЛимитаНажатие" name="Click"/>
+						</mf:textData>
+					</mf:field>
+				</mf:group>
+				<mf:group name="ГруппаВводПриходаРасхода" type="UsualGroup">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ввод прихода расхода</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ввод прихода расхода</v8:content>
+						</v8:item>
+					</mf:tooltip>
+					<mf:usualData group="Vertical" representation="None">
+						<mf:showTitle>false</mf:showTitle>
+					</mf:usualData>
+					<mf:button name="ДобавитьПриход" type="UsualButton" commandName="Form.Command.ДобавитьПриход"/>
+					<mf:button name="ДобавитьРасход" type="UsualButton" commandName="Form.Command.ДобавитьРасход"/>
+					<mf:button name="ДобавитьПланируемыйРасход" type="UsualButton" commandName="Form.Command.ДобавитьПланируемыйРасход"/>
+				</mf:group>
+			</mf:mainElement>
+		</form>
+		<useStandardCommands>false</useStandardCommands>
+	</commonForm>
+	<commonCommand name="ОткрытьСписокПланируемыхРасходов" id="7ec44af3-dba3-4745-8d18-ed4f402a6269">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Планируемый расход</v8:content>
+			</v8:item>
+		</synonym>
+		<clientModule version="1">
+			<bsch:cmdOpCode>1,2,18,20,1,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>5,0,0,0,5,7,0,0</bsch:cmdOperand>
+			<bsch:constant>SОткрытьФормуСпискаПланируемыхРасходов</bsch:constant>
+			<bsch:variable name="УчетДенежныхСредствКлиент" isExternal="true"/>
+			<bsch:procedure name="ОбработкаКоманды" parametersCount="2" startAddr="0">
+				<bsch:variable name="ПараметрКоманды" isLocal="true" isParam="true"/>
+				<bsch:variable name="ПараметрыВыполненияКоманды" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+		</clientModule>
+		<serverModule version="1">
+			<bsch:cmdOpCode>22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0</bsch:cmdOperand>
+		</serverModule>
+		<group>NavigationPanelImportant</group>
+		<parameterType/>
+	</commonCommand>
+	<commonCommand name="ОткрытьСписокФактическихРасходов" id="06c97d2e-3c43-4495-8a88-3197077e45ef">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Фактический расход</v8:content>
+			</v8:item>
+		</synonym>
+		<clientModule version="1">
+			<bsch:cmdOpCode>1,2,18,20,1,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>5,0,0,0,5,7,0,0</bsch:cmdOperand>
+			<bsch:constant>SОткрытьФормуСпискаФактическихРасходов</bsch:constant>
+			<bsch:variable name="УчетДенежныхСредствКлиент" isExternal="true"/>
+			<bsch:procedure name="ОбработкаКоманды" parametersCount="2" startAddr="0">
+				<bsch:variable name="ПараметрКоманды" isLocal="true" isParam="true"/>
+				<bsch:variable name="ПараметрыВыполненияКоманды" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+		</clientModule>
+		<serverModule version="1">
+			<bsch:cmdOpCode>22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0</bsch:cmdOperand>
+		</serverModule>
+		<group>NavigationPanelImportant</group>
+		<parameterType/>
+	</commonCommand>
+	<commonCommand name="ОткрытьФормуНачальнойСтраницы" id="f502331b-c25a-4c37-a44d-858dda405822">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Открыть форму начальной страницы</v8:content>
+			</v8:item>
+		</synonym>
+		<clientModule version="1">
+			<bsch:cmdOpCode>1,4,18,19,1,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>4,0,1,1,4,5,0,0</bsch:cmdOperand>
+			<bsch:constant>SОбщаяФорма.ФормаНачальнойСтраницы</bsch:constant>
+			<bsch:procedure name="ОбработкаКоманды" parametersCount="2" startAddr="0">
+				<bsch:variable name="ПараметрКоманды" isLocal="true" isParam="true"/>
+				<bsch:variable name="ПараметрыВыполненияКоманды" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ОткрытьФорму" isFunction="true" isExternal="true" parametersCount="8" startAddr="0"/>
+		</clientModule>
+		<serverModule version="1">
+			<bsch:cmdOpCode>22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0</bsch:cmdOperand>
+		</serverModule>
+		<group>NavigationPanelImportant</group>
+		<parameterType/>
+	</commonCommand>
+	<role name="ПолныеПрава" id="6a743ef3-5ea6-4014-887e-c43af6403bfd">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Полные права</v8:content>
+			</v8:item>
+		</synonym>
+		<rights>
+			<role:setForNewObjects>true</role:setForNewObjects>
+			<role:setForAttributesByDefault>true</role:setForAttributesByDefault>
+			<role:independentRightsOfChildObjects>false</role:independentRightsOfChildObjects>
+			<role:object>
+				<role:name>CommonCommand.ОткрытьФормуНачальнойСтраницы</role:name>
+				<role:right>
+					<role:name>View</role:name>
+					<role:value>false</role:value>
+				</role:right>
+			</role:object>
+		</rights>
+	</role>
+	<role name="Тестирование" id="4838f842-5845-412a-896f-5ff8a000d641">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Тестирование</v8:content>
+			</v8:item>
+		</synonym>
+		<rights>
+			<role:setForNewObjects>true</role:setForNewObjects>
+			<role:setForAttributesByDefault>true</role:setForAttributesByDefault>
+			<role:independentRightsOfChildObjects>false</role:independentRightsOfChildObjects>
+		</rights>
+	</role>
+	<constant name="ПоследняяДатаРасчетаФактическогоОстаткаЛимита" id="6734b57d-5e25-402a-9de0-f7bebe7abe6c">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Последняя дата расчета фактического остатка лимита</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="ConstantManager.ПоследняяДатаРасчетаФактическогоОстаткаЛимита" category="Manager">
+			<xr:TypeId>bf4129fa-abd5-4484-9708-82818db0ba55</xr:TypeId>
+			<xr:ValueId>0ffde6f8-846d-4691-ba33-5e2b755679b6</xr:ValueId>
+		</generatedType>
+		<generatedType name="ConstantValueManager.ПоследняяДатаРасчетаФактическогоОстаткаЛимита" category="ValueManager">
+			<xr:TypeId>d26c5711-b210-434f-96da-644764b196c0</xr:TypeId>
+			<xr:ValueId>92475e73-6dc8-4001-8690-07b2093412a4</xr:ValueId>
+		</generatedType>
+		<type>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>Date</v8:DateFractions>
+			</v8:DateQualifiers>
+		</type>
+		<valueManagerModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</valueManagerModule>
+	</constant>
+	<constant name="ДатаТестирования" id="1b8168f9-3f7d-4f87-903b-0ad7ea8c8394">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата тестирования</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="ConstantManager.ДатаТестирования" category="Manager">
+			<xr:TypeId>e7995b3b-43dd-471f-b6aa-5c6b095a0a51</xr:TypeId>
+			<xr:ValueId>c552cbb5-bb73-442c-b7ad-9b3099ca574a</xr:ValueId>
+		</generatedType>
+		<generatedType name="ConstantValueManager.ДатаТестирования" category="ValueManager">
+			<xr:TypeId>27231de0-626c-40bb-963d-de2b275676e7</xr:TypeId>
+			<xr:ValueId>dbabac7a-9aca-4e31-afde-23f2892a43cd</xr:ValueId>
+		</generatedType>
+		<type>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</type>
+		<valueManagerModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</valueManagerModule>
+	</constant>
+	<constant name="РежимТестирования" id="cac1fd4e-2b5f-40c7-ad8c-d20f50f50de9">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Режим тестирования</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="ConstantManager.РежимТестирования" category="Manager">
+			<xr:TypeId>35721fa9-a5b5-40b0-9859-088f6c953917</xr:TypeId>
+			<xr:ValueId>6211597e-387b-45ac-80c0-43cd7cdc4138</xr:ValueId>
+		</generatedType>
+		<generatedType name="ConstantValueManager.РежимТестирования" category="ValueManager">
+			<xr:TypeId>bdc2a958-08cd-4a71-b629-7eb7ab0bcf76</xr:TypeId>
+			<xr:ValueId>b55dadc4-03b0-4c18-8409-6c09aaab159e</xr:ValueId>
+		</generatedType>
+		<type>
+			<v8:Type>xs:boolean</v8:Type>
+		</type>
+		<valueManagerModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</valueManagerModule>
+	</constant>
+	<document name="ПриходДенежныхСредств" id="ffeb7827-a423-4cbf-a854-ac34dd2d7722">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Приход денежных средств</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="DocumentObject.ПриходДенежныхСредств" category="Object">
+			<xr:TypeId>6ab262d3-3914-4566-8661-92dbd30eabe0</xr:TypeId>
+			<xr:ValueId>0197411e-4982-4453-a916-8b7018e8012c</xr:ValueId>
+		</generatedType>
+		<generatedType name="DocumentRef.ПриходДенежныхСредств" category="Ref">
+			<xr:TypeId>8debba16-99c3-4db2-a0ef-bf239d635956</xr:TypeId>
+			<xr:ValueId>ab89a908-c9e3-4d5e-96b4-55349511a037</xr:ValueId>
+		</generatedType>
+		<generatedType name="DocumentSelection.ПриходДенежныхСредств" category="Selection">
+			<xr:TypeId>6ce7a2b2-15e1-4837-8d42-0c0037066951</xr:TypeId>
+			<xr:ValueId>4b282d55-04b7-41e7-b5f8-2aadfdcbf048</xr:ValueId>
+		</generatedType>
+		<generatedType name="DocumentList.ПриходДенежныхСредств" category="List">
+			<xr:TypeId>24712055-7cb4-4151-8a84-cd4a419d6cb7</xr:TypeId>
+			<xr:ValueId>83bbdd5b-32ae-4a2f-acdb-2f95165357cd</xr:ValueId>
+		</generatedType>
+		<generatedType name="DocumentManager.ПриходДенежныхСредств" category="Manager">
+			<xr:TypeId>80426ea5-049f-4cb5-9cc4-8d16144af6c8</xr:TypeId>
+			<xr:ValueId>cc80730e-773a-4efd-9877-fd0f8cb0ab0a</xr:ValueId>
+		</generatedType>
+		<managerModule version="1">
+			<bsch:cmdOpCode>22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0</bsch:cmdOperand>
+		</managerModule>
+		<objectModule version="1" startAddr="137">
+			<bsch:cmdOpCode>1,2,2,18,20,1,1,2,12,12,7,16,1,3,2,12,18,21,5,1,16,1,3,12,2,16,1,3,12,2,16,1,18,19,1,1,22,1,2,2,18,20,1,1,22,1,3,18,19,5,1,16,1,3,4,33,40,1,45,39,39,1,1,2,3,18,20,1,1,22,1,3,2,18,21,5,1,16,1,3,2,18,21,5,1,16,1,3,2,18,21,5,1,16,1,3,3,3,3,24,25,16,1,3,3,2,18,103,16,1,3,4,38,40,1,3,4,16,39,1,3,2,3,2,18,21,5,1,16,1,1,3,17,45,39,1,22,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>6,0,1,1,0,6,8,2,1,2,0,0,10,2,2,1,0,3,0,10,0,11,2,4,3,0,12,2,5,4,0,14,0,1,14,16,0,20,0,1,1,6,20,22,0,30,0,0,3,0,30,0,32,0,7,0,61,33,0,68,61,34,36,5,0,1,8,36,38,0,42,0,5,0,9,0,42,0,43,1,5,0,10,0,43,0,44,2,5,0,11,0,44,0,46,3,1,0,2,0,0,0,48,4,3,4,2,0,0,50,4,7,0,119,51,5,7,0,129,53,5,5,4,3,2,12,0,53,0,54,56,5,0,0,135,58,0,0,0</bsch:cmdOperand>
+			<bsch:constant>SПодготовитьНаборыЗаписейКПроведению</bsch:constant>
+			<bsch:constant>SДенежныеСредства</bsch:constant>
+			<bsch:constant>SЗаписывать</bsch:constant>
+			<bsch:constant>SДобавитьПриход</bsch:constant>
+			<bsch:constant>SПериод</bsch:constant>
+			<bsch:constant>SСумма</bsch:constant>
+			<bsch:constant>SПодготовитьНаборыЗаписейКОтменеПроведения</bsch:constant>
+			<bsch:constant>N0</bsch:constant>
+			<bsch:constant>SСформироватьПриходПоРегиструОстатокЛимитаДенежныхСредств</bsch:constant>
+			<bsch:constant>SПолучитьОстатокЛимитаДенежныхСредств</bsch:constant>
+			<bsch:constant>SПолучитьЛимит</bsch:constant>
+			<bsch:constant>SПолучитьРасходыЗаТекущийПериод</bsch:constant>
+			<bsch:constant>SПолучитьСуммуПоОставшимсяДням</bsch:constant>
+			<bsch:variable name="ПроведениеСервер" isExternal="true"/>
+			<bsch:variable name="ЭтотОбъект" isExternal="true"/>
+			<bsch:variable name="Движения" isExternal="true"/>
+			<bsch:variable name="Дата" isExternal="true"/>
+			<bsch:variable name="Сумма" isExternal="true"/>
+			<bsch:variable name="УчетДенежныхСредствСервер" isExternal="true"/>
+			<bsch:procedure name="ОбработкаПроведения" parametersCount="2" startAddr="0">
+				<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+				<bsch:variable name="РежимПроведения" isLocal="true" isParam="true"/>
+				<bsch:variable name="Движение" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="СформироватьДвиженияПоРегиструОстатокЛимитаДенежныхСредств" parametersCount="0" startAddr="45">
+				<bsch:variable name="СуммаДоНовогоЛимита" isLocal="true"/>
+			</bsch:procedure>
+			<bsch:procedure name="ОбработкаУдаленияПроведения" parametersCount="1" startAddr="37">
+				<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="РассчитатьСуммуДляЛимита" isFunction="true" parametersCount="0" startAddr="70">
+				<bsch:variable name="ТекущийОстатокЛимита" isLocal="true"/>
+				<bsch:variable name="ЛимитДенежныхСредств" isLocal="true"/>
+				<bsch:variable name="РасходыЗаТекущийПериод" isLocal="true"/>
+				<bsch:variable name="ОсталосьОтЛимита" isLocal="true"/>
+				<bsch:variable name="СуммаДляРаспределения" isLocal="true"/>
+				<bsch:variable name="СуммаДоНовогоЛимита" isLocal="true"/>
+			</bsch:procedure>
+		</objectModule>
+		<registerRecord>AccumulationRegister.ДенежныеСредства</registerRecord>
+		<inputByString>Number</inputByString>
+		<defaultObjectForm>Document.ПриходДенежныхСредств.Form.ФормаДокумента</defaultObjectForm>
+		<defaultListForm>Document.ПриходДенежныхСредств.Form.ФормаСписка</defaultListForm>
+		<attribute name="Сумма" id="f7827708-01ec-474a-97b0-4bb1af4dd1a1">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</type>
+		</attribute>
+		<form name="ФормаДокумента" id="9369f3d0-750c-4be1-a942-f4a2daa254c8">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма документа</v8:content>
+				</v8:item>
+			</synonym>
+			<form>
+				<mf:serverModule version="1" startAddr="27">
+					<bsch:cmdOpCode>1,2,6,16,1,3,4,18,19,5,1,16,1,3,2,12,18,20,1,1,3,4,18,19,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>32,0,0,0,34,0,0,1,1,0,34,0,35,0,1,2,1,1,35,36,0,0,2,2,36,38,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SОбъект</bsch:constant>
+					<bsch:constant>SЗаписать</bsch:constant>
+					<bsch:constant>SПроведение</bsch:constant>
+					<bsch:variable name="Модифицированность" isExternal="true"/>
+					<bsch:variable name="РежимЗаписиДокумента" isExternal="true"/>
+					<bsch:procedure name="ВыполнитьПроведениеДокумента" parametersCount="0" startAddr="0">
+						<bsch:variable name="ОбъектДокумента" isLocal="true"/>
+					</bsch:procedure>
+					<bsch:procedure name="РеквизитФормыВЗначение" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
+					<bsch:procedure name="ЗначениеВРеквизитФормы" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
+				</mf:serverModule>
+				<mf:clientModule version="1" startAddr="27">
+					<bsch:cmdOpCode>1,18,19,1,1,22,1,18,19,1,1,4,18,19,1,1,2,12,18,19,1,1,18,19,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>11,0,1,11,13,0,22,0,2,22,23,0,1,3,23,24,0,1,1,4,24,25,0,5,25,27,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SИзменениеОстатков</bsch:constant>
+					<bsch:constant>SСсылка</bsch:constant>
+					<bsch:variable name="Объект" isExternal="true"/>
+					<bsch:procedure name="ЗаписатьДокумент" parametersCount="1" startAddr="0">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="НачатьЗаписьДокумента" parametersCount="0" startAddr="6"/>
+					<bsch:procedure name="ВыполнитьПроведениеДокумента" isExternal="true" parametersCount="0" startAddr="0"/>
+					<bsch:procedure name="Оповестить" isExternal="true" parametersCount="3" startAddr="0"/>
+					<bsch:procedure name="ОповеститьОбИзменении" isExternal="true" parametersCount="1" startAddr="0"/>
+					<bsch:procedure name="Закрыть" isExternal="true" parametersCount="1" startAddr="0"/>
+				</mf:clientModule>
+				<mf:serverWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:serverWOContextModule>
+				<mf:clientServerWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:clientServerWOContextModule>
+				<mf:attributes>
+					<mf:attribute name="Объект">
+						<mf:type>
+							<v8:Type>cfg:DocumentObject.ПриходДенежныхСредств</v8:Type>
+						</mf:type>
+						<mf:main>true</mf:main>
+						<mf:storedData>true</mf:storedData>
+						<mf:useAalways>RegisterRecords</mf:useAalways>
+					</mf:attribute>
+				</mf:attributes>
+				<mf:command name="ЗаписатьДокумент">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Записать</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>ЗаписатьДокумент</mf:handlerName>
+					<mf:picture ref="v8ui:Write"/>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Записать документ</v8:content>
+						</v8:item>
+					</mf:tooltip>
+					<mf:representation>PictureAndText</mf:representation>
+				</mf:command>
+				<mf:mainElement>
+					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar">
+						<mf:button name="ФормаЗаписатьДокумент" type="CommandBarButton" commandName="Form.Command.ЗаписатьДокумент"/>
+					</mf:autoCommandBar>
+					<mf:commandsContent>
+						<mf:excluded>Post</mf:excluded>
+						<mf:excluded>PostAndClose</mf:excluded>
+						<mf:excluded>Write</mf:excluded>
+					</mf:commandsContent>
+					<mf:event handler="ПослеЗаписи" name="AfterWrite"/>
+					<mf:field name="Дата" kind="InputField" dataPath="Объект.Date">
+						<mf:contextMenu name="ДатаКонтекстноеМеню" type="ContextMenu"/>
+					</mf:field>
+					<mf:field name="Сумма" kind="InputField" dataPath="Объект.Сумма">
+						<mf:contextMenu name="СуммаКонтекстноеМеню" type="ContextMenu"/>
+					</mf:field>
+				</mf:mainElement>
+			</form>
+		</form>
+		<form name="ФормаСписка" id="24585bb5-4976-402c-9831-35c70359817f">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма списка</v8:content>
+				</v8:item>
+			</synonym>
+			<form>
+				<mf:serverModule version="1" startAddr="0">
+					<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0,0</bsch:cmdOperand>
+				</mf:serverModule>
+				<mf:clientModule version="1" startAddr="0">
+					<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0,0</bsch:cmdOperand>
+				</mf:clientModule>
+				<mf:serverWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:serverWOContextModule>
+				<mf:clientServerWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:clientServerWOContextModule>
+				<mf:attributes>
+					<mf:attribute name="Список">
+						<mf:type>
+							<v8:TypeSet>dl:DynamicList</v8:TypeSet>
+						</mf:type>
+						<mf:extInformation>
+							<mf:mainTable>Document.ПриходДенежныхСредств</mf:mainTable>
+							<mf:mainTableCategory>1</mf:mainTableCategory>
+						</mf:extInformation>
+						<mf:main>true</mf:main>
+					</mf:attribute>
+				</mf:attributes>
+				<mf:mainElement>
+					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
+					<mf:group name="СписокКомпоновщикНастроекПользовательскиеНастройки" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа пользовательских настроек</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:verticalStretch>false</mf:verticalStretch>
+						<mf:usualData group="Vertical">
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+					</mf:group>
+					<mf:table name="Список" dataPath="Список" defaultItem="true">
+						<mf:representation>List</mf:representation>
+						<mf:initialTreeView>ExpandTopLevel</mf:initialTreeView>
+						<mf:rowPictureDataPath>Список.DefaultPicture</mf:rowPictureDataPath>
+						<mf:useAlternationRowColor>true</mf:useAlternationRowColor>
+						<mf:commandBarLocation>None</mf:commandBarLocation>
+						<mf:autoCommandBar name="СписокКоманднаяПанель" type="AutoCommandBar">
+							<mf:autoMenuData>
+								<mf:autofill>false</mf:autofill>
+							</mf:autoMenuData>
+						</mf:autoCommandBar>
+						<mf:contextMenu name="СписокКонтекстноеМеню" type="ContextMenu"/>
+						<mf:field name="Дата" kind="LabelField" dataPath="Список.Date" defaultItem="true">
+							<mf:contextMenu name="ДатаКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+						<mf:field name="Сумма" kind="LabelField" dataPath="Список.Сумма">
+							<mf:contextMenu name="СуммаКонтекстноеМеню" type="ContextMenu"/>
+						</mf:field>
+					</mf:table>
+				</mf:mainElement>
+			</form>
+		</form>
+	</document>
+	<document name="РасходДенежныхСредств" id="34b9f4b5-14b9-489c-9cb3-02747b4b0bec">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расход денежных средств</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="DocumentObject.РасходДенежныхСредств" category="Object">
+			<xr:TypeId>72fd7b16-0c69-47bd-955f-743ac224802b</xr:TypeId>
+			<xr:ValueId>127037bf-f56c-4f5a-86fd-f0eef89df20e</xr:ValueId>
+		</generatedType>
+		<generatedType name="DocumentRef.РасходДенежныхСредств" category="Ref">
+			<xr:TypeId>942a7cda-bb6b-4da0-948d-28436c645148</xr:TypeId>
+			<xr:ValueId>476e53c2-28fe-45b1-8917-04b716a655c0</xr:ValueId>
+		</generatedType>
+		<generatedType name="DocumentSelection.РасходДенежныхСредств" category="Selection">
+			<xr:TypeId>3e157eb6-6d58-4b36-bad5-a2f6ac0609b0</xr:TypeId>
+			<xr:ValueId>2f87acef-73f2-4428-80f7-fab75439fc8c</xr:ValueId>
+		</generatedType>
+		<generatedType name="DocumentList.РасходДенежныхСредств" category="List">
+			<xr:TypeId>a94f6729-90e7-4071-b71a-99f0628ae814</xr:TypeId>
+			<xr:ValueId>026b65c2-46fd-48ac-bdd3-17276e209795</xr:ValueId>
+		</generatedType>
+		<generatedType name="DocumentManager.РасходДенежныхСредств" category="Manager">
+			<xr:TypeId>901b3f91-de08-4011-9427-44e278f47feb</xr:TypeId>
+			<xr:ValueId>45f60034-a465-42f0-8d90-e74aa98c9031</xr:ValueId>
+		</generatedType>
+		<managerModule version="1">
+			<bsch:cmdOpCode>22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0</bsch:cmdOperand>
+		</managerModule>
+		<objectModule version="1" startAddr="122">
+			<bsch:cmdOpCode>1,2,12,40,1,45,39,39,1,1,2,4,18,19,5,1,18,20,1,1,22,1,2,2,18,20,1,1,2,2,12,12,33,40,1,18,19,1,1,2,2,18,20,1,39,1,2,2,12,12,33,40,1,18,19,1,39,1,1,22,1,2,2,18,20,1,1,22,1,2,12,12,7,16,1,3,2,12,18,21,5,1,16,1,3,12,2,16,1,3,12,2,16,1,22,1,2,12,12,7,16,1,3,2,12,18,21,5,1,16,1,3,12,2,16,1,3,12,2,16,1,22,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>6,0,0,8,7,0,19,8,8,10,1,2,0,1,0,10,2,1,10,12,0,16,2,3,1,3,16,18,4,5,4,5,0,45,20,0,3,20,21,6,7,1,6,21,57,23,4,5,4,7,0,57,25,0,4,25,57,27,29,0,33,2,3,1,8,33,35,0,43,8,9,10,0,0,45,0,8,9,0,11,0,45,0,46,0,12,9,0,47,0,13,7,0,49,0,53,8,14,10,0,0,55,0,8,14,0,15,0,55,0,56,0,12,9,0,57,0,13,7,0,59,0,0,0</bsch:cmdOperand>
+			<bsch:constant>SЗагрузка</bsch:constant>
+			<bsch:constant>SВставить</bsch:constant>
+			<bsch:constant>SЭтоНовый</bsch:constant>
+			<bsch:constant>SПодготовитьНаборыЗаписейКПроведению</bsch:constant>
+			<bsch:constant>SВидыРасходов</bsch:constant>
+			<bsch:constant>SФактический</bsch:constant>
+			<bsch:constant>SСформироватьРасходПоРегиструОстатокЛимитаДенежныхСредств</bsch:constant>
+			<bsch:constant>SПланируемый</bsch:constant>
+			<bsch:constant>SПодготовитьНаборыЗаписейКОтменеПроведения</bsch:constant>
+			<bsch:constant>SДенежныеСредства</bsch:constant>
+			<bsch:constant>SЗаписывать</bsch:constant>
+			<bsch:constant>SДобавитьРасход</bsch:constant>
+			<bsch:constant>SПериод</bsch:constant>
+			<bsch:constant>SСумма</bsch:constant>
+			<bsch:constant>SПланируемыеОстаткиДенежныхСредств</bsch:constant>
+			<bsch:constant>SДобавить</bsch:constant>
+			<bsch:variable name="ОбменДанными" isExternal="true"/>
+			<bsch:variable name="ДополнительныеСвойства" isExternal="true"/>
+			<bsch:variable name="ПроведениеСервер" isExternal="true"/>
+			<bsch:variable name="ЭтотОбъект" isExternal="true"/>
+			<bsch:variable name="ВидРасхода" isExternal="true"/>
+			<bsch:variable name="Перечисления" isExternal="true"/>
+			<bsch:variable name="УчетДенежныхСредствСервер" isExternal="true"/>
+			<bsch:variable name="Сумма" isExternal="true"/>
+			<bsch:variable name="Движения" isExternal="true"/>
+			<bsch:variable name="Дата" isExternal="true"/>
+			<bsch:procedure name="ПередЗаписью" parametersCount="3" startAddr="0">
+				<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+				<bsch:variable name="РежимЗаписи" isLocal="true" isParam="true"/>
+				<bsch:variable name="РежимПроведения" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ЭтоНовый" isFunction="true" isExternal="true" parametersCount="0" startAddr="0"/>
+			<bsch:procedure name="ОбработкаПроведения" parametersCount="2" startAddr="21">
+				<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+				<bsch:variable name="РежимПроведения" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="СформироватьДвиженияПоРегиструДенежныеСредства" parametersCount="0" startAddr="68">
+				<bsch:variable name="Движение" isLocal="true"/>
+			</bsch:procedure>
+			<bsch:procedure name="СформироватьДвиженияПоРегиструПланируемыеОстаткиДенежныхСредств" parametersCount="0" startAddr="95">
+				<bsch:variable name="Движение" isLocal="true"/>
+			</bsch:procedure>
+			<bsch:procedure name="ОбработкаУдаленияПроведения" parametersCount="1" startAddr="60">
+				<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+		</objectModule>
+		<realTimePosting>Deny</realTimePosting>
+		<registerRecord>AccumulationRegister.ПланируемыеОстаткиДенежныхСредств</registerRecord>
+		<registerRecord>AccumulationRegister.ДенежныеСредства</registerRecord>
+		<registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
+		<inputByString>Number</inputByString>
+		<defaultObjectForm>Document.РасходДенежныхСредств.Form.ФормаДокумента</defaultObjectForm>
+		<defaultListForm>Document.РасходДенежныхСредств.Form.ФормаСписка</defaultListForm>
+		<attribute name="Сумма" id="9ec24191-a236-4116-8b1c-09c4ce5a836d">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</type>
+		</attribute>
+		<attribute name="ВидРасхода" id="111426c8-d83c-4499-9557-492f64eda52e">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид расхода</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>cfg:EnumRef.ВидыРасходов</v8:Type>
+			</type>
+			<fillFromFillingValue>true</fillFromFillingValue>
+			<fillingValue xsi:type="DesTimeDBObjRefType">Enum.ВидыРасходов.EnumValue.Фактический</fillingValue>
+		</attribute>
+		<attribute name="Назначение" id="b466e8b8-04ec-406f-8997-bc9387eced09">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назначение</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>500</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</type>
+			<fillingValue xsi:type="xs:string"/>
+		</attribute>
+		<form name="ФормаДокумента" id="6954f9f0-3a71-48a8-ac16-5c05f644f86c">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма документа</v8:content>
+				</v8:item>
+			</synonym>
+			<form>
+				<mf:serverModule version="1" startAddr="151">
+					<bsch:cmdOpCode>1,18,19,1,1,22,1,2,12,12,2,12,2,12,12,33,16,1,22,1,3,18,51,16,1,3,4,6,18,20,1,1,3,4,4,18,20,1,1,2,12,2,12,12,33,29,40,1,3,17,45,39,39,1,1,3,2,18,21,5,1,16,1,3,2,2,12,18,21,5,1,16,1,3,2,2,12,18,21,5,1,16,1,3,2,3,3,18,21,5,1,16,1,3,3,2,12,24,16,1,3,3,3,25,16,1,3,12,3,4,35,16,1,3,12,3,16,1,3,17,45,39,1,22,1,2,6,16,1,3,4,18,19,5,1,16,1,3,2,12,18,20,1,1,3,4,18,19,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>7,0,1,7,9,0,56,0,0,1,1,2,2,3,4,0,0,58,0,63,0,0,5,0,64,0,7,0,2,6,64,65,0,8,9,2,6,65,67,1,2,2,3,4,0,0,53,68,0,0,0,122,53,69,71,1,3,0,10,0,71,0,73,2,4,1,12,1,11,0,73,0,74,3,4,1,12,1,13,0,74,0,76,4,3,2,3,2,14,0,76,0,78,5,4,1,15,0,0,80,6,5,1,0,0,82,0,7,6,9,0,0,83,0,8,6,0,85,0,0,0,122,87,0,113,5,0,0,115,0,16,1,4,0,115,0,116,0,6,18,1,17,116,117,0,16,2,5,117,119,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SПодтвердитьФактическийРасход</bsch:constant>
+					<bsch:constant>SВидимость</bsch:constant>
+					<bsch:constant>SВидРасхода</bsch:constant>
+					<bsch:constant>SВидыРасходов</bsch:constant>
+					<bsch:constant>SПланируемый</bsch:constant>
+					<bsch:constant>SСтруктура</bsch:constant>
+					<bsch:constant>SВставить</bsch:constant>
+					<bsch:constant>SЛимитПревышен</bsch:constant>
+					<bsch:constant>SСуммаПревышения</bsch:constant>
+					<bsch:constant>N0</bsch:constant>
+					<bsch:constant>SПолучитьЛимит</bsch:constant>
+					<bsch:constant>SПолучитьДатуНачалаПериода</bsch:constant>
+					<bsch:constant>SДата</bsch:constant>
+					<bsch:constant>SПолучитьДатуОкончанияПериода</bsch:constant>
+					<bsch:constant>SПолучитьПланируемыеРасходаЗаПериод</bsch:constant>
+					<bsch:constant>SСумма</bsch:constant>
+					<bsch:constant>SОбъект</bsch:constant>
+					<bsch:constant>SЗаписать</bsch:constant>
+					<bsch:constant>SПроведение</bsch:constant>
+					<bsch:variable name="Элементы" isExternal="true"/>
+					<bsch:variable name="Объект" isExternal="true"/>
+					<bsch:variable name="Перечисления" isExternal="true"/>
+					<bsch:variable name="УчетДенежныхСредствСервер" isExternal="true"/>
+					<bsch:variable name="ОбщегоНазначенияКлиентСервер" isExternal="true"/>
+					<bsch:variable name="Модифицированность" isExternal="true"/>
+					<bsch:variable name="РежимЗаписиДокумента" isExternal="true"/>
+					<bsch:procedure name="ПриСозданииНаСервере" parametersCount="2" startAddr="0">
+						<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="УправлениеФормой" parametersCount="0" startAddr="6"/>
+					<bsch:procedure name="ПроверитьПревышениеЛимитаЗаПериод" isFunction="true" parametersCount="0" startAddr="19">
+						<bsch:variable name="Результат" isLocal="true"/>
+						<bsch:variable name="ЛимитНаПериод" isLocal="true"/>
+						<bsch:variable name="ДатаНачалаПериода" isLocal="true"/>
+						<bsch:variable name="ДатаОкончанияПериода" isLocal="true"/>
+						<bsch:variable name="ПланируемыеРасходы" isLocal="true"/>
+						<bsch:variable name="ПланируемыеРасходыСТекущимПланом" isLocal="true"/>
+						<bsch:variable name="СуммаПревышения" isLocal="true"/>
+					</bsch:procedure>
+					<bsch:procedure name="ВыполнитьПроведениеДокумента" parametersCount="0" startAddr="124">
+						<bsch:variable name="ОбъектДокумента" isLocal="true"/>
+					</bsch:procedure>
+					<bsch:procedure name="РеквизитФормыВЗначение" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
+					<bsch:procedure name="ЗначениеВРеквизитФормы" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
+				</mf:serverModule>
+				<mf:clientModule version="1" startAddr="137">
+					<bsch:cmdOpCode>1,3,18,19,5,1,16,1,3,12,40,1,3,4,18,19,5,1,16,1,3,2,3,2,2,12,18,21,5,1,4,110,2,2,12,18,21,5,1,4,110,3,12,18,21,5,1,16,1,3,4,2,18,51,16,1,3,3,2,12,4,18,19,1,39,1,18,19,1,1,1,22,1,2,12,4,18,19,5,1,16,1,18,19,1,1,18,19,1,1,22,1,3,2,12,33,40,1,18,19,1,39,1,3,2,12,33,40,1,18,19,1,39,1,1,22,1,18,19,1,1,4,18,19,1,1,2,12,18,19,1,1,18,19,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>14,1,0,1,0,14,0,16,1,0,65,18,2,1,1,2,0,18,0,20,3,0,2,1,2,4,1,3,0,21,5,0,1,2,4,1,6,0,22,5,0,1,7,4,2,0,20,0,25,4,8,3,2,9,0,26,4,3,4,10,11,4,3,26,69,30,0,4,30,32,34,0,43,2,12,13,1,6,0,43,0,44,0,7,44,45,0,8,45,47,0,92,0,5,14,0,102,93,0,8,93,113,94,0,5,15,0,113,95,0,4,95,113,96,98,0,103,0,10,103,104,16,1,11,104,105,2,17,1,12,105,106,0,8,106,108,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SЛимитПревышен</bsch:constant>
+					<bsch:constant>Sru = 'Лимит денежных средств на период с %1 по %2 превышен на %3. Все равно записать?'</bsch:constant>
+					<bsch:constant>SПодставитьПараметрыВСтроку</bsch:constant>
+					<bsch:constant>SПолучитьДатуНачалаПериода</bsch:constant>
+					<bsch:constant>SДата</bsch:constant>
+					<bsch:constant>SДЛФ=DD</bsch:constant>
+					<bsch:constant>SПолучитьДатуОкончанияПериода</bsch:constant>
+					<bsch:constant>SСуммаПревышения</bsch:constant>
+					<bsch:constant>SРезультатВопросаЗаписиДокумента</bsch:constant>
+					<bsch:constant>SОписаниеОповещения</bsch:constant>
+					<bsch:constant>SДаНетОтмена</bsch:constant>
+					<bsch:constant>N60</bsch:constant>
+					<bsch:constant>SВидРасхода</bsch:constant>
+					<bsch:constant>SПеречисление.ВидыРасходов.Фактический</bsch:constant>
+					<bsch:constant>SНет</bsch:constant>
+					<bsch:constant>SДа</bsch:constant>
+					<bsch:constant>SИзменениеОстатков</bsch:constant>
+					<bsch:constant>SСсылка</bsch:constant>
+					<bsch:variable name="СтроковыеФункцииКлиентСервер" isExternal="true"/>
+					<bsch:variable name="ОбщегоНазначенияКлиентСервер" isExternal="true"/>
+					<bsch:variable name="Объект" isExternal="true"/>
+					<bsch:variable name="ЭтотОбъект" isExternal="true"/>
+					<bsch:variable name="РежимДиалогаВопрос" isExternal="true"/>
+					<bsch:variable name="КодВозвратаДиалога" isExternal="true"/>
+					<bsch:procedure name="ЗаписатьДокумент" parametersCount="1" startAddr="0">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:variable name="Результат" isLocal="true"/>
+						<bsch:variable name="ШаблонВопроса" isLocal="true"/>
+						<bsch:variable name="ТекстВопроса" isLocal="true"/>
+						<bsch:variable name="ОписаниеОповещения" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ПроверитьПревышениеЛимитаЗаПериод" isFunction="true" isExternal="true" parametersCount="0" startAddr="0"/>
+					<bsch:procedure name="НСтр" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
+					<bsch:procedure name="ПоказатьВопрос" isExternal="true" parametersCount="7" startAddr="0"/>
+					<bsch:procedure name="НачатьЗаписьДокумента" parametersCount="0" startAddr="116"/>
+					<bsch:procedure name="ПодтвердитьФактическийРасход" parametersCount="1" startAddr="72">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ПредопределенноеЗначение" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
+					<bsch:procedure name="Записать" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
+					<bsch:procedure name="Закрыть" isExternal="true" parametersCount="1" startAddr="0"/>
+					<bsch:procedure name="РезультатВопросаЗаписиДокумента" isExported="true" parametersCount="2" startAddr="91">
+						<bsch:variable name="РезультатВопроса" isLocal="true" isParam="true"/>
+						<bsch:variable name="ДополнительныеПараметры" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ВыполнитьПроведениеДокумента" isExternal="true" parametersCount="0" startAddr="0"/>
+					<bsch:procedure name="Оповестить" isExternal="true" parametersCount="3" startAddr="0"/>
+					<bsch:procedure name="ОповеститьОбИзменении" isExternal="true" parametersCount="1" startAddr="0"/>
+				</mf:clientModule>
+				<mf:serverWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:serverWOContextModule>
+				<mf:clientServerWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:clientServerWOContextModule>
+				<mf:attributes>
+					<mf:attribute name="Объект">
+						<mf:type>
+							<v8:Type>cfg:DocumentObject.РасходДенежныхСредств</v8:Type>
+						</mf:type>
+						<mf:main>true</mf:main>
+						<mf:storedData>true</mf:storedData>
+						<mf:useAalways>RegisterRecords</mf:useAalways>
+					</mf:attribute>
+				</mf:attributes>
+				<mf:command name="ПодтвердитьФактическийРасход">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтвердить фактический расход</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>ПодтвердитьФактическийРасход</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтвердить фактический расход</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:command name="ЗаписатьДокумент">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Записать</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>ЗаписатьДокумент</mf:handlerName>
+					<mf:picture ref="v8ui:Write"/>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Записать документ</v8:content>
+						</v8:item>
+					</mf:tooltip>
+					<mf:representation>PictureAndText</mf:representation>
+				</mf:command>
+				<mf:mainElement>
+					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar">
+						<mf:button name="ФормаЗаписть" type="CommandBarButton" commandName="Form.Command.ЗаписатьДокумент"/>
+					</mf:autoCommandBar>
+					<mf:commandsContent>
+						<mf:excluded>Post</mf:excluded>
+						<mf:excluded>PostAndClose</mf:excluded>
+						<mf:excluded>Write</mf:excluded>
+					</mf:commandsContent>
+					<mf:event handler="ПослеЗаписи" name="AfterWrite"/>
+					<mf:event handler="ПриОткрытии" name="OnOpen"/>
+					<mf:event handler="ПередЗаписью" name="BeforeWrite"/>
+					<mf:event handler="ПриСозданииНаСервере" name="OnCreateAtServer"/>
+					<mf:field name="Дата" kind="InputField" dataPath="Объект.Date">
+						<mf:contextMenu name="ДатаКонтекстноеМеню" type="ContextMenu"/>
+					</mf:field>
+					<mf:field name="Сумма" kind="InputField" dataPath="Объект.Сумма">
+						<mf:contextMenu name="СуммаКонтекстноеМеню" type="ContextMenu"/>
+					</mf:field>
+					<mf:field name="Назначение" kind="InputField" dataPath="Объект.Назначение">
+						<mf:contextMenu name="НазначениеКонтекстноеМеню" type="ContextMenu"/>
+					</mf:field>
+					<mf:button name="ПодтвердитьФактическийРасход" type="UsualButton" commandName="Form.Command.ПодтвердитьФактическийРасход"/>
+				</mf:mainElement>
+			</form>
+		</form>
+		<form name="ФормаСписка" id="1e04a263-ae0a-415e-be04-2f428402634e">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма списка</v8:content>
+				</v8:item>
+			</synonym>
+			<form>
+				<mf:serverModule version="1" startAddr="139">
+					<bsch:cmdOpCode>1,2,4,18,21,5,1,30,2,12,69,40,1,2,2,99,18,21,5,1,16,1,2,2,99,18,21,5,1,16,1,7,18,19,1,39,1,1,2,12,4,18,21,5,1,40,1,2,12,12,2,12,12,33,40,1,2,4,16,39,1,2,12,12,2,12,12,33,40,1,2,4,16,39,1,39,1,1,22,1,2,12,12,12,12,18,20,1,1,3,4,16,1,2,2,3,2,4,110,2,4,110,18,21,5,1,16,1,2,2,12,12,12,4,2,12,2,10,3,18,20,1,1,2,2,12,12,12,4,2,12,2,10,3,18,20,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>7,0,1,1,0,0,7,11,0,1,0,36,8,1,2,0,1,2,0,8,0,9,3,2,0,1,3,0,9,0,10,0,1,1,10,36,11,13,0,4,5,1,0,0,13,76,14,0,4,5,4,6,7,0,60,15,5,8,0,74,16,0,4,5,4,6,9,0,74,17,5,10,0,74,18,76,19,21,0,69,6,11,12,4,13,0,14,69,71,1,15,0,72,7,8,1,1,17,0,3,17,0,3,16,0,72,0,77,2,6,11,12,4,19,9,20,1,0,0,6,18,77,85,2,6,11,12,4,19,9,21,3,0,0,6,18,85,93,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SСвойство</bsch:constant>
+					<bsch:constant>SОтборПоДате</bsch:constant>
+					<bsch:constant>SПолучитьДатуНачалаПериода</bsch:constant>
+					<bsch:constant>SПолучитьДатуОкончанияПериода</bsch:constant>
+					<bsch:constant>SОтбор</bsch:constant>
+					<bsch:constant>SВидРасхода</bsch:constant>
+					<bsch:constant>SВидыРасходов</bsch:constant>
+					<bsch:constant>SПланируемый</bsch:constant>
+					<bsch:constant>SПланируемые расходы</bsch:constant>
+					<bsch:constant>SФактический</bsch:constant>
+					<bsch:constant>SФактические расходы</bsch:constant>
+					<bsch:constant>SКомпоновщикНастроек</bsch:constant>
+					<bsch:constant>SНастройки</bsch:constant>
+					<bsch:constant>SЭлементы</bsch:constant>
+					<bsch:constant>SОчистить</bsch:constant>
+					<bsch:constant>S%1 - %2</bsch:constant>
+					<bsch:constant>SПодставитьПараметрыВСтроку</bsch:constant>
+					<bsch:constant>SДЛФ=DD</bsch:constant>
+					<bsch:constant>SДобавитьЭлементКомпоновки</bsch:constant>
+					<bsch:constant>SДата</bsch:constant>
+					<bsch:constant>SБольшеИлиРавно</bsch:constant>
+					<bsch:constant>SМеньшеИлиРавно</bsch:constant>
+					<bsch:variable name="Параметры" isExternal="true"/>
+					<bsch:variable name="ДатаНачалаПериода" isExternal="true"/>
+					<bsch:variable name="ОбщегоНазначенияКлиентСервер" isExternal="true"/>
+					<bsch:variable name="ДатаОкончанияПериода" isExternal="true"/>
+					<bsch:variable name="Перечисления" isExternal="true"/>
+					<bsch:variable name="Заголовок" isExternal="true"/>
+					<bsch:variable name="Список" isExternal="true"/>
+					<bsch:variable name="ПредставлениеПериода" isExternal="true"/>
+					<bsch:variable name="СтроковыеФункцииКлиентСервер" isExternal="true"/>
+					<bsch:variable name="ВидСравненияКомпоновкиДанных" isExternal="true"/>
+					<bsch:procedure name="ПриСозданииНаСервере" parametersCount="2" startAddr="0">
+						<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="УстановитьОтборПоДате" parametersCount="1" startAddr="79">
+						<bsch:variable name="Использовать" isLocal="true" isParam="true"/>
+						<bsch:variable name="ШаблонПредставлениеПериода" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+				</mf:serverModule>
+				<mf:clientModule version="1" startAddr="91">
+					<bsch:cmdOpCode>1,2,2,4,25,16,1,2,2,2,18,21,5,1,16,1,7,18,19,1,1,22,1,2,2,4,24,16,1,2,2,2,18,21,5,1,16,1,7,18,19,1,1,22,1,2,12,12,2,12,12,29,16,1,2,12,12,29,18,19,1,1,2,12,12,40,1,2,12,12,4,16,39,1,2,12,12,4,16,1,1,2,12,12,2,12,12,29,16,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>30,0,1,0,0,0,31,1,2,0,1,1,0,31,0,32,0,1,1,32,34,0,39,1,0,0,0,0,40,0,2,1,1,2,0,40,0,41,0,1,1,41,43,0,48,3,3,4,3,3,4,0,0,50,3,3,4,0,1,1,50,52,3,3,4,73,53,3,3,5,6,0,79,55,3,3,5,7,0,56,58,3,8,9,3,3,4,0,0,60,0,0,0</bsch:cmdOperand>
+					<bsch:constant>N1</bsch:constant>
+					<bsch:constant>SПолучитьДатуНачалаПериода</bsch:constant>
+					<bsch:constant>SПолучитьДатуОкончанияПериода</bsch:constant>
+					<bsch:constant>SПоказатьВесьСписок</bsch:constant>
+					<bsch:constant>SПометка</bsch:constant>
+					<bsch:constant>SЗаголовок</bsch:constant>
+					<bsch:constant>SВключить отбор по периоду</bsch:constant>
+					<bsch:constant>SПоказать весь список</bsch:constant>
+					<bsch:constant>SОтборПериод</bsch:constant>
+					<bsch:constant>SВидимость</bsch:constant>
+					<bsch:variable name="ДатаОкончанияПериода" isExternal="true"/>
+					<bsch:variable name="ДатаНачалаПериода" isExternal="true"/>
+					<bsch:variable name="ОбщегоНазначенияКлиентСервер" isExternal="true"/>
+					<bsch:variable name="Элементы" isExternal="true"/>
+					<bsch:procedure name="СдвинутьПериодНазад" parametersCount="1" startAddr="0">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="УстановитьОтборПоДате" isExternal="true" parametersCount="1" startAddr="0"/>
+					<bsch:procedure name="СдвинутьПериодВперед" parametersCount="1" startAddr="22">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ПоказатьВесьСписок" parametersCount="1" startAddr="44">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+				</mf:clientModule>
+				<mf:serverWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:serverWOContextModule>
+				<mf:clientServerWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:clientServerWOContextModule>
+				<mf:attributes>
+					<mf:attribute name="Список">
+						<mf:type>
+							<v8:TypeSet>dl:DynamicList</v8:TypeSet>
+						</mf:type>
+						<mf:extInformation>
+							<mf:customQuery>true</mf:customQuery>
+							<mf:queryText>ВЫБРАТЬ
+	ДокументРасходДенежныхСредств.Ссылка КАК Ссылка,
+	ДокументРасходДенежныхСредств.ПометкаУдаления КАК ПометкаУдаления,
+	ДокументРасходДенежныхСредств.Номер КАК Номер,
+	ДокументРасходДенежныхСредств.Дата КАК Дата,
+	ДокументРасходДенежныхСредств.Проведен КАК Проведен,
+	ДокументРасходДенежныхСредств.Сумма КАК Сумма,
+	ДокументРасходДенежныхСредств.ВидРасхода КАК ВидРасхода,
+	ДокументРасходДенежныхСредств.Назначение КАК Назначение,
+	ДокументРасходДенежныхСредств.МоментВремени КАК МоментВремени
+ПОМЕСТИТЬ ВТ_ОсновнаяТаблица
+ИЗ
+	Документ.РасходДенежныхСредств КАК ДокументРасходДенежныхСредств
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	СУММА(ВТ_ОсновнаяТаблица.Сумма) КАК ИтоговаяСумма
+ПОМЕСТИТЬ ВТ_ИтоговаяСумма
+ИЗ
+	ВТ_ОсновнаяТаблица КАК ВТ_ОсновнаяТаблица
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	РасходДенежныхСредств.Ссылка КАК Ссылка,
+	РасходДенежныхСредств.ПометкаУдаления КАК ПометкаУдаления,
+	РасходДенежныхСредств.Номер КАК Номер,
+	РасходДенежныхСредств.Дата КАК Дата,
+	РасходДенежныхСредств.Проведен КАК Проведен,
+	РасходДенежныхСредств.Сумма КАК Сумма,
+	РасходДенежныхСредств.ВидРасхода КАК ВидРасхода,
+	РасходДенежныхСредств.Назначение КАК Назначение,
+	РасходДенежныхСредств.МоментВремени КАК МоментВремени,
+	ВТ_ИтоговаяСумма.ИтоговаяСумма КАК ИтоговаяСумма
+ИЗ
+	Документ.РасходДенежныхСредств КАК РасходДенежныхСредств
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ИтоговаяСумма КАК ВТ_ИтоговаяСумма
+		ПО (ИСТИНА)
+ГДЕ
+	РасходДенежныхСредств.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_ОсновнаяТаблица.Ссылка КАК Ссылка
+			ИЗ
+				ВТ_ОсновнаяТаблица КАК ВТ_ОсновнаяТаблица)</mf:queryText>
+							<mf:mainTable>Document.РасходДенежныхСредств</mf:mainTable>
+							<mf:mainTableCategory>1</mf:mainTableCategory>
+							<mf:requiredField>ИтоговаяСумма</mf:requiredField>
+							<mf:requiredField>Ссылка</mf:requiredField>
+						</mf:extInformation>
+						<mf:main>true</mf:main>
+					</mf:attribute>
+					<mf:attribute name="ДатаНачалаПериода">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дата начала периода</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:dateTime</v8:Type>
+							<v8:DateQualifiers>
+								<v8:DateFractions>DateTime</v8:DateFractions>
+							</v8:DateQualifiers>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="ДатаОкончанияПериода">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дата окончания периода</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:dateTime</v8:Type>
+							<v8:DateQualifiers>
+								<v8:DateFractions>DateTime</v8:DateFractions>
+							</v8:DateQualifiers>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="ПредставлениеПериода">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Представление периода</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:string</v8:Type>
+							<v8:StringQualifiers>
+								<v8:Length>0</v8:Length>
+								<v8:AllowedLength>Variable</v8:AllowedLength>
+							</v8:StringQualifiers>
+						</mf:type>
+					</mf:attribute>
+				</mf:attributes>
+				<mf:command name="СдвинутьПериодНазад">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;&lt;</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>СдвинутьПериодНазад</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сдвинуть период назад</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:command name="СдвинутьПериодВперед">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&gt;&gt;</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>СдвинутьПериодВперед</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сдвинуть период вперед</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:command name="ПоказатьВесьСписок">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показать весь список</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>ПоказатьВесьСписок</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показать весь список</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:mainElement>
+					<mf:autoTitle>false</mf:autoTitle>
+					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
+					<mf:event handler="ПриОткрытии" name="OnOpen"/>
+					<mf:event handler="ПриСозданииНаСервере" name="OnCreateAtServer"/>
+					<mf:button name="ПоказатьВесьСписок" type="UsualButton" commandName="Form.Command.ПоказатьВесьСписок"/>
+					<mf:group name="ОтборПериод" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отбор период</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:tooltip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отбор период</v8:content>
+							</v8:item>
+						</mf:tooltip>
+						<mf:usualData representation="None">
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+						<mf:button name="СдвинутьПериодНазад" type="UsualButton" commandName="Form.Command.СдвинутьПериодНазад">
+							<mf:font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+						</mf:button>
+						<mf:field name="ПредставлениеПериода" kind="LabelField" dataPath="ПредставлениеПериода">
+							<mf:titleLocation>None</mf:titleLocation>
+							<mf:contextMenu name="ПредставлениеПериодаКонтекстноеМеню" type="ContextMenu"/>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
+							<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+						</mf:field>
+						<mf:button name="СдвинутьПериодВперед" type="UsualButton" commandName="Form.Command.СдвинутьПериодВперед">
+							<mf:font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+						</mf:button>
+					</mf:group>
+					<mf:group name="СписокКомпоновщикНастроекПользовательскиеНастройки" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа пользовательских настроек</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:verticalStretch>false</mf:verticalStretch>
+						<mf:usualData group="Vertical">
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+					</mf:group>
+					<mf:table name="Список" dataPath="Список" defaultItem="true">
+						<mf:representation>List</mf:representation>
+						<mf:initialTreeView>ExpandTopLevel</mf:initialTreeView>
+						<mf:rowPictureDataPath>Список.DefaultPicture</mf:rowPictureDataPath>
+						<mf:useAlternationRowColor>true</mf:useAlternationRowColor>
+						<mf:showFooter>true</mf:showFooter>
+						<mf:commandBarLocation>None</mf:commandBarLocation>
+						<mf:autoCommandBar name="СписокКоманднаяПанель" type="AutoCommandBar">
+							<mf:autoMenuData>
+								<mf:autofill>false</mf:autofill>
+							</mf:autoMenuData>
+						</mf:autoCommandBar>
+						<mf:contextMenu name="СписокКонтекстноеМеню" type="ContextMenu"/>
+						<mf:field name="Дата" kind="LabelField" dataPath="Список.Дата" defaultItem="true">
+							<mf:contextMenu name="ДатаКонтекстноеМеню" type="ContextMenu"/>
+							<mf:textData>
+								<mf:format>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ДФ=dd.MM.yyyy</v8:content>
+									</v8:item>
+								</mf:format>
+							</mf:textData>
+						</mf:field>
+						<mf:group name="Группа1" type="ColumnGroup">
+							<mf:field name="Назначение" kind="LabelField" dataPath="Список.Назначение">
+								<mf:contextMenu name="НазначениеКонтекстноеМеню" type="ContextMenu"/>
+								<mf:footerText>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ИТОГО:</v8:content>
+									</v8:item>
+								</mf:footerText>
+								<mf:horizontalAlign>Right</mf:horizontalAlign>
+							</mf:field>
+							<mf:field name="Сумма" kind="LabelField" dataPath="Список.Сумма">
+								<mf:contextMenu name="СуммаКонтекстноеМеню" type="ContextMenu"/>
+								<mf:footerDataPath>Items.Список.CurrentData.ИтоговаяСумма</mf:footerDataPath>
+								<mf:textData>
+									<mf:font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+								</mf:textData>
+							</mf:field>
+						</mf:group>
+					</mf:table>
+				</mf:mainElement>
+			</form>
+		</form>
+	</document>
+	<document name="КорректировкаРегистров" id="d19481d4-819f-442b-b084-ca82b5efdcca">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Корректировка регистров</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="DocumentObject.КорректировкаРегистров" category="Object">
+			<xr:TypeId>bc0e7e72-20d3-40cf-91bf-238a2a669c57</xr:TypeId>
+			<xr:ValueId>6d9917e3-ce31-4565-b690-a18b4ec17944</xr:ValueId>
+		</generatedType>
+		<generatedType name="DocumentRef.КорректировкаРегистров" category="Ref">
+			<xr:TypeId>b6c59e5d-c21a-4d7d-83d2-c222d50f6258</xr:TypeId>
+			<xr:ValueId>50556b7f-04e9-4f7c-a5a3-dd6fb17e15b5</xr:ValueId>
+		</generatedType>
+		<generatedType name="DocumentSelection.КорректировкаРегистров" category="Selection">
+			<xr:TypeId>2a892cf3-3941-43c2-827c-6c87a715ffc6</xr:TypeId>
+			<xr:ValueId>a2d14cfe-7b4a-4699-9d06-f89b63be1ee6</xr:ValueId>
+		</generatedType>
+		<generatedType name="DocumentList.КорректировкаРегистров" category="List">
+			<xr:TypeId>420fc59f-e1d3-4151-a2b0-99c2da7d6838</xr:TypeId>
+			<xr:ValueId>e8fc340c-8a44-4625-9e83-fe210ecbef90</xr:ValueId>
+		</generatedType>
+		<generatedType name="DocumentManager.КорректировкаРегистров" category="Manager">
+			<xr:TypeId>b4b6365c-2c37-4855-9208-19afe00c4ac3</xr:TypeId>
+			<xr:ValueId>b223434a-628c-47ef-aedd-ed0550807c56</xr:ValueId>
+		</generatedType>
+		<managerModule version="1">
+			<bsch:cmdOpCode>22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0</bsch:cmdOperand>
+		</managerModule>
+		<objectModule version="1" startAddr="2">
+			<bsch:cmdOpCode>1,22,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>5,0,0,0</bsch:cmdOperand>
+			<bsch:procedure name="ПередЗаписью" parametersCount="3" startAddr="0">
+				<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+				<bsch:variable name="РежимЗаписи" isLocal="true" isParam="true"/>
+				<bsch:variable name="РежимПроведения" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+		</objectModule>
+		<posting>Deny</posting>
+		<inputByString>Number</inputByString>
+		<defaultObjectForm>Document.КорректировкаРегистров.Form.ФормаДокумента</defaultObjectForm>
+		<form name="ФормаДокумента" id="6472201a-5da9-4798-9880-aa8db8004562">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма документа</v8:content>
+				</v8:item>
+			</synonym>
+			<form>
+				<mf:serverModule version="1" startAddr="0">
+					<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0,0</bsch:cmdOperand>
+				</mf:serverModule>
+				<mf:clientModule version="1" startAddr="0">
+					<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0,0</bsch:cmdOperand>
+				</mf:clientModule>
+				<mf:serverWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:serverWOContextModule>
+				<mf:clientServerWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:clientServerWOContextModule>
+				<mf:attributes>
+					<mf:attribute name="Объект">
+						<mf:type>
+							<v8:Type>cfg:DocumentObject.КорректировкаРегистров</v8:Type>
+						</mf:type>
+						<mf:main>true</mf:main>
+						<mf:storedData>true</mf:storedData>
+						<mf:useAalways>RegisterRecords</mf:useAalways>
+					</mf:attribute>
+				</mf:attributes>
+				<mf:mainElement>
+					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
+					<mf:field name="Дата" kind="InputField" dataPath="Объект.Date">
+						<mf:contextMenu name="ДатаКонтекстноеМеню" type="ContextMenu"/>
+					</mf:field>
+					<mf:group name="Страницы" type="Pages">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Страницы</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:tooltip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Страницы</v8:content>
+							</v8:item>
+						</mf:tooltip>
+						<mf:group name="СтраницаДвиженияОстатокЛимитаДенежныхСредств" type="Page">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Остаток лимита денежных средств</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:tooltip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница движения остаток лимита денежных средств</v8:content>
+								</v8:item>
+							</mf:tooltip>
+							<mf:table name="ДвиженияОстатокЛимитаДенежныхСредств">
+								<mf:autoInsertNewRow>true</mf:autoInsertNewRow>
+								<mf:autoCommandBar name="ДвиженияОстатокЛимитаДенежныхСредствКоманднаяПанель" type="AutoCommandBar"/>
+								<mf:contextMenu name="ДвиженияОстатокЛимитаДенежныхСредствКонтекстноеМеню" type="ContextMenu"/>
+								<mf:field name="ДвиженияОстатокЛимитаДенежныхСредствНомерСтроки" kind="LabelField">
+									<mf:contextMenu name="ДвиженияОстатокЛимитаДенежныхСредствНомерСтрокиКонтекстноеМеню" type="ContextMenu"/>
+								</mf:field>
+								<mf:field name="ДвиженияОстатокЛимитаДенежныхСредствПериод" kind="InputField">
+									<mf:visible>false</mf:visible>
+									<mf:contextMenu name="ДвиженияОстатокЛимитаДенежныхСредствПериодКонтекстноеМеню" type="ContextMenu"/>
+								</mf:field>
+								<mf:field name="ДвиженияОстатокЛимитаДенежныхСредствВидДвижения" kind="InputField">
+									<mf:contextMenu name="ДвиженияОстатокЛимитаДенежныхСредствВидДвиженияКонтекстноеМеню" type="ContextMenu"/>
+								</mf:field>
+								<mf:field name="ДвиженияОстатокЛимитаДенежныхСредствСумма" kind="InputField">
+									<mf:contextMenu name="ДвиженияОстатокЛимитаДенежныхСредствСуммаКонтекстноеМеню" type="ContextMenu"/>
+								</mf:field>
+							</mf:table>
+						</mf:group>
+					</mf:group>
+				</mf:mainElement>
+			</form>
+		</form>
+	</document>
+	<informationRegister name="ЛимитДенежныхСредств" id="019d1c0a-6646-4693-ae09-376348cefb0c">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Лимит денежных средств</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="InformationRegisterRecord.ЛимитДенежныхСредств" category="Record">
+			<xr:TypeId>5c19e2f7-b2fc-4168-92f1-15af50c49f58</xr:TypeId>
+			<xr:ValueId>bfea941f-0622-4070-b259-af3bf4cc3eb2</xr:ValueId>
+		</generatedType>
+		<generatedType name="InformationRegisterManager.ЛимитДенежныхСредств" category="Manager">
+			<xr:TypeId>57444b12-9caf-4eed-a8e1-854d5b08111c</xr:TypeId>
+			<xr:ValueId>fc11de18-f39d-4052-8b85-bdeefda6de90</xr:ValueId>
+		</generatedType>
+		<generatedType name="InformationRegisterSelection.ЛимитДенежныхСредств" category="Selection">
+			<xr:TypeId>90f77182-25a2-4c34-ad5f-504955a8a502</xr:TypeId>
+			<xr:ValueId>bc3796c1-4cb8-4493-8089-df9b864088e9</xr:ValueId>
+		</generatedType>
+		<generatedType name="InformationRegisterList.ЛимитДенежныхСредств" category="List">
+			<xr:TypeId>c23e3aab-d5f2-4ee2-b0d1-27b4ea204832</xr:TypeId>
+			<xr:ValueId>939f89b2-e5e7-4e81-a041-eaab6c90f217</xr:ValueId>
+		</generatedType>
+		<generatedType name="InformationRegisterRecordSet.ЛимитДенежныхСредств" category="RecordSet">
+			<xr:TypeId>2e1672fa-fc7c-477e-a8ec-9b77baa51c22</xr:TypeId>
+			<xr:ValueId>7c06be4c-841d-498b-b260-b691f9fad801</xr:ValueId>
+		</generatedType>
+		<generatedType name="InformationRegisterRecordKey.ЛимитДенежныхСредств" category="RecordKey">
+			<xr:TypeId>47c3aa9a-2b38-48e8-aed2-055eefd9f455</xr:TypeId>
+			<xr:ValueId>6b813031-90f0-4683-97ca-d1ae057c9364</xr:ValueId>
+		</generatedType>
+		<generatedType name="InformationRegisterRecordManager.ЛимитДенежныхСредств" category="RecordManager">
+			<xr:TypeId>fc7d903c-f67d-47a1-87cb-cb14dc723e59</xr:TypeId>
+			<xr:ValueId>0f949986-6028-4afb-a1a0-93106ae79c77</xr:ValueId>
+		</generatedType>
+		<managerModule version="1">
+			<bsch:cmdOpCode>22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0</bsch:cmdOperand>
+		</managerModule>
+		<recordSetModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</recordSetModule>
+		<periodicity>Day</periodicity>
+		<resource name="Сумма" id="6ed5aedd-60b5-454b-b331-2a823d07cb33">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</type>
+		</resource>
+	</informationRegister>
+	<informationRegister name="ОстатокЛимитаДенежныхСредств" id="68537aa7-63b3-4e44-9370-38e5863e9f45">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Остаток лимита денежных средств</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="InformationRegisterRecord.ОстатокЛимитаДенежныхСредств" category="Record">
+			<xr:TypeId>79b3bb2d-ab71-4a02-9528-ac479d0776b4</xr:TypeId>
+			<xr:ValueId>74d1970b-4334-49cb-94c7-3c9cb4f660eb</xr:ValueId>
+		</generatedType>
+		<generatedType name="InformationRegisterManager.ОстатокЛимитаДенежныхСредств" category="Manager">
+			<xr:TypeId>884d67da-2e86-4fec-936e-ebe03e0249bb</xr:TypeId>
+			<xr:ValueId>cdb65a84-807a-4cae-b179-8382319bb5c4</xr:ValueId>
+		</generatedType>
+		<generatedType name="InformationRegisterSelection.ОстатокЛимитаДенежныхСредств" category="Selection">
+			<xr:TypeId>ef869ac1-757b-45c2-898c-808c64c6bcb1</xr:TypeId>
+			<xr:ValueId>36b168e8-544f-4ab7-8ea1-fdc8ed66130b</xr:ValueId>
+		</generatedType>
+		<generatedType name="InformationRegisterList.ОстатокЛимитаДенежныхСредств" category="List">
+			<xr:TypeId>1b686128-ba7d-4a01-ae61-8ee612dc2f46</xr:TypeId>
+			<xr:ValueId>ffe242b3-c25d-4465-8de7-d8a6ac103c41</xr:ValueId>
+		</generatedType>
+		<generatedType name="InformationRegisterRecordSet.ОстатокЛимитаДенежныхСредств" category="RecordSet">
+			<xr:TypeId>7283616d-daa1-494f-8b6e-a2a0907250c1</xr:TypeId>
+			<xr:ValueId>c3aa7c85-62aa-47d2-a00a-c444fe9e146c</xr:ValueId>
+		</generatedType>
+		<generatedType name="InformationRegisterRecordKey.ОстатокЛимитаДенежныхСредств" category="RecordKey">
+			<xr:TypeId>acf109ea-9abe-437a-8373-d4c99cf855a9</xr:TypeId>
+			<xr:ValueId>bd62f06f-ba77-4416-98c3-d3bc2fc68cc3</xr:ValueId>
+		</generatedType>
+		<generatedType name="InformationRegisterRecordManager.ОстатокЛимитаДенежныхСредств" category="RecordManager">
+			<xr:TypeId>86729f6f-0acc-4826-ae80-30e57cbfe3c6</xr:TypeId>
+			<xr:ValueId>f942cc90-395f-4ae6-ac6c-b2827ee20d89</xr:ValueId>
+		</generatedType>
+		<managerModule version="1">
+			<bsch:cmdOpCode>22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0</bsch:cmdOperand>
+		</managerModule>
+		<recordSetModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</recordSetModule>
+		<mainFilterOnPeriod>false</mainFilterOnPeriod>
+		<resource name="Сумма" id="06a0d581-bfdc-4aa9-b5af-6874cc7a149f">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</type>
+		</resource>
+		<form name="ФормаРедактированияЛимита" id="38128af4-9ffc-4958-97fa-5bc7ad824596">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактирование фактического остатка лимита</v8:content>
+				</v8:item>
+			</synonym>
+			<form>
+				<mf:serverModule version="1" startAddr="7">
+					<bsch:cmdOpCode>1,2,2,12,16,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>7,0,1,0,0,9,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SТекущийОстатокЛимита</bsch:constant>
+					<bsch:variable name="НовыйОстатокЛимита" isExternal="true"/>
+					<bsch:variable name="Параметры" isExternal="true"/>
+					<bsch:procedure name="ПриСозданииНаСервере" parametersCount="2" startAddr="0">
+						<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+				</mf:serverModule>
+				<mf:clientModule version="1" startAddr="22">
+					<bsch:cmdOpCode>1,2,18,19,1,1,4,18,19,1,1,18,19,1,1,22,1,18,19,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>18,0,1,1,18,19,0,1,2,19,20,0,3,20,22,0,27,0,3,27,29,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SИзменениеОстатков</bsch:constant>
+					<bsch:variable name="НовыйОстатокЛимита" isExternal="true"/>
+					<bsch:procedure name="ЗаписатьИЗакрыть" parametersCount="1" startAddr="0">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ЗаписатьИЗакрытьНаСервере" isExternal="true" parametersCount="1" startAddr="0"/>
+					<bsch:procedure name="Оповестить" isExternal="true" parametersCount="3" startAddr="0"/>
+					<bsch:procedure name="Закрыть" isExternal="true" parametersCount="1" startAddr="0"/>
+					<bsch:procedure name="Отмена" parametersCount="1" startAddr="16">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+				</mf:clientModule>
+				<mf:serverWOContextModule version="1">
+					<bsch:cmdOpCode>1,3,2,12,18,21,5,1,16,1,3,12,3,16,1,3,4,33,40,1,3,18,20,1,39,1,3,18,20,1,1,1,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>38,1,0,0,0,1,0,38,0,39,1,2,0,0,40,0,3,0,25,41,1,0,4,41,30,43,1,0,5,43,44,46,0,0</bsch:cmdOperand>
+					<bsch:constant>SОстатокЛимитаДенежныхСредств</bsch:constant>
+					<bsch:constant>SСоздатьМенеджерЗаписи</bsch:constant>
+					<bsch:constant>SСумма</bsch:constant>
+					<bsch:constant>N0</bsch:constant>
+					<bsch:constant>SУдалить</bsch:constant>
+					<bsch:constant>SЗаписать</bsch:constant>
+					<bsch:variable name="РегистрыСведений" isExternal="true"/>
+					<bsch:procedure name="ЗаписатьИЗакрытьНаСервере" parametersCount="1" startAddr="0">
+						<bsch:variable name="НовыйОстатокЛимита" isLocal="true" isParam="true"/>
+						<bsch:variable name="МенеджерЗаписи" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+				</mf:serverWOContextModule>
+				<mf:clientServerWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:clientServerWOContextModule>
+				<mf:attributes>
+					<mf:attribute name="НовыйОстатокЛимита">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Новый остаток лимита</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>10</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</mf:type>
+					</mf:attribute>
+				</mf:attributes>
+				<mf:command name="ЗаписатьИЗакрыть">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Записать</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>ЗаписатьИЗакрыть</mf:handlerName>
+					<mf:picture ref="v8ui:Write"/>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Записать и закрыть</v8:content>
+						</v8:item>
+					</mf:tooltip>
+					<mf:representation>Picture</mf:representation>
+				</mf:command>
+				<mf:command name="Отмена">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отмена</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>Отмена</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отмена</v8:content>
+						</v8:item>
+					</mf:tooltip>
+				</mf:command>
+				<mf:mainElement>
+					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar">
+						<mf:autoMenuData>
+							<mf:autofill>false</mf:autofill>
+						</mf:autoMenuData>
+					</mf:autoCommandBar>
+					<mf:event handler="ПриСозданииНаСервере" name="OnCreateAtServer"/>
+					<mf:field name="НовыйОстатокЛимита" kind="InputField" dataPath="НовыйОстатокЛимита">
+						<mf:contextMenu name="НовыйОстатокЛимитаКонтекстноеМеню" type="ContextMenu"/>
+					</mf:field>
+					<mf:group name="ГруппаКомандныхПанелей" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа командных панелей</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:tooltip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа командных панелей</v8:content>
+							</v8:item>
+						</mf:tooltip>
+						<mf:usualData representation="None">
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+						<mf:group name="ГруппаКоманднаяПанельЗаписать" type="CommandBar">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа командная панель записать</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:tooltip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа командная панель записать</v8:content>
+								</v8:item>
+							</mf:tooltip>
+							<mf:button name="ЗаписатьИЗакрыть" type="CommandBarButton" commandName="Form.Command.ЗаписатьИЗакрыть"/>
+						</mf:group>
+						<mf:group name="ГруппаКоманднаяПанельОтмена" type="CommandBar">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа командная панель отмена</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:tooltip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа командная панель отмена</v8:content>
+								</v8:item>
+							</mf:tooltip>
+							<mf:menuData>
+								<mf:horizontalAlign>Right</mf:horizontalAlign>
+							</mf:menuData>
+							<mf:button name="Отмена" type="CommandBarButton" commandName="Form.Command.Отмена">
+								<mf:groupHorizontalAlign>Left</mf:groupHorizontalAlign>
+							</mf:button>
+						</mf:group>
+					</mf:group>
+				</mf:mainElement>
+			</form>
+		</form>
+	</informationRegister>
+	<accumulationRegister name="ПланируемыеОстаткиДенежныхСредств" id="25fe94a5-fed5-464f-9d49-05dd9d803344">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Планируемые остатки денежных средств</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="AccumulationRegisterRecord.ПланируемыеОстаткиДенежныхСредств" category="Record">
+			<xr:TypeId>c9d164a2-b596-4949-8003-222b9096713f</xr:TypeId>
+			<xr:ValueId>ccf7911d-e138-42d1-b992-767837cf6c47</xr:ValueId>
+		</generatedType>
+		<generatedType name="AccumulationRegisterManager.ПланируемыеОстаткиДенежныхСредств" category="Manager">
+			<xr:TypeId>b517755d-2860-4e55-8126-13abef2e7b8d</xr:TypeId>
+			<xr:ValueId>9ff4f10a-9d9e-4f43-8ea9-747af141393c</xr:ValueId>
+		</generatedType>
+		<generatedType name="AccumulationRegisterSelection.ПланируемыеОстаткиДенежныхСредств" category="Selection">
+			<xr:TypeId>8a302a68-09e7-4154-89cf-d03a975e4aa2</xr:TypeId>
+			<xr:ValueId>723aa6c5-111b-4c87-a2b2-842221eef093</xr:ValueId>
+		</generatedType>
+		<generatedType name="AccumulationRegisterList.ПланируемыеОстаткиДенежныхСредств" category="List">
+			<xr:TypeId>807232be-4dc6-4b81-81d3-aa04c8333d7c</xr:TypeId>
+			<xr:ValueId>ad652078-9ab4-47bf-bdb3-7105e6b931d2</xr:ValueId>
+		</generatedType>
+		<generatedType name="AccumulationRegisterRecordSet.ПланируемыеОстаткиДенежныхСредств" category="RecordSet">
+			<xr:TypeId>81c0bea9-b919-4f2c-a887-e5b47d7de79e</xr:TypeId>
+			<xr:ValueId>e40163c7-a8ca-466d-839b-9c81c8f3d6aa</xr:ValueId>
+		</generatedType>
+		<generatedType name="AccumulationRegisterRecordKey.ПланируемыеОстаткиДенежныхСредств" category="RecordKey">
+			<xr:TypeId>593f6f3b-6426-4138-84de-c9fb712a8d9b</xr:TypeId>
+			<xr:ValueId>09249dfe-55d4-439c-8a08-592ce6fa5c7b</xr:ValueId>
+		</generatedType>
+		<managerModule version="1">
+			<bsch:cmdOpCode>22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0</bsch:cmdOperand>
+		</managerModule>
+		<recordSetModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</recordSetModule>
+		<registerType>Turnovers</registerType>
+		<standardAttribute name="Active">
+			<passwordMode>false</passwordMode>
+			<markNegatives>false</markNegatives>
+			<minValue xsi:nil="true"/>
+			<maxValue xsi:nil="true"/>
+			<mask/>
+			<multiLine>false</multiLine>
+			<fillFromFillingValue>false</fillFromFillingValue>
+			<fillingValue xsi:nil="true"/>
+			<fillChecking>DontCheck</fillChecking>
+			<choiceParamLinks/>
+			<choiceParams/>
+			<quickChoice>auto</quickChoice>
+			<choiceForm/>
+		</standardAttribute>
+		<standardAttribute name="LineNumber">
+			<passwordMode>false</passwordMode>
+			<markNegatives>false</markNegatives>
+			<minValue xsi:nil="true"/>
+			<maxValue xsi:nil="true"/>
+			<mask/>
+			<multiLine>false</multiLine>
+			<fillFromFillingValue>false</fillFromFillingValue>
+			<fillingValue xsi:nil="true"/>
+			<fillChecking>DontCheck</fillChecking>
+			<choiceParamLinks/>
+			<choiceParams/>
+			<quickChoice>auto</quickChoice>
+			<choiceForm/>
+		</standardAttribute>
+		<standardAttribute name="Recorder">
+			<passwordMode>false</passwordMode>
+			<markNegatives>false</markNegatives>
+			<minValue xsi:nil="true"/>
+			<maxValue xsi:nil="true"/>
+			<mask/>
+			<multiLine>false</multiLine>
+			<fillFromFillingValue>false</fillFromFillingValue>
+			<fillingValue xsi:nil="true"/>
+			<fillChecking>DontCheck</fillChecking>
+			<choiceParamLinks/>
+			<choiceParams/>
+			<quickChoice>auto</quickChoice>
+			<choiceForm/>
+		</standardAttribute>
+		<standardAttribute name="Period">
+			<passwordMode>false</passwordMode>
+			<markNegatives>false</markNegatives>
+			<minValue xsi:nil="true"/>
+			<maxValue xsi:nil="true"/>
+			<mask/>
+			<multiLine>false</multiLine>
+			<fillFromFillingValue>false</fillFromFillingValue>
+			<fillingValue xsi:nil="true"/>
+			<fillChecking>ShowError</fillChecking>
+			<choiceParamLinks/>
+			<choiceParams/>
+			<quickChoice>auto</quickChoice>
+			<choiceForm/>
+		</standardAttribute>
+		<resource name="Сумма" id="89767c74-eaff-46c7-9306-b0ad0b59631c">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</type>
+		</resource>
+	</accumulationRegister>
+	<accumulationRegister name="ДенежныеСредства" id="3d0329f9-42d1-4e82-8be5-757a2c4e7ea8">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Денежные средства</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="AccumulationRegisterRecord.ДенежныеСредства" category="Record">
+			<xr:TypeId>07afc73b-032b-42ed-842b-4befcb5e3958</xr:TypeId>
+			<xr:ValueId>1a39f436-389d-41a0-98a5-79ef889c4cc5</xr:ValueId>
+		</generatedType>
+		<generatedType name="AccumulationRegisterManager.ДенежныеСредства" category="Manager">
+			<xr:TypeId>d75e60fd-9d58-4ca7-8b4e-8c07a7c33af4</xr:TypeId>
+			<xr:ValueId>767518eb-769b-4fa0-a1df-f5619bbebd99</xr:ValueId>
+		</generatedType>
+		<generatedType name="AccumulationRegisterSelection.ДенежныеСредства" category="Selection">
+			<xr:TypeId>7e9c5168-0242-4641-94af-5c1c8b307c78</xr:TypeId>
+			<xr:ValueId>b612397b-227a-4181-81a7-8676c08984dd</xr:ValueId>
+		</generatedType>
+		<generatedType name="AccumulationRegisterList.ДенежныеСредства" category="List">
+			<xr:TypeId>edb3e968-23dd-49b8-a329-081f1859a8a6</xr:TypeId>
+			<xr:ValueId>11ec8346-3885-4a1d-9e7f-13f67cf35ba6</xr:ValueId>
+		</generatedType>
+		<generatedType name="AccumulationRegisterRecordSet.ДенежныеСредства" category="RecordSet">
+			<xr:TypeId>023a1a59-dc6b-4f7c-b10e-094ef0f35f4f</xr:TypeId>
+			<xr:ValueId>d7222074-f065-40bf-8231-933bb79b5f8d</xr:ValueId>
+		</generatedType>
+		<generatedType name="AccumulationRegisterRecordKey.ДенежныеСредства" category="RecordKey">
+			<xr:TypeId>7bc98c13-15cd-41a1-b479-098efcf8953f</xr:TypeId>
+			<xr:ValueId>bef16cf5-ffa2-4759-adb6-33abc5ea3edf</xr:ValueId>
+		</generatedType>
+		<managerModule version="1">
+			<bsch:cmdOpCode>22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0</bsch:cmdOperand>
+		</managerModule>
+		<recordSetModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</recordSetModule>
+		<resource name="Сумма" id="5c26dbdb-09c8-42c1-97f8-57a0c754a34a">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</type>
+		</resource>
+	</accumulationRegister>
+	<enum name="ВидыРасходов" id="a700104c-3f84-4a46-9036-2710c0ca1d03">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Виды расходов</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="EnumRef.ВидыРасходов" category="Ref">
+			<xr:TypeId>b617c4f8-831e-4a3e-8e8e-b1e1e812c408</xr:TypeId>
+			<xr:ValueId>88220fcb-07ad-4458-b086-0566a3c4a29b</xr:ValueId>
+		</generatedType>
+		<generatedType name="EnumManager.ВидыРасходов" category="Manager">
+			<xr:TypeId>a4babee5-5603-4345-8276-16ea2c3b9773</xr:TypeId>
+			<xr:ValueId>553de22e-24dd-4c45-9e8a-27513843a899</xr:ValueId>
+		</generatedType>
+		<generatedType name="EnumList.ВидыРасходов" category="List">
+			<xr:TypeId>051d0634-6292-4e94-959d-8cd8ace26a98</xr:TypeId>
+			<xr:ValueId>66d2ca52-ffbc-4e51-a15c-67bb37709589</xr:ValueId>
+		</generatedType>
+		<managerModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</managerModule>
+		<value name="Планируемый" id="98dcb466-20ce-40e2-8ca2-185bb6bc3cde">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Планируемый</v8:content>
+				</v8:item>
+			</synonym>
+		</value>
+		<value name="Фактический" id="98f1765c-3605-4b22-b52c-97da1efc562f">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фактический</v8:content>
+				</v8:item>
+			</synonym>
+		</value>
+	</enum>
+	<requiredPermission>
+		<permission>Multimedia</permission>
+		<use>false</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>Calendars</permission>
+		<use>false</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>BackgroundAudioPlayback</permission>
+		<use>false</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>Location</permission>
+		<use>false</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>Contacts</permission>
+		<use>false</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>BackgroundLocation</permission>
+		<use>false</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>Telephony</permission>
+		<use>false</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>PushNotification</permission>
+		<use>false</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>LocalNotification</permission>
+		<use>false</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>Print</permission>
+		<use>false</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>InAppPurchases</permission>
+		<use>false</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>Ads</permission>
+		<use>false</use>
+	</requiredPermission>
+	<requiredPermission>
+		<permission>FileExchangeWithPersonalComputer</permission>
+		<use>false</use>
+	</requiredPermission>
+</MobileApp>
