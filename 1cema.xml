@@ -1280,6 +1280,26 @@
 		<group>NavigationPanelImportant</group>
 		<parameterType/>
 	</commonCommand>
+	<commonPicture name="СделатьАудиоЗапись" id="f95f4051-e4f2-4022-9124-d84274ee948e">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сделать аудио запись</v8:content>
+			</v8:item>
+		</synonym>
+		<picture>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACAklEQVQ4T6XTS0gU
+cRgA8P9jdmbcXXbG3Q13EfJYJl20TvYyepxWqUMPiVIDQ4KIII8xl86BsHTwUIJ5
+mJNO1kUoNAohSEjISg0KNphtzZm13Z35z/8RRofIqYz9jh98v+8BHwR1BqyzHoQC
+hmEgfW9LhxyVsowR4Fd54dubwoJhGPz3hqHA3YdjzViOPBBCHGSUCs75LPG8izfO
+DBW2BUzMWYc94o35vt9CKQUY44+qLF0aONE7uy3AejnT47hu3ve9Zhr8AD5rmn71
+7KHc5D+BvHVvf7Qh5kGGOANUAkEAmMBUSMRzyz4YPndl9Vdkyw3MF9OD646zs1i0
+TxPiZwGHLJXQn6dT6dFETC91Hzg+/1dgYm7qguus796oVfoE55lGVbv/emkx3phO
+HgEArBCf3G5YEzOGYdBNaMsE40+mOktrdhdC8JSEpfL75eViJptp36GnpwkLWsuV
+crTm1a4bA8OvQoG8acYhqgxijBKRSGTFdr7cUZEyntITkx4J2gLELzMBb13r6XsU
+Cmwm5z8sNq2+e9tZ+Gp3yKp81LaLroSAhbG8R08m92la7Gb/sfPPQgHzqRl3nOpJ
+4tM2hng3hmiBQtEKBVARxoGiyFY8qo32duVKocDI4xFFqmq7KPUyUkRRBSOfYpqO
+Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
+	</commonPicture>
 	<role name="ПолныеПрава" id="6a743ef3-5ea6-4014-887e-c43af6403bfd">
 		<synonym>
 			<v8:item>
@@ -1797,7 +1817,7 @@
 			<form>
 				<mf:serverModule version="1" startAddr="151">
 					<bsch:cmdOpCode>1,18,19,1,1,22,1,2,12,12,2,12,2,12,12,33,16,1,22,1,3,18,51,16,1,3,4,6,18,20,1,1,3,4,4,18,20,1,1,2,12,2,12,12,33,29,40,1,3,17,45,39,39,1,1,3,2,18,21,5,1,16,1,3,2,2,12,18,21,5,1,16,1,3,2,2,12,18,21,5,1,16,1,3,2,3,3,18,21,5,1,16,1,3,3,2,12,24,16,1,3,3,3,25,16,1,3,12,3,4,35,16,1,3,12,3,16,1,3,17,45,39,1,22,1,2,6,16,1,3,4,18,19,5,1,16,1,3,2,12,18,20,1,1,3,4,18,19,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>7,0,1,7,9,0,56,0,0,1,1,2,2,3,4,0,0,58,0,63,0,0,5,0,64,0,7,0,2,6,64,65,0,8,9,2,6,65,67,1,2,2,3,4,0,0,53,68,0,0,0,122,53,69,71,1,3,0,10,0,71,0,73,2,4,1,12,1,11,0,73,0,74,3,4,1,12,1,13,0,74,0,76,4,3,2,3,2,14,0,76,0,78,5,4,1,15,0,0,80,6,5,1,0,0,82,0,7,6,9,0,0,83,0,8,6,0,85,0,0,0,122,87,0,113,5,0,0,115,0,16,1,4,0,115,0,116,0,6,18,1,17,116,117,0,16,2,5,117,119,0,0,0</bsch:cmdOperand>
+					<bsch:cmdOperand>7,0,1,7,9,0,77,0,0,1,1,2,2,3,4,0,0,79,0,84,0,0,5,0,85,0,7,0,2,6,85,86,0,8,9,2,6,86,88,1,2,2,3,4,0,0,53,89,0,0,0,122,53,90,92,1,3,0,10,0,92,0,94,2,4,1,12,1,11,0,94,0,95,3,4,1,12,1,13,0,95,0,97,4,3,2,3,2,14,0,97,0,99,5,4,1,15,0,0,101,6,5,1,0,0,103,0,7,6,9,0,0,104,0,8,6,0,106,0,0,0,122,108,0,134,5,0,0,136,0,16,1,4,0,136,0,137,0,6,18,1,17,137,138,0,16,2,5,138,140,0,0,0</bsch:cmdOperand>
 					<bsch:constant>SПодтвердитьФактическийРасход</bsch:constant>
 					<bsch:constant>SВидимость</bsch:constant>
 					<bsch:constant>SВидРасхода</bsch:constant>
@@ -1846,9 +1866,9 @@
 					<bsch:procedure name="РеквизитФормыВЗначение" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
 					<bsch:procedure name="ЗначениеВРеквизитФормы" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
 				</mf:serverModule>
-				<mf:clientModule version="1" startAddr="137">
-					<bsch:cmdOpCode>1,3,18,19,5,1,16,1,3,12,40,1,3,4,18,19,5,1,16,1,3,2,3,2,2,12,18,21,5,1,4,110,2,2,12,18,21,5,1,4,110,3,12,18,21,5,1,16,1,3,4,2,18,51,16,1,3,3,2,12,4,18,19,1,39,1,18,19,1,1,1,22,1,2,12,4,18,19,5,1,16,1,18,19,1,1,18,19,1,1,22,1,3,2,12,33,40,1,18,19,1,39,1,3,2,12,33,40,1,18,19,1,39,1,1,22,1,18,19,1,1,4,18,19,1,1,2,12,18,19,1,1,18,19,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>14,1,0,1,0,14,0,16,1,0,65,18,2,1,1,2,0,18,0,20,3,0,2,1,2,4,1,3,0,21,5,0,1,2,4,1,6,0,22,5,0,1,7,4,2,0,20,0,25,4,8,3,2,9,0,26,4,3,4,10,11,4,3,26,69,30,0,4,30,32,34,0,43,2,12,13,1,6,0,43,0,44,0,7,44,45,0,8,45,47,0,92,0,5,14,0,102,93,0,8,93,113,94,0,5,15,0,113,95,0,4,95,113,96,98,0,103,0,10,103,104,16,1,11,104,105,2,17,1,12,105,106,0,8,106,108,0,0,0</bsch:cmdOperand>
+				<mf:clientModule version="1" startAddr="207">
+					<bsch:cmdOpCode>1,3,18,19,5,1,16,1,3,12,40,1,3,4,18,19,5,1,16,1,3,2,3,2,2,12,18,21,5,1,4,110,2,2,12,18,21,5,1,4,110,3,12,18,21,5,1,16,1,3,4,2,18,51,16,1,3,3,2,12,4,18,19,1,39,1,18,19,1,1,1,22,1,2,12,4,18,19,5,1,16,1,18,19,1,1,18,19,1,1,22,1,3,18,51,16,1,3,12,4,16,1,3,18,21,5,1,40,1,3,7,18,20,1,1,48,49,3,12,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,12,4,33,40,1,2,12,3,12,16,39,1,1,39,50,3,8,16,3,8,16,39,1,1,22,1,3,2,12,33,40,1,18,19,1,39,1,3,2,12,33,40,1,18,19,1,39,1,1,22,1,18,19,1,1,4,18,19,1,1,2,12,18,19,1,1,18,19,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>14,1,0,1,0,14,0,16,1,0,65,18,2,1,1,2,0,18,0,20,3,0,2,1,2,4,1,3,0,21,5,0,1,2,4,1,6,0,22,5,0,1,7,4,2,0,20,0,25,4,8,3,2,9,0,26,4,3,4,10,11,4,3,26,69,30,0,4,30,32,34,0,43,2,12,13,1,6,0,43,0,44,0,7,44,45,0,8,45,47,0,54,1,0,14,0,55,1,15,16,0,57,1,0,17,0,57,158,58,1,0,1,18,58,59,0,0,1,19,0,0,59,3,0,0,3,0,150,2,3,0,3,0,0,60,2,20,21,0,147,61,2,22,2,23,0,147,62,63,121,1,3,0,0,3,0,0,158,64,68,0,113,0,5,24,0,172,114,0,8,114,183,115,0,5,25,0,183,116,0,4,116,183,117,119,0,124,0,11,124,125,26,1,12,125,126,2,27,1,13,126,127,0,8,127,129,0,0,0</bsch:cmdOperand>
 					<bsch:constant>SЛимитПревышен</bsch:constant>
 					<bsch:constant>Sru = 'Лимит денежных средств на период с %1 по %2 превышен на %3. Все равно записать?'</bsch:constant>
 					<bsch:constant>SПодставитьПараметрыВСтроку</bsch:constant>
@@ -1863,6 +1883,16 @@
 					<bsch:constant>N60</bsch:constant>
 					<bsch:constant>SВидРасхода</bsch:constant>
 					<bsch:constant>SПеречисление.ВидыРасходов.Фактический</bsch:constant>
+					<bsch:constant>SЗапускПриложенияМобильногоУстройства</bsch:constant>
+					<bsch:constant>SДействие</bsch:constant>
+					<bsch:constant>Sandroid.speech.action.RECOGNIZE_SPEECH</bsch:constant>
+					<bsch:constant>SПоддерживаетсяЗапуск</bsch:constant>
+					<bsch:constant>SЗапустить</bsch:constant>
+					<bsch:constant>SДополнительныеДанные</bsch:constant>
+					<bsch:constant>SКлюч</bsch:constant>
+					<bsch:constant>Squery</bsch:constant>
+					<bsch:constant>SНазначение</bsch:constant>
+					<bsch:constant>SЗначение</bsch:constant>
 					<bsch:constant>SНет</bsch:constant>
 					<bsch:constant>SДа</bsch:constant>
 					<bsch:constant>SИзменениеОстатков</bsch:constant>
@@ -1884,7 +1914,7 @@
 					<bsch:procedure name="ПроверитьПревышениеЛимитаЗаПериод" isFunction="true" isExternal="true" parametersCount="0" startAddr="0"/>
 					<bsch:procedure name="НСтр" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
 					<bsch:procedure name="ПоказатьВопрос" isExternal="true" parametersCount="7" startAddr="0"/>
-					<bsch:procedure name="НачатьЗаписьДокумента" parametersCount="0" startAddr="116"/>
+					<bsch:procedure name="НачатьЗаписьДокумента" parametersCount="0" startAddr="186"/>
 					<bsch:procedure name="ПодтвердитьФактическийРасход" parametersCount="1" startAddr="72">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
@@ -1892,7 +1922,14 @@
 					<bsch:procedure name="ПредопределенноеЗначение" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
 					<bsch:procedure name="Записать" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
 					<bsch:procedure name="Закрыть" isExternal="true" parametersCount="1" startAddr="0"/>
-					<bsch:procedure name="РезультатВопросаЗаписиДокумента" isExported="true" parametersCount="2" startAddr="91">
+					<bsch:procedure name="ДобавитьГолосовоеНазначение" parametersCount="1" startAddr="91">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:variable name="ЗапсукПриложения" isLocal="true"/>
+						<bsch:variable name="СтрокаДанных" isLocal="true"/>
+						<bsch:variable name="0СтрокаДанных" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="РезультатВопросаЗаписиДокумента" isExported="true" parametersCount="2" startAddr="161">
 						<bsch:variable name="РезультатВопроса" isLocal="true" isParam="true"/>
 						<bsch:variable name="ДополнительныеПараметры" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
@@ -1952,6 +1989,23 @@
 					</mf:tooltip>
 					<mf:representation>PictureAndText</mf:representation>
 				</mf:command>
+				<mf:command name="ДобавитьГолосовоеНазначение">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добавить голосовое назначение</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>ДобавитьГолосовоеНазначение</mf:handlerName>
+					<mf:picture ref="v8ui:СделатьАудиоЗапись"/>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Добавить голосовое назначение</v8:content>
+						</v8:item>
+					</mf:tooltip>
+					<mf:representation>Picture</mf:representation>
+				</mf:command>
 				<mf:mainElement>
 					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar">
 						<mf:button name="ФормаЗаписть" type="CommandBarButton" commandName="Form.Command.ЗаписатьДокумент"/>
@@ -1971,9 +2025,36 @@
 					<mf:field name="Сумма" kind="InputField" dataPath="Объект.Сумма">
 						<mf:contextMenu name="СуммаКонтекстноеМеню" type="ContextMenu"/>
 					</mf:field>
-					<mf:field name="Назначение" kind="InputField" dataPath="Объект.Назначение">
-						<mf:contextMenu name="НазначениеКонтекстноеМеню" type="ContextMenu"/>
-					</mf:field>
+					<mf:group name="ГруппаНазначение" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа назначение</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:tooltip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа назначение</v8:content>
+							</v8:item>
+						</mf:tooltip>
+						<mf:usualData group="AlwaysHorizontal" representation="None">
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+						<mf:field name="Назначение" kind="InputField" dataPath="Объект.Назначение">
+							<mf:titleLocation>None</mf:titleLocation>
+							<mf:contextMenu name="НазначениеКонтекстноеМеню" type="ContextMenu"/>
+							<mf:inputData>
+								<mf:inputHint>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Введите назначение расхода</v8:content>
+									</v8:item>
+								</mf:inputHint>
+							</mf:inputData>
+						</mf:field>
+						<mf:button name="ДобавитьГолосовоеНазначение" type="UsualButton" commandName="Form.Command.ДобавитьГолосовоеНазначение"/>
+					</mf:group>
 					<mf:button name="ПодтвердитьФактическийРасход" type="UsualButton" commandName="Form.Command.ПодтвердитьФактическийРасход"/>
 				</mf:mainElement>
 			</form>

@@ -29,6 +29,9 @@ CommonModules\СтроковыеФункцииКлиентСервер\Ext\Modul
 CommonModules\УчетДенежныхСредствВызовСервера\Ext\Module.bsl-->CommonModules\УчетДенежныхСредствВызовСервера\Ext\Module.bsl
 CommonModules\УчетДенежныхСредствКлиент\Ext\Module.bsl-->CommonModules\УчетДенежныхСредствКлиент\Ext\Module.bsl
 CommonModules\УчетДенежныхСредствСервер\Ext\Module.bsl-->CommonModules\УчетДенежныхСредствСервер\Ext\Module.bsl
+CommonPictures\СделатьАудиоЗапись.xml-->CommonPictures\СделатьАудиоЗапись.xml
+CommonPictures\СделатьАудиоЗапись\Ext\Picture.xml-->CommonPictures\СделатьАудиоЗапись\Ext\Picture.xml
+CommonPictures\СделатьАудиоЗапись\Ext\Picture\Picture.png-->CommonPictures\СделатьАудиоЗапись\Ext\Picture\Picture.png
 Constants\ДатаТестирования.xml-->Constants\ДатаТестирования.xml
 Constants\ПоследняяДатаРасчетаФактическогоОстаткаЛимита.xml-->Constants\ПоследняяДатаРасчетаФактическогоОстаткаЛимита.xml
 Constants\РежимТестирования.xml-->Constants\РежимТестирования.xml
