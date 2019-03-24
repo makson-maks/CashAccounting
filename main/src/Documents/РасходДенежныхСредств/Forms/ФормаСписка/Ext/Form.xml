@@ -7,6 +7,11 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
+		<Button name="ПоказатьВесьСписок" id="36">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПоказатьВесьСписок</CommandName>
+			<ExtendedTooltip name="ПоказатьВесьСписокРасширеннаяПодсказка" id="37"/>
+		</Button>
 		<UsualGroup name="ОтборПериод" id="25">
 			<Title>
 				<v8:item>
@@ -27,6 +32,7 @@
 				<Button name="СдвинутьПериодНазад" id="30">
 					<Type>UsualButton</Type>
 					<CommandName>Form.Command.СдвинутьПериодНазад</CommandName>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 					<ExtendedTooltip name="СдвинутьПериодНазадРасширеннаяПодсказка" id="31"/>
 				</Button>
 				<LabelField name="ПредставлениеПериода" id="27">
@@ -40,6 +46,7 @@
 				<Button name="СдвинутьПериодВперед" id="32">
 					<Type>UsualButton</Type>
 					<CommandName>Form.Command.СдвинутьПериодВперед</CommandName>
+					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 					<ExtendedTooltip name="СдвинутьПериодВпередРасширеннаяПодсказка" id="33"/>
 				</Button>
 			</ChildItems>
@@ -300,6 +307,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СдвинутьПериодВперед</Action>
+		</Command>
+		<Command name="ПоказатьВесьСписок" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать весь список</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать весь список</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьВесьСписок</Action>
 		</Command>
 	</Commands>
 </Form>
