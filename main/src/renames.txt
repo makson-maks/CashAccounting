@@ -56,6 +56,7 @@ Documents\РасходДенежныхСредств\Forms\ФормаСписк�
 Documents\РасходДенежныхСредств\Forms\ФормаСписка\Ext\Form\Module.bsl-->Documents\РасходДенежныхСредств\Forms\ФормаСписка\Ext\Form\Module.bsl
 Enums\ВидыРасходов.xml-->Enums\ВидыРасходов.xml
 Ext\HomePageWorkArea.xml-->Ext\HomePageWorkArea.xml
+Ext\MainSectionCommandInterface.xml-->Ext\MainSectionCommandInterface.xml
 Ext\ManagedApplicationModule.bsl-->Ext\ManagedApplicationModule.bsl
 Ext\SessionModule.bsl-->Ext\SessionModule.bsl
 InformationRegisters\ЛимитДенежныхСредств.xml-->InformationRegisters\ЛимитДенежныхСредств.xml
@@ -68,5 +69,3 @@ Roles\ПолныеПрава.xml-->Roles\ПолныеПрава.xml
 Roles\Тестирование.xml-->Roles\Тестирование.xml
 Roles\ПолныеПрава\Ext\Rights.xml-->Roles\ПолныеПрава\Ext\Rights.xml
 Roles\Тестирование\Ext\Rights.xml-->Roles\Тестирование\Ext\Rights.xml
-Subsystems\УчетДенежныхСредств.xml-->Subsystems\УчетДенежныхСредств.xml
-Subsystems\УчетДенежныхСредств\Ext\CommandInterface.xml-->Subsystems\УчетДенежныхСредств\Ext\CommandInterface.xml

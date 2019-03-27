@@ -32,7 +32,7 @@
 				</v8:item>
 			</Synonym>
 			<Comment/>
-			<UseStandardCommands>true</UseStandardCommands>
+			<UseStandardCommands>false</UseStandardCommands>
 			<Numerator/>
 			<NumberType>String</NumberType>
 			<NumberLength>9</NumberLength>

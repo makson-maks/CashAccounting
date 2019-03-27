@@ -140,7 +140,6 @@
 		</Properties>
 		<ChildObjects>
 			<Language>Русский</Language>
-			<Subsystem>УчетДенежныхСредств</Subsystem>
 			<CommonPicture>СделатьАудиоЗапись</CommonPicture>
 			<Role>ПолныеПрава</Role>
 			<Role>Тестирование</Role>

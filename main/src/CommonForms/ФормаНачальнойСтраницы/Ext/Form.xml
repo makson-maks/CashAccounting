@@ -1,5 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Баланс</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
@@ -82,6 +89,7 @@
 									<v8:content>факт</v8:content>
 								</v8:item>
 							</Title>
+							<MarkNegatives>true</MarkNegatives>
 							<Hiperlink>true</Hiperlink>
 							<ContextMenu name="ФактическийОстатокЛимитаКонтекстноеМеню" id="33"/>
 							<ExtendedTooltip name="ФактическийОстатокЛимитаРасширеннаяПодсказка" id="34"/>
@@ -106,6 +114,7 @@
 							<v8:content>план</v8:content>
 						</v8:item>
 					</Title>
+					<MarkNegatives>true</MarkNegatives>
 					<Hiperlink>true</Hiperlink>
 					<ContextMenu name="ПлановыйОстатокЛимитаКонтекстноеМеню" id="30"/>
 					<ExtendedTooltip name="ПлановыйОстатокЛимитаРасширеннаяПодсказка" id="31"/>
@@ -135,16 +144,19 @@
 			<ChildItems>
 				<Button name="ДобавитьПриход" id="22">
 					<Type>UsualButton</Type>
+					<HorizontalStretch>true</HorizontalStretch>
 					<CommandName>Form.Command.ДобавитьПриход</CommandName>
 					<ExtendedTooltip name="ДобавитьПриходРасширеннаяПодсказка" id="23"/>
 				</Button>
 				<Button name="ДобавитьРасход" id="20">
 					<Type>UsualButton</Type>
+					<HorizontalStretch>true</HorizontalStretch>
 					<CommandName>Form.Command.ДобавитьРасход</CommandName>
 					<ExtendedTooltip name="ДобавитьРасходРасширеннаяПодсказка" id="21"/>
 				</Button>
 				<Button name="ДобавитьПланируемыйРасход" id="24">
 					<Type>UsualButton</Type>
+					<HorizontalStretch>true</HorizontalStretch>
 					<CommandName>Form.Command.ДобавитьПланируемыйРасход</CommandName>
 					<ExtendedTooltip name="ДобавитьПланируемыйРасходРасширеннаяПодсказка" id="25"/>
 				</Button>
