@@ -141,6 +141,9 @@
 		<ChildObjects>
 			<Language>Русский</Language>
 			<CommonPicture>СделатьАудиоЗапись</CommonPicture>
+			<CommonPicture>ПриходДС</CommonPicture>
+			<CommonPicture>РасходДС</CommonPicture>
+			<CommonPicture>ПлановыйРасходДС</CommonPicture>
 			<Role>ПолныеПрава</Role>
 			<Role>Тестирование</Role>
 			<CommonModule>ОбщегоНазначенийВызовСервера</CommonModule>

@@ -29,7 +29,16 @@ CommonModules\СтроковыеФункцииКлиентСервер\Ext\Modul
 CommonModules\УчетДенежныхСредствВызовСервера\Ext\Module.bsl-->CommonModules\УчетДенежныхСредствВызовСервера\Ext\Module.bsl
 CommonModules\УчетДенежныхСредствКлиент\Ext\Module.bsl-->CommonModules\УчетДенежныхСредствКлиент\Ext\Module.bsl
 CommonModules\УчетДенежныхСредствСервер\Ext\Module.bsl-->CommonModules\УчетДенежныхСредствСервер\Ext\Module.bsl
+CommonPictures\ПлановыйРасходДС.xml-->CommonPictures\ПлановыйРасходДС.xml
+CommonPictures\ПриходДС.xml-->CommonPictures\ПриходДС.xml
+CommonPictures\РасходДС.xml-->CommonPictures\РасходДС.xml
 CommonPictures\СделатьАудиоЗапись.xml-->CommonPictures\СделатьАудиоЗапись.xml
+CommonPictures\ПлановыйРасходДС\Ext\Picture.xml-->CommonPictures\ПлановыйРасходДС\Ext\Picture.xml
+CommonPictures\ПлановыйРасходДС\Ext\Picture\Picture.png-->CommonPictures\ПлановыйРасходДС\Ext\Picture\Picture.png
+CommonPictures\ПриходДС\Ext\Picture.xml-->CommonPictures\ПриходДС\Ext\Picture.xml
+CommonPictures\ПриходДС\Ext\Picture\Picture.png-->CommonPictures\ПриходДС\Ext\Picture\Picture.png
+CommonPictures\РасходДС\Ext\Picture.xml-->CommonPictures\РасходДС\Ext\Picture.xml
+CommonPictures\РасходДС\Ext\Picture\Picture.png-->CommonPictures\РасходДС\Ext\Picture\Picture.png
 CommonPictures\СделатьАудиоЗапись\Ext\Picture.xml-->CommonPictures\СделатьАудиоЗапись\Ext\Picture.xml
 CommonPictures\СделатьАудиоЗапись\Ext\Picture\Picture.png-->CommonPictures\СделатьАудиоЗапись\Ext\Picture\Picture.png
 Constants\ДатаТестирования.xml-->Constants\ДатаТестирования.xml

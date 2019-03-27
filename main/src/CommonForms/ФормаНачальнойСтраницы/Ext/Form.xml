@@ -3,12 +3,19 @@
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
-			<v8:content>Баланс</v8:content>
+			<v8:content>Лимиты</v8:content>
 		</v8:item>
 	</Title>
 	<AutoTitle>false</AutoTitle>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ОбновитьТекущийОстатокДенежныхСредств" id="16">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОбновитьТекущийОстатокДенежныхСредств</CommandName>
+				<ExtendedTooltip name="ОбновитьТекущийОстатокДенежныхСредствРасширеннаяПодсказка" id="17"/>
+			</Button>
+		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
@@ -29,24 +36,81 @@
 					<v8:content>Группа текущий остаток денежных средств</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Group>AlwaysHorizontal</Group>
+			<HorizontalStretch>true</HorizontalStretch>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<Group>Vertical</Group>
+			<HorizontalAlign>Center</HorizontalAlign>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаТекущийОстатокДенежныхСредствРасширеннаяПодсказка" id="15"/>
 			<ChildItems>
+				<LabelDecoration name="ДекорацияБаланс" id="39">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>баланс</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияБалансКонтекстноеМеню" id="40"/>
+					<ExtendedTooltip name="ДекорацияБалансРасширеннаяПодсказка" id="41"/>
+				</LabelDecoration>
 				<LabelField name="ТекущийОстатокДенежныхСредств" id="4">
 					<DataPath>ТекущийОстатокДенежныхСредств</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<Font ref="style:ExtraLargeTextFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 					<ContextMenu name="ТекущийОстатокДенежныхСредствКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="ТекущийОстатокДенежныхСредствРасширеннаяПодсказка" id="6"/>
 				</LabelField>
-				<Button name="ОбновитьТекущийОстатокДенежныхСредств" id="16">
-					<Type>UsualButton</Type>
-					<CommandName>Form.Command.ОбновитьТекущийОстатокДенежныхСредств</CommandName>
-					<ExtendedTooltip name="ОбновитьТекущийОстатокДенежныхСредствРасширеннаяПодсказка" id="17"/>
-				</Button>
 			</ChildItems>
 		</UsualGroup>
-		<UsualGroup name="ГруппаФактическийОстатокЛимитаДенежныхСредств" id="10">
+		<UsualGroup name="ГруппаФактическийОстатокЛимита" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа фактический остаток лимита</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа фактический остаток лимита</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<Group>Vertical</Group>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаФактическийОстатокЛимитаРасширеннаяПодсказка" id="36"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияФактическийЛимит" id="42">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>факт. лимит</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияФактическийЛимитКонтекстноеМеню" id="43"/>
+					<ExtendedTooltip name="ДекорацияФактическийЛимитРасширеннаяПодсказка" id="44"/>
+				</LabelDecoration>
+				<LabelField name="ФактическийОстатокЛимита" id="32">
+					<DataPath>ФактическийОстатокЛимита</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<MarkNegatives>true</MarkNegatives>
+					<Font ref="style:ExtraLargeTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ContextMenu name="ФактическийОстатокЛимитаКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ФактическийОстатокЛимитаРасширеннаяПодсказка" id="34"/>
+					<Events>
+						<Event name="Click">ФактическийОстатокЛимитаНажатие</Event>
+					</Events>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаПлановыйОстатокЛимита" id="10">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -56,56 +120,27 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа фактический остаток лимита денежных средств</v8:content>
+					<v8:content>Группа плановый остаток лимита</v8:content>
 				</v8:item>
 			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 			<Group>Vertical</Group>
+			<HorizontalAlign>Center</HorizontalAlign>
 			<Representation>None</Representation>
-			<BackColor>web:PeachPuff</BackColor>
-			<ExtendedTooltip name="ГруппаФактическийОстатокЛимитаДенежныхСредствРасширеннаяПодсказка" id="11"/>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПлановыйОстатокЛимитаРасширеннаяПодсказка" id="11"/>
 			<ChildItems>
-				<UsualGroup name="ГруппаФактическийОстатокЛимита" id="35">
-					<Title>
+				<LabelDecoration name="ДекорацияПлановыйЛимит" id="45">
+					<Title formatted="false">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа фактический остаток лимита</v8:content>
+							<v8:content>план. лимит</v8:content>
 						</v8:item>
 					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа фактический остаток лимита</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ГруппаФактическийОстатокЛимитаРасширеннаяПодсказка" id="36"/>
-					<ChildItems>
-						<LabelField name="ФактическийОстатокЛимита" id="32">
-							<DataPath>ФактическийОстатокЛимита</DataPath>
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>факт</v8:content>
-								</v8:item>
-							</Title>
-							<MarkNegatives>true</MarkNegatives>
-							<Hiperlink>true</Hiperlink>
-							<ContextMenu name="ФактическийОстатокЛимитаКонтекстноеМеню" id="33"/>
-							<ExtendedTooltip name="ФактическийОстатокЛимитаРасширеннаяПодсказка" id="34"/>
-							<Events>
-								<Event name="Click">ФактическийОстатокЛимитаНажатие</Event>
-							</Events>
-						</LabelField>
-						<Button name="РедактироватьФактическийОстатокЛимита" id="37">
-							<Type>UsualButton</Type>
-							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
-							<CommandName>Form.Command.РедактироватьФактическийОстатокЛимита</CommandName>
-							<PictureLocation>Right</PictureLocation>
-							<ExtendedTooltip name="РедактироватьФактическийОстатокЛимитаРасширеннаяПодсказка" id="38"/>
-						</Button>
-					</ChildItems>
-				</UsualGroup>
+					<ContextMenu name="ДекорацияПлановыйЛимитКонтекстноеМеню" id="46"/>
+					<ExtendedTooltip name="ДекорацияПлановыйЛимитРасширеннаяПодсказка" id="47"/>
+				</LabelDecoration>
 				<LabelField name="ПлановыйОстатокЛимита" id="29">
 					<DataPath>ПлановыйОстатокЛимита</DataPath>
 					<Title>
@@ -114,8 +149,12 @@
 							<v8:content>план</v8:content>
 						</v8:item>
 					</Title>
+					<TitleLocation>None</TitleLocation>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<HorizontalStretch>false</HorizontalStretch>
 					<MarkNegatives>true</MarkNegatives>
-					<Hiperlink>true</Hiperlink>
+					<Font ref="style:ExtraLargeTextFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 					<ContextMenu name="ПлановыйОстатокЛимитаКонтекстноеМеню" id="30"/>
 					<ExtendedTooltip name="ПлановыйОстатокЛимитаРасширеннаяПодсказка" id="31"/>
 					<Events>
@@ -125,6 +164,7 @@
 			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="ГруппаВводПриходаРасхода" id="18">
+			<Visible>false</Visible>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -141,24 +181,41 @@
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаВводПриходаРасходаРасширеннаяПодсказка" id="19"/>
+		</UsualGroup>
+		<Button name="РедактироватьФактическийОстатокЛимита" id="37" DisplayImportance="VeryLow">
+			<Type>UsualButton</Type>
+			<Visible>false</Visible>
+			<Representation>Picture</Representation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<CommandName>Form.Command.РедактироватьФактическийОстатокЛимита</CommandName>
+			<Shape>Oval</Shape>
+			<ShapeRepresentation>None</ShapeRepresentation>
+			<PictureLocation>Right</PictureLocation>
+			<ExtendedTooltip name="РедактироватьФактическийОстатокЛимитаРасширеннаяПодсказка" id="38"/>
+		</Button>
+		<UsualGroup name="Группа1" id="48">
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="49"/>
 			<ChildItems>
-				<Button name="ДобавитьПриход" id="22">
+				<Button name="ДобавитьПриход" id="50">
 					<Type>UsualButton</Type>
-					<HorizontalStretch>true</HorizontalStretch>
 					<CommandName>Form.Command.ДобавитьПриход</CommandName>
-					<ExtendedTooltip name="ДобавитьПриходРасширеннаяПодсказка" id="23"/>
+					<ExtendedTooltip name="ДобавитьПриходРасширеннаяПодсказка" id="51"/>
 				</Button>
-				<Button name="ДобавитьРасход" id="20">
+				<Button name="ДобавитьРасход" id="52">
 					<Type>UsualButton</Type>
-					<HorizontalStretch>true</HorizontalStretch>
 					<CommandName>Form.Command.ДобавитьРасход</CommandName>
-					<ExtendedTooltip name="ДобавитьРасходРасширеннаяПодсказка" id="21"/>
+					<ExtendedTooltip name="ДобавитьРасходРасширеннаяПодсказка" id="53"/>
 				</Button>
-				<Button name="ДобавитьПланируемыйРасход" id="24">
+				<Button name="ДобавитьПланируемыйРасход" id="54">
 					<Type>UsualButton</Type>
-					<HorizontalStretch>true</HorizontalStretch>
 					<CommandName>Form.Command.ДобавитьПланируемыйРасход</CommandName>
-					<ExtendedTooltip name="ДобавитьПланируемыйРасходРасширеннаяПодсказка" id="25"/>
+					<ExtendedTooltip name="ДобавитьПланируемыйРасходРасширеннаяПодсказка" id="55"/>
 				</Button>
 			</ChildItems>
 		</UsualGroup>
@@ -174,7 +231,7 @@
 			<Type>
 				<v8:Type>xs:decimal</v8:Type>
 				<v8:NumberQualifiers>
-					<v8:Digits>0</v8:Digits>
+					<v8:Digits>10</v8:Digits>
 					<v8:FractionDigits>0</v8:FractionDigits>
 					<v8:AllowedSign>Any</v8:AllowedSign>
 				</v8:NumberQualifiers>
@@ -247,7 +304,12 @@
 					<v8:content>Добавить расход</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.РасходДС</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ДобавитьРасход</Action>
+			<Representation>Picture</Representation>
 		</Command>
 		<Command name="ДобавитьПриход" id="4">
 			<Title>
@@ -262,7 +324,12 @@
 					<v8:content>Добавить приход</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ПриходДС</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ДобавитьПриход</Action>
+			<Representation>Picture</Representation>
 		</Command>
 		<Command name="ДобавитьПланируемыйРасход" id="5">
 			<Title>
@@ -277,7 +344,12 @@
 					<v8:content>Добавить планируемый расход</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ПлановыйРасходДС</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ДобавитьПланируемыйРасход</Action>
+			<Representation>Picture</Representation>
 		</Command>
 		<Command name="РедактироватьФактическийОстатокЛимита" id="1">
 			<Title>

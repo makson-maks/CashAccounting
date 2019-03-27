@@ -30,28 +30,6 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаКомандныхПанелейРасширеннаяПодсказка" id="11"/>
 			<ChildItems>
-				<CommandBar name="ГруппаКоманднаяПанельЗаписать" id="4">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа командная панель записать</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа командная панель записать</v8:content>
-						</v8:item>
-					</ToolTip>
-					<ExtendedTooltip name="ГруппаКоманднаяПанельЗаписатьРасширеннаяПодсказка" id="5"/>
-					<ChildItems>
-						<Button name="ЗаписатьИЗакрыть" id="6">
-							<Type>CommandBarButton</Type>
-							<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
-							<ExtendedTooltip name="ЗаписатьИЗакрытьРасширеннаяПодсказка" id="7"/>
-						</Button>
-					</ChildItems>
-				</CommandBar>
 				<CommandBar name="ГруппаКоманднаяПанельОтмена" id="12">
 					<Title>
 						<v8:item>
@@ -68,6 +46,11 @@
 					<HorizontalLocation>Right</HorizontalLocation>
 					<ExtendedTooltip name="ГруппаКоманднаяПанельОтменаРасширеннаяПодсказка" id="13"/>
 					<ChildItems>
+						<Button name="ЗаписатьИЗакрыть" id="6">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+							<ExtendedTooltip name="ЗаписатьИЗакрытьРасширеннаяПодсказка" id="7"/>
+						</Button>
 						<Button name="Отмена" id="8">
 							<Type>CommandBarButton</Type>
 							<GroupHorizontalAlign>Left</GroupHorizontalAlign>
