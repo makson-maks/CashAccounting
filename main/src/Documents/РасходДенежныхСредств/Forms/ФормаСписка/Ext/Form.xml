@@ -34,6 +34,7 @@
 		<Event name="NewWriteProcessing">ОбработкаЗаписиНового</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnChangeDisplaySettings">ПриИзмененииПараметровЭкрана</Event>
 	</Events>
 	<ChildItems>
 		<Button name="ПоказатьВесьСписок" id="36">
@@ -61,7 +62,7 @@
 				<Button name="СдвинутьПериодНазад" id="30">
 					<Type>UsualButton</Type>
 					<CommandName>Form.Command.СдвинутьПериодНазад</CommandName>
-					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Font ref="style:ExtraLargeTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 					<ExtendedTooltip name="СдвинутьПериодНазадРасширеннаяПодсказка" id="31"/>
 				</Button>
 				<LabelField name="ПредставлениеПериода" id="27">
@@ -75,7 +76,7 @@
 				<Button name="СдвинутьПериодВперед" id="32">
 					<Type>UsualButton</Type>
 					<CommandName>Form.Command.СдвинутьПериодВперед</CommandName>
-					<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Font ref="style:ExtraLargeTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 					<ExtendedTooltip name="СдвинутьПериодВпередРасширеннаяПодсказка" id="33"/>
 				</Button>
 			</ChildItems>
@@ -191,18 +192,17 @@
 						<LabelField name="Назначение" id="22">
 							<DataPath>Список.Назначение</DataPath>
 							<HorizontalAlign>Right</HorizontalAlign>
-							<FooterText>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>ИТОГО:</v8:content>
-								</v8:item>
-							</FooterText>
 							<ContextMenu name="НазначениеКонтекстноеМеню" id="23"/>
 							<ExtendedTooltip name="НазначениеРасширеннаяПодсказка" id="24"/>
 						</LabelField>
 						<LabelField name="Сумма" id="19">
 							<DataPath>Список.Сумма</DataPath>
 							<FooterDataPath>ИтоговаяСумма</FooterDataPath>
+							<FooterPicture>
+								<xr:Ref>CommonPicture.Сумма</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</FooterPicture>
+							<FooterHorizontalAlign>Right</FooterHorizontalAlign>
 							<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 							<ContextMenu name="СуммаКонтекстноеМеню" id="20"/>
 							<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="21"/>

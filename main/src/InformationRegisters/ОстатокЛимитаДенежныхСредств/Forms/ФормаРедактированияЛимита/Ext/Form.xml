@@ -1,5 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Введите новое значение</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
 	<ShowCloseButton>false</ShowCloseButton>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
@@ -8,11 +15,37 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
-		<InputField name="НовыйОстатокЛимита" id="1">
-			<DataPath>НовыйОстатокЛимита</DataPath>
-			<ContextMenu name="НовыйОстатокЛимитаКонтекстноеМеню" id="2"/>
-			<ExtendedTooltip name="НовыйОстатокЛимитаРасширеннаяПодсказка" id="3"/>
-		</InputField>
+		<UsualGroup name="Группа1" id="14">
+			<HorizontalStretch>true</HorizontalStretch>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="15"/>
+			<ChildItems>
+				<LabelDecoration name="Декорация1" id="16">
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>новый факт. остаток лимита</v8:content>
+						</v8:item>
+					</Title>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<ContextMenu name="Декорация1КонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="18"/>
+				</LabelDecoration>
+				<InputField name="НовыйОстатокЛимита" id="1">
+					<DataPath>НовыйОстатокЛимита</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Font ref="style:ExtraLargeTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ContextMenu name="НовыйОстатокЛимитаКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НовыйОстатокЛимитаРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="ГруппаКомандныхПанелей" id="10">
 			<Title>
 				<v8:item>
@@ -26,39 +59,22 @@
 					<v8:content>Группа командных панелей</v8:content>
 				</v8:item>
 			</ToolTip>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<HorizontalAlign>Center</HorizontalAlign>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаКомандныхПанелейРасширеннаяПодсказка" id="11"/>
 			<ChildItems>
-				<CommandBar name="ГруппаКоманднаяПанельОтмена" id="12">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа командная панель отмена</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа командная панель отмена</v8:content>
-						</v8:item>
-					</ToolTip>
-					<HorizontalLocation>Right</HorizontalLocation>
-					<ExtendedTooltip name="ГруппаКоманднаяПанельОтменаРасширеннаяПодсказка" id="13"/>
-					<ChildItems>
-						<Button name="ЗаписатьИЗакрыть" id="6">
-							<Type>CommandBarButton</Type>
-							<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
-							<ExtendedTooltip name="ЗаписатьИЗакрытьРасширеннаяПодсказка" id="7"/>
-						</Button>
-						<Button name="Отмена" id="8">
-							<Type>CommandBarButton</Type>
-							<GroupHorizontalAlign>Left</GroupHorizontalAlign>
-							<CommandName>Form.Command.Отмена</CommandName>
-							<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="9"/>
-						</Button>
-					</ChildItems>
-				</CommandBar>
+				<Button name="ЗаписатьИЗакрыть" id="19">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
+					<ExtendedTooltip name="ЗаписатьИЗакрытьРасширеннаяПодсказка" id="20"/>
+				</Button>
+				<Button name="Отмена" id="21">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Отмена</CommandName>
+					<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="22"/>
+				</Button>
 			</ChildItems>
 		</UsualGroup>
 	</ChildItems>
@@ -95,7 +111,7 @@
 				</v8:item>
 			</ToolTip>
 			<Picture>
-				<xr:Ref>StdPicture.Write</xr:Ref>
+				<xr:Ref>CommonPicture.ЗеленаяГалочка</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ЗаписатьИЗакрыть</Action>
@@ -114,7 +130,12 @@
 					<v8:content>Отмена</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.КрасныйКрестикВКруге</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>Отмена</Action>
+			<Representation>Picture</Representation>
 		</Command>
 	</Commands>
 </Form>

@@ -47,7 +47,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ПолныеПрава</xr:Item>
 			</DefaultRoles>
 			<Vendor>makson_maks</Vendor>
-			<Version>1.0.2</Version>
+			<Version>1.1.0</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -135,7 +135,7 @@
 			<ModalityUseMode>DontUse</ModalityUseMode>
 			<SynchronousPlatformExtensionAndAddInCallUseMode>DontUse</SynchronousPlatformExtensionAndAddInCallUseMode>
 			<InterfaceCompatibilityMode>Taxi</InterfaceCompatibilityMode>
-			<CompatibilityMode>Version8_3_12</CompatibilityMode>
+			<CompatibilityMode>Version8_3_13</CompatibilityMode>
 			<DefaultConstantsForm/>
 		</Properties>
 		<ChildObjects>
@@ -145,6 +145,13 @@
 			<CommonPicture>РасходДС</CommonPicture>
 			<CommonPicture>ПлановыйРасходДС</CommonPicture>
 			<CommonPicture>ЖелтыйКруг</CommonPicture>
+			<CommonPicture>ЗеленаяГалочка</CommonPicture>
+			<CommonPicture>КрасныйКрестик_Объемный</CommonPicture>
+			<CommonPicture>КрасныйКрестик</CommonPicture>
+			<CommonPicture>КрасныйКрестикВКруге</CommonPicture>
+			<CommonPicture>ПереводПланРасходаВФакт</CommonPicture>
+			<CommonPicture>Сумма</CommonPicture>
+			<CommonPicture>Подменю</CommonPicture>
 			<Role>ПолныеПрава</Role>
 			<Role>Тестирование</Role>
 			<CommonModule>ОбщегоНазначенийВызовСервера</CommonModule>

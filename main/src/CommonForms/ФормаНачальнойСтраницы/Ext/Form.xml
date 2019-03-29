@@ -213,6 +213,50 @@
 				</Button>
 			</ChildItems>
 		</UsualGroup>
+		<PictureDecoration name="Декорация1" id="58">
+			<VerticalStretch>true</VerticalStretch>
+			<ContextMenu name="Декорация1КонтекстноеМеню" id="59"/>
+			<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="60"/>
+		</PictureDecoration>
+		<CommandBar name="ГруппаКоманднаяПанельПодвал" id="56">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель подвал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа командная панель подвал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalLocation>Right</HorizontalLocation>
+			<ExtendedTooltip name="ГруппаКоманднаяПанельПодвалРасширеннаяПодсказка" id="57"/>
+			<ChildItems>
+				<Popup name="ГруппаПодменю" id="61">
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа подменю</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Picture>
+						<xr:Ref>CommonPicture.Подменю</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<Representation>Picture</Representation>
+					<ExtendedTooltip name="ГруппаПодменюРасширеннаяПодсказка" id="62"/>
+					<ChildItems>
+						<Button name="ИзменитьФактическийЛимит" id="63">
+							<Type>CommandBarButton</Type>
+							<CommandName>Form.Command.ИзменитьФактическийЛимит</CommandName>
+							<ExtendedTooltip name="ИзменитьФактическийЛимитРасширеннаяПодсказка" id="64"/>
+						</Button>
+					</ChildItems>
+				</Popup>
+			</ChildItems>
+		</CommandBar>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="ТекущийОстатокДенежныхСредств" id="1">
@@ -364,6 +408,22 @@
 			</Picture>
 			<Action>РедактироватьФактическийОстатокЛимита</Action>
 			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ИзменитьФактическийЛимит" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить факт. лимит</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить фактический лимит</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьФактическийЛимит</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 </Form>
