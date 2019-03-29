@@ -29,10 +29,13 @@ CommonModules\СтроковыеФункцииКлиентСервер\Ext\Modul
 CommonModules\УчетДенежныхСредствВызовСервера\Ext\Module.bsl-->CommonModules\УчетДенежныхСредствВызовСервера\Ext\Module.bsl
 CommonModules\УчетДенежныхСредствКлиент\Ext\Module.bsl-->CommonModules\УчетДенежныхСредствКлиент\Ext\Module.bsl
 CommonModules\УчетДенежныхСредствСервер\Ext\Module.bsl-->CommonModules\УчетДенежныхСредствСервер\Ext\Module.bsl
+CommonPictures\ЖелтыйКруг.xml-->CommonPictures\ЖелтыйКруг.xml
 CommonPictures\ПлановыйРасходДС.xml-->CommonPictures\ПлановыйРасходДС.xml
 CommonPictures\ПриходДС.xml-->CommonPictures\ПриходДС.xml
 CommonPictures\РасходДС.xml-->CommonPictures\РасходДС.xml
 CommonPictures\СделатьАудиоЗапись.xml-->CommonPictures\СделатьАудиоЗапись.xml
+CommonPictures\ЖелтыйКруг\Ext\Picture.xml-->CommonPictures\ЖелтыйКруг\Ext\Picture.xml
+CommonPictures\ЖелтыйКруг\Ext\Picture\Picture.png-->CommonPictures\ЖелтыйКруг\Ext\Picture\Picture.png
 CommonPictures\ПлановыйРасходДС\Ext\Picture.xml-->CommonPictures\ПлановыйРасходДС\Ext\Picture.xml
 CommonPictures\ПлановыйРасходДС\Ext\Picture\Picture.png-->CommonPictures\ПлановыйРасходДС\Ext\Picture\Picture.png
 CommonPictures\ПриходДС\Ext\Picture.xml-->CommonPictures\ПриходДС\Ext\Picture.xml
@@ -44,12 +47,8 @@ CommonPictures\СделатьАудиоЗапись\Ext\Picture\Picture.png-->Co
 Constants\ДатаТестирования.xml-->Constants\ДатаТестирования.xml
 Constants\ПоследняяДатаРасчетаФактическогоОстаткаЛимита.xml-->Constants\ПоследняяДатаРасчетаФактическогоОстаткаЛимита.xml
 Constants\РежимТестирования.xml-->Constants\РежимТестирования.xml
-Documents\КорректировкаРегистров.xml-->Documents\КорректировкаРегистров.xml
 Documents\ПриходДенежныхСредств.xml-->Documents\ПриходДенежныхСредств.xml
 Documents\РасходДенежныхСредств.xml-->Documents\РасходДенежныхСредств.xml
-Documents\КорректировкаРегистров\Ext\ObjectModule.bsl-->Documents\КорректировкаРегистров\Ext\ObjectModule.bsl
-Documents\КорректировкаРегистров\Forms\ФормаДокумента.xml-->Documents\КорректировкаРегистров\Forms\ФормаДокумента.xml
-Documents\КорректировкаРегистров\Forms\ФормаДокумента\Ext\Form.xml-->Documents\КорректировкаРегистров\Forms\ФормаДокумента\Ext\Form.xml
 Documents\ПриходДенежныхСредств\Ext\ObjectModule.bsl-->Documents\ПриходДенежныхСредств\Ext\ObjectModule.bsl
 Documents\ПриходДенежныхСредств\Forms\ФормаДокумента.xml-->Documents\ПриходДенежныхСредств\Forms\ФормаДокумента.xml
 Documents\ПриходДенежныхСредств\Forms\ФормаСписка.xml-->Documents\ПриходДенежныхСредств\Forms\ФормаСписка.xml
