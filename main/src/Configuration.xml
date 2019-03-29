@@ -162,6 +162,7 @@
 			<Constant>ДатаТестирования</Constant>
 			<Constant>РежимТестирования</Constant>
 			<CommonForm>ФормаНачальнойСтраницы</CommonForm>
+			<CommonForm>ФормаВыбораДаты</CommonForm>
 			<Document>ПриходДенежныхСредств</Document>
 			<Document>РасходДенежныхСредств</Document>
 			<Enum>ВидыРасходов</Enum>

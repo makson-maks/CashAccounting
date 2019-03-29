@@ -10,7 +10,10 @@ CommonCommands\ОткрытьФормуНачальнойСтраницы.xml-->
 CommonCommands\ОткрытьСписокПланируемыхРасходов\Ext\CommandModule.bsl-->CommonCommands\ОткрытьСписокПланируемыхРасходов\Ext\CommandModule.bsl
 CommonCommands\ОткрытьСписокФактическихРасходов\Ext\CommandModule.bsl-->CommonCommands\ОткрытьСписокФактическихРасходов\Ext\CommandModule.bsl
 CommonCommands\ОткрытьФормуНачальнойСтраницы\Ext\CommandModule.bsl-->CommonCommands\ОткрытьФормуНачальнойСтраницы\Ext\CommandModule.bsl
+CommonForms\ФормаВыбораДаты.xml-->CommonForms\ФормаВыбораДаты.xml
 CommonForms\ФормаНачальнойСтраницы.xml-->CommonForms\ФормаНачальнойСтраницы.xml
+CommonForms\ФормаВыбораДаты\Ext\Form.xml-->CommonForms\ФормаВыбораДаты\Ext\Form.xml
+CommonForms\ФормаВыбораДаты\Ext\Form\Module.bsl-->CommonForms\ФормаВыбораДаты\Ext\Form\Module.bsl
 CommonForms\ФормаНачальнойСтраницы\Ext\Form.xml-->CommonForms\ФормаНачальнойСтраницы\Ext\Form.xml
 CommonForms\ФормаНачальнойСтраницы\Ext\Form\Module.bsl-->CommonForms\ФормаНачальнойСтраницы\Ext\Form\Module.bsl
 CommonModules\ОбщегоНазначенийВызовСервера.xml-->CommonModules\ОбщегоНазначенийВызовСервера.xml

@@ -54,6 +54,9 @@
 			</EditFormat>
 			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="StartChoice">ДатаНачалоВыбора</Event>
+			</Events>
 		</InputField>
 		<InputField name="Сумма" id="7">
 			<DataPath>Объект.Сумма</DataPath>
