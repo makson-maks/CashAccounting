@@ -5,11 +5,8 @@
 		<ExcludedCommand>Abort</ExcludedCommand>
 		<ExcludedCommand>Cancel</ExcludedCommand>
 		<ExcludedCommand>CancelSearch</ExcludedCommand>
-		<ExcludedCommand>Change</ExcludedCommand>
 		<ExcludedCommand>ChangeHistory</ExcludedCommand>
 		<ExcludedCommand>Close</ExcludedCommand>
-		<ExcludedCommand>Copy</ExcludedCommand>
-		<ExcludedCommand>Create</ExcludedCommand>
 		<ExcludedCommand>CustomizeForm</ExcludedCommand>
 		<ExcludedCommand>DynamicListStandardSettings</ExcludedCommand>
 		<ExcludedCommand>Find</ExcludedCommand>
