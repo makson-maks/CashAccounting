@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MobileApp xmlns="http://v8.1c.ru/8.3/mobile-application/app" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:bsch="http://v8.1c.ru/8.2/data/bsl" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:chm="http://v8.1c.ru/8.2/data/chart" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dl="http://v8.1c.ru/8.2/managed-application/dynamic-list" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:mf="http://v8.1c.ru/8.3/mobile-application/form" xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet" xmlns:pl="http://v8.1c.ru/8.3/data/planner" xmlns:role="http://v8.1c.ru/8.2/roles" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="УчетДенежныхСредств" id="eddd66c0-8cf9-41cc-b517-9dc67f52ff59" formatVersion="2" platformVersion="8.3.13.1644" containerID="08cc8678-290f-4ee5-9316-06bf602cf55a" defaultLanguage="Language.Русский" version="1.0.2" scriptVariant="Russian">
+<MobileApp xmlns="http://v8.1c.ru/8.3/mobile-application/app" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:bsch="http://v8.1c.ru/8.2/data/bsl" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:chm="http://v8.1c.ru/8.2/data/chart" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dl="http://v8.1c.ru/8.2/managed-application/dynamic-list" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:mf="http://v8.1c.ru/8.3/mobile-application/form" xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet" xmlns:pl="http://v8.1c.ru/8.3/data/planner" xmlns:role="http://v8.1c.ru/8.2/roles" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="УчетДенежныхСредств" id="eddd66c0-8cf9-41cc-b517-9dc67f52ff59" formatVersion="2" platformVersion="8.3.13.1644" containerID="08cc8678-290f-4ee5-9316-06bf602cf55a" defaultLanguage="Language.Русский" version="1.1.0" scriptVariant="Russian">
 	<synonym>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
-			<v8:content>Учет денежных средств</v8:content>
+			<v8:content>Остатки и лимиты</v8:content>
 		</v8:item>
 	</synonym>
 	<language name="Русский" id="a2e45361-6ee7-466a-b0dd-da1b72a5dba2" languageCode="ru">
@@ -34,96 +34,6 @@
 		</leftColumn>
 	</startPageWorkingArea>
 	<defaultRole>Role.ПолныеПрава</defaultRole>
-	<subsystem name="УчетДенежныхСредств" id="f1ebf94d-9531-49eb-8ded-46b15edd2ee9">
-		<synonym>
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Учет денежных средств</v8:content>
-			</v8:item>
-		</synonym>
-		<commandInterface>
-			<CommandVisibility name="Document.ПриходДенежныхСредств.StandardCommand.OpenList"/>
-			<CommandVisibility name="Document.РасходДенежныхСредств.StandardCommand.OpenList">
-				<Visibility2>
-					<mf:common>false</mf:common>
-				</Visibility2>
-			</CommandVisibility>
-			<CommandVisibility name="Document.КорректировкаРегистров.StandardCommand.OpenList">
-				<Visibility2>
-					<mf:common>false</mf:common>
-				</Visibility2>
-			</CommandVisibility>
-			<CommandVisibility name="InformationRegister.ЛимитДенежныхСредств.StandardCommand.OpenList"/>
-			<CommandVisibility name="InformationRegister.ОстатокЛимитаДенежныхСредств.StandardCommand.OpenList"/>
-			<CommandVisibility name="Constant.ПоследняяДатаРасчетаФактическогоОстаткаЛимита.StandardCommand.Open">
-				<Visibility2>
-					<mf:common>false</mf:common>
-				</Visibility2>
-			</CommandVisibility>
-			<CommandPlacement>
-				<Command>Document.ПриходДенежныхСредств.StandardCommand.OpenList</Command>
-				<CommandGroup>NavigationPanelImportant</CommandGroup>
-				<Palcement>Auto</Palcement>
-			</CommandPlacement>
-			<CommandPlacement>
-				<Command>Document.КорректировкаРегистров.StandardCommand.OpenList</Command>
-				<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
-				<Palcement>Auto</Palcement>
-			</CommandPlacement>
-			<CommandPlacement>
-				<Command>InformationRegister.ЛимитДенежныхСредств.StandardCommand.OpenList</Command>
-				<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
-				<Palcement>Auto</Palcement>
-			</CommandPlacement>
-			<CommandPlacement>
-				<Command>InformationRegister.ОстатокЛимитаДенежныхСредств.StandardCommand.OpenList</Command>
-				<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
-				<Palcement>Auto</Palcement>
-			</CommandPlacement>
-			<CommandOrder>
-				<CommandGroup>NavigationPanelImportant</CommandGroup>
-				<Command>Document.ПриходДенежныхСредств.StandardCommand.OpenList</Command>
-			</CommandOrder>
-			<CommandOrder>
-				<CommandGroup>NavigationPanelImportant</CommandGroup>
-				<Command>CommonCommand.ОткрытьСписокПланируемыхРасходов</Command>
-			</CommandOrder>
-			<CommandOrder>
-				<CommandGroup>NavigationPanelImportant</CommandGroup>
-				<Command>CommonCommand.ОткрытьСписокФактическихРасходов</Command>
-			</CommandOrder>
-			<CommandOrder>
-				<CommandGroup>NavigationPanelImportant</CommandGroup>
-				<Command>CommonCommand.ОткрытьФормуНачальнойСтраницы</Command>
-			</CommandOrder>
-			<CommandOrder>
-				<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
-				<Command>Document.КорректировкаРегистров.StandardCommand.OpenList</Command>
-			</CommandOrder>
-			<CommandOrder>
-				<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
-				<Command>InformationRegister.ЛимитДенежныхСредств.StandardCommand.OpenList</Command>
-			</CommandOrder>
-			<CommandOrder>
-				<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
-				<Command>InformationRegister.ОстатокЛимитаДенежныхСредств.StandardCommand.OpenList</Command>
-			</CommandOrder>
-			<ManualOrderEditGroup>NavigationPanelImportant</ManualOrderEditGroup>
-			<ManualOrderEditGroup>NavigationPanelSeeAlso</ManualOrderEditGroup>
-		</commandInterface>
-		<content>CommonCommand.ОткрытьСписокПланируемыхРасходов</content>
-		<content>CommonCommand.ОткрытьСписокФактическихРасходов</content>
-		<content>InformationRegister.ЛимитДенежныхСредств</content>
-		<content>CommonForm.ФормаНачальнойСтраницы</content>
-		<content>Constant.ПоследняяДатаРасчетаФактическогоОстаткаЛимита</content>
-		<content>Document.ПриходДенежныхСредств</content>
-		<content>Document.РасходДенежныхСредств</content>
-		<content>Document.КорректировкаРегистров</content>
-		<content>AccumulationRegister.ПланируемыеОстаткиДенежныхСредств</content>
-		<content>AccumulationRegister.ДенежныеСредства</content>
-		<content>CommonCommand.ОткрытьФормуНачальнойСтраницы</content>
-		<content>InformationRegister.ОстатокЛимитаДенежныхСредств</content>
-	</subsystem>
 	<commonModule name="ОбщегоНазначенийВызовСервера" id="50d0db7f-b1c3-4e41-9e14-75dda3ea8f9f">
 		<synonym>
 			<v8:item>
@@ -487,11 +397,9 @@
 			<bsch:constant>SДвижения</bsch:constant>
 			<bsch:constant>SЗаписывать</bsch:constant>
 			<bsch:constant>SЗаписать</bsch:constant>
-			<bsch:procedure name="ПодготовитьНаборыЗаписейКПроведению" isExported="true" parametersCount="2" startAddr="0">
+			<bsch:procedure name="ПодготовитьНаборыЗаписейКПроведению" isExported="true" parametersCount="1" startAddr="0">
 				<bsch:variable name="Объект" isLocal="true" isParam="true"/>
-				<bsch:variable name="ВыборочноОчищатьРегистры" isLocal="true" isParam="true"/>
 				<bsch:paramsDefValue/>
-				<bsch:paramsDefValue>Btrue</bsch:paramsDefValue>
 			</bsch:procedure>
 			<bsch:procedure name="ОчиститьДвижения" parametersCount="1" startAddr="14">
 				<bsch:variable name="Объект" isLocal="true" isParam="true"/>
@@ -833,8 +741,8 @@
 			</v8:item>
 		</synonym>
 		<clientModule version="1">
-			<bsch:cmdOpCode>1,3,18,51,16,1,3,4,4,18,19,5,1,18,20,1,1,3,18,51,16,1,3,4,7,18,20,1,1,3,4,3,18,20,1,1,4,3,10,4,18,19,1,1,22,1,3,18,51,16,1,3,4,4,18,19,5,1,18,20,1,1,3,18,51,16,1,3,4,7,18,20,1,1,3,4,3,18,20,1,1,4,3,10,4,18,19,1,1,22,22</bsch:cmdOpCode>
-			<bsch:cmdOperand>4,0,0,0,0,5,0,2,3,1,1,0,5,2,1,5,7,1,0,0,0,8,1,4,0,2,1,8,9,1,5,0,2,1,9,11,6,1,0,7,4,2,11,13,0,17,0,0,0,0,18,0,2,8,1,1,0,18,2,1,18,20,1,0,0,0,21,1,4,0,2,1,21,22,1,5,0,2,1,22,24,6,1,0,9,4,2,24,26,0,0</bsch:cmdOperand>
+			<bsch:cmdOpCode>1,3,18,51,16,1,3,4,4,18,19,5,1,18,20,1,1,3,18,51,16,1,3,4,7,18,20,1,1,3,4,3,18,20,1,1,4,3,10,4,18,19,1,1,22,1,3,18,51,16,1,3,4,4,18,19,5,1,18,20,1,1,3,18,51,16,1,3,4,7,18,20,1,1,3,4,3,18,20,1,1,4,3,10,4,18,19,1,1,22,1,3,18,51,16,1,3,4,3,18,20,1,1,3,4,2,3,18,51,16,1,3,18,51,16,1,3,4,3,12,12,18,20,1,1,4,3,10,10,10,10,3,18,19,1,1,22,1,3,18,19,5,1,40,1,3,12,12,12,3,16,39,1,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>6,0,0,0,0,7,0,2,3,1,1,0,7,2,1,7,9,1,0,0,0,10,1,4,0,2,1,10,11,1,5,0,2,1,11,13,6,1,0,7,4,2,13,15,0,19,0,0,0,0,20,0,2,8,1,1,0,20,2,1,20,22,1,0,0,0,23,1,4,0,2,1,23,24,1,5,0,2,1,24,26,6,1,0,9,4,2,26,28,0,32,1,0,0,0,33,1,10,0,2,1,33,35,2,11,0,1,3,12,0,37,3,0,0,0,38,3,13,0,14,13,2,1,38,40,15,3,0,0,0,0,2,7,2,40,42,0,51,0,1,6,0,51,152,52,1,10,14,13,0,0,152,53,55,0,0</bsch:cmdOperand>
 			<bsch:constant>SСтруктура</bsch:constant>
 			<bsch:constant>SВставить</bsch:constant>
 			<bsch:constant>SВидРасхода</bsch:constant>
@@ -845,6 +753,13 @@
 			<bsch:constant>SПланируемый</bsch:constant>
 			<bsch:constant>SПеречисление.ВидыРасходов.Фактический</bsch:constant>
 			<bsch:constant>SФактический</bsch:constant>
+			<bsch:constant>SФорма</bsch:constant>
+			<bsch:constant>SОкончаниеВыбораДаты</bsch:constant>
+			<bsch:constant>SОписаниеОповещения</bsch:constant>
+			<bsch:constant>SДата</bsch:constant>
+			<bsch:constant>SОбъект</bsch:constant>
+			<bsch:constant>SОбщаяФорма.ФормаВыбораДаты</bsch:constant>
+			<bsch:variable name="ЭтотОбъект" isExternal="true"/>
 			<bsch:procedure name="ОткрытьФормуСпискаПланируемыхРасходов" isExported="true" parametersCount="0" startAddr="0">
 				<bsch:variable name="Отбор" isLocal="true"/>
 				<bsch:variable name="ПараметрыФормы" isLocal="true"/>
@@ -855,6 +770,20 @@
 				<bsch:variable name="Отбор" isLocal="true"/>
 				<bsch:variable name="ПараметрыФормы" isLocal="true"/>
 			</bsch:procedure>
+			<bsch:procedure name="ОткрытьФормуВыбораДаты" isExported="true" parametersCount="1" startAddr="90">
+				<bsch:variable name="Форма" isLocal="true" isParam="true"/>
+				<bsch:variable name="ДополнительныеПараметры" isLocal="true"/>
+				<bsch:variable name="ОповещениеОЗакрытии" isLocal="true"/>
+				<bsch:variable name="ПараметрыФормы" isLocal="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ОкончаниеВыбораДаты" isExported="true" parametersCount="2" startAddr="137">
+				<bsch:variable name="РезультатЗакрытия" isLocal="true" isParam="true"/>
+				<bsch:variable name="ДополнительныеПараметры" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ЗначениеЗаполнено" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
 		</clientModule>
 	</commonModule>
 	<commonForm name="ФормаНачальнойСтраницы" id="807fe82d-8f56-4f81-8f0b-113cadb57ef3">
@@ -943,7 +872,7 @@
 					<bsch:paramsDefValue/>
 				</bsch:procedure>
 				<bsch:procedure name="ПредопределенноеЗначение" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
-				<bsch:procedure name="РедактироватьФактическийОстатокЛимита" parametersCount="1" startAddr="91">
+				<bsch:procedure name="ИзменитьФактическийЛимит" parametersCount="1" startAddr="91">
 					<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 					<bsch:variable name="ПараметрыФормы" isLocal="true"/>
 					<bsch:paramsDefValue/>
@@ -968,7 +897,7 @@
 					<mf:type>
 						<v8:Type>xs:decimal</v8:Type>
 						<v8:NumberQualifiers>
-							<v8:Digits>0</v8:Digits>
+							<v8:Digits>10</v8:Digits>
 							<v8:FractionDigits>0</v8:FractionDigits>
 							<v8:AllowedSign>Any</v8:AllowedSign>
 						</v8:NumberQualifiers>
@@ -1032,12 +961,14 @@
 					</v8:item>
 				</mf:title>
 				<mf:handlerName>ДобавитьРасход</mf:handlerName>
+				<mf:picture ref="v8ui:РасходДС"/>
 				<mf:tooltip>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
 						<v8:content>Добавить расход</v8:content>
 					</v8:item>
 				</mf:tooltip>
+				<mf:representation>Picture</mf:representation>
 			</mf:command>
 			<mf:command name="ДобавитьПриход">
 				<mf:title>
@@ -1047,12 +978,14 @@
 					</v8:item>
 				</mf:title>
 				<mf:handlerName>ДобавитьПриход</mf:handlerName>
+				<mf:picture ref="v8ui:ПриходДС"/>
 				<mf:tooltip>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
 						<v8:content>Добавить приход</v8:content>
 					</v8:item>
 				</mf:tooltip>
+				<mf:representation>Picture</mf:representation>
 			</mf:command>
 			<mf:command name="ДобавитьПланируемыйРасход">
 				<mf:title>
@@ -1062,12 +995,14 @@
 					</v8:item>
 				</mf:title>
 				<mf:handlerName>ДобавитьПланируемыйРасход</mf:handlerName>
+				<mf:picture ref="v8ui:ПлановыйРасходДС"/>
 				<mf:tooltip>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
 						<v8:content>Добавить планируемый расход</v8:content>
 					</v8:item>
 				</mf:tooltip>
+				<mf:representation>Picture</mf:representation>
 			</mf:command>
 			<mf:command name="РедактироватьФактическийОстатокЛимита">
 				<mf:title>
@@ -1086,11 +1021,29 @@
 				</mf:tooltip>
 				<mf:representation>Picture</mf:representation>
 			</mf:command>
+			<mf:command name="ИзменитьФактическийЛимит">
+				<mf:title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Изменить факт. лимит</v8:content>
+					</v8:item>
+				</mf:title>
+				<mf:handlerName>ИзменитьФактическийЛимит</mf:handlerName>
+				<mf:tooltip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Изменить фактический лимит</v8:content>
+					</v8:item>
+				</mf:tooltip>
+				<mf:representation>PictureAndText</mf:representation>
+			</mf:command>
 			<mf:mainElement>
+				<mf:autoTitle>false</mf:autoTitle>
 				<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar">
 					<mf:autoMenuData>
 						<mf:autofill>false</mf:autofill>
 					</mf:autoMenuData>
+					<mf:button name="ОбновитьТекущийОстатокДенежныхСредств" type="CommandBarButton" commandName="Form.Command.ОбновитьТекущийОстатокДенежныхСредств"/>
 				</mf:autoCommandBar>
 				<mf:event handler="ОбработкаОповещения" name="NotificationProcessing"/>
 				<mf:event handler="ПриОткрытии" name="OnOpen"/>
@@ -1108,15 +1061,75 @@
 							<v8:content>Группа текущий остаток денежных средств</v8:content>
 						</v8:item>
 					</mf:tooltip>
-					<mf:usualData group="AlwaysHorizontal" representation="None">
+					<mf:horizontalStretch>true</mf:horizontalStretch>
+					<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+					<mf:usualData group="Vertical" representation="None">
 						<mf:showTitle>false</mf:showTitle>
+						<mf:horizontalAlign>Center</mf:horizontalAlign>
 					</mf:usualData>
+					<mf:decoration name="ДекорацияБаланс" type="Label">
+						<mf:formattedTitle>
+							<mf:str>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>баланс</v8:content>
+								</v8:item>
+							</mf:str>
+						</mf:formattedTitle>
+						<mf:contextMenu name="ДекорацияБалансКонтекстноеМеню" type="ContextMenu"/>
+					</mf:decoration>
 					<mf:field name="ТекущийОстатокДенежныхСредств" kind="LabelField" dataPath="ТекущийОстатокДенежныхСредств">
+						<mf:titleLocation>None</mf:titleLocation>
 						<mf:contextMenu name="ТекущийОстатокДенежныхСредствКонтекстноеМеню" type="ContextMenu"/>
+						<mf:horizontalAlign>Center</mf:horizontalAlign>
+						<mf:textData>
+							<mf:font ref="style:ExtraLargeTextFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+						</mf:textData>
 					</mf:field>
-					<mf:button name="ОбновитьТекущийОстатокДенежныхСредств" type="UsualButton" commandName="Form.Command.ОбновитьТекущийОстатокДенежныхСредств"/>
 				</mf:group>
-				<mf:group name="ГруппаФактическийОстатокЛимитаДенежныхСредств" type="UsualGroup">
+				<mf:group name="ГруппаФактическийОстатокЛимита" type="UsualGroup">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа фактический остаток лимита</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа фактический остаток лимита</v8:content>
+						</v8:item>
+					</mf:tooltip>
+					<mf:horizontalStretch>true</mf:horizontalStretch>
+					<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+					<mf:usualData group="Vertical" representation="None">
+						<mf:showTitle>false</mf:showTitle>
+						<mf:horizontalAlign>Center</mf:horizontalAlign>
+					</mf:usualData>
+					<mf:decoration name="ДекорацияФактическийЛимит" type="Label">
+						<mf:formattedTitle>
+							<mf:str>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>факт. лимит на неделю</v8:content>
+								</v8:item>
+							</mf:str>
+						</mf:formattedTitle>
+						<mf:contextMenu name="ДекорацияФактическийЛимитКонтекстноеМеню" type="ContextMenu"/>
+					</mf:decoration>
+					<mf:field name="ФактическийОстатокЛимита" kind="LabelField" dataPath="ФактическийОстатокЛимита">
+						<mf:titleLocation>None</mf:titleLocation>
+						<mf:contextMenu name="ФактическийОстатокЛимитаКонтекстноеМеню" type="ContextMenu"/>
+						<mf:horizontalAlign>Center</mf:horizontalAlign>
+						<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+						<mf:textData>
+							<mf:markNegatives>true</mf:markNegatives>
+							<mf:font ref="style:ExtraLargeTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<mf:event handler="ФактическийОстатокЛимитаНажатие" name="Click"/>
+						</mf:textData>
+					</mf:field>
+				</mf:group>
+				<mf:group name="ГруппаПлановыйОстатокЛимита" type="UsualGroup">
 					<mf:title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1126,45 +1139,26 @@
 					<mf:tooltip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Группа фактический остаток лимита денежных средств</v8:content>
+							<v8:content>Группа плановый остаток лимита</v8:content>
 						</v8:item>
 					</mf:tooltip>
+					<mf:horizontalStretch>true</mf:horizontalStretch>
+					<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
 					<mf:usualData group="Vertical" representation="None">
-						<mf:backColor>web:PeachPuff</mf:backColor>
+						<mf:showTitle>false</mf:showTitle>
+						<mf:horizontalAlign>Center</mf:horizontalAlign>
 					</mf:usualData>
-					<mf:group name="ГруппаФактическийОстатокЛимита" type="UsualGroup">
-						<mf:title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Группа фактический остаток лимита</v8:content>
-							</v8:item>
-						</mf:title>
-						<mf:tooltip>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Группа фактический остаток лимита</v8:content>
-							</v8:item>
-						</mf:tooltip>
-						<mf:usualData representation="None">
-							<mf:showTitle>false</mf:showTitle>
-						</mf:usualData>
-						<mf:field name="ФактическийОстатокЛимита" kind="LabelField" dataPath="ФактическийОстатокЛимита">
-							<mf:title>
+					<mf:decoration name="ДекорацияПлановыйЛимит" type="Label">
+						<mf:formattedTitle>
+							<mf:str>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>факт</v8:content>
+									<v8:content>лимит на неделю с учетом план. расходов</v8:content>
 								</v8:item>
-							</mf:title>
-							<mf:contextMenu name="ФактическийОстатокЛимитаКонтекстноеМеню" type="ContextMenu"/>
-							<mf:textData hyperlink="true">
-								<mf:event handler="ФактическийОстатокЛимитаНажатие" name="Click"/>
-							</mf:textData>
-						</mf:field>
-						<mf:button name="РедактироватьФактическийОстатокЛимита" type="UsualButton" commandName="Form.Command.РедактироватьФактическийОстатокЛимита">
-							<mf:groupHorizontalAlign>Right</mf:groupHorizontalAlign>
-							<mf:pictureLocation>Right</mf:pictureLocation>
-						</mf:button>
-					</mf:group>
+							</mf:str>
+						</mf:formattedTitle>
+						<mf:contextMenu name="ДекорацияПлановыйЛимитКонтекстноеМеню" type="ContextMenu"/>
+					</mf:decoration>
 					<mf:field name="ПлановыйОстатокЛимита" kind="LabelField" dataPath="ПлановыйОстатокЛимита">
 						<mf:title>
 							<v8:item>
@@ -1172,8 +1166,14 @@
 								<v8:content>план</v8:content>
 							</v8:item>
 						</mf:title>
+						<mf:titleLocation>None</mf:titleLocation>
 						<mf:contextMenu name="ПлановыйОстатокЛимитаКонтекстноеМеню" type="ContextMenu"/>
-						<mf:textData hyperlink="true">
+						<mf:horizontalAlign>Center</mf:horizontalAlign>
+						<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+						<mf:textData>
+							<mf:markNegatives>true</mf:markNegatives>
+							<mf:font ref="style:ExtraLargeTextFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<mf:horizontalStretch>false</mf:horizontalStretch>
 							<mf:event handler="ПлановыйОстатокЛимитаНажатие" name="Click"/>
 						</mf:textData>
 					</mf:field>
@@ -1185,6 +1185,7 @@
 							<v8:content>Группа ввод прихода расхода</v8:content>
 						</v8:item>
 					</mf:title>
+					<mf:visible>false</mf:visible>
 					<mf:tooltip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -1194,10 +1195,140 @@
 					<mf:usualData group="Vertical" representation="None">
 						<mf:showTitle>false</mf:showTitle>
 					</mf:usualData>
+				</mf:group>
+				<mf:button name="РедактироватьФактическийОстатокЛимита" type="UsualButton" commandName="Form.Command.РедактироватьФактическийОстатокЛимита">
+					<mf:visible>false</mf:visible>
+					<mf:representation>Picture</mf:representation>
+					<mf:autoMaxWidth>false</mf:autoMaxWidth>
+					<mf:autoMaxHeight>false</mf:autoMaxHeight>
+					<mf:groupHorizontalAlign>Right</mf:groupHorizontalAlign>
+					<mf:shape>Oval</mf:shape>
+					<mf:shapeRepresentation>None</mf:shapeRepresentation>
+					<mf:pictureLocation>Right</mf:pictureLocation>
+					<mf:displayImportance>VeryLow</mf:displayImportance>
+				</mf:button>
+				<mf:group name="Группа1" type="UsualGroup">
+					<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+					<mf:usualData representation="None">
+						<mf:showTitle>false</mf:showTitle>
+						<mf:horizontalAlign>Center</mf:horizontalAlign>
+					</mf:usualData>
 					<mf:button name="ДобавитьПриход" type="UsualButton" commandName="Form.Command.ДобавитьПриход"/>
 					<mf:button name="ДобавитьРасход" type="UsualButton" commandName="Form.Command.ДобавитьРасход"/>
 					<mf:button name="ДобавитьПланируемыйРасход" type="UsualButton" commandName="Form.Command.ДобавитьПланируемыйРасход"/>
 				</mf:group>
+				<mf:decoration name="Декорация1" type="Picture">
+					<mf:verticalStretch>true</mf:verticalStretch>
+					<mf:contextMenu name="Декорация1КонтекстноеМеню" type="ContextMenu"/>
+				</mf:decoration>
+				<mf:group name="ГруппаКоманднаяПанельПодвал" type="CommandBar">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа командная панель подвал</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа командная панель подвал</v8:content>
+						</v8:item>
+					</mf:tooltip>
+					<mf:menuData>
+						<mf:horizontalAlign>Right</mf:horizontalAlign>
+					</mf:menuData>
+					<mf:group name="ГруппаПодменю" type="Popup">
+						<mf:tooltip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа подменю</v8:content>
+							</v8:item>
+						</mf:tooltip>
+						<mf:subMenuData>
+							<mf:representation>Picture</mf:representation>
+							<mf:picture ref="v8ui:Подменю"/>
+						</mf:subMenuData>
+						<mf:button name="ИзменитьФактическийЛимит" type="CommandBarButton" commandName="Form.Command.ИзменитьФактическийЛимит"/>
+					</mf:group>
+				</mf:group>
+			</mf:mainElement>
+		</form>
+		<useStandardCommands>false</useStandardCommands>
+	</commonForm>
+	<commonForm name="ФормаВыбораДаты" id="11239ea6-6101-4d38-86ea-35f5fe519980">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Форма выбора даты</v8:content>
+			</v8:item>
+		</synonym>
+		<form>
+			<mf:serverModule version="1" startAddr="7">
+				<bsch:cmdOpCode>1,2,2,12,16,1,22,22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>7,0,1,0,0,9,0,0,0</bsch:cmdOperand>
+				<bsch:constant>SДата</bsch:constant>
+				<bsch:variable name="ПолеКалендаря" isExternal="true"/>
+				<bsch:variable name="Параметры" isExternal="true"/>
+				<bsch:procedure name="ПриСозданииНаСервере" parametersCount="2" startAddr="0">
+					<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+					<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
+					<bsch:paramsDefValue/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+			</mf:serverModule>
+			<mf:clientModule version="1" startAddr="10">
+				<bsch:cmdOpCode>1,3,12,4,13,18,19,1,1,22,22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>18,0,0,1,0,1,1,18,20,0,0,0</bsch:cmdOperand>
+				<bsch:constant>SВыделенныеДаты</bsch:constant>
+				<bsch:constant>N0</bsch:constant>
+				<bsch:procedure name="ПолеКалендаряПриАктивизацииДаты" parametersCount="1" startAddr="0">
+					<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+				<bsch:procedure name="Закрыть" isExternal="true" parametersCount="1" startAddr="0"/>
+			</mf:clientModule>
+			<mf:serverWOContextModule version="1">
+				<bsch:cmdOpCode>22</bsch:cmdOpCode>
+				<bsch:cmdOperand>0</bsch:cmdOperand>
+			</mf:serverWOContextModule>
+			<mf:clientServerWOContextModule version="1">
+				<bsch:cmdOpCode>22</bsch:cmdOpCode>
+				<bsch:cmdOperand>0</bsch:cmdOperand>
+			</mf:clientServerWOContextModule>
+			<mf:attributes>
+				<mf:attribute name="ПолеКалендаря">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поле календаря</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</mf:type>
+				</mf:attribute>
+			</mf:attributes>
+			<mf:mainElement>
+				<mf:title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Выберите дату...</v8:content>
+					</v8:item>
+				</mf:title>
+				<mf:autoTitle>false</mf:autoTitle>
+				<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
+				<mf:event handler="ПриСозданииНаСервере" name="OnCreateAtServer"/>
+				<mf:field name="ПолеКалендаря" kind="CalendarField" dataPath="ПолеКалендаря">
+					<mf:titleLocation>None</mf:titleLocation>
+					<mf:contextMenu name="ПолеКалендаряКонтекстноеМеню" type="ContextMenu"/>
+					<mf:calendarData>
+						<mf:event handler="ПолеКалендаряВыбор" name="Selection"/>
+						<mf:event handler="ПолеКалендаряПриАктивизацииДаты" name="OnActivateDate"/>
+					</mf:calendarData>
+				</mf:field>
 			</mf:mainElement>
 		</form>
 		<useStandardCommands>false</useStandardCommands>
@@ -1206,7 +1337,7 @@
 		<synonym>
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Планируемый расход</v8:content>
+				<v8:content>Расход (план)</v8:content>
 			</v8:item>
 		</synonym>
 		<clientModule version="1">
@@ -1232,7 +1363,7 @@
 		<synonym>
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Фактический расход</v8:content>
+				<v8:content>Расход (факт)</v8:content>
 			</v8:item>
 		</synonym>
 		<clientModule version="1">
@@ -1287,18 +1418,329 @@
 				<v8:content>Сделать аудио запись</v8:content>
 			</v8:item>
 		</synonym>
-		<picture>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACAklEQVQ4T6XTS0gU
-cRgA8P9jdmbcXXbG3Q13EfJYJl20TvYyepxWqUMPiVIDQ4KIII8xl86BsHTwUIJ5
-mJNO1kUoNAohSEjISg0KNphtzZm13Z35z/8RRofIqYz9jh98v+8BHwR1BqyzHoQC
-hmEgfW9LhxyVsowR4Fd54dubwoJhGPz3hqHA3YdjzViOPBBCHGSUCs75LPG8izfO
-DBW2BUzMWYc94o35vt9CKQUY44+qLF0aONE7uy3AejnT47hu3ve9Zhr8AD5rmn71
-7KHc5D+BvHVvf7Qh5kGGOANUAkEAmMBUSMRzyz4YPndl9Vdkyw3MF9OD646zs1i0
-TxPiZwGHLJXQn6dT6dFETC91Hzg+/1dgYm7qguus796oVfoE55lGVbv/emkx3phO
-HgEArBCf3G5YEzOGYdBNaMsE40+mOktrdhdC8JSEpfL75eViJptp36GnpwkLWsuV
-crTm1a4bA8OvQoG8acYhqgxijBKRSGTFdr7cUZEyntITkx4J2gLELzMBb13r6XsU
-Cmwm5z8sNq2+e9tZ+Gp3yKp81LaLroSAhbG8R08m92la7Gb/sfPPQgHzqRl3nOpJ
-4tM2hng3hmiBQtEKBVARxoGiyFY8qo32duVKocDI4xFFqmq7KPUyUkRRBSOfYpqO
-Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
+		<picture>iVBORw0KGgoAAAANSUhEUgAAAA4AAAAYCAYAAADKx8xXAAACn0lEQVQ4jYWSS2/b
+RhRGz5AjDR+uqCRVktICatkIoiQFmsAJYEBb/xb/Gf8NL7y0kS6sbYC0m0LZJEDc
+h4RWqWxTYEyLoijaGrKLxGlc+fHtBpgz5947V/A5s9msiKKIJEkYfQzRWmM7Dve+
+8/nG8zANQ/BVJECe58Xu7i7tdpvhUYAsCl48f07z4UP+/rPHD6ur/D+G1rpot9v8
+9PIlSZKQJAlHwRE7Ozt0u12y6ZTe/m8UeVFcAOM4Zn9/n2bzEdIwsWwLwzTAEPza
+6ZDnOekkmTPK6XRKOkk5iaJPL5km3u1v8X2fuu9zNjtDCDEPOo5D/0MfwzBoPmry
+49OnvHv7ltevXnH4oc/jBw9wKpV50HVd1tfXieOYMAzZ3t7m9/fvyWczVp89Q0rJ
+940GwriolaZpijRNi62tLfb29ih0DlojgOqtW5RKJe7evzdvBLBtWwBsbm4Wv7z+
+mcqCQzQMCYMhWZZxenp6OXiejY0NXNuh86aDaZrE4zFZlhEOh/P/+PXB8zzRWF7G
+X1ykrBRpmjKdTgkOj64HASpehWq1SllZCAEHBwecHH+8GazX64gCHNelpCx6vR6T
+eMxkMiluBJ0FF9d1kZbin4MBWZbR+6N7Ye3mQNM0RavV+mQslSgrRb/f569eF53r
+q40AS0tL+L5PWSmkNBkMBuizM+LR6HrQtm2qnketdhdZtgijYwQQRyfXg0IIHj95
+glIKZduMx2MEEB0ff+lTXgYahiG01oVlWyhLMcpzwjBkwfPg83wuNZ4PaW1tjbJS
+KNui0+kwHsVf1u9KEGBlZQXP88hOZwRBQFHkBMEhV5Z6nlqtRqvV4nAwoLFYx7Is
+bt+5czMopRRa66IsS9i2jUTgOAs3l3re69Jyg5nWCOO/6/8CnvUX0MrH9JoAAAAA
+SUVORK5CYII=</picture>
+	</commonPicture>
+	<commonPicture name="ПриходДС" id="43fee76b-cd69-4ed8-a0fd-7aabd5db52bd">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Приход ДС</v8:content>
+			</v8:item>
+		</synonym>
+		<picture>iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADFUlEQVRoge2ZP2hT
+QRzHP6lpLW0lVC0iiCCECg421UqomzpZEBzSQdxFEMXOznZUoaDiLg7pIIgWirSb
+GrTauhkLgghSai1R02pTG4e7pnln3svdvT/NkM+Uy939ft9vcu/+vIMmTXwRqy78
+LTy0jdMGDAKngKNAL7Af6JL1v4CvQB54D0wDL4E1m2Q7Ehcrn/0a6AcuAxlgt2Hf
+ZSAL3AfemXSsNtBimHSTPuApMANcwlw8QLfsOwM8kzGNMTXQDtwC3gBDKP+gJTHg
+rIx5W+bQxsRAEjFuR4C4SRJN4sB1mSOp20nXwAngBZAy12VMCngFpHUa6xhIA1NA
+jw9RpuwBnqNhop6BJPCErekwSrpkbs/h5GWgHTHNRfnLq/RIDa4PtpeBUaIZ8/VI
+ATfdKt0M9AFXQ5FjxzXECv8fbgZGCWeqtCWO0FSzQqUfsbD44tDjcT4Xi5Xywc5O
+Pp3P+Ak5hNDm2HbU+geuEMwKGzQxhDYHqoGdiI1Zo5JBaKygGkgDicjkmJNAWdxU
+A6ej02KNQ6NqwGpLGzEOjaqB3giF2OLQqE6j+0wi7c0+cq0rlEqO8peVFc/234Yv
+6KZ1aFQN7NKNArC8pn+k3SiXjdp74NBoe6RsGFQDP7dFhRkOjeoQWkAcJrTobmtz
+rSuUSmyUy5VySyxGorVVN7QXC9UF1UAeOKIbyevBU/dCBzo6/O6FNslXF9QhNBdE
+hpBxaFQNTEUoxJbp6oJqIAcUotNizA/EG4sKqoE/wHhkcszJIjRWqLUO3I1GixX3
+1C9qGXgLTIavxZhJxHtUB25vp1PAaxrnXLwODCBnIJ2307PAWOiy9BnDZYr32gvd
+QBjZbuYQWmriZWAVGAYWg1ZkwCLiHLzq1qDebnQeOAcU67QLg6LMPe/VSGc7nQPO
+AEsBiNJlSebM1Wuoex7IIS7xongmZoGTaIgHswPNR4SJO4hpLWjWZexBlB2nF6Yn
+st+IK6YBYMKwrxcTMuaIzKGN7ZFyDvGu8hjwAPhuEWNZ9j0uY1lt5cO66D5M7Yvu
+DwR80d2kiU/+ATzqnBWIt1lUAAAAAElFTkSuQmCC</picture>
+	</commonPicture>
+	<commonPicture name="РасходДС" id="c80a7b8a-be78-4486-99fd-fd7523d1c9f5">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Расход ДС</v8:content>
+			</v8:item>
+		</synonym>
+		<picture>iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACz0lEQVRoge2ZPWgU
+QRxH3+mhUSLnB0HsjwgW5uIHR+zUyoBdrOxFkIhptBArMaUKByr2VkkXNBAk6dQD
+ozk7z/QSQoxRY1ROtJjxvJ3s7s1/dndyxb0qm92Zeb9kdj52oEuXRORaL36vPXGt
+ZwcwBJwGjgL9wCGgV9//BnwE6sA7YA54CfxyaWx74WLz56QBBoHLwAiwX1h2FZgA
+HgFvJQVbA2wTNvqPAeApMA9cQi4PsE+XnQee6TrFSAP0AHeB18Awxn/QkRxwTtd5
+T7dhjSRAEdVvx4C8pBFL8sA13UbRtpBtgJPAC6Ak9xJTAl4BZZuHbQKUgVmgL4GU
+lAPAcyxCtAtQBKb4Pxz6pFe3Hdud4gL0oIY5n395kz7tEPlixwUYx0+fb0cJuBN1
+MyrAADCaiY4bV1Ez/CaiAoyTzVDpSh7ltImwAIOoiaXTGEa5BQgLcIV0Zti0yaHc
+ApgBdqIWZp3KCMqxiRmgDBS86cgpYExuZoAz/lycCTiaAZyWtJ4JOJoB+j2KuBJw
+NMf6gy41fh697Wyzt3JLWiTgaAbY4yLx5/uGSzFXAo6uW8qOwQzwdUssZAQczS60
+hNpMiMjt3pVESMpS64UZoA4ckdbo8CImod56YXahmkcRVwKOZoBZjyKuzLVemAGq
+wJo/FzFfUF8smpgBfgKT3nTkTKAcm4TNAw/8uDjx0PxFWIA3wEz2LmJmUN9RA0TN
+xDeARqY6MhrA9bAbUQEWgEpmOnIqRAzxcWuhm6ggW00N5RJKXIAN4AKwnLaRgGXU
+PjhyudtuNboInAfWU5SyZV23vRj3kM1yugqcBVZSkLJlRbdZbfeg7X6gijrE8/FO
+LACnsJAH2YbmAyrEfbIZYhu67iGMFWcc0h3ZD9QR0wlgWlg2jmld55huwxrXLWUN
+9a3yGPAY+ORQx6oue1zX5bSUz+qg+zDhB93vSfmgu0uXhPwFZzp4uMhR8vIAAAAA
+SUVORK5CYII=</picture>
+	</commonPicture>
+	<commonPicture name="ПлановыйРасходДС" id="ec200dfc-6633-4656-83aa-3613fc787df1">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Плановый расход ДС</v8:content>
+			</v8:item>
+		</synonym>
+		<picture>iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADK0lEQVRoge2ZO0wU
+QQCGv3OJokHXR4ixJ5hYyEMMYqdWktBhtaWJMTEYabQgVkZKNaEx9ldpZ5SEGOgU
+ElHODrA3hCCeD0DD5Sxm7tgd9jEzu7dcwVfd3t3MfP/u7MzOLOyzTyoK/oNKuWhb
+z0FgALgCnAc6gTNAm/z9N/ANWAK+ADPAB+CfTWOO69U/pw3QA9wGhoGThmXXgZfA
+c+CzSUF/gAOGjdboAt4A88AtzOUBTsiy88BbWacxpgFagSfAR2AQ5QpaUgCuyzqf
+yja0MQnQgei3o0CLSSOatAD3ZBsduoV0A1wE3gPd5l7GdAOzQL/On3UC9APTQHsK
+KVNOAe/QCJEUoAN4zc5wmCdtsu3Y7hQXoBUxzOV55lXapUPkjR0XYJx8+nwS3cDj
+qB+jAnQBIw3RseMuYobfRVSAcRozVNrSgnDaRViAHsTE0mwMItwChAW4QzYzbNYU
+EG4B1ACHEA9mzcowwrGOGqAfcHPTMcdFmdzUAFfzc7Em4KgGsHqkzZmAoxqgM0cR
+WwKO6lh/2qbGHyOPrG2OTzw0LRJwVAMctZGobmzaFLMl4Gi7pGwa1AC/9sTCjICj
+2oVWEIsJIwpHDqcRMmXFf6AGWALOmdZocSOmYcl/oHahUo4itgQc1QDTOYrYMuM/
+UAPMAeX8XIz5idixqKPeA3+BV8DNPGz8W4SaHAO2/F+E7Y32Irb7csFxPZM92T5g
+XgavAoWwiewTMJWNXjKVclH3Skyxc2KryJMfNRM/ALZT22miEWIbuA/guF5dHqID
+LAATWQnqkBBiAig5rletlIuBbh/3LDSGCJIbESFKwFiYPMQH2ARuAKvZKSajhFgF
+hh3X2wiTh+Sn0a/AEPAnO8VkfCGGHNdbjpIHvcfpOeAasJaRnw5rlXLxkuN6s3Hy
+oL8emEO8xMvjnlgALtfk5agTicmCZhkR4hmNGWK3Zd0Djust1s58UgjTFdkW4hVT
+HzBpaxrCpKxz1HG9TbXbxIWwXVKWEHuVvcAL4LtFHeuy7AVZV+g4XyMqRKNedJ8l
+/EX3IhEvuuPk/agzcbMQe6Nm8P+GYitThb2/FKnP5H9cMswmDww/VwAAAABJRU5E
+rkJggg==</picture>
+	</commonPicture>
+	<commonPicture name="ЖелтыйКруг" id="a72affd4-91f5-452c-8e8d-d5c02e0c0902">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Желтый круг</v8:content>
+			</v8:item>
+		</synonym>
+		<picture>iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACrElEQVRoge2ZP2hT
+QRzHP9GgHSpBpYh7qJtN/UOomzpZcKuTuwii2EUHZzuqUFBxd6pb0UKRdlMDVhs3
+a3eRUkvVUpUIDr8z5q7vvdzvknfNkM/U9L273+fbvtyfd9CnT0cUWj/82Xwa2s8+
+YAw4CxwHhoGjwKC5/gP4DKwAH4BF4DXwO6TY3tLl5s+dBhgFrgITwCFl2w1gBngM
+vNc0bA2wR1n0HyPAc2AJuIJeHuCgabsEvDB9qtEGGADuAW+BcZz/YCAF4ILp876p
+4Y0mQBl5bieBoqaIJ0XgpqlR9m3kG+A08Aqo6L3UVIA3QNXnZp8AVWABGOpASsth
+4CUeIdoFKAOz/B8OYzJoamc+TlkBBpBhLuZf3mXIOKR+sbMCTBHnmW9HBbibdjEt
+wAhwPRedMG4gM/wO0gJMkc9QGUoRcdpBUoBRZGLpNcYRN4ukANfozgzbbQqIm4Ub
+YD+yMOtVJhDHJm6AKlCKpqOnhDO5uQHOxXMJxnJ0AwQtaSNjOboBhiOKhGI5ugGO
+RBQJxXJ0AxyIKBKK5Ri6pewZ3ADfd8VCh+XoBvgSUSQUy9ENsBJRJBTL0Q1QjygS
+iuXoBliIKBLKYusHN0AN2IznouYb8saiiRvgF/Asmo6eGcSxSdI88DCOSxCP3F8k
+BXgHzOfvomYeeY9qkTYT3wYaueroaAC3ki6kBVgGpnPT0TNNyhCftRa6gwTZbeqI
+SyJZAbaBS8Bat40UrCH74O20G9qtRleBi8BWF6V82TK1V7Nu8llO14DzwHoXpHxZ
+NzVr7W703Q/UkEO8GN+JZeAMHvKg29B8QkI8IJ8htmH6HkOxKtbuyH4iR0yngDll
+2yzmTJ+TpoY3oVvKOvKu8gTwBPga0MeGaXvS9BW0lM/roPsYyQfdH+nyQXefPh3y
+Fz2OcVNJ0Rq6AAAAAElFTkSuQmCC</picture>
+	</commonPicture>
+	<commonPicture name="ЗеленаяГалочка" id="1f0f76ce-78c8-4343-909f-9901ea99a275">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Зеленая галочка</v8:content>
+			</v8:item>
+		</synonym>
+		<picture>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
+AAAAAElFTkSuQmCC</picture>
+	</commonPicture>
+	<commonPicture name="КрасныйКрестик_Объемный" id="e847242f-68ff-4876-9095-bd0be4da7318">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Красный крестик объемный</v8:content>
+			</v8:item>
+		</synonym>
+		<picture>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
+8D3xPxHAvZJO64w6AAAAAElFTkSuQmCC</picture>
+	</commonPicture>
+	<commonPicture name="КрасныйКрестик" id="825fb765-5069-4df3-9b68-52f5ec29270b">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Красный крестик</v8:content>
+			</v8:item>
+		</synonym>
+		<picture>iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAA0UlEQVRYhe2WwRKE
+IAxDg7N3//8z/QK872pJUlZhhh5x2jygNJZaa8VAsb0N8B0LqBULqBWfuw9HKT9r
+u/kglVrSCV0V7p0jX5ki4GzA6iFGyIEBEk0dCbowQADENPCVMAMT1Q5PSIXKwgBA
+Ycw1cwUKDED2kDt/nBp0U2eglFzplTlQao787BUBZwPDmevc1jGUuWZmkZJLAfUY
+jGyNJhBrB673SUCqN/WAugVyjTILZc+hSDhjMxYQI+hCzW0dT5gr9YP2ZMxvrv+O
+BdSK4YBOYJxjPHKvI6oAAAAASUVORK5CYII=</picture>
+	</commonPicture>
+	<commonPicture name="КрасныйКрестикВКруге" id="39a0162a-574d-4000-9243-e04a126763cb">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Красный крестик в круге</v8:content>
+			</v8:item>
+		</synonym>
+		<picture>iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADBklEQVRoge2Zv2sU
+QRTHP9FDIyQElSD2R+zMxR+E2KmVAbtY2YsQFIOgf4EpVQio2FvFTjQQJOnUA6N3
+dsb0IiGGGMOpnGAxs+fN3O7emx+31X2r7N6+9z7f7O7Mmx3oq68gDbQf/N155pvn
+ADAFnAdOAmPAcWBI//4T+AqsA5+AVeAt8Men2P6Rq62/Qw1MANeBGeCIY+w2sAg8
+AT66BLYb2OdYNNE48BJYA67hDg9wWMeuAa90Tme5GhgE7gPvgWmsO+ipAeCSzvlA
+1xDLxUAZ9dzOASWXIkKVgFu6RlkaJDVwFngDVNy5nFUB3gGTkoslBiaBFWA0AMpV
+R4HXCEx0M1AGXvB/OCxSQ7p27uOUZ2AQNcwV+Z+3NaoZMl/svJdxnpRnfrdtDE40
+7DkBCnNVgHvA7bQcWXdgHLgRAhI55iZqhu9QloF5HIdKFyAPwyUUU4fSDEygJhZn
+ScB87pbWNIrNUJqBWQJm2DzAAHhQTLP2SdvAQVRjFqQ0UAm8YDCYQTG2ZBuYBEYC
+iwAmcCR4UGzG5GYbuCDJ4mIiInwig9E2IG5pfcf+CHkMRtvAWI+Lx4g3GG0DxwqC
+CDFvMNoGhouACbxzBqPvkrIza6R3wlW2gV3fRD1uJYzw9gPbwDevjL1v5tplMNoG
+1gsE8Y01GG0D9QIAQnMYjLaBlZiFfdoOgVbbD2wDVWAnRsEEPrKJH6gvFi3ZBn4D
+z0ML2dARTSyiGFtKmwceiaplKAs20jzx2D6RZuADsOyTvRtkoIll1HdUQ1kz8V2g
+6ZJdCudpogncSfshy0ANWJBmL6AXWiBjiM/bHzhEcd9D81RHbZ40khPS/YEGcAXY
+7BWZQJuodXAj64Ju3egGcBnYiwgl1Z6uvZF3kaSdrgIXga0IUFJt6ZrVbhdK1wNV
+1HNYC4CSqgacQwAPbguaLygTD3EcYoVq6txTOHTFriuyX6gtpjPAkmNsnpZ0zjld
+QyzfJWUd9a3yFPAU+O6RY1vHnta5nFr5RL3a6D5B+kb3ZyJvdPfVV6D+AbJqzY3P
+7CQMAAAAAElFTkSuQmCC</picture>
+	</commonPicture>
+	<commonPicture name="ПереводПланРасходаВФакт" id="b1ca4e0a-3be9-4680-aa5d-6e9fc346844c">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Перевод план расхода в факт</v8:content>
+			</v8:item>
+		</synonym>
+		<picture>iVBORw0KGgoAAAANSUhEUgAAAF8AAAAxCAYAAAC8snXfAAAEiUlEQVR4nO2bT2gd
+RQCHv3XL1pjqiBKkd6k3a5EQ4k3xIiWgkHrZU9SDIL0qUjyJ8SpE1EKLp+2hHvQi
+ShG92RStJr219ayUUHRjXlMf2a6H2ZduJrs7s7uzf176Pggk2dndb38zO2923ixM
+mDBhQqs4Ng4ShYEHzAMvAs8Cx4CjwJGkyBbwF3ADuAb8BFx2hT+0cf5x9awVfhQG
+J4C3gUXgiZK7/w18BXzhCv/3Oh46+upZKfwoDI4Dy8ArVY+RIga+B953hb9e81h7
+6LtnKaEoDB5GXsxp4JANgRQ7wKfIi7tb50Dj4mkcfhQGTyNvv+fqnNCANeCUK/w/
+quw8Lp5gGH4UBrPAt8BM1ROV5DZw0hX+lTI7jYvnCG34URjMAT9wf0TQFlvAy6YX
+Ni6eaQrDT27hn2mvJalsAC/obu1x8VTJDT/50LpM832njjVgPu/DbVw8s3ioYNsy
+3V8QSIePCraPi+c+Mlt+Mj7+FfvDtMq4wt/n2kPPHeB5V/jXTArntfxl+nNBAIR/
+nv8349998zyEdDIiqzWdAK5mbeuarcHdrceOvnHEcRynx54xsvVrpyKyWv479O+C
+AJiePjwNEMdxTH89HaSblj3hR2FwGDn51EscnHTYvfUEFpMsC1Fb/hwgmvGxw73N
+C9zbvLBNhufsRb8Do0wEMstC1PBfasbFOm7ehh5VgDZLNfzjDYnYxiva2JMK0Gap
+hn+sIZHW6UEFaLNUx8hPVTnLP6c/rLIbAI+vfLDnb5uhzV70+eX1YPdvm54GaLNU
+w3+07BkA4jvbVXZrhXQFtOypzbJobufA0IMuKBM1/KxH+LEn3fW0iDZLtdu5BTxZ
+9izOI1Nld2mNdPAte97SFdjzeB6FwdfAq43p1CAmjke/K0+6u6jdS0ctfsQ3rvBf
+KyqgdjtWl27YZDD4bzD6AbSLmDoOHgyyVMP/sSER20RFG3sQPMjVboWo4V8BwmZc
+rBKR49mT4DeBVV2hrPn8c8CbTRipuMJ8COh52TMK2xtf2tKxyXlX+G/pCmV9C/QZ
+LYUfhQGu8IlCfWtVv0b0PC/uafAAn5sU2veQ5Qr/N+CSdZ0cRhVQBs/z4uFw6NCi
+ZwkuucK/alIw7wn3PeSXwa1gUAG7LqngoWVPA3aAd00LZ4bvCn8NWLFlZIKmAlZg
+X/CdeGpYKbOCuWhu5wxyIVBr5FTAOnBGDT5F6545rCNdjMkN3xX+NnAKuRSuNZQK
+2AAWp2aW7uQE35mnwgawmLgYUzirmaw9XAAGNcRKk6qAhamZpZt5wY/oyjNhACxU
+WSpuukR8Drn0uvSkW0VuAyenZpZWdcGn6cqz6hJxo/n85ODztNO3riFX/K4Oh0PH
+87xYu0dCR56VgocSX6a4wr+JvLBPaGZ4t5Mce94V/nWSu7JCBbTpeaPOgeq8EPcx
+8kUzG3zH/RfN4iyvgtFOLg171qYPr4KeTZ6qISf4EVUqoCFPKzT1EvQzZL9cfJ38
+l4sLgx9RtQIseh44jPt0kBXQlMiDRqUgD0IFdL3E2ijAvLl8kKMhazYTHhz+B9xo
+ynR6/sWcAAAAAElFTkSuQmCC</picture>
+	</commonPicture>
+	<commonPicture name="Сумма" id="cbc99ee8-ec3f-4445-b97c-3f236023f111">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сумма</v8:content>
+			</v8:item>
+		</synonym>
+		<picture>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAmElEQVQ4jcWTwQ3D
+IAxFfyoYhG0yA6zC0auwA9OYQXL4PYFQS1AaKuVLSMjGz8aWN5IGC2rBIYTjalBK
+ydb7ayU7AICkIWlUld57eu+pqqz2kb+34+zRDHIKuAL5PF+AXyHDJjrnrIgAAHLO
+0x4uT2EIKKUcMUYAwL7vc8Jfm3hnjO0LfdkiAuec7Svt/b22ukyP7UKr4K7eY7hB
+OuDZlGAAAAAASUVORK5CYII=</picture>
+	</commonPicture>
+	<commonPicture name="Подменю" id="653f4309-cb44-4cd9-9abf-bac871a7bb5c">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Подменю</v8:content>
+			</v8:item>
+		</synonym>
+		<picture>iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAq0lEQVQ4je2QPQrC
+QBBGX0gM6jW8iAgpY+sZrDxcrDyA2FilS6cESyGabNb9yVoEAyKCYmOR6eZjeMz3
+POccv0wAcNwuNs42kVSvMGvazFhH4HsY2+7nwymZLnfzAKC8mmgyW9EYQaMKfL3v
+ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
+6ycAXi+xl8i/SnwE3ieUO9bGHtHneuZ0AAAAAElFTkSuQmCC</picture>
 	</commonPicture>
 	<role name="ПолныеПрава" id="6a743ef3-5ea6-4014-887e-c43af6403bfd">
 		<synonym>
@@ -1358,6 +1800,7 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
 			<bsch:cmdOperand>0,0</bsch:cmdOperand>
 		</valueManagerModule>
+		<useStandardCommands>false</useStandardCommands>
 	</constant>
 	<constant name="ДатаТестирования" id="1b8168f9-3f7d-4f87-903b-0ad7ea8c8394">
 		<synonym>
@@ -1384,6 +1827,7 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
 			<bsch:cmdOperand>0,0</bsch:cmdOperand>
 		</valueManagerModule>
+		<useStandardCommands>false</useStandardCommands>
 	</constant>
 	<constant name="РежимТестирования" id="cac1fd4e-2b5f-40c7-ad8c-d20f50f50de9">
 		<synonym>
@@ -1407,12 +1851,13 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
 			<bsch:cmdOperand>0,0</bsch:cmdOperand>
 		</valueManagerModule>
+		<useStandardCommands>false</useStandardCommands>
 	</constant>
 	<document name="ПриходДенежныхСредств" id="ffeb7827-a423-4cbf-a854-ac34dd2d7722">
 		<synonym>
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Приход денежных средств</v8:content>
+				<v8:content>Приход</v8:content>
 			</v8:item>
 		</synonym>
 		<generatedType name="DocumentObject.ПриходДенежныхСредств" category="Object">
@@ -1439,53 +1884,159 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 			<bsch:cmdOpCode>22</bsch:cmdOpCode>
 			<bsch:cmdOperand>0</bsch:cmdOperand>
 		</managerModule>
-		<objectModule version="1" startAddr="137">
-			<bsch:cmdOpCode>1,2,2,18,20,1,1,2,12,12,7,16,1,3,2,12,18,21,5,1,16,1,3,12,2,16,1,3,12,2,16,1,18,19,1,1,22,1,2,2,18,20,1,1,22,1,3,18,19,5,1,16,1,3,4,33,40,1,45,39,39,1,1,2,3,18,20,1,1,22,1,3,2,18,21,5,1,16,1,3,2,18,21,5,1,16,1,3,2,18,21,5,1,16,1,3,3,3,3,24,25,16,1,3,3,2,18,103,16,1,3,4,38,40,1,3,4,16,39,1,3,2,3,2,18,21,5,1,16,1,1,3,17,45,39,1,22,22,22</bsch:cmdOpCode>
-			<bsch:cmdOperand>6,0,1,1,0,6,8,2,1,2,0,0,10,2,2,1,0,3,0,10,0,11,2,4,3,0,12,2,5,4,0,14,0,1,14,16,0,20,0,1,1,6,20,22,0,30,0,0,3,0,30,0,32,0,7,0,61,33,0,68,61,34,36,5,0,1,8,36,38,0,42,0,5,0,9,0,42,0,43,1,5,0,10,0,43,0,44,2,5,0,11,0,44,0,46,3,1,0,2,0,0,0,48,4,3,4,2,0,0,50,4,7,0,119,51,5,7,0,129,53,5,5,4,3,2,12,0,53,0,54,56,5,0,0,135,58,0,0,0</bsch:cmdOperand>
+		<objectModule version="1" startAddr="170">
+			<bsch:cmdOpCode>1,2,18,19,5,1,16,1,2,4,2,12,18,20,1,1,22,1,2,2,18,20,1,1,2,12,12,7,16,1,3,2,12,18,21,5,1,16,1,3,12,2,16,1,3,12,2,16,1,18,19,1,1,22,1,2,12,4,34,40,1,2,2,18,20,1,1,2,2,12,18,20,1,39,1,1,22,1,2,2,18,20,1,1,22,1,2,4,33,40,1,45,39,39,1,1,2,2,18,20,1,1,22,1,3,2,18,21,5,1,16,1,3,2,18,21,5,1,16,1,3,2,18,21,5,1,16,1,3,3,3,3,24,25,16,1,3,3,2,18,103,16,1,3,4,38,40,1,2,4,16,39,1,2,2,3,2,18,21,5,1,16,1,1,2,17,45,39,1,22,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>6,0,0,1,0,6,0,7,1,1,2,2,2,0,7,9,0,13,3,4,1,3,13,15,5,4,5,0,0,17,2,5,4,0,6,0,17,0,18,2,7,6,0,19,2,8,7,0,21,0,3,21,23,0,27,1,1,9,0,74,28,3,4,1,10,28,29,8,1,1,1,11,29,74,30,32,0,36,8,0,1,11,36,38,0,46,0,9,0,94,47,0,101,94,48,50,8,0,1,12,50,52,0,56,0,8,0,13,0,56,0,57,1,8,0,14,0,57,0,58,2,8,0,15,0,58,0,60,3,1,0,2,0,0,0,62,4,3,7,2,0,0,64,4,9,0,152,65,0,9,0,162,67,0,8,4,6,2,16,0,67,0,68,70,0,0,0,168,72,0,0,0</bsch:cmdOperand>
+			<bsch:constant>SВставить</bsch:constant>
+			<bsch:constant>SСуммаДоНовогоЛимитаДоИзменения</bsch:constant>
+			<bsch:constant>SСуммаДоНовогоЛимита</bsch:constant>
 			<bsch:constant>SПодготовитьНаборыЗаписейКПроведению</bsch:constant>
 			<bsch:constant>SДенежныеСредства</bsch:constant>
 			<bsch:constant>SЗаписывать</bsch:constant>
 			<bsch:constant>SДобавитьПриход</bsch:constant>
 			<bsch:constant>SПериод</bsch:constant>
 			<bsch:constant>SСумма</bsch:constant>
-			<bsch:constant>SПодготовитьНаборыЗаписейКОтменеПроведения</bsch:constant>
 			<bsch:constant>N0</bsch:constant>
+			<bsch:constant>SПодготовитьНаборыЗаписейКОтменеПроведения</bsch:constant>
+			<bsch:constant>SСформироватьРасходПоРегиструОстатокЛимитаДенежныхСредств</bsch:constant>
 			<bsch:constant>SСформироватьПриходПоРегиструОстатокЛимитаДенежныхСредств</bsch:constant>
 			<bsch:constant>SПолучитьОстатокЛимитаДенежныхСредств</bsch:constant>
 			<bsch:constant>SПолучитьЛимит</bsch:constant>
 			<bsch:constant>SПолучитьРасходыЗаТекущийПериод</bsch:constant>
 			<bsch:constant>SПолучитьСуммуПоОставшимсяДням</bsch:constant>
+			<bsch:variable name="СуммаДоНовогоЛимита" isExternal="true"/>
+			<bsch:variable name="ДополнительныеСвойства" isExternal="true"/>
+			<bsch:variable name="Ссылка" isExternal="true"/>
 			<bsch:variable name="ПроведениеСервер" isExternal="true"/>
 			<bsch:variable name="ЭтотОбъект" isExternal="true"/>
 			<bsch:variable name="Движения" isExternal="true"/>
 			<bsch:variable name="Дата" isExternal="true"/>
 			<bsch:variable name="Сумма" isExternal="true"/>
 			<bsch:variable name="УчетДенежныхСредствСервер" isExternal="true"/>
-			<bsch:procedure name="ОбработкаПроведения" parametersCount="2" startAddr="0">
+			<bsch:procedure name="ПередЗаписью" parametersCount="3" startAddr="0">
+				<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+				<bsch:variable name="РежимЗаписи" isLocal="true" isParam="true"/>
+				<bsch:variable name="РежимПроведения" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="РассчитатьСуммуДляЛимита" isFunction="true" parametersCount="0" startAddr="103">
+				<bsch:variable name="ТекущийОстатокЛимита" isLocal="true"/>
+				<bsch:variable name="ЛимитДенежныхСредств" isLocal="true"/>
+				<bsch:variable name="РасходыЗаТекущийПериод" isLocal="true"/>
+				<bsch:variable name="ОсталосьОтЛимита" isLocal="true"/>
+				<bsch:variable name="СуммаДляРаспределения" isLocal="true"/>
+			</bsch:procedure>
+			<bsch:procedure name="ОбработкаПроведения" parametersCount="2" startAddr="17">
 				<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
 				<bsch:variable name="РежимПроведения" isLocal="true" isParam="true"/>
 				<bsch:variable name="Движение" isLocal="true"/>
 				<bsch:paramsDefValue/>
 				<bsch:paramsDefValue/>
 			</bsch:procedure>
-			<bsch:procedure name="СформироватьДвиженияПоРегиструОстатокЛимитаДенежныхСредств" parametersCount="0" startAddr="45">
-				<bsch:variable name="СуммаДоНовогоЛимита" isLocal="true"/>
-			</bsch:procedure>
-			<bsch:procedure name="ОбработкаУдаленияПроведения" parametersCount="1" startAddr="37">
+			<bsch:procedure name="СформироватьДвиженияПоРегиструОстатокЛимитаДенежныхСредств" parametersCount="0" startAddr="85"/>
+			<bsch:procedure name="ОбработкаУдаленияПроведения" parametersCount="1" startAddr="54">
 				<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
 				<bsch:paramsDefValue/>
 			</bsch:procedure>
-			<bsch:procedure name="РассчитатьСуммуДляЛимита" isFunction="true" parametersCount="0" startAddr="70">
-				<bsch:variable name="ТекущийОстатокЛимита" isLocal="true"/>
-				<bsch:variable name="ЛимитДенежныхСредств" isLocal="true"/>
-				<bsch:variable name="РасходыЗаТекущийПериод" isLocal="true"/>
-				<bsch:variable name="ОсталосьОтЛимита" isLocal="true"/>
-				<bsch:variable name="СуммаДляРаспределения" isLocal="true"/>
-				<bsch:variable name="СуммаДоНовогоЛимита" isLocal="true"/>
+			<bsch:procedure name="ПередУдалением" parametersCount="1" startAddr="77">
+				<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
 			</bsch:procedure>
 		</objectModule>
 		<registerRecord>AccumulationRegister.ДенежныеСредства</registerRecord>
-		<inputByString>Number</inputByString>
+		<registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
+		<numberLength>0</numberLength>
+		<checkUnique>false</checkUnique>
+		<autoNumbering>false</autoNumbering>
+		<standardAttribute name="Posted">
+			<passwordMode>false</passwordMode>
+			<markNegatives>false</markNegatives>
+			<minValue xsi:nil="true"/>
+			<maxValue xsi:nil="true"/>
+			<mask/>
+			<multiLine>false</multiLine>
+			<fillFromFillingValue>false</fillFromFillingValue>
+			<fillingValue xsi:nil="true"/>
+			<fillChecking>DontCheck</fillChecking>
+			<choiceParamLinks/>
+			<choiceParams/>
+			<quickChoice>auto</quickChoice>
+			<choiceForm/>
+		</standardAttribute>
+		<standardAttribute name="Ref">
+			<passwordMode>false</passwordMode>
+			<markNegatives>false</markNegatives>
+			<minValue xsi:nil="true"/>
+			<maxValue xsi:nil="true"/>
+			<mask/>
+			<multiLine>false</multiLine>
+			<fillFromFillingValue>false</fillFromFillingValue>
+			<fillingValue xsi:nil="true"/>
+			<fillChecking>DontCheck</fillChecking>
+			<choiceParamLinks/>
+			<choiceParams/>
+			<quickChoice>auto</quickChoice>
+			<choiceForm/>
+		</standardAttribute>
+		<standardAttribute name="DeletionMark">
+			<passwordMode>false</passwordMode>
+			<markNegatives>false</markNegatives>
+			<minValue xsi:nil="true"/>
+			<maxValue xsi:nil="true"/>
+			<mask/>
+			<multiLine>false</multiLine>
+			<fillFromFillingValue>false</fillFromFillingValue>
+			<fillingValue xsi:nil="true"/>
+			<fillChecking>DontCheck</fillChecking>
+			<choiceParamLinks/>
+			<choiceParams/>
+			<quickChoice>auto</quickChoice>
+			<choiceForm/>
+		</standardAttribute>
+		<standardAttribute name="Date">
+			<passwordMode>false</passwordMode>
+			<format>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДФ=dd.MM.yyyy</v8:content>
+				</v8:item>
+			</format>
+			<editFormat>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДФ=dd.MM.yyyy</v8:content>
+				</v8:item>
+			</editFormat>
+			<markNegatives>false</markNegatives>
+			<minValue xsi:nil="true"/>
+			<maxValue xsi:nil="true"/>
+			<mask/>
+			<multiLine>false</multiLine>
+			<fillFromFillingValue>false</fillFromFillingValue>
+			<fillingValue xsi:nil="true"/>
+			<fillChecking>ShowError</fillChecking>
+			<choiceParamLinks/>
+			<choiceParams/>
+			<quickChoice>auto</quickChoice>
+			<choiceForm/>
+		</standardAttribute>
+		<standardAttribute name="Number">
+			<passwordMode>false</passwordMode>
+			<markNegatives>false</markNegatives>
+			<minValue xsi:nil="true"/>
+			<maxValue xsi:nil="true"/>
+			<mask/>
+			<multiLine>false</multiLine>
+			<fillFromFillingValue>false</fillFromFillingValue>
+			<fillingValue xsi:nil="true"/>
+			<fillChecking>DontCheck</fillChecking>
+			<choiceParamLinks/>
+			<choiceParams/>
+			<quickChoice>auto</quickChoice>
+			<choiceForm/>
+		</standardAttribute>
 		<defaultObjectForm>Document.ПриходДенежныхСредств.Form.ФормаДокумента</defaultObjectForm>
 		<defaultListForm>Document.ПриходДенежныхСредств.Form.ФормаСписка</defaultListForm>
 		<attribute name="Сумма" id="f7827708-01ec-474a-97b0-4bb1af4dd1a1">
@@ -1493,6 +2044,22 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Сумма</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</type>
+		</attribute>
+		<attribute name="СуммаДоНовогоЛимита" id="a12d04fb-92ad-4b5c-9431-8e324fe6fe2d">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма до нового лимита</v8:content>
 				</v8:item>
 			</synonym>
 			<type>
@@ -1512,11 +2079,12 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 				</v8:item>
 			</synonym>
 			<form>
-				<mf:serverModule version="1" startAddr="27">
-					<bsch:cmdOpCode>1,2,6,16,1,3,4,18,19,5,1,16,1,3,2,12,18,20,1,1,3,4,18,19,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>32,0,0,0,34,0,0,1,1,0,34,0,35,0,1,2,1,1,35,36,0,0,2,2,36,38,0,0,0</bsch:cmdOperand>
+				<mf:serverModule version="1" startAddr="34">
+					<bsch:cmdOpCode>1,2,6,16,1,3,4,18,19,5,1,16,1,3,2,12,18,20,1,1,3,2,12,18,20,1,1,3,4,18,19,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>52,0,0,0,54,0,0,1,1,0,54,0,55,0,1,2,1,1,55,56,0,1,3,1,1,56,57,0,0,2,2,57,59,0,0,0</bsch:cmdOperand>
 					<bsch:constant>SОбъект</bsch:constant>
 					<bsch:constant>SЗаписать</bsch:constant>
+					<bsch:constant>SОтменаПроведения</bsch:constant>
 					<bsch:constant>SПроведение</bsch:constant>
 					<bsch:variable name="Модифицированность" isExternal="true"/>
 					<bsch:variable name="РежимЗаписиДокумента" isExternal="true"/>
@@ -1526,21 +2094,36 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 					<bsch:procedure name="РеквизитФормыВЗначение" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
 					<bsch:procedure name="ЗначениеВРеквизитФормы" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
 				</mf:serverModule>
-				<mf:clientModule version="1" startAddr="27">
-					<bsch:cmdOpCode>1,18,19,1,1,22,1,18,19,1,1,4,18,19,1,1,2,12,18,19,1,1,18,19,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>11,0,1,11,13,0,22,0,2,22,23,0,1,3,23,24,0,1,1,4,24,25,0,5,25,27,0,0,0</bsch:cmdOperand>
+				<mf:clientModule version="1" startAddr="45">
+					<bsch:cmdOpCode>1,18,19,1,1,22,1,18,19,1,1,22,1,3,6,16,1,2,2,18,20,1,1,22,1,18,19,1,1,4,18,19,1,1,2,12,18,19,1,1,18,19,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>11,0,1,11,13,0,18,0,3,18,20,0,29,2,0,0,31,0,1,1,0,31,33,0,42,0,5,42,43,1,1,6,43,44,2,2,1,7,44,45,0,3,45,47,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SОткрытьФормуВыбораДаты</bsch:constant>
 					<bsch:constant>SИзменениеОстатков</bsch:constant>
 					<bsch:constant>SСсылка</bsch:constant>
+					<bsch:variable name="УчетДенежныхСредствКлиент" isExternal="true"/>
+					<bsch:variable name="ЭтаФорма" isExternal="true"/>
 					<bsch:variable name="Объект" isExternal="true"/>
 					<bsch:procedure name="ЗаписатьДокумент" parametersCount="1" startAddr="0">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="НачатьЗаписьДокумента" parametersCount="0" startAddr="6"/>
+					<bsch:procedure name="НачатьЗаписьДокумента" parametersCount="0" startAddr="24"/>
+					<bsch:procedure name="Отмена" parametersCount="1" startAddr="6">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="Закрыть" isExternal="true" parametersCount="1" startAddr="0"/>
+					<bsch:procedure name="ДатаНачалоВыбора" parametersCount="3" startAddr="12">
+						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+						<bsch:variable name="ДанныеВыбора" isLocal="true" isParam="true"/>
+						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
 					<bsch:procedure name="ВыполнитьПроведениеДокумента" isExternal="true" parametersCount="0" startAddr="0"/>
 					<bsch:procedure name="Оповестить" isExternal="true" parametersCount="3" startAddr="0"/>
 					<bsch:procedure name="ОповеститьОбИзменении" isExternal="true" parametersCount="1" startAddr="0"/>
-					<bsch:procedure name="Закрыть" isExternal="true" parametersCount="1" startAddr="0"/>
 				</mf:clientModule>
 				<mf:serverWOContextModule version="1">
 					<bsch:cmdOpCode>22</bsch:cmdOpCode>
@@ -1568,31 +2151,164 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 						</v8:item>
 					</mf:title>
 					<mf:handlerName>ЗаписатьДокумент</mf:handlerName>
-					<mf:picture ref="v8ui:Write"/>
+					<mf:picture ref="v8ui:ЗеленаяГалочка"/>
 					<mf:tooltip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Записать документ</v8:content>
 						</v8:item>
 					</mf:tooltip>
-					<mf:representation>PictureAndText</mf:representation>
+					<mf:representation>Picture</mf:representation>
+				</mf:command>
+				<mf:command name="Отмена">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отмена</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>Отмена</mf:handlerName>
+					<mf:picture ref="v8ui:КрасныйКрестикВКруге"/>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отмена</v8:content>
+						</v8:item>
+					</mf:tooltip>
+					<mf:representation>Picture</mf:representation>
 				</mf:command>
 				<mf:mainElement>
-					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar">
-						<mf:button name="ФормаЗаписатьДокумент" type="CommandBarButton" commandName="Form.Command.ЗаписатьДокумент"/>
-					</mf:autoCommandBar>
+					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
 					<mf:commandsContent>
+						<mf:excluded>No</mf:excluded>
+						<mf:excluded>ChangeHistory</mf:excluded>
+						<mf:excluded>CustomizeForm</mf:excluded>
+						<mf:excluded>Reread</mf:excluded>
+						<mf:excluded>SaveValues</mf:excluded>
+						<mf:excluded>Close</mf:excluded>
+						<mf:excluded>UndoPosting</mf:excluded>
+						<mf:excluded>Help</mf:excluded>
+						<mf:excluded>ShowInList</mf:excluded>
 						<mf:excluded>Post</mf:excluded>
+						<mf:excluded>Abort</mf:excluded>
+						<mf:excluded>Retry</mf:excluded>
+						<mf:excluded>Yes</mf:excluded>
+						<mf:excluded>Cancel</mf:excluded>
+						<mf:excluded>Copy</mf:excluded>
+						<mf:excluded>RestoreValues</mf:excluded>
+						<mf:excluded>SetDeletionMark</mf:excluded>
 						<mf:excluded>PostAndClose</mf:excluded>
+						<mf:excluded>Ignore</mf:excluded>
+						<mf:excluded>OK</mf:excluded>
 						<mf:excluded>Write</mf:excluded>
 					</mf:commandsContent>
 					<mf:event handler="ПослеЗаписи" name="AfterWrite"/>
-					<mf:field name="Дата" kind="InputField" dataPath="Объект.Date">
-						<mf:contextMenu name="ДатаКонтекстноеМеню" type="ContextMenu"/>
-					</mf:field>
-					<mf:field name="Сумма" kind="InputField" dataPath="Объект.Сумма">
-						<mf:contextMenu name="СуммаКонтекстноеМеню" type="ContextMenu"/>
-					</mf:field>
+					<mf:group name="ГруппаДата" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа дата</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:tooltip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа дата</v8:content>
+							</v8:item>
+						</mf:tooltip>
+						<mf:horizontalStretch>true</mf:horizontalStretch>
+						<mf:usualData group="Vertical" representation="None">
+							<mf:showTitle>false</mf:showTitle>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
+						</mf:usualData>
+						<mf:decoration name="ДекорацияДата" type="Label">
+							<mf:formattedTitle>
+								<mf:str>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>дата</v8:content>
+									</v8:item>
+								</mf:str>
+							</mf:formattedTitle>
+							<mf:horizontalStretch>false</mf:horizontalStretch>
+							<mf:contextMenu name="ДекорацияДатаКонтекстноеМеню" type="ContextMenu"/>
+							<mf:textData>
+								<mf:horizontalAlign>Center</mf:horizontalAlign>
+							</mf:textData>
+						</mf:decoration>
+						<mf:field name="Дата" kind="InputField" dataPath="Объект.Date">
+							<mf:titleLocation>None</mf:titleLocation>
+							<mf:contextMenu name="ДатаКонтекстноеМеню" type="ContextMenu"/>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
+							<mf:inputData>
+								<mf:font ref="style:LargeTextFont" height="14" kind="StyleItem"/>
+								<mf:width>16</mf:width>
+								<mf:autoMaxWidth>false</mf:autoMaxWidth>
+								<mf:horizontalStretch>true</mf:horizontalStretch>
+								<mf:event handler="ДатаНачалоВыбора" name="StartChoice"/>
+							</mf:inputData>
+						</mf:field>
+					</mf:group>
+					<mf:group name="ГруппаСумма" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа сумма</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:tooltip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа сумма</v8:content>
+							</v8:item>
+						</mf:tooltip>
+						<mf:horizontalStretch>true</mf:horizontalStretch>
+						<mf:usualData group="Vertical" representation="None">
+							<mf:showTitle>false</mf:showTitle>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
+						</mf:usualData>
+						<mf:decoration name="ДекорацияСумма" type="Label">
+							<mf:formattedTitle>
+								<mf:str>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>сумма</v8:content>
+									</v8:item>
+								</mf:str>
+							</mf:formattedTitle>
+							<mf:contextMenu name="ДекорацияСуммаКонтекстноеМеню" type="ContextMenu"/>
+						</mf:decoration>
+						<mf:field name="Сумма" kind="InputField" dataPath="Объект.Сумма">
+							<mf:titleLocation>None</mf:titleLocation>
+							<mf:contextMenu name="СуммаКонтекстноеМеню" type="ContextMenu"/>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
+							<mf:inputData>
+								<mf:font ref="style:ExtraLargeTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+								<mf:horizontalStretch>true</mf:horizontalStretch>
+							</mf:inputData>
+						</mf:field>
+					</mf:group>
+					<mf:group name="ГруппаКоманды" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа команды</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:tooltip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа команды</v8:content>
+							</v8:item>
+						</mf:tooltip>
+						<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+						<mf:usualData representation="None">
+							<mf:showTitle>false</mf:showTitle>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
+						</mf:usualData>
+						<mf:button name="ЗаписатьДокумент" type="UsualButton" commandName="Form.Command.ЗаписатьДокумент"/>
+						<mf:button name="Отмена" type="UsualButton" commandName="Form.Command.Отмена"/>
+					</mf:group>
 				</mf:mainElement>
 			</form>
 		</form>
@@ -1608,9 +2324,16 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 					<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
 					<bsch:cmdOperand>0,0</bsch:cmdOperand>
 				</mf:serverModule>
-				<mf:clientModule version="1" startAddr="0">
-					<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>0,0</bsch:cmdOperand>
+				<mf:clientModule version="1" startAddr="9">
+					<bsch:cmdOpCode>1,4,18,19,1,1,22,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>7,0,1,1,7,9,0,15,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SИзменениеОстатков</bsch:constant>
+					<bsch:procedure name="СписокПослеУдаления" parametersCount="1" startAddr="0">
+						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="Оповестить" isExternal="true" parametersCount="3" startAddr="0"/>
+					<bsch:procedure name="СписокОбработкаЗапросаОбновления" parametersCount="0" startAddr="7"/>
 				</mf:clientModule>
 				<mf:serverWOContextModule version="1">
 					<bsch:cmdOpCode>22</bsch:cmdOpCode>
@@ -1634,6 +2357,33 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 				</mf:attributes>
 				<mf:mainElement>
 					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
+					<mf:commandsContent>
+						<mf:excluded>No</mf:excluded>
+						<mf:excluded>CustomizeForm</mf:excluded>
+						<mf:excluded>ListSettings</mf:excluded>
+						<mf:excluded>SaveValues</mf:excluded>
+						<mf:excluded>SetDeletionMark</mf:excluded>
+						<mf:excluded>Close</mf:excluded>
+						<mf:excluded>Help</mf:excluded>
+						<mf:excluded>Abort</mf:excluded>
+						<mf:excluded>UndoPosting</mf:excluded>
+						<mf:excluded>Post</mf:excluded>
+						<mf:excluded>Retry</mf:excluded>
+						<mf:excluded>Yes</mf:excluded>
+						<mf:excluded>Cancel</mf:excluded>
+						<mf:excluded>RestoreValues</mf:excluded>
+						<mf:excluded>LoadDynamicListSettings</mf:excluded>
+						<mf:excluded>CancelSearch</mf:excluded>
+						<mf:excluded>OutputList</mf:excluded>
+						<mf:excluded>FindByCurrentValue</mf:excluded>
+						<mf:excluded>Find</mf:excluded>
+						<mf:excluded>ChangeHistory</mf:excluded>
+						<mf:excluded>SaveDynamicListSettings</mf:excluded>
+						<mf:excluded>DynamicListStandardSettings</mf:excluded>
+						<mf:excluded>Ignore</mf:excluded>
+						<mf:excluded>SetDateInterval</mf:excluded>
+						<mf:excluded>OK</mf:excluded>
+					</mf:commandsContent>
 					<mf:group name="СписокКомпоновщикНастроекПользовательскиеНастройки" type="UsualGroup">
 						<mf:title>
 							<v8:item>
@@ -1658,6 +2408,31 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 							</mf:autoMenuData>
 						</mf:autoCommandBar>
 						<mf:contextMenu name="СписокКонтекстноеМеню" type="ContextMenu"/>
+						<mf:commandsContent>
+							<mf:excluded>UndoPosting</mf:excluded>
+							<mf:excluded>Copy</mf:excluded>
+							<mf:excluded>Create</mf:excluded>
+							<mf:excluded>ChangeHistory</mf:excluded>
+							<mf:excluded>ListSettings</mf:excluded>
+							<mf:excluded>LoadDynamicListSettings</mf:excluded>
+							<mf:excluded>DynamicListStandardSettings</mf:excluded>
+							<mf:excluded>Refresh</mf:excluded>
+							<mf:excluded>CancelSearch</mf:excluded>
+							<mf:excluded>FindByCurrentValue</mf:excluded>
+							<mf:excluded>OutputList</mf:excluded>
+							<mf:excluded>CopyToClipboard</mf:excluded>
+							<mf:excluded>SaveDynamicListSettings</mf:excluded>
+							<mf:excluded>SetDeletionMark</mf:excluded>
+							<mf:excluded>Change</mf:excluded>
+							<mf:excluded>Find</mf:excluded>
+							<mf:excluded>SearchHistory</mf:excluded>
+							<mf:excluded>SetDateInterval</mf:excluded>
+							<mf:excluded>Post</mf:excluded>
+							<mf:excluded>ShowMultipleSelection</mf:excluded>
+							<mf:excluded>Delete</mf:excluded>
+						</mf:commandsContent>
+						<mf:event handler="СписокПослеУдаления" name="AfterDeleteRow"/>
+						<mf:event handler="СписокОбработкаЗапросаОбновления" name="RefreshRequestProcessing"/>
 						<mf:field name="Дата" kind="LabelField" dataPath="Список.Date" defaultItem="true">
 							<mf:contextMenu name="ДатаКонтекстноеМеню" type="ContextMenu"/>
 						</mf:field>
@@ -1673,7 +2448,7 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 		<synonym>
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Расход денежных средств</v8:content>
+				<v8:content>Расход</v8:content>
 			</v8:item>
 		</synonym>
 		<generatedType name="DocumentObject.РасходДенежныхСредств" category="Object">
@@ -1700,27 +2475,33 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 			<bsch:cmdOpCode>22</bsch:cmdOpCode>
 			<bsch:cmdOperand>0</bsch:cmdOperand>
 		</managerModule>
-		<objectModule version="1" startAddr="122">
-			<bsch:cmdOpCode>1,2,12,40,1,45,39,39,1,1,2,4,18,19,5,1,18,20,1,1,22,1,2,2,18,20,1,1,2,2,12,12,33,40,1,18,19,1,1,2,2,18,20,1,39,1,2,2,12,12,33,40,1,18,19,1,39,1,1,22,1,2,2,18,20,1,1,22,1,2,12,12,7,16,1,3,2,12,18,21,5,1,16,1,3,12,2,16,1,3,12,2,16,1,22,1,2,12,12,7,16,1,3,2,12,18,21,5,1,16,1,3,12,2,16,1,3,12,2,16,1,22,22,22</bsch:cmdOpCode>
-			<bsch:cmdOperand>6,0,0,8,7,0,19,8,8,10,1,2,0,1,0,10,2,1,10,12,0,16,2,3,1,3,16,18,4,5,4,5,0,45,20,0,3,20,21,6,7,1,6,21,57,23,4,5,4,7,0,57,25,0,4,25,57,27,29,0,33,2,3,1,8,33,35,0,43,8,9,10,0,0,45,0,8,9,0,11,0,45,0,46,0,12,9,0,47,0,13,7,0,49,0,53,8,14,10,0,0,55,0,8,14,0,15,0,55,0,56,0,12,9,0,57,0,13,7,0,59,0,0,0</bsch:cmdOperand>
+		<objectModule version="1" startAddr="180">
+			<bsch:cmdOpCode>1,2,12,40,1,45,39,39,1,1,2,4,18,19,5,1,18,20,1,1,2,4,2,12,18,20,1,1,2,4,2,12,18,20,1,1,22,1,2,2,18,20,1,1,2,2,12,12,33,40,1,18,19,1,1,2,2,18,20,1,39,1,2,2,12,12,33,40,1,18,19,1,39,1,1,22,1,2,12,4,34,40,1,2,2,18,20,1,1,2,12,2,12,12,33,40,1,2,2,12,18,20,1,39,1,39,1,1,22,1,2,2,12,12,33,40,1,2,2,18,20,1,39,1,1,22,1,2,12,12,7,16,1,3,2,12,18,21,5,1,16,1,3,12,2,16,1,3,12,2,16,1,22,1,2,12,12,7,16,1,3,2,12,18,21,5,1,16,1,3,12,2,16,1,3,12,2,16,1,22,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>6,0,0,8,7,0,35,8,8,10,1,2,0,1,0,10,2,1,10,11,1,3,2,4,2,1,11,12,1,5,2,6,2,1,12,14,0,18,3,4,1,7,18,20,5,6,8,9,0,61,22,0,3,22,23,7,8,1,10,23,73,25,5,6,8,11,0,73,27,0,4,27,73,29,31,0,35,1,3,12,0,106,37,3,4,1,13,37,39,1,5,6,8,9,0,104,40,7,1,3,1,14,40,104,41,106,43,45,0,49,5,6,8,9,0,123,50,7,8,1,14,50,123,51,53,0,61,9,15,16,0,0,63,0,9,15,0,17,0,63,0,64,0,18,10,0,65,0,4,8,0,67,0,71,9,19,16,0,0,73,0,9,19,0,20,0,73,0,74,0,18,10,0,75,0,4,8,0,77,0,0,0</bsch:cmdOperand>
 			<bsch:constant>SЗагрузка</bsch:constant>
 			<bsch:constant>SВставить</bsch:constant>
 			<bsch:constant>SЭтоНовый</bsch:constant>
+			<bsch:constant>SСуммаДоИзменения</bsch:constant>
+			<bsch:constant>SСумма</bsch:constant>
+			<bsch:constant>SВидРасходаДоИзменения</bsch:constant>
+			<bsch:constant>SВидРасхода</bsch:constant>
 			<bsch:constant>SПодготовитьНаборыЗаписейКПроведению</bsch:constant>
 			<bsch:constant>SВидыРасходов</bsch:constant>
 			<bsch:constant>SФактический</bsch:constant>
 			<bsch:constant>SСформироватьРасходПоРегиструОстатокЛимитаДенежныхСредств</bsch:constant>
 			<bsch:constant>SПланируемый</bsch:constant>
+			<bsch:constant>N0</bsch:constant>
 			<bsch:constant>SПодготовитьНаборыЗаписейКОтменеПроведения</bsch:constant>
+			<bsch:constant>SСформироватьПриходПоРегиструОстатокЛимитаДенежныхСредств</bsch:constant>
 			<bsch:constant>SДенежныеСредства</bsch:constant>
 			<bsch:constant>SЗаписывать</bsch:constant>
 			<bsch:constant>SДобавитьРасход</bsch:constant>
 			<bsch:constant>SПериод</bsch:constant>
-			<bsch:constant>SСумма</bsch:constant>
 			<bsch:constant>SПланируемыеОстаткиДенежныхСредств</bsch:constant>
 			<bsch:constant>SДобавить</bsch:constant>
 			<bsch:variable name="ОбменДанными" isExternal="true"/>
 			<bsch:variable name="ДополнительныеСвойства" isExternal="true"/>
+			<bsch:variable name="Ссылка" isExternal="true"/>
 			<bsch:variable name="ПроведениеСервер" isExternal="true"/>
 			<bsch:variable name="ЭтотОбъект" isExternal="true"/>
 			<bsch:variable name="ВидРасхода" isExternal="true"/>
@@ -1738,19 +2519,23 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 				<bsch:paramsDefValue/>
 			</bsch:procedure>
 			<bsch:procedure name="ЭтоНовый" isFunction="true" isExternal="true" parametersCount="0" startAddr="0"/>
-			<bsch:procedure name="ОбработкаПроведения" parametersCount="2" startAddr="21">
+			<bsch:procedure name="ОбработкаПроведения" parametersCount="2" startAddr="37">
 				<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
 				<bsch:variable name="РежимПроведения" isLocal="true" isParam="true"/>
 				<bsch:paramsDefValue/>
 				<bsch:paramsDefValue/>
 			</bsch:procedure>
-			<bsch:procedure name="СформироватьДвиженияПоРегиструДенежныеСредства" parametersCount="0" startAddr="68">
+			<bsch:procedure name="СформироватьДвиженияПоРегиструДенежныеСредства" parametersCount="0" startAddr="126">
 				<bsch:variable name="Движение" isLocal="true"/>
 			</bsch:procedure>
-			<bsch:procedure name="СформироватьДвиженияПоРегиструПланируемыеОстаткиДенежныхСредств" parametersCount="0" startAddr="95">
+			<bsch:procedure name="СформироватьДвиженияПоРегиструПланируемыеОстаткиДенежныхСредств" parametersCount="0" startAddr="153">
 				<bsch:variable name="Движение" isLocal="true"/>
 			</bsch:procedure>
-			<bsch:procedure name="ОбработкаУдаленияПроведения" parametersCount="1" startAddr="60">
+			<bsch:procedure name="ОбработкаУдаленияПроведения" parametersCount="1" startAddr="76">
+				<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="ПередУдалением" parametersCount="1" startAddr="109">
 				<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
 				<bsch:paramsDefValue/>
 			</bsch:procedure>
@@ -1759,7 +2544,97 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 		<registerRecord>AccumulationRegister.ПланируемыеОстаткиДенежныхСредств</registerRecord>
 		<registerRecord>AccumulationRegister.ДенежныеСредства</registerRecord>
 		<registerRecordsDeletion>AutoDeleteOff</registerRecordsDeletion>
-		<inputByString>Number</inputByString>
+		<numberLength>0</numberLength>
+		<checkUnique>false</checkUnique>
+		<autoNumbering>false</autoNumbering>
+		<useStandardCommands>false</useStandardCommands>
+		<standardAttribute name="Posted">
+			<passwordMode>false</passwordMode>
+			<markNegatives>false</markNegatives>
+			<minValue xsi:nil="true"/>
+			<maxValue xsi:nil="true"/>
+			<mask/>
+			<multiLine>false</multiLine>
+			<fillFromFillingValue>false</fillFromFillingValue>
+			<fillingValue xsi:nil="true"/>
+			<fillChecking>DontCheck</fillChecking>
+			<choiceParamLinks/>
+			<choiceParams/>
+			<quickChoice>auto</quickChoice>
+			<choiceForm/>
+		</standardAttribute>
+		<standardAttribute name="Ref">
+			<passwordMode>false</passwordMode>
+			<markNegatives>false</markNegatives>
+			<minValue xsi:nil="true"/>
+			<maxValue xsi:nil="true"/>
+			<mask/>
+			<multiLine>false</multiLine>
+			<fillFromFillingValue>false</fillFromFillingValue>
+			<fillingValue xsi:nil="true"/>
+			<fillChecking>DontCheck</fillChecking>
+			<choiceParamLinks/>
+			<choiceParams/>
+			<quickChoice>auto</quickChoice>
+			<choiceForm/>
+		</standardAttribute>
+		<standardAttribute name="DeletionMark">
+			<passwordMode>false</passwordMode>
+			<markNegatives>false</markNegatives>
+			<minValue xsi:nil="true"/>
+			<maxValue xsi:nil="true"/>
+			<mask/>
+			<multiLine>false</multiLine>
+			<fillFromFillingValue>false</fillFromFillingValue>
+			<fillingValue xsi:nil="true"/>
+			<fillChecking>DontCheck</fillChecking>
+			<choiceParamLinks/>
+			<choiceParams/>
+			<quickChoice>auto</quickChoice>
+			<choiceForm/>
+		</standardAttribute>
+		<standardAttribute name="Date">
+			<passwordMode>false</passwordMode>
+			<format>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДФ=dd.MM.yyyy</v8:content>
+				</v8:item>
+			</format>
+			<editFormat>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДФ=dd.MM.yyyy</v8:content>
+				</v8:item>
+			</editFormat>
+			<markNegatives>false</markNegatives>
+			<minValue xsi:nil="true"/>
+			<maxValue xsi:nil="true"/>
+			<mask/>
+			<multiLine>false</multiLine>
+			<fillFromFillingValue>true</fillFromFillingValue>
+			<fillingValue xsi:nil="true"/>
+			<fillChecking>ShowError</fillChecking>
+			<choiceParamLinks/>
+			<choiceParams/>
+			<quickChoice>auto</quickChoice>
+			<choiceForm/>
+		</standardAttribute>
+		<standardAttribute name="Number">
+			<passwordMode>false</passwordMode>
+			<markNegatives>false</markNegatives>
+			<minValue xsi:nil="true"/>
+			<maxValue xsi:nil="true"/>
+			<mask/>
+			<multiLine>false</multiLine>
+			<fillFromFillingValue>false</fillFromFillingValue>
+			<fillingValue xsi:nil="true"/>
+			<fillChecking>DontCheck</fillChecking>
+			<choiceParamLinks/>
+			<choiceParams/>
+			<quickChoice>auto</quickChoice>
+			<choiceForm/>
+		</standardAttribute>
 		<defaultObjectForm>Document.РасходДенежныхСредств.Form.ФормаДокумента</defaultObjectForm>
 		<defaultListForm>Document.РасходДенежныхСредств.Form.ФормаСписка</defaultListForm>
 		<attribute name="Сумма" id="9ec24191-a236-4116-8b1c-09c4ce5a836d">
@@ -1815,14 +2690,19 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 				</v8:item>
 			</synonym>
 			<form>
-				<mf:serverModule version="1" startAddr="151">
-					<bsch:cmdOpCode>1,18,19,1,1,22,1,2,12,12,2,12,2,12,12,33,16,1,22,1,3,18,51,16,1,3,4,6,18,20,1,1,3,4,4,18,20,1,1,2,12,2,12,12,33,29,40,1,3,17,45,39,39,1,1,3,2,18,21,5,1,16,1,3,2,2,12,18,21,5,1,16,1,3,2,2,12,18,21,5,1,16,1,3,2,3,3,18,21,5,1,16,1,3,3,2,12,24,16,1,3,3,3,25,16,1,3,12,3,4,35,16,1,3,12,3,16,1,3,17,45,39,1,22,1,2,6,16,1,3,4,18,19,5,1,16,1,3,2,12,18,20,1,1,3,4,18,19,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>7,0,1,7,9,0,77,0,0,1,1,2,2,3,4,0,0,79,0,84,0,0,5,0,85,0,7,0,2,6,85,86,0,8,9,2,6,86,88,1,2,2,3,4,0,0,53,89,0,0,0,122,53,90,92,1,3,0,10,0,92,0,94,2,4,1,12,1,11,0,94,0,95,3,4,1,12,1,13,0,95,0,97,4,3,2,3,2,14,0,97,0,99,5,4,1,15,0,0,101,6,5,1,0,0,103,0,7,6,9,0,0,104,0,8,6,0,106,0,0,0,122,108,0,134,5,0,0,136,0,16,1,4,0,136,0,137,0,6,18,1,17,137,138,0,16,2,5,138,140,0,0,0</bsch:cmdOperand>
-					<bsch:constant>SПодтвердитьФактическийРасход</bsch:constant>
-					<bsch:constant>SВидимость</bsch:constant>
+				<mf:serverModule version="1" startAddr="199">
+					<bsch:cmdOpCode>1,18,19,1,1,22,1,3,2,12,2,12,12,33,30,2,12,18,21,5,1,6,33,69,16,1,2,12,12,3,16,1,2,12,2,12,12,33,40,1,2,4,16,39,1,2,12,2,12,12,33,40,1,2,4,16,39,1,1,22,1,3,18,51,16,1,3,4,6,18,20,1,1,3,4,4,18,20,1,1,2,12,2,12,12,33,29,40,1,3,17,45,39,39,1,1,3,2,18,21,5,1,16,1,3,2,2,12,18,21,5,1,16,1,3,2,2,12,18,21,5,1,16,1,3,2,3,3,18,21,5,1,16,1,3,3,2,12,24,16,1,3,3,3,25,16,1,3,12,3,4,35,16,1,3,12,3,16,1,3,17,45,39,1,22,1,2,6,16,1,3,4,18,19,5,1,16,1,3,2,12,18,20,1,1,3,2,12,18,20,1,1,3,4,18,19,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>7,0,1,7,9,0,95,0,0,0,1,1,2,0,24,2,3,0,4,0,95,0,0,0,0,97,3,5,6,0,0,99,0,0,1,1,2,0,44,100,4,7,0,57,101,0,0,1,1,8,0,57,102,4,9,0,57,103,105,0,110,0,0,10,0,111,0,12,0,2,11,111,112,0,13,14,2,11,112,114,0,0,1,1,2,0,0,94,115,0,0,0,163,94,116,118,1,5,0,15,0,118,0,120,2,6,0,17,1,16,0,120,0,121,3,6,0,17,1,18,0,121,0,123,4,5,2,3,2,19,0,123,0,125,5,4,0,20,0,0,127,6,5,1,0,0,129,0,12,6,14,0,0,130,0,13,6,0,132,0,0,0,163,134,0,160,7,0,0,162,0,21,1,4,0,162,0,163,0,8,23,1,22,163,164,0,8,24,1,22,164,165,0,21,2,5,165,167,0,0,0</bsch:cmdOperand>
 					<bsch:constant>SВидРасхода</bsch:constant>
 					<bsch:constant>SВидыРасходов</bsch:constant>
 					<bsch:constant>SПланируемый</bsch:constant>
+					<bsch:constant>SКлюч</bsch:constant>
+					<bsch:constant>SПустая</bsch:constant>
+					<bsch:constant>SПодтвердитьФактическийРасход</bsch:constant>
+					<bsch:constant>SВидимость</bsch:constant>
+					<bsch:constant>SРасход (план)</bsch:constant>
+					<bsch:constant>SФактический</bsch:constant>
+					<bsch:constant>SРасход (факт)</bsch:constant>
 					<bsch:constant>SСтруктура</bsch:constant>
 					<bsch:constant>SВставить</bsch:constant>
 					<bsch:constant>SЛимитПревышен</bsch:constant>
@@ -1836,10 +2716,13 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 					<bsch:constant>SСумма</bsch:constant>
 					<bsch:constant>SОбъект</bsch:constant>
 					<bsch:constant>SЗаписать</bsch:constant>
+					<bsch:constant>SОтменаПроведения</bsch:constant>
 					<bsch:constant>SПроведение</bsch:constant>
-					<bsch:variable name="Элементы" isExternal="true"/>
 					<bsch:variable name="Объект" isExternal="true"/>
 					<bsch:variable name="Перечисления" isExternal="true"/>
+					<bsch:variable name="Параметры" isExternal="true"/>
+					<bsch:variable name="Элементы" isExternal="true"/>
+					<bsch:variable name="Заголовок" isExternal="true"/>
 					<bsch:variable name="УчетДенежныхСредствСервер" isExternal="true"/>
 					<bsch:variable name="ОбщегоНазначенияКлиентСервер" isExternal="true"/>
 					<bsch:variable name="Модифицированность" isExternal="true"/>
@@ -1850,8 +2733,10 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 						<bsch:paramsDefValue/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="УправлениеФормой" parametersCount="0" startAddr="6"/>
-					<bsch:procedure name="ПроверитьПревышениеЛимитаЗаПериод" isFunction="true" parametersCount="0" startAddr="19">
+					<bsch:procedure name="УправлениеФормой" parametersCount="0" startAddr="6">
+						<bsch:variable name="ВидимостьПодтверждения" isLocal="true"/>
+					</bsch:procedure>
+					<bsch:procedure name="ПроверитьПревышениеЛимитаЗаПериод" isFunction="true" parametersCount="0" startAddr="60">
 						<bsch:variable name="Результат" isLocal="true"/>
 						<bsch:variable name="ЛимитНаПериод" isLocal="true"/>
 						<bsch:variable name="ДатаНачалаПериода" isLocal="true"/>
@@ -1860,20 +2745,28 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 						<bsch:variable name="ПланируемыеРасходыСТекущимПланом" isLocal="true"/>
 						<bsch:variable name="СуммаПревышения" isLocal="true"/>
 					</bsch:procedure>
-					<bsch:procedure name="ВыполнитьПроведениеДокумента" parametersCount="0" startAddr="124">
+					<bsch:procedure name="ВыполнитьПроведениеДокумента" parametersCount="0" startAddr="165">
 						<bsch:variable name="ОбъектДокумента" isLocal="true"/>
 					</bsch:procedure>
 					<bsch:procedure name="РеквизитФормыВЗначение" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
 					<bsch:procedure name="ЗначениеВРеквизитФормы" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
 				</mf:serverModule>
-				<mf:clientModule version="1" startAddr="207">
-					<bsch:cmdOpCode>1,3,18,19,5,1,16,1,3,12,40,1,3,4,18,19,5,1,16,1,3,2,3,2,2,12,18,21,5,1,4,110,2,2,12,18,21,5,1,4,110,3,12,18,21,5,1,16,1,3,4,2,18,51,16,1,3,3,2,12,4,18,19,1,39,1,18,19,1,1,1,22,1,2,12,4,18,19,5,1,16,1,18,19,1,1,18,19,1,1,22,1,3,18,51,16,1,3,12,4,16,1,3,18,21,5,1,40,1,3,7,18,20,1,1,48,49,3,12,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,12,4,33,40,1,2,12,3,12,16,39,1,1,39,50,3,8,16,3,8,16,39,1,1,22,1,3,2,12,33,40,1,18,19,1,39,1,3,2,12,33,40,1,18,19,1,39,1,1,22,1,18,19,1,1,4,18,19,1,1,2,12,18,19,1,1,18,19,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>14,1,0,1,0,14,0,16,1,0,65,18,2,1,1,2,0,18,0,20,3,0,2,1,2,4,1,3,0,21,5,0,1,2,4,1,6,0,22,5,0,1,7,4,2,0,20,0,25,4,8,3,2,9,0,26,4,3,4,10,11,4,3,26,69,30,0,4,30,32,34,0,43,2,12,13,1,6,0,43,0,44,0,7,44,45,0,8,45,47,0,54,1,0,14,0,55,1,15,16,0,57,1,0,17,0,57,158,58,1,0,1,18,58,59,0,0,1,19,0,0,59,3,0,0,3,0,150,2,3,0,3,0,0,60,2,20,21,0,147,61,2,22,2,23,0,147,62,63,121,1,3,0,0,3,0,0,158,64,68,0,113,0,5,24,0,172,114,0,8,114,183,115,0,5,25,0,183,116,0,4,116,183,117,119,0,124,0,11,124,125,26,1,12,125,126,2,27,1,13,126,127,0,8,127,129,0,0,0</bsch:cmdOperand>
+				<mf:clientModule version="1" startAddr="260">
+					<bsch:cmdOpCode>1,2,12,18,21,5,1,40,1,2,107,4,108,33,40,1,2,12,2,12,12,16,39,1,39,1,1,22,1,2,12,4,18,19,5,1,16,1,18,19,1,1,4,18,19,1,1,22,1,3,18,19,5,1,16,1,3,12,40,1,3,4,18,19,5,1,16,1,3,2,3,2,2,12,18,21,5,1,4,110,2,2,12,18,21,5,1,4,110,3,12,18,21,5,1,16,1,3,4,2,18,51,16,1,3,3,2,12,4,18,19,1,39,1,18,19,1,1,1,22,1,18,19,1,1,22,1,3,6,16,1,2,2,18,20,1,1,22,1,18,19,1,1,22,1,3,2,12,33,40,1,18,19,1,39,1,3,2,12,33,40,1,18,19,1,39,1,1,22,1,18,19,1,1,4,18,19,1,1,2,12,18,19,1,1,18,19,1,1,22,1,3,18,51,16,1,3,12,4,16,1,3,18,21,5,1,40,1,3,7,18,20,1,1,48,49,3,12,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,12,4,33,40,1,2,12,3,12,16,39,1,1,39,50,3,8,16,3,8,16,39,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>14,0,0,0,1,0,14,25,15,1,0,2,0,0,23,16,2,3,1,4,5,0,23,17,25,18,20,0,29,2,6,7,1,2,0,29,0,30,0,3,30,32,8,1,4,32,34,0,39,1,0,6,0,39,0,41,1,9,113,43,2,10,1,7,0,43,0,45,3,3,2,4,2,3,1,12,0,46,13,0,4,2,3,1,14,0,47,13,0,1,15,4,11,0,45,0,50,4,16,5,2,17,0,51,4,3,6,18,19,4,8,51,117,55,0,3,55,57,59,0,64,0,10,64,66,0,75,2,0,0,77,7,8,1,20,77,79,0,84,0,13,84,86,0,139,0,9,21,0,155,140,0,10,140,166,141,0,9,22,0,166,142,0,3,142,166,143,145,0,150,0,15,150,151,23,1,16,151,152,2,24,1,17,152,153,0,10,153,155,0,174,0,0,25,0,175,0,26,27,0,177,0,0,28,0,177,257,178,0,0,1,29,178,179,0,0,0,30,0,0,179,2,0,0,2,0,249,1,2,0,2,0,0,180,1,0,31,0,246,181,2,32,1,33,0,246,182,183,220,1,2,0,0,2,0,0,257,184,188,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SКлюч</bsch:constant>
+					<bsch:constant>SПустая</bsch:constant>
+					<bsch:constant>SТаблицаФормы</bsch:constant>
+					<bsch:constant>SДата</bsch:constant>
+					<bsch:constant>SРодитель</bsch:constant>
+					<bsch:constant>SДатаНачалаПериода</bsch:constant>
+					<bsch:constant>SВидРасхода</bsch:constant>
+					<bsch:constant>SПеречисление.ВидыРасходов.Фактический</bsch:constant>
+					<bsch:constant>SПлановый расход переведен в фактический</bsch:constant>
 					<bsch:constant>SЛимитПревышен</bsch:constant>
 					<bsch:constant>Sru = 'Лимит денежных средств на период с %1 по %2 превышен на %3. Все равно записать?'</bsch:constant>
 					<bsch:constant>SПодставитьПараметрыВСтроку</bsch:constant>
 					<bsch:constant>SПолучитьДатуНачалаПериода</bsch:constant>
-					<bsch:constant>SДата</bsch:constant>
 					<bsch:constant>SДЛФ=DD</bsch:constant>
 					<bsch:constant>SПолучитьДатуОкончанияПериода</bsch:constant>
 					<bsch:constant>SСуммаПревышения</bsch:constant>
@@ -1881,29 +2774,42 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 					<bsch:constant>SОписаниеОповещения</bsch:constant>
 					<bsch:constant>SДаНетОтмена</bsch:constant>
 					<bsch:constant>N60</bsch:constant>
-					<bsch:constant>SВидРасхода</bsch:constant>
-					<bsch:constant>SПеречисление.ВидыРасходов.Фактический</bsch:constant>
+					<bsch:constant>SОткрытьФормуВыбораДаты</bsch:constant>
+					<bsch:constant>SНет</bsch:constant>
+					<bsch:constant>SДа</bsch:constant>
+					<bsch:constant>SИзменениеОстатков</bsch:constant>
+					<bsch:constant>SСсылка</bsch:constant>
 					<bsch:constant>SЗапускПриложенияМобильногоУстройства</bsch:constant>
 					<bsch:constant>SДействие</bsch:constant>
 					<bsch:constant>Sandroid.speech.action.RECOGNIZE_SPEECH</bsch:constant>
 					<bsch:constant>SПоддерживаетсяЗапуск</bsch:constant>
 					<bsch:constant>SЗапустить</bsch:constant>
 					<bsch:constant>SДополнительныеДанные</bsch:constant>
-					<bsch:constant>SКлюч</bsch:constant>
 					<bsch:constant>Squery</bsch:constant>
 					<bsch:constant>SНазначение</bsch:constant>
 					<bsch:constant>SЗначение</bsch:constant>
-					<bsch:constant>SНет</bsch:constant>
-					<bsch:constant>SДа</bsch:constant>
-					<bsch:constant>SИзменениеОстатков</bsch:constant>
-					<bsch:constant>SСсылка</bsch:constant>
+					<bsch:variable name="Параметры" isExternal="true"/>
+					<bsch:variable name="ВладелецФормы" isExternal="true"/>
+					<bsch:variable name="Объект" isExternal="true"/>
 					<bsch:variable name="СтроковыеФункцииКлиентСервер" isExternal="true"/>
 					<bsch:variable name="ОбщегоНазначенияКлиентСервер" isExternal="true"/>
-					<bsch:variable name="Объект" isExternal="true"/>
 					<bsch:variable name="ЭтотОбъект" isExternal="true"/>
 					<bsch:variable name="РежимДиалогаВопрос" isExternal="true"/>
+					<bsch:variable name="УчетДенежныхСредствКлиент" isExternal="true"/>
+					<bsch:variable name="ЭтаФорма" isExternal="true"/>
 					<bsch:variable name="КодВозвратаДиалога" isExternal="true"/>
-					<bsch:procedure name="ЗаписатьДокумент" parametersCount="1" startAddr="0">
+					<bsch:procedure name="ПриОткрытии" parametersCount="1" startAddr="0">
+						<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ПодтвердитьФактическийРасход" parametersCount="1" startAddr="28">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ПредопределенноеЗначение" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
+					<bsch:procedure name="НачатьЗаписьДокумента" parametersCount="0" startAddr="169"/>
+					<bsch:procedure name="Сообщить" isExternal="true" parametersCount="2" startAddr="0"/>
+					<bsch:procedure name="ЗаписатьДокумент" parametersCount="1" startAddr="48">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:variable name="Результат" isLocal="true"/>
 						<bsch:variable name="ШаблонВопроса" isLocal="true"/>
@@ -1914,22 +2820,33 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 					<bsch:procedure name="ПроверитьПревышениеЛимитаЗаПериод" isFunction="true" isExternal="true" parametersCount="0" startAddr="0"/>
 					<bsch:procedure name="НСтр" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
 					<bsch:procedure name="ПоказатьВопрос" isExternal="true" parametersCount="7" startAddr="0"/>
-					<bsch:procedure name="НачатьЗаписьДокумента" parametersCount="0" startAddr="186"/>
-					<bsch:procedure name="ПодтвердитьФактическийРасход" parametersCount="1" startAddr="72">
+					<bsch:procedure name="Отмена" parametersCount="1" startAddr="120">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="ПредопределенноеЗначение" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
-					<bsch:procedure name="Записать" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
 					<bsch:procedure name="Закрыть" isExternal="true" parametersCount="1" startAddr="0"/>
-					<bsch:procedure name="ДобавитьГолосовоеНазначение" parametersCount="1" startAddr="91">
-						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+					<bsch:procedure name="ДатаНачалоВыбора" parametersCount="3" startAddr="126">
+						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+						<bsch:variable name="ДанныеВыбора" isLocal="true" isParam="true"/>
+						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="НазначениеНачалоВыбора" parametersCount="3" startAddr="138">
+						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+						<bsch:variable name="ДанныеВыбора" isLocal="true" isParam="true"/>
+						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ДобавитьГолосовоеНазначение" parametersCount="0" startAddr="190">
 						<bsch:variable name="ЗапсукПриложения" isLocal="true"/>
 						<bsch:variable name="СтрокаДанных" isLocal="true"/>
 						<bsch:variable name="0СтрокаДанных" isLocal="true"/>
-						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="РезультатВопросаЗаписиДокумента" isExported="true" parametersCount="2" startAddr="161">
+					<bsch:procedure name="РезультатВопросаЗаписиДокумента" isExported="true" parametersCount="2" startAddr="144">
 						<bsch:variable name="РезультатВопроса" isLocal="true" isParam="true"/>
 						<bsch:variable name="ДополнительныеПараметры" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
@@ -1965,12 +2882,14 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 						</v8:item>
 					</mf:title>
 					<mf:handlerName>ПодтвердитьФактическийРасход</mf:handlerName>
+					<mf:picture ref="v8ui:ПереводПланРасходаВФакт"/>
 					<mf:tooltip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Подтвердить фактический расход</v8:content>
 						</v8:item>
 					</mf:tooltip>
+					<mf:representation>Picture</mf:representation>
 				</mf:command>
 				<mf:command name="ЗаписатьДокумент">
 					<mf:title>
@@ -1980,51 +2899,147 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 						</v8:item>
 					</mf:title>
 					<mf:handlerName>ЗаписатьДокумент</mf:handlerName>
-					<mf:picture ref="v8ui:Write"/>
+					<mf:picture ref="v8ui:ЗеленаяГалочка"/>
 					<mf:tooltip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Записать документ</v8:content>
 						</v8:item>
 					</mf:tooltip>
-					<mf:representation>PictureAndText</mf:representation>
+					<mf:representation>Picture</mf:representation>
 				</mf:command>
-				<mf:command name="ДобавитьГолосовоеНазначение">
+				<mf:command name="Отмена">
 					<mf:title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Добавить голосовое назначение</v8:content>
+							<v8:content>Отмена</v8:content>
 						</v8:item>
 					</mf:title>
-					<mf:handlerName>ДобавитьГолосовоеНазначение</mf:handlerName>
-					<mf:picture ref="v8ui:СделатьАудиоЗапись"/>
+					<mf:handlerName>Отмена</mf:handlerName>
+					<mf:picture ref="v8ui:КрасныйКрестикВКруге"/>
 					<mf:tooltip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Добавить голосовое назначение</v8:content>
+							<v8:content>Отмена</v8:content>
 						</v8:item>
 					</mf:tooltip>
 					<mf:representation>Picture</mf:representation>
 				</mf:command>
 				<mf:mainElement>
-					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar">
-						<mf:button name="ФормаЗаписть" type="CommandBarButton" commandName="Form.Command.ЗаписатьДокумент"/>
-					</mf:autoCommandBar>
+					<mf:autoTitle>false</mf:autoTitle>
+					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
 					<mf:commandsContent>
+						<mf:excluded>No</mf:excluded>
+						<mf:excluded>ChangeHistory</mf:excluded>
+						<mf:excluded>CustomizeForm</mf:excluded>
+						<mf:excluded>Reread</mf:excluded>
+						<mf:excluded>SaveValues</mf:excluded>
+						<mf:excluded>Close</mf:excluded>
+						<mf:excluded>UndoPosting</mf:excluded>
+						<mf:excluded>Help</mf:excluded>
+						<mf:excluded>ShowInList</mf:excluded>
 						<mf:excluded>Post</mf:excluded>
+						<mf:excluded>Abort</mf:excluded>
+						<mf:excluded>Retry</mf:excluded>
+						<mf:excluded>Yes</mf:excluded>
+						<mf:excluded>Cancel</mf:excluded>
+						<mf:excluded>Copy</mf:excluded>
+						<mf:excluded>RestoreValues</mf:excluded>
+						<mf:excluded>SetDeletionMark</mf:excluded>
 						<mf:excluded>PostAndClose</mf:excluded>
+						<mf:excluded>Ignore</mf:excluded>
+						<mf:excluded>OK</mf:excluded>
 						<mf:excluded>Write</mf:excluded>
 					</mf:commandsContent>
 					<mf:event handler="ПослеЗаписи" name="AfterWrite"/>
 					<mf:event handler="ПриОткрытии" name="OnOpen"/>
 					<mf:event handler="ПередЗаписью" name="BeforeWrite"/>
 					<mf:event handler="ПриСозданииНаСервере" name="OnCreateAtServer"/>
-					<mf:field name="Дата" kind="InputField" dataPath="Объект.Date">
-						<mf:contextMenu name="ДатаКонтекстноеМеню" type="ContextMenu"/>
-					</mf:field>
-					<mf:field name="Сумма" kind="InputField" dataPath="Объект.Сумма">
-						<mf:contextMenu name="СуммаКонтекстноеМеню" type="ContextMenu"/>
-					</mf:field>
+					<mf:group name="ГруппаДата" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа дата</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:tooltip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа дата</v8:content>
+							</v8:item>
+						</mf:tooltip>
+						<mf:horizontalStretch>true</mf:horizontalStretch>
+						<mf:usualData group="Vertical" representation="None">
+							<mf:showTitle>false</mf:showTitle>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
+						</mf:usualData>
+						<mf:decoration name="ДекорацияДата" type="Label">
+							<mf:formattedTitle>
+								<mf:str>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>дата</v8:content>
+									</v8:item>
+								</mf:str>
+							</mf:formattedTitle>
+							<mf:horizontalStretch>false</mf:horizontalStretch>
+							<mf:contextMenu name="ДекорацияДатаКонтекстноеМеню" type="ContextMenu"/>
+							<mf:textData>
+								<mf:horizontalAlign>Center</mf:horizontalAlign>
+							</mf:textData>
+						</mf:decoration>
+						<mf:field name="Дата" kind="InputField" dataPath="Объект.Date">
+							<mf:titleLocation>None</mf:titleLocation>
+							<mf:contextMenu name="ДатаКонтекстноеМеню" type="ContextMenu"/>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
+							<mf:inputData>
+								<mf:font ref="style:LargeTextFont" height="14" kind="StyleItem"/>
+								<mf:width>16</mf:width>
+								<mf:autoMaxWidth>false</mf:autoMaxWidth>
+								<mf:horizontalStretch>true</mf:horizontalStretch>
+								<mf:event handler="ДатаНачалоВыбора" name="StartChoice"/>
+							</mf:inputData>
+						</mf:field>
+					</mf:group>
+					<mf:group name="ГруппаСумма" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа сумма</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:tooltip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа сумма</v8:content>
+							</v8:item>
+						</mf:tooltip>
+						<mf:horizontalStretch>true</mf:horizontalStretch>
+						<mf:usualData group="Vertical" representation="None">
+							<mf:showTitle>false</mf:showTitle>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
+						</mf:usualData>
+						<mf:decoration name="ДекорацияСумма" type="Label">
+							<mf:formattedTitle>
+								<mf:str>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>сумма</v8:content>
+									</v8:item>
+								</mf:str>
+							</mf:formattedTitle>
+							<mf:contextMenu name="ДекорацияСуммаКонтекстноеМеню" type="ContextMenu"/>
+						</mf:decoration>
+						<mf:field name="Сумма" kind="InputField" dataPath="Объект.Сумма">
+							<mf:titleLocation>None</mf:titleLocation>
+							<mf:contextMenu name="СуммаКонтекстноеМеню" type="ContextMenu"/>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
+							<mf:inputData>
+								<mf:font ref="style:ExtraLargeTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+								<mf:horizontalStretch>true</mf:horizontalStretch>
+							</mf:inputData>
+						</mf:field>
+					</mf:group>
 					<mf:group name="ГруппаНазначение" type="UsualGroup">
 						<mf:title>
 							<v8:item>
@@ -2038,24 +3053,64 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 								<v8:content>Группа назначение</v8:content>
 							</v8:item>
 						</mf:tooltip>
-						<mf:usualData group="AlwaysHorizontal" representation="None">
+						<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+						<mf:usualData group="Vertical" representation="None">
 							<mf:showTitle>false</mf:showTitle>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
 						</mf:usualData>
+						<mf:decoration name="ДекорацияНазначение" type="Label">
+							<mf:formattedTitle>
+								<mf:str>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>описание расхода</v8:content>
+									</v8:item>
+								</mf:str>
+							</mf:formattedTitle>
+							<mf:contextMenu name="ДекорацияНазначениеКонтекстноеМеню" type="ContextMenu"/>
+						</mf:decoration>
 						<mf:field name="Назначение" kind="InputField" dataPath="Объект.Назначение">
 							<mf:titleLocation>None</mf:titleLocation>
 							<mf:contextMenu name="НазначениеКонтекстноеМеню" type="ContextMenu"/>
 							<mf:inputData>
+								<mf:choiceButton>true</mf:choiceButton>
+								<mf:choiceButtonPicture ref="v8ui:СделатьАудиоЗапись"/>
 								<mf:inputHint>
 									<v8:item>
 										<v8:lang>ru</v8:lang>
 										<v8:content>Введите назначение расхода</v8:content>
 									</v8:item>
 								</mf:inputHint>
+								<mf:event handler="НазначениеНачалоВыбора" name="StartChoice"/>
 							</mf:inputData>
 						</mf:field>
-						<mf:button name="ДобавитьГолосовоеНазначение" type="UsualButton" commandName="Form.Command.ДобавитьГолосовоеНазначение"/>
 					</mf:group>
-					<mf:button name="ПодтвердитьФактическийРасход" type="UsualButton" commandName="Form.Command.ПодтвердитьФактическийРасход"/>
+					<mf:group name="ГруппаКоманды" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа команды</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:tooltip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа команды</v8:content>
+							</v8:item>
+						</mf:tooltip>
+						<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+						<mf:usualData representation="None">
+							<mf:showTitle>false</mf:showTitle>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
+						</mf:usualData>
+						<mf:button name="ЗаписатьДокумент" type="UsualButton" commandName="Form.Command.ЗаписатьДокумент">
+							<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+						</mf:button>
+						<mf:button name="Отмена" type="UsualButton" commandName="Form.Command.Отмена">
+							<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+						</mf:button>
+						<mf:button name="ПодтвердитьФактическийРасход" type="UsualButton" commandName="Form.Command.ПодтвердитьФактическийРасход"/>
+					</mf:group>
 				</mf:mainElement>
 			</form>
 		</form>
@@ -2067,9 +3122,9 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 				</v8:item>
 			</synonym>
 			<form>
-				<mf:serverModule version="1" startAddr="139">
-					<bsch:cmdOpCode>1,2,4,18,21,5,1,30,2,12,69,40,1,2,2,99,18,21,5,1,16,1,2,2,99,18,21,5,1,16,1,7,18,19,1,39,1,1,2,12,4,18,21,5,1,40,1,2,12,12,2,12,12,33,40,1,2,4,16,39,1,2,12,12,2,12,12,33,40,1,2,4,16,39,1,39,1,1,22,1,2,12,12,12,12,18,20,1,1,3,4,16,1,2,2,3,2,4,110,2,4,110,18,21,5,1,16,1,2,2,12,12,12,4,2,12,2,10,3,18,20,1,1,2,2,12,12,12,4,2,12,2,10,3,18,20,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>7,0,1,1,0,0,7,11,0,1,0,36,8,1,2,0,1,2,0,8,0,9,3,2,0,1,3,0,9,0,10,0,1,1,10,36,11,13,0,4,5,1,0,0,13,76,14,0,4,5,4,6,7,0,60,15,5,8,0,74,16,0,4,5,4,6,9,0,74,17,5,10,0,74,18,76,19,21,0,69,6,11,12,4,13,0,14,69,71,1,15,0,72,7,8,1,1,17,0,3,17,0,3,16,0,72,0,77,2,6,11,12,4,19,9,20,1,0,0,6,18,77,85,2,6,11,12,4,19,9,21,3,0,0,6,18,85,93,0,0,0</bsch:cmdOperand>
+				<mf:serverModule version="1" startAddr="267">
+					<bsch:cmdOpCode>1,2,4,18,21,5,1,30,2,12,69,40,1,2,2,99,18,21,5,1,16,1,2,2,99,18,21,5,1,16,1,7,18,19,1,39,1,1,2,12,4,18,21,5,1,40,1,2,2,12,12,16,1,2,2,12,12,33,40,1,2,4,16,39,1,2,2,12,12,33,40,1,2,4,16,39,1,39,1,1,18,19,1,1,22,1,2,12,12,12,12,18,20,1,1,3,4,16,1,2,2,3,2,4,110,2,4,110,18,21,5,1,16,1,2,2,12,12,12,4,2,12,2,10,3,18,20,1,1,2,2,12,12,12,4,2,12,2,10,3,18,20,1,1,22,1,3,18,51,16,1,2,18,19,5,1,40,1,3,2,18,20,1,39,1,3,2,12,12,18,20,1,1,3,2,12,12,18,20,1,1,1,3,4,16,1,3,4,16,1,2,12,12,29,40,1,3,4,16,39,1,1,3,3,3,24,16,1,3,18,51,16,1,3,12,3,16,1,3,4,3,18,20,1,1,3,4,2,18,20,1,1,3,4,2,94,18,20,1,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,18,20,1,1,2,3,12,16,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>7,0,1,1,0,0,7,11,0,1,0,36,8,1,2,0,1,2,0,8,0,9,3,2,0,1,3,0,9,0,10,0,1,1,10,36,11,13,0,4,5,1,0,0,13,78,15,4,0,4,5,0,17,4,5,6,7,0,64,18,6,8,0,76,19,4,5,6,9,0,76,20,6,10,0,76,21,78,23,25,0,2,25,27,0,105,7,11,12,4,13,0,14,105,107,1,15,0,108,8,9,1,1,17,0,3,17,0,3,16,0,108,0,113,2,7,11,12,4,19,10,20,1,0,0,6,18,113,121,2,7,11,12,4,19,10,21,3,0,0,6,18,121,129,0,134,0,0,22,0,135,4,1,3,0,135,164,136,0,4,1,23,136,180,138,0,5,6,7,1,23,138,139,0,5,6,9,1,23,139,140,142,1,24,0,150,2,25,0,151,11,26,27,0,200,152,2,28,0,200,153,155,1,1,2,0,0,157,3,0,29,0,158,3,30,1,0,159,3,32,0,2,31,159,160,3,33,1,2,31,160,161,3,34,3,0,2,31,161,163,4,3,0,35,0,163,0,164,5,4,0,36,0,164,0,165,5,0,37,165,167,12,5,38,0,169,0,0,0</bsch:cmdOperand>
 					<bsch:constant>SСвойство</bsch:constant>
 					<bsch:constant>SОтборПоДате</bsch:constant>
 					<bsch:constant>SПолучитьДатуНачалаПериода</bsch:constant>
@@ -2078,9 +3133,9 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 					<bsch:constant>SВидРасхода</bsch:constant>
 					<bsch:constant>SВидыРасходов</bsch:constant>
 					<bsch:constant>SПланируемый</bsch:constant>
-					<bsch:constant>SПланируемые расходы</bsch:constant>
+					<bsch:constant>SРасход (план)</bsch:constant>
 					<bsch:constant>SФактический</bsch:constant>
-					<bsch:constant>SФактические расходы</bsch:constant>
+					<bsch:constant>SРасход (факт)</bsch:constant>
 					<bsch:constant>SКомпоновщикНастроек</bsch:constant>
 					<bsch:constant>SНастройки</bsch:constant>
 					<bsch:constant>SЭлементы</bsch:constant>
@@ -2092,31 +3147,65 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 					<bsch:constant>SДата</bsch:constant>
 					<bsch:constant>SБольшеИлиРавно</bsch:constant>
 					<bsch:constant>SМеньшеИлиРавно</bsch:constant>
+					<bsch:constant>SМассив</bsch:constant>
+					<bsch:constant>SДобавить</bsch:constant>
+					<bsch:constant>SВЫБРАТЬ
+	СУММА(РасходДенежныхСредств.Сумма) КАК Сумма
+ИЗ
+	Документ.РасходДенежныхСредств КАК РасходДенежныхСредств
+ГДЕ
+	РасходДенежныхСредств.ВидРасхода В(&amp;МассивВидовРасхода)</bsch:constant>
+					<bsch:constant>S</bsch:constant>
+					<bsch:constant>SПоказатьВесьСписок</bsch:constant>
+					<bsch:constant>SПометка</bsch:constant>
+					<bsch:constant>S И РасходДенежныхСредств.Дата МЕЖДУ &amp;ДатаНачалаПериода И &amp;ДатаОкончанияПериода</bsch:constant>
+					<bsch:constant>SЗапрос</bsch:constant>
+					<bsch:constant>SТекст</bsch:constant>
+					<bsch:constant>SУстановитьПараметр</bsch:constant>
+					<bsch:constant>SМассивВидовРасхода</bsch:constant>
+					<bsch:constant>SДатаНачалаПериода</bsch:constant>
+					<bsch:constant>SДатаОкончанияПериода</bsch:constant>
+					<bsch:constant>SВыполнить</bsch:constant>
+					<bsch:constant>SВыбрать</bsch:constant>
+					<bsch:constant>SСледующий</bsch:constant>
+					<bsch:constant>SСумма</bsch:constant>
 					<bsch:variable name="Параметры" isExternal="true"/>
 					<bsch:variable name="ДатаНачалаПериода" isExternal="true"/>
 					<bsch:variable name="ОбщегоНазначенияКлиентСервер" isExternal="true"/>
 					<bsch:variable name="ДатаОкончанияПериода" isExternal="true"/>
+					<bsch:variable name="ОтборВидРасхода" isExternal="true"/>
 					<bsch:variable name="Перечисления" isExternal="true"/>
 					<bsch:variable name="Заголовок" isExternal="true"/>
 					<bsch:variable name="Список" isExternal="true"/>
 					<bsch:variable name="ПредставлениеПериода" isExternal="true"/>
 					<bsch:variable name="СтроковыеФункцииКлиентСервер" isExternal="true"/>
 					<bsch:variable name="ВидСравненияКомпоновкиДанных" isExternal="true"/>
+					<bsch:variable name="Элементы" isExternal="true"/>
+					<bsch:variable name="ИтоговаяСумма" isExternal="true"/>
 					<bsch:procedure name="ПриСозданииНаСервере" parametersCount="2" startAddr="0">
 						<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
 						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="УстановитьОтборПоДате" parametersCount="1" startAddr="79">
+					<bsch:procedure name="УстановитьОтборПоДате" parametersCount="1" startAddr="85">
 						<bsch:variable name="Использовать" isLocal="true" isParam="true"/>
 						<bsch:variable name="ШаблонПредставлениеПериода" isLocal="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
+					<bsch:procedure name="РассчитатьИтоговуюСуммуПоСпискуДокументов" parametersCount="0" startAddr="145">
+						<bsch:variable name="МассивВидовРасхода" isLocal="true"/>
+						<bsch:variable name="ТекстЗапрса" isLocal="true"/>
+						<bsch:variable name="ТекстУсловия" isLocal="true"/>
+						<bsch:variable name="Запрос" isLocal="true"/>
+						<bsch:variable name="РезультатЗапроса" isLocal="true"/>
+						<bsch:variable name="ВыборкаДетальныеЗаписи" isLocal="true"/>
+					</bsch:procedure>
+					<bsch:procedure name="ЗначениеЗаполнено" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
 				</mf:serverModule>
-				<mf:clientModule version="1" startAddr="91">
-					<bsch:cmdOpCode>1,2,2,4,25,16,1,2,2,2,18,21,5,1,16,1,7,18,19,1,1,22,1,2,2,4,24,16,1,2,2,2,18,21,5,1,16,1,7,18,19,1,1,22,1,2,12,12,2,12,12,29,16,1,2,12,12,29,18,19,1,1,2,12,12,40,1,2,12,12,4,16,39,1,2,12,12,4,16,1,1,2,12,12,2,12,12,29,16,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>30,0,1,0,0,0,31,1,2,0,1,1,0,31,0,32,0,1,1,32,34,0,39,1,0,0,0,0,40,0,2,1,1,2,0,40,0,41,0,1,1,41,43,0,48,3,3,4,3,3,4,0,0,50,3,3,4,0,1,1,50,52,3,3,4,73,53,3,3,5,6,0,79,55,3,3,5,7,0,56,58,3,8,9,3,3,4,0,0,60,0,0,0</bsch:cmdOperand>
+				<mf:clientModule version="1" startAddr="126">
+					<bsch:cmdOpCode>1,18,19,1,1,22,1,2,2,4,25,16,1,2,2,2,18,21,5,1,16,1,7,18,19,1,1,18,19,1,1,22,1,2,2,4,24,16,1,2,2,2,18,21,5,1,16,1,7,18,19,1,1,18,19,1,1,22,1,2,12,12,2,12,12,29,16,1,2,12,12,29,18,19,1,1,2,12,12,40,1,2,12,12,4,16,39,1,2,12,12,4,16,1,1,2,12,12,2,12,12,29,16,1,18,19,1,1,22,1,18,19,1,1,4,18,19,1,1,22,1,18,19,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>32,0,1,32,34,0,43,0,1,0,0,0,44,1,2,0,1,1,0,44,0,45,0,1,3,45,46,0,1,46,48,0,53,1,0,0,0,0,54,0,2,1,1,2,0,54,0,55,0,1,3,55,56,0,1,56,58,0,63,3,3,4,3,3,4,0,0,65,3,3,4,0,1,3,65,67,3,3,4,87,68,3,3,5,6,0,93,70,3,3,5,7,0,71,73,3,8,9,3,3,4,0,0,75,0,1,75,77,0,86,0,1,86,87,10,1,7,87,89,0,94,0,1,94,96,0,0,0</bsch:cmdOperand>
 					<bsch:constant>N1</bsch:constant>
 					<bsch:constant>SПолучитьДатуНачалаПериода</bsch:constant>
 					<bsch:constant>SПолучитьДатуОкончанияПериода</bsch:constant>
@@ -2127,23 +3216,39 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 					<bsch:constant>SПоказать весь список</bsch:constant>
 					<bsch:constant>SОтборПериод</bsch:constant>
 					<bsch:constant>SВидимость</bsch:constant>
+					<bsch:constant>SИзменениеОстатков</bsch:constant>
 					<bsch:variable name="ДатаОкончанияПериода" isExternal="true"/>
 					<bsch:variable name="ДатаНачалаПериода" isExternal="true"/>
 					<bsch:variable name="ОбщегоНазначенияКлиентСервер" isExternal="true"/>
 					<bsch:variable name="Элементы" isExternal="true"/>
-					<bsch:procedure name="СдвинутьПериодНазад" parametersCount="1" startAddr="0">
+					<bsch:procedure name="ОбработкаОповещения" parametersCount="3" startAddr="0">
+						<bsch:variable name="ИмяСобытия" isLocal="true" isParam="true"/>
+						<bsch:variable name="Параметр" isLocal="true" isParam="true"/>
+						<bsch:variable name="Источник" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="РассчитатьИтоговуюСуммуПоСпискуДокументов" isExternal="true" parametersCount="0" startAddr="0"/>
+					<bsch:procedure name="СдвинутьПериодНазад" parametersCount="1" startAddr="6">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
 					<bsch:procedure name="УстановитьОтборПоДате" isExternal="true" parametersCount="1" startAddr="0"/>
-					<bsch:procedure name="СдвинутьПериодВперед" parametersCount="1" startAddr="22">
+					<bsch:procedure name="СдвинутьПериодВперед" parametersCount="1" startAddr="32">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="ПоказатьВесьСписок" parametersCount="1" startAddr="44">
+					<bsch:procedure name="ПоказатьВесьСписок" parametersCount="1" startAddr="58">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
+					<bsch:procedure name="СписокПослеУдаления" parametersCount="1" startAddr="109">
+						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="Оповестить" isExternal="true" parametersCount="3" startAddr="0"/>
+					<bsch:procedure name="СписокОбработкаЗапросаОбновления" parametersCount="0" startAddr="120"/>
 				</mf:clientModule>
 				<mf:serverWOContextModule version="1">
 					<bsch:cmdOpCode>22</bsch:cmdOpCode>
@@ -2159,56 +3264,10 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 							<v8:TypeSet>dl:DynamicList</v8:TypeSet>
 						</mf:type>
 						<mf:extInformation>
-							<mf:customQuery>true</mf:customQuery>
-							<mf:queryText>ВЫБРАТЬ
-	ДокументРасходДенежныхСредств.Ссылка КАК Ссылка,
-	ДокументРасходДенежныхСредств.ПометкаУдаления КАК ПометкаУдаления,
-	ДокументРасходДенежныхСредств.Номер КАК Номер,
-	ДокументРасходДенежныхСредств.Дата КАК Дата,
-	ДокументРасходДенежныхСредств.Проведен КАК Проведен,
-	ДокументРасходДенежныхСредств.Сумма КАК Сумма,
-	ДокументРасходДенежныхСредств.ВидРасхода КАК ВидРасхода,
-	ДокументРасходДенежныхСредств.Назначение КАК Назначение,
-	ДокументРасходДенежныхСредств.МоментВремени КАК МоментВремени
-ПОМЕСТИТЬ ВТ_ОсновнаяТаблица
-ИЗ
-	Документ.РасходДенежныхСредств КАК ДокументРасходДенежныхСредств
-;
-
-////////////////////////////////////////////////////////////////////////////////
-ВЫБРАТЬ
-	СУММА(ВТ_ОсновнаяТаблица.Сумма) КАК ИтоговаяСумма
-ПОМЕСТИТЬ ВТ_ИтоговаяСумма
-ИЗ
-	ВТ_ОсновнаяТаблица КАК ВТ_ОсновнаяТаблица
-;
-
-////////////////////////////////////////////////////////////////////////////////
-ВЫБРАТЬ РАЗЛИЧНЫЕ
-	РасходДенежныхСредств.Ссылка КАК Ссылка,
-	РасходДенежныхСредств.ПометкаУдаления КАК ПометкаУдаления,
-	РасходДенежныхСредств.Номер КАК Номер,
-	РасходДенежныхСредств.Дата КАК Дата,
-	РасходДенежныхСредств.Проведен КАК Проведен,
-	РасходДенежныхСредств.Сумма КАК Сумма,
-	РасходДенежныхСредств.ВидРасхода КАК ВидРасхода,
-	РасходДенежныхСредств.Назначение КАК Назначение,
-	РасходДенежныхСредств.МоментВремени КАК МоментВремени,
-	ВТ_ИтоговаяСумма.ИтоговаяСумма КАК ИтоговаяСумма
-ИЗ
-	Документ.РасходДенежныхСредств КАК РасходДенежныхСредств
-		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ИтоговаяСумма КАК ВТ_ИтоговаяСумма
-		ПО (ИСТИНА)
-ГДЕ
-	РасходДенежныхСредств.Ссылка В
-			(ВЫБРАТЬ
-				ВТ_ОсновнаяТаблица.Ссылка КАК Ссылка
-			ИЗ
-				ВТ_ОсновнаяТаблица КАК ВТ_ОсновнаяТаблица)</mf:queryText>
 							<mf:mainTable>Document.РасходДенежныхСредств</mf:mainTable>
 							<mf:mainTableCategory>1</mf:mainTableCategory>
 							<mf:requiredField>ИтоговаяСумма</mf:requiredField>
-							<mf:requiredField>Ссылка</mf:requiredField>
+							<mf:requiredField>Ref</mf:requiredField>
 						</mf:extInformation>
 						<mf:main>true</mf:main>
 					</mf:attribute>
@@ -2253,6 +3312,33 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 								<v8:Length>0</v8:Length>
 								<v8:AllowedLength>Variable</v8:AllowedLength>
 							</v8:StringQualifiers>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="ИтоговаяСумма">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Итоговая сумма</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>10</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="ОтборВидРасхода">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отбор вид расхода</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>cfg:EnumRef.ВидыРасходов</v8:Type>
 						</mf:type>
 					</mf:attribute>
 				</mf:attributes>
@@ -2304,8 +3390,38 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 				<mf:mainElement>
 					<mf:autoTitle>false</mf:autoTitle>
 					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
+					<mf:commandsContent>
+						<mf:excluded>No</mf:excluded>
+						<mf:excluded>CustomizeForm</mf:excluded>
+						<mf:excluded>ListSettings</mf:excluded>
+						<mf:excluded>SaveValues</mf:excluded>
+						<mf:excluded>SetDeletionMark</mf:excluded>
+						<mf:excluded>Close</mf:excluded>
+						<mf:excluded>Help</mf:excluded>
+						<mf:excluded>Abort</mf:excluded>
+						<mf:excluded>UndoPosting</mf:excluded>
+						<mf:excluded>Post</mf:excluded>
+						<mf:excluded>Retry</mf:excluded>
+						<mf:excluded>Yes</mf:excluded>
+						<mf:excluded>Cancel</mf:excluded>
+						<mf:excluded>RestoreValues</mf:excluded>
+						<mf:excluded>LoadDynamicListSettings</mf:excluded>
+						<mf:excluded>CancelSearch</mf:excluded>
+						<mf:excluded>OutputList</mf:excluded>
+						<mf:excluded>FindByCurrentValue</mf:excluded>
+						<mf:excluded>Find</mf:excluded>
+						<mf:excluded>ChangeHistory</mf:excluded>
+						<mf:excluded>SaveDynamicListSettings</mf:excluded>
+						<mf:excluded>DynamicListStandardSettings</mf:excluded>
+						<mf:excluded>Ignore</mf:excluded>
+						<mf:excluded>SetDateInterval</mf:excluded>
+						<mf:excluded>OK</mf:excluded>
+					</mf:commandsContent>
+					<mf:event handler="ОбработкаОповещения" name="NotificationProcessing"/>
+					<mf:event handler="ОбработкаЗаписиНового" name="NewWriteProcessing"/>
 					<mf:event handler="ПриОткрытии" name="OnOpen"/>
 					<mf:event handler="ПриСозданииНаСервере" name="OnCreateAtServer"/>
+					<mf:event handler="ПриИзмененииПараметровЭкрана" name="OnChangeDisplaySettings"/>
 					<mf:button name="ПоказатьВесьСписок" type="UsualButton" commandName="Form.Command.ПоказатьВесьСписок"/>
 					<mf:group name="ОтборПериод" type="UsualGroup">
 						<mf:title>
@@ -2324,7 +3440,7 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 							<mf:showTitle>false</mf:showTitle>
 						</mf:usualData>
 						<mf:button name="СдвинутьПериодНазад" type="UsualButton" commandName="Form.Command.СдвинутьПериодНазад">
-							<mf:font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<mf:font ref="style:ExtraLargeTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 						</mf:button>
 						<mf:field name="ПредставлениеПериода" kind="LabelField" dataPath="ПредставлениеПериода">
 							<mf:titleLocation>None</mf:titleLocation>
@@ -2333,7 +3449,7 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 							<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
 						</mf:field>
 						<mf:button name="СдвинутьПериодВперед" type="UsualButton" commandName="Form.Command.СдвинутьПериодВперед">
-							<mf:font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<mf:font ref="style:ExtraLargeTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 						</mf:button>
 					</mf:group>
 					<mf:group name="СписокКомпоновщикНастроекПользовательскиеНастройки" type="UsualGroup">
@@ -2361,7 +3477,32 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 							</mf:autoMenuData>
 						</mf:autoCommandBar>
 						<mf:contextMenu name="СписокКонтекстноеМеню" type="ContextMenu"/>
-						<mf:field name="Дата" kind="LabelField" dataPath="Список.Дата" defaultItem="true">
+						<mf:commandsContent>
+							<mf:excluded>UndoPosting</mf:excluded>
+							<mf:excluded>Copy</mf:excluded>
+							<mf:excluded>Create</mf:excluded>
+							<mf:excluded>ChangeHistory</mf:excluded>
+							<mf:excluded>ListSettings</mf:excluded>
+							<mf:excluded>LoadDynamicListSettings</mf:excluded>
+							<mf:excluded>DynamicListStandardSettings</mf:excluded>
+							<mf:excluded>CancelSearch</mf:excluded>
+							<mf:excluded>FindByCurrentValue</mf:excluded>
+							<mf:excluded>OutputList</mf:excluded>
+							<mf:excluded>CopyToClipboard</mf:excluded>
+							<mf:excluded>SaveDynamicListSettings</mf:excluded>
+							<mf:excluded>SetDeletionMark</mf:excluded>
+							<mf:excluded>Change</mf:excluded>
+							<mf:excluded>Find</mf:excluded>
+							<mf:excluded>SearchHistory</mf:excluded>
+							<mf:excluded>SetDateInterval</mf:excluded>
+							<mf:excluded>Post</mf:excluded>
+							<mf:excluded>Delete</mf:excluded>
+						</mf:commandsContent>
+						<mf:event handler="СписокОбработкаВыбора" name="ChoiceProcessing"/>
+						<mf:event handler="СписокОбработкаЗаписиНового" name="NewWriteProcessing"/>
+						<mf:event handler="СписокПослеУдаления" name="AfterDeleteRow"/>
+						<mf:event handler="СписокОбработкаЗапросаОбновления" name="RefreshRequestProcessing"/>
+						<mf:field name="Дата" kind="LabelField" dataPath="Список.Date" defaultItem="true">
 							<mf:contextMenu name="ДатаКонтекстноеМеню" type="ContextMenu"/>
 							<mf:textData>
 								<mf:format>
@@ -2375,158 +3516,19 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 						<mf:group name="Группа1" type="ColumnGroup">
 							<mf:field name="Назначение" kind="LabelField" dataPath="Список.Назначение">
 								<mf:contextMenu name="НазначениеКонтекстноеМеню" type="ContextMenu"/>
-								<mf:footerText>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>ИТОГО:</v8:content>
-									</v8:item>
-								</mf:footerText>
 								<mf:horizontalAlign>Right</mf:horizontalAlign>
 							</mf:field>
 							<mf:field name="Сумма" kind="LabelField" dataPath="Список.Сумма">
 								<mf:contextMenu name="СуммаКонтекстноеМеню" type="ContextMenu"/>
-								<mf:footerDataPath>Items.Список.CurrentData.ИтоговаяСумма</mf:footerDataPath>
+								<mf:footerDataPath>ИтоговаяСумма</mf:footerDataPath>
+								<mf:footerHorizontalAlign>Right</mf:footerHorizontalAlign>
+								<mf:footerPicture ref="v8ui:Сумма"/>
 								<mf:textData>
 									<mf:font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 								</mf:textData>
 							</mf:field>
 						</mf:group>
 					</mf:table>
-				</mf:mainElement>
-			</form>
-		</form>
-	</document>
-	<document name="КорректировкаРегистров" id="d19481d4-819f-442b-b084-ca82b5efdcca">
-		<synonym>
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Корректировка регистров</v8:content>
-			</v8:item>
-		</synonym>
-		<generatedType name="DocumentObject.КорректировкаРегистров" category="Object">
-			<xr:TypeId>bc0e7e72-20d3-40cf-91bf-238a2a669c57</xr:TypeId>
-			<xr:ValueId>6d9917e3-ce31-4565-b690-a18b4ec17944</xr:ValueId>
-		</generatedType>
-		<generatedType name="DocumentRef.КорректировкаРегистров" category="Ref">
-			<xr:TypeId>b6c59e5d-c21a-4d7d-83d2-c222d50f6258</xr:TypeId>
-			<xr:ValueId>50556b7f-04e9-4f7c-a5a3-dd6fb17e15b5</xr:ValueId>
-		</generatedType>
-		<generatedType name="DocumentSelection.КорректировкаРегистров" category="Selection">
-			<xr:TypeId>2a892cf3-3941-43c2-827c-6c87a715ffc6</xr:TypeId>
-			<xr:ValueId>a2d14cfe-7b4a-4699-9d06-f89b63be1ee6</xr:ValueId>
-		</generatedType>
-		<generatedType name="DocumentList.КорректировкаРегистров" category="List">
-			<xr:TypeId>420fc59f-e1d3-4151-a2b0-99c2da7d6838</xr:TypeId>
-			<xr:ValueId>e8fc340c-8a44-4625-9e83-fe210ecbef90</xr:ValueId>
-		</generatedType>
-		<generatedType name="DocumentManager.КорректировкаРегистров" category="Manager">
-			<xr:TypeId>b4b6365c-2c37-4855-9208-19afe00c4ac3</xr:TypeId>
-			<xr:ValueId>b223434a-628c-47ef-aedd-ed0550807c56</xr:ValueId>
-		</generatedType>
-		<managerModule version="1">
-			<bsch:cmdOpCode>22</bsch:cmdOpCode>
-			<bsch:cmdOperand>0</bsch:cmdOperand>
-		</managerModule>
-		<objectModule version="1" startAddr="2">
-			<bsch:cmdOpCode>1,22,22,22</bsch:cmdOpCode>
-			<bsch:cmdOperand>5,0,0,0</bsch:cmdOperand>
-			<bsch:procedure name="ПередЗаписью" parametersCount="3" startAddr="0">
-				<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
-				<bsch:variable name="РежимЗаписи" isLocal="true" isParam="true"/>
-				<bsch:variable name="РежимПроведения" isLocal="true" isParam="true"/>
-				<bsch:paramsDefValue/>
-				<bsch:paramsDefValue/>
-				<bsch:paramsDefValue/>
-			</bsch:procedure>
-		</objectModule>
-		<posting>Deny</posting>
-		<inputByString>Number</inputByString>
-		<defaultObjectForm>Document.КорректировкаРегистров.Form.ФормаДокумента</defaultObjectForm>
-		<form name="ФормаДокумента" id="6472201a-5da9-4798-9880-aa8db8004562">
-			<synonym>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Форма документа</v8:content>
-				</v8:item>
-			</synonym>
-			<form>
-				<mf:serverModule version="1" startAddr="0">
-					<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>0,0</bsch:cmdOperand>
-				</mf:serverModule>
-				<mf:clientModule version="1" startAddr="0">
-					<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>0,0</bsch:cmdOperand>
-				</mf:clientModule>
-				<mf:serverWOContextModule version="1">
-					<bsch:cmdOpCode>22</bsch:cmdOpCode>
-					<bsch:cmdOperand>0</bsch:cmdOperand>
-				</mf:serverWOContextModule>
-				<mf:clientServerWOContextModule version="1">
-					<bsch:cmdOpCode>22</bsch:cmdOpCode>
-					<bsch:cmdOperand>0</bsch:cmdOperand>
-				</mf:clientServerWOContextModule>
-				<mf:attributes>
-					<mf:attribute name="Объект">
-						<mf:type>
-							<v8:Type>cfg:DocumentObject.КорректировкаРегистров</v8:Type>
-						</mf:type>
-						<mf:main>true</mf:main>
-						<mf:storedData>true</mf:storedData>
-						<mf:useAalways>RegisterRecords</mf:useAalways>
-					</mf:attribute>
-				</mf:attributes>
-				<mf:mainElement>
-					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
-					<mf:field name="Дата" kind="InputField" dataPath="Объект.Date">
-						<mf:contextMenu name="ДатаКонтекстноеМеню" type="ContextMenu"/>
-					</mf:field>
-					<mf:group name="Страницы" type="Pages">
-						<mf:title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Страницы</v8:content>
-							</v8:item>
-						</mf:title>
-						<mf:tooltip>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Страницы</v8:content>
-							</v8:item>
-						</mf:tooltip>
-						<mf:group name="СтраницаДвиженияОстатокЛимитаДенежныхСредств" type="Page">
-							<mf:title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Остаток лимита денежных средств</v8:content>
-								</v8:item>
-							</mf:title>
-							<mf:tooltip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Страница движения остаток лимита денежных средств</v8:content>
-								</v8:item>
-							</mf:tooltip>
-							<mf:table name="ДвиженияОстатокЛимитаДенежныхСредств">
-								<mf:autoInsertNewRow>true</mf:autoInsertNewRow>
-								<mf:autoCommandBar name="ДвиженияОстатокЛимитаДенежныхСредствКоманднаяПанель" type="AutoCommandBar"/>
-								<mf:contextMenu name="ДвиженияОстатокЛимитаДенежныхСредствКонтекстноеМеню" type="ContextMenu"/>
-								<mf:field name="ДвиженияОстатокЛимитаДенежныхСредствНомерСтроки" kind="LabelField">
-									<mf:contextMenu name="ДвиженияОстатокЛимитаДенежныхСредствНомерСтрокиКонтекстноеМеню" type="ContextMenu"/>
-								</mf:field>
-								<mf:field name="ДвиженияОстатокЛимитаДенежныхСредствПериод" kind="InputField">
-									<mf:visible>false</mf:visible>
-									<mf:contextMenu name="ДвиженияОстатокЛимитаДенежныхСредствПериодКонтекстноеМеню" type="ContextMenu"/>
-								</mf:field>
-								<mf:field name="ДвиженияОстатокЛимитаДенежныхСредствВидДвижения" kind="InputField">
-									<mf:contextMenu name="ДвиженияОстатокЛимитаДенежныхСредствВидДвиженияКонтекстноеМеню" type="ContextMenu"/>
-								</mf:field>
-								<mf:field name="ДвиженияОстатокЛимитаДенежныхСредствСумма" kind="InputField">
-									<mf:contextMenu name="ДвиженияОстатокЛимитаДенежныхСредствСуммаКонтекстноеМеню" type="ContextMenu"/>
-								</mf:field>
-							</mf:table>
-						</mf:group>
-					</mf:group>
 				</mf:mainElement>
 			</form>
 		</form>
@@ -2736,7 +3738,7 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 						</v8:item>
 					</mf:title>
 					<mf:handlerName>ЗаписатьИЗакрыть</mf:handlerName>
-					<mf:picture ref="v8ui:Write"/>
+					<mf:picture ref="v8ui:ЗеленаяГалочка"/>
 					<mf:tooltip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -2753,23 +3755,61 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 						</v8:item>
 					</mf:title>
 					<mf:handlerName>Отмена</mf:handlerName>
+					<mf:picture ref="v8ui:КрасныйКрестикВКруге"/>
 					<mf:tooltip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Отмена</v8:content>
 						</v8:item>
 					</mf:tooltip>
+					<mf:representation>Picture</mf:representation>
 				</mf:command>
 				<mf:mainElement>
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Введите новое значение</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:autoTitle>false</mf:autoTitle>
 					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar">
 						<mf:autoMenuData>
 							<mf:autofill>false</mf:autofill>
 						</mf:autoMenuData>
 					</mf:autoCommandBar>
 					<mf:event handler="ПриСозданииНаСервере" name="OnCreateAtServer"/>
-					<mf:field name="НовыйОстатокЛимита" kind="InputField" dataPath="НовыйОстатокЛимита">
-						<mf:contextMenu name="НовыйОстатокЛимитаКонтекстноеМеню" type="ContextMenu"/>
-					</mf:field>
+					<mf:group name="Группа1" type="UsualGroup">
+						<mf:horizontalStretch>true</mf:horizontalStretch>
+						<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+						<mf:usualData representation="None">
+							<mf:showTitle>false</mf:showTitle>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
+						</mf:usualData>
+						<mf:decoration name="Декорация1" type="Label">
+							<mf:formattedTitle>
+								<mf:str>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>новый факт. остаток лимита</v8:content>
+									</v8:item>
+								</mf:str>
+							</mf:formattedTitle>
+							<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+							<mf:contextMenu name="Декорация1КонтекстноеМеню" type="ContextMenu"/>
+							<mf:textData>
+								<mf:horizontalAlign>Center</mf:horizontalAlign>
+							</mf:textData>
+						</mf:decoration>
+						<mf:field name="НовыйОстатокЛимита" kind="InputField" dataPath="НовыйОстатокЛимита">
+							<mf:titleLocation>None</mf:titleLocation>
+							<mf:contextMenu name="НовыйОстатокЛимитаКонтекстноеМеню" type="ContextMenu"/>
+							<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+							<mf:inputData>
+								<mf:font ref="style:ExtraLargeTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+								<mf:horizontalStretch>true</mf:horizontalStretch>
+							</mf:inputData>
+						</mf:field>
+					</mf:group>
 					<mf:group name="ГруппаКомандныхПанелей" type="UsualGroup">
 						<mf:title>
 							<v8:item>
@@ -2783,44 +3823,13 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 								<v8:content>Группа командных панелей</v8:content>
 							</v8:item>
 						</mf:tooltip>
+						<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
 						<mf:usualData representation="None">
 							<mf:showTitle>false</mf:showTitle>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
 						</mf:usualData>
-						<mf:group name="ГруппаКоманднаяПанельЗаписать" type="CommandBar">
-							<mf:title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа командная панель записать</v8:content>
-								</v8:item>
-							</mf:title>
-							<mf:tooltip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа командная панель записать</v8:content>
-								</v8:item>
-							</mf:tooltip>
-							<mf:button name="ЗаписатьИЗакрыть" type="CommandBarButton" commandName="Form.Command.ЗаписатьИЗакрыть"/>
-						</mf:group>
-						<mf:group name="ГруппаКоманднаяПанельОтмена" type="CommandBar">
-							<mf:title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа командная панель отмена</v8:content>
-								</v8:item>
-							</mf:title>
-							<mf:tooltip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа командная панель отмена</v8:content>
-								</v8:item>
-							</mf:tooltip>
-							<mf:menuData>
-								<mf:horizontalAlign>Right</mf:horizontalAlign>
-							</mf:menuData>
-							<mf:button name="Отмена" type="CommandBarButton" commandName="Form.Command.Отмена">
-								<mf:groupHorizontalAlign>Left</mf:groupHorizontalAlign>
-							</mf:button>
-						</mf:group>
+						<mf:button name="ЗаписатьИЗакрыть" type="UsualButton" commandName="Form.Command.ЗаписатьИЗакрыть"/>
+						<mf:button name="Отмена" type="UsualButton" commandName="Form.Command.Отмена"/>
 					</mf:group>
 				</mf:mainElement>
 			</form>
@@ -3091,4 +4100,45 @@ Ax40SVDeSCvqUu5n8R9X+J8Hq/sbvwPrP90Ryc2APwAAAABJRU5ErkJggg==</picture>
 		<permission>FileExchangeWithPersonalComputer</permission>
 		<use>false</use>
 	</requiredPermission>
+	<desktopCommandInterface>
+		<CommandVisibility name="Document.ПриходДенежныхСредств.StandardCommand.OpenList"/>
+		<CommandVisibility name="InformationRegister.ОстатокЛимитаДенежныхСредств.StandardCommand.OpenList">
+			<Visibility2>
+				<mf:common>false</mf:common>
+			</Visibility2>
+		</CommandVisibility>
+		<CommandVisibility name="InformationRegister.ЛимитДенежныхСредств.StandardCommand.OpenList"/>
+		<CommandPlacement>
+			<Command>Document.ПриходДенежныхСредств.StandardCommand.OpenList</Command>
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Palcement>Auto</Palcement>
+		</CommandPlacement>
+		<CommandPlacement>
+			<Command>InformationRegister.ЛимитДенежныхСредств.StandardCommand.OpenList</Command>
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Palcement>Auto</Palcement>
+		</CommandPlacement>
+		<CommandOrder>
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Command>CommonCommand.ОткрытьФормуНачальнойСтраницы</Command>
+		</CommandOrder>
+		<CommandOrder>
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Command>Document.ПриходДенежныхСредств.StandardCommand.OpenList</Command>
+		</CommandOrder>
+		<CommandOrder>
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Command>CommonCommand.ОткрытьСписокПланируемыхРасходов</Command>
+		</CommandOrder>
+		<CommandOrder>
+			<CommandGroup>NavigationPanelImportant</CommandGroup>
+			<Command>CommonCommand.ОткрытьСписокФактическихРасходов</Command>
+		</CommandOrder>
+		<CommandOrder>
+			<CommandGroup>NavigationPanelSeeAlso</CommandGroup>
+			<Command>InformationRegister.ЛимитДенежныхСредств.StandardCommand.OpenList</Command>
+		</CommandOrder>
+		<ManualOrderEditGroup>NavigationPanelImportant</ManualOrderEditGroup>
+		<ManualOrderEditGroup>NavigationPanelSeeAlso</ManualOrderEditGroup>
+	</desktopCommandInterface>
 </MobileApp>
