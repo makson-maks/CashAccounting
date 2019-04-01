@@ -37,29 +37,29 @@
 		<Metadata name="CommonModule.УчетДенежныхСредствСервер.Module" id="4d05c93c-ad5f-4177-a2da-830caffdfed7.0" configVersion="26ca1e19792f504a90acba01f937bbf900000000"/>
 		<Metadata name="CommonPicture.ЖелтыйКруг" id="a72affd4-91f5-452c-8e8d-d5c02e0c0902" configVersion="c2fbaa4b920f844fb63cdac662370b9e00000000"/>
 		<Metadata name="CommonPicture.ЖелтыйКруг.Picture" id="a72affd4-91f5-452c-8e8d-d5c02e0c0902.0" configVersion="c53c67861d06714da4a105ca40e73d7500000000"/>
-		<Metadata name="CommonPicture.ЗеленаяГалочка" id="1f0f76ce-78c8-4343-909f-9901ea99a275" configVersion="3f7a5dc7b2eeb64791be6fcd2ae57db600000000"/>
-		<Metadata name="CommonPicture.ЗеленаяГалочка.Picture" id="1f0f76ce-78c8-4343-909f-9901ea99a275.0" configVersion="88c0c0f4c273cb49956598c3914727eb00000000"/>
+		<Metadata name="CommonPicture.ЗеленаяГалочка" id="1f0f76ce-78c8-4343-909f-9901ea99a275" configVersion="103ecfa3a0736b4595a5134103c10d8f00000000"/>
+		<Metadata name="CommonPicture.ЗеленаяГалочка.Picture" id="1f0f76ce-78c8-4343-909f-9901ea99a275.0" configVersion="1af6d65e97bea7458094525172093ebd00000000"/>
 		<Metadata name="CommonPicture.КрасныйКрестик" id="825fb765-5069-4df3-9b68-52f5ec29270b" configVersion="ce2a1d4e3c089943a48327f1cfc937f200000000"/>
 		<Metadata name="CommonPicture.КрасныйКрестик.Picture" id="825fb765-5069-4df3-9b68-52f5ec29270b.0" configVersion="658bb70f8d25d6418dbb4d3a61dad1e400000000"/>
 		<Metadata name="CommonPicture.КрасныйКрестик_Объемный" id="e847242f-68ff-4876-9095-bd0be4da7318" configVersion="f6c69ba785ec7f449d289f3de4f85a7300000000"/>
 		<Metadata name="CommonPicture.КрасныйКрестик_Объемный.Picture" id="e847242f-68ff-4876-9095-bd0be4da7318.0" configVersion="8d45db75ebce15448adc2d04b0ea52ed00000000"/>
-		<Metadata name="CommonPicture.КрасныйКрестикВКруге" id="39a0162a-574d-4000-9243-e04a126763cb" configVersion="d3deba749fd5954d88bc50c2d2e7004c00000000"/>
-		<Metadata name="CommonPicture.КрасныйКрестикВКруге.Picture" id="39a0162a-574d-4000-9243-e04a126763cb.0" configVersion="1a2c915937855648960585f59381620a00000000"/>
-		<Metadata name="CommonPicture.ПереводПланРасходаВФакт" id="b1ca4e0a-3be9-4680-aa5d-6e9fc346844c" configVersion="b72a3f0583b39f459fbd8361b98d826500000000"/>
-		<Metadata name="CommonPicture.ПереводПланРасходаВФакт.Picture" id="b1ca4e0a-3be9-4680-aa5d-6e9fc346844c.0" configVersion="1ae3507f8c18ca4b90b1a0d6d890761300000000"/>
-		<Metadata name="CommonPicture.ПлановыйРасходДС" id="ec200dfc-6633-4656-83aa-3613fc787df1" configVersion="09ec5193d1a040408f050df0cadebe6e00000000"/>
-		<Metadata name="CommonPicture.ПлановыйРасходДС.Picture" id="ec200dfc-6633-4656-83aa-3613fc787df1.0" configVersion="ef4e02e7963b23459f7b6b2f3bdad36900000000"/>
+		<Metadata name="CommonPicture.КрасныйКрестикВКруге" id="39a0162a-574d-4000-9243-e04a126763cb" configVersion="2e91db0055fc434aa8b18157172207a900000000"/>
+		<Metadata name="CommonPicture.КрасныйКрестикВКруге.Picture" id="39a0162a-574d-4000-9243-e04a126763cb.0" configVersion="099cc1108b9c02428b6816764fe9d99d00000000"/>
+		<Metadata name="CommonPicture.ПереводПланРасходаВФакт" id="b1ca4e0a-3be9-4680-aa5d-6e9fc346844c" configVersion="fc3a70a0fbc7fb4a9002d70d1c955d8100000000"/>
+		<Metadata name="CommonPicture.ПереводПланРасходаВФакт.Picture" id="b1ca4e0a-3be9-4680-aa5d-6e9fc346844c.0" configVersion="0c12c42f81ddd54e91d5b1797d1e392600000000"/>
+		<Metadata name="CommonPicture.ПлановыйРасходДС" id="ec200dfc-6633-4656-83aa-3613fc787df1" configVersion="83bde8e4a4bc0148b110d57d804839a000000000"/>
+		<Metadata name="CommonPicture.ПлановыйРасходДС.Picture" id="ec200dfc-6633-4656-83aa-3613fc787df1.0" configVersion="683c3babe52dd147bec72a4e0f6a652e00000000"/>
 		<Metadata name="CommonPicture.Подменю" id="653f4309-cb44-4cd9-9abf-bac871a7bb5c" configVersion="b9ac0c1fb061ad409ee063fdc31cbcac00000000"/>
 		<Metadata name="CommonPicture.Подменю.Picture" id="653f4309-cb44-4cd9-9abf-bac871a7bb5c.0" configVersion="7709acab0568584bbbb8cd0145d4c55500000000"/>
-		<Metadata name="CommonPicture.ПриходДС" id="43fee76b-cd69-4ed8-a0fd-7aabd5db52bd" configVersion="090a086926887749923e1e081052a62800000000"/>
-		<Metadata name="CommonPicture.ПриходДС.Picture" id="43fee76b-cd69-4ed8-a0fd-7aabd5db52bd.0" configVersion="5b9e4c4404158a46a2593efbc496826400000000"/>
-		<Metadata name="CommonPicture.РасходДС" id="c80a7b8a-be78-4486-99fd-fd7523d1c9f5" configVersion="c259d33ffd5efc4e90e9cc859c414a2f00000000"/>
-		<Metadata name="CommonPicture.РасходДС.Picture" id="c80a7b8a-be78-4486-99fd-fd7523d1c9f5.0" configVersion="a1845d545fa28d46a7b8ff2fc7ac30ca00000000"/>
+		<Metadata name="CommonPicture.ПриходДС" id="43fee76b-cd69-4ed8-a0fd-7aabd5db52bd" configVersion="2dddb0c40ba1c546815e569ba6f25d1e00000000"/>
+		<Metadata name="CommonPicture.ПриходДС.Picture" id="43fee76b-cd69-4ed8-a0fd-7aabd5db52bd.0" configVersion="fcdb4182fc22a84cac794b647b31a54600000000"/>
+		<Metadata name="CommonPicture.РасходДС" id="c80a7b8a-be78-4486-99fd-fd7523d1c9f5" configVersion="d7de2ccc8cd6db4192f5c066c0e78dd700000000"/>
+		<Metadata name="CommonPicture.РасходДС.Picture" id="c80a7b8a-be78-4486-99fd-fd7523d1c9f5.0" configVersion="dac1ee2685209249b23064c64d88d4f200000000"/>
 		<Metadata name="CommonPicture.СделатьАудиоЗапись" id="f95f4051-e4f2-4022-9124-d84274ee948e" configVersion="72e049ae69cd244093aedf1531e703e600000000"/>
 		<Metadata name="CommonPicture.СделатьАудиоЗапись.Picture" id="f95f4051-e4f2-4022-9124-d84274ee948e.0" configVersion="43914b4d8e280a4f809bab0c6f46360500000000"/>
 		<Metadata name="CommonPicture.Сумма" id="cbc99ee8-ec3f-4445-b97c-3f236023f111" configVersion="bb2afe63eb018b408dee8ba5a790d8bf00000000"/>
 		<Metadata name="CommonPicture.Сумма.Picture" id="cbc99ee8-ec3f-4445-b97c-3f236023f111.0" configVersion="9d4d6fd0011d32428e0f1852e8192bea00000000"/>
-		<Metadata name="Configuration.УчетДенежныхСредств" id="08cc8678-290f-4ee5-9316-06bf602cf55a" configVersion="6c3c55c40d9c484b97c1c20dcd2e508000000000"/>
+		<Metadata name="Configuration.УчетДенежныхСредств" id="08cc8678-290f-4ee5-9316-06bf602cf55a" configVersion="cfb894ceca9fdf4d9eb7311559399f7f00000000"/>
 		<Metadata name="Configuration.УчетДенежныхСредств.HomePageWorkArea" id="eddd66c0-8cf9-41cc-b517-9dc67f52ff59.8" configVersion="bfa57c478826324e9f94871a41ac655a00000000"/>
 		<Metadata name="Configuration.УчетДенежныхСредств.MainSectionCommandInterface" id="eddd66c0-8cf9-41cc-b517-9dc67f52ff59.9" configVersion="d336943621cb0a499b4a9b085df135b100000000"/>
 		<Metadata name="Configuration.УчетДенежныхСредств.ManagedApplicationModule" id="eddd66c0-8cf9-41cc-b517-9dc67f52ff59.6" configVersion="128ab9ce90b2294daca755d5a63c2a2600000000"/>
