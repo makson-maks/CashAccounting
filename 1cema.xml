@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MobileApp xmlns="http://v8.1c.ru/8.3/mobile-application/app" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:bsch="http://v8.1c.ru/8.2/data/bsl" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:chm="http://v8.1c.ru/8.2/data/chart" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dl="http://v8.1c.ru/8.2/managed-application/dynamic-list" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:mf="http://v8.1c.ru/8.3/mobile-application/form" xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet" xmlns:pl="http://v8.1c.ru/8.3/data/planner" xmlns:role="http://v8.1c.ru/8.2/roles" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="УчетДенежныхСредств" id="eddd66c0-8cf9-41cc-b517-9dc67f52ff59" formatVersion="2" platformVersion="8.3.13.1644" containerID="08cc8678-290f-4ee5-9316-06bf602cf55a" defaultLanguage="Language.Русский" version="1.1.0" scriptVariant="Russian">
+<MobileApp xmlns="http://v8.1c.ru/8.3/mobile-application/app" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:bsch="http://v8.1c.ru/8.2/data/bsl" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:chm="http://v8.1c.ru/8.2/data/chart" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dl="http://v8.1c.ru/8.2/managed-application/dynamic-list" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:mf="http://v8.1c.ru/8.3/mobile-application/form" xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet" xmlns:pl="http://v8.1c.ru/8.3/data/planner" xmlns:role="http://v8.1c.ru/8.2/roles" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="УчетДенежныхСредств" id="eddd66c0-8cf9-41cc-b517-9dc67f52ff59" formatVersion="2" platformVersion="8.3.13.1644" containerID="08cc8678-290f-4ee5-9316-06bf602cf55a" defaultLanguage="Language.Русский" version="1.1.1" scriptVariant="Russian">
 	<synonym>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
@@ -1442,24 +1442,33 @@ SUVORK5CYII=</picture>
 				<v8:content>Приход ДС</v8:content>
 			</v8:item>
 		</synonym>
-		<picture>iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADFUlEQVRoge2ZP2hT
-QRzHP6lpLW0lVC0iiCCECg421UqomzpZEBzSQdxFEMXOznZUoaDiLg7pIIgWirSb
-GrTauhkLgghSai1R02pTG4e7pnln3svdvT/NkM+Uy939ft9vcu/+vIMmTXwRqy78
-LTy0jdMGDAKngKNAL7Af6JL1v4CvQB54D0wDL4E1m2Q7Ehcrn/0a6AcuAxlgt2Hf
-ZSAL3AfemXSsNtBimHSTPuApMANcwlw8QLfsOwM8kzGNMTXQDtwC3gBDKP+gJTHg
-rIx5W+bQxsRAEjFuR4C4SRJN4sB1mSOp20nXwAngBZAy12VMCngFpHUa6xhIA1NA
-jw9RpuwBnqNhop6BJPCErekwSrpkbs/h5GWgHTHNRfnLq/RIDa4PtpeBUaIZ8/VI
-ATfdKt0M9AFXQ5FjxzXECv8fbgZGCWeqtCWO0FSzQqUfsbD44tDjcT4Xi5Xywc5O
-Pp3P+Ak5hNDm2HbU+geuEMwKGzQxhDYHqoGdiI1Zo5JBaKygGkgDicjkmJNAWdxU
-A6ej02KNQ6NqwGpLGzEOjaqB3giF2OLQqE6j+0wi7c0+cq0rlEqO8peVFc/234Yv
-6KZ1aFQN7NKNArC8pn+k3SiXjdp74NBoe6RsGFQDP7dFhRkOjeoQWkAcJrTobmtz
-rSuUSmyUy5VySyxGorVVN7QXC9UF1UAeOKIbyevBU/dCBzo6/O6FNslXF9QhNBdE
-hpBxaFQNTEUoxJbp6oJqIAcUotNizA/EG4sKqoE/wHhkcszJIjRWqLUO3I1GixX3
-1C9qGXgLTIavxZhJxHtUB25vp1PAaxrnXLwODCBnIJ2307PAWOiy9BnDZYr32gvd
-QBjZbuYQWmriZWAVGAYWg1ZkwCLiHLzq1qDebnQeOAcU67QLg6LMPe/VSGc7nQPO
-AEsBiNJlSebM1Wuoex7IIS7xongmZoGTaIgHswPNR4SJO4hpLWjWZexBlB2nF6Yn
-st+IK6YBYMKwrxcTMuaIzKGN7ZFyDvGu8hjwAPhuEWNZ9j0uY1lt5cO66D5M7Yvu
-DwR80d2kiU/+ATzqnBWIt1lUAAAAAElFTkSuQmCC</picture>
+		<picture>iVBORw0KGgoAAAANSUhEUgAAADAAAAA6CAYAAAD2mdrhAAAEz0lEQVRoge2ZT2gc
+VRzHP1uza2kroWoRQVxK0xaE2FQroZ5WN4TdgOBhexCPC5IlKNtDNgfPFpKDLpQ4
+RbJH8ZAcBLGBkG1yUoNWG3NKtiVZEaS0NURNq5Pa8fDezs687M6+mf3TCPnAsPv2
+vff7fb87b968NwP77NMUIWfh363Pg8aJAOeBN4CXgVPA88ARWf8X8BuwBvwMLADf
+AmaQZE90v2t/b9bAWWAYSAFP++y7CUwDV4Cf/HR0GjjgM2mFM8DXwHXgPfyLBzgq
++14HrsqYvvFr4CDwMfADMIRyBgMSApIy5icyhzZ+DPQgxu1FoMtPEk26gKzM0aPb
+SdfAa8A3QJ9/Xb7pA74D+nUa6xjoB64Bx5oQ5ZdngHk0TDQy0AN8RXU67CRHZG7P
+4eRl4CBimuvkP69yTGqoe2F7GbhEZ8Z8I/qAj+pV1jNwBni/LXKC8QHiDr+LegYu
+0Z6pMihdCE01K1TOIm4sTXH8yxl+2d62yy8ePsz626lmQg4htLmWHbXOwAitucO2
+mhBCmwvVwJOIhdleJYXQaKMa6Ae6OybHP90oNzfVwJud0xIYl0bVQKAlbYdxaVQN
+nOqgkKC4NKrT6HN+Ij07/UXduq2dHVf51/v3PdvfvfCOblqXRtXAU7pRADZN/S3t
+I8vy1d4Dl8agW8o9g2rgz8eiwh8ujeoQuo3YTGhxNBKpW7e1s8Mjy7LLB0IhusNh
+3dBe3HYWVANrwEu6kbwuPHUt9MKhQ82uhSqsOQvqEFpuRYY249KoGrjWQSFBWXAW
+VANLwFbntPjmD8QTCxvVwD/ATMfk+GcaodGm1n3g085oCYSh/lDLwI/AXPu1+GYO
+8RzVRb2n033A9+ydffFD4BxyBtJ5On0DuNx2Wfpcps4U77UW+hBh5HGzjNBSEy8D
+D4ALwJ1WK/LBHcQ++EG9Bo1WozeBt4DtBu3awbbMfdOrkc5yegmIA/daIEqXezLn
+UqOGuvuBJcRLvE5cEzeA19EQD/42NCWEiTxiWms1D2Xs8ygrTi/87sj+RrxiOgfM
++uzrxayMeVHm0CbolnIZ8azyFeAz4PcAMTZl31dlrEBL+Xa96D5N7Rfdq7T4Rfc+
++zRJyLIcjw7+hzhmoUVykQgR5cgtVuqS5HLJap2osOsK5UoxJ/uVKSQjRCI5Ki3L
+haQjZrVsH8kCZdxxnEfSTlLTAEAco2RimiamOUfWVVckz1i1Lj9oC6lSpjCel9+j
+pGdLGPE8g7lFKBcYzoBRMpmIIcu9zJmVfCUMMgw7RcYNSpW6eMMz0Ig4xkhMfo8x
+YsTJX1UcLE6S6c06jEdJzwqzkZMZMK6Qjkqr8zMUs0PEHG0HUnGKq+v6kvwZcBM9
+0Qsrt6qnnDKF8RWMkSGlpTALWcYq6jVilm+tQO8JvHs0YWBXgvlJMr1j7NIoh4ph
+rIihpBlzfbVI/PTxhjp8GCgyM29fqUxmimSHYnZdJgNzEzGlzyK5kxkwRkinx8jm
+B+0LMTqQIp4fr178lJmfkaLLBcbzcVIDjf5/wLJZsEbDCWtqw1kOW6ML1bpEImyF
+w+JI2A1FO7U8uiA+w4kpqxpy1NV3YyphxwvbbWW/Okc1jwBLC9VcO6mXa8OaSuw2
+sFcemziIMWHGavweJT1rklZ+/Q+hK3SvAo0FDgAAAABJRU5ErkJggg==</picture>
 	</commonPicture>
 	<commonPicture name="РасходДС" id="c80a7b8a-be78-4486-99fd-fd7523d1c9f5">
 		<synonym>
@@ -1468,23 +1477,31 @@ DwR80d2kiU/+ATzqnBWIt1lUAAAAAElFTkSuQmCC</picture>
 				<v8:content>Расход ДС</v8:content>
 			</v8:item>
 		</synonym>
-		<picture>iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACz0lEQVRoge2ZPWgU
-QRxH3+mhUSLnB0HsjwgW5uIHR+zUyoBdrOxFkIhptBArMaUKByr2VkkXNBAk6dQD
-ozk7z/QSQoxRY1ROtJjxvJ3s7s1/dndyxb0qm92Zeb9kdj52oEuXRORaL36vPXGt
-ZwcwBJwGjgL9wCGgV9//BnwE6sA7YA54CfxyaWx74WLz56QBBoHLwAiwX1h2FZgA
-HgFvJQVbA2wTNvqPAeApMA9cQi4PsE+XnQee6TrFSAP0AHeB18Awxn/QkRxwTtd5
-T7dhjSRAEdVvx4C8pBFL8sA13UbRtpBtgJPAC6Ak9xJTAl4BZZuHbQKUgVmgL4GU
-lAPAcyxCtAtQBKb4Pxz6pFe3Hdud4gL0oIY5n395kz7tEPlixwUYx0+fb0cJuBN1
-MyrAADCaiY4bV1Ez/CaiAoyTzVDpSh7ltImwAIOoiaXTGEa5BQgLcIV0Zti0yaHc
-ApgBdqIWZp3KCMqxiRmgDBS86cgpYExuZoAz/lycCTiaAZyWtJ4JOJoB+j2KuBJw
-NMf6gy41fh697Wyzt3JLWiTgaAbY4yLx5/uGSzFXAo6uW8qOwQzwdUssZAQczS60
-hNpMiMjt3pVESMpS64UZoA4ckdbo8CImod56YXahmkcRVwKOZoBZjyKuzLVemAGq
-wJo/FzFfUF8smpgBfgKT3nTkTKAcm4TNAw/8uDjx0PxFWIA3wEz2LmJmUN9RA0TN
-xDeARqY6MhrA9bAbUQEWgEpmOnIqRAzxcWuhm6ggW00N5RJKXIAN4AKwnLaRgGXU
-PjhyudtuNboInAfWU5SyZV23vRj3kM1yugqcBVZSkLJlRbdZbfeg7X6gijrE8/FO
-LACnsJAH2YbmAyrEfbIZYhu67iGMFWcc0h3ZD9QR0wlgWlg2jmld55huwxrXLWUN
-9a3yGPAY+ORQx6oue1zX5bSUz+qg+zDhB93vSfmgu0uXhPwFZzp4uMhR8vIAAAAA
-SUVORK5CYII=</picture>
+		<picture>iVBORw0KGgoAAAANSUhEUgAAADAAAAA6CAYAAAD2mdrhAAAEU0lEQVRoge2aT2hc
+RRzHP6vZZ5VKrFLEU5DGFoTY1D+EeooG5G3BWzx5DEilVNLDbg7iqdiDBxUCRmT3
+6Km5iQZC05eTGrDamFPSlu6epJRaq9bWJTIeZnZ3ZvLe2zezuy855AMLeW9mfr/v
+d9/83RfYZ5+eKOgX/9372jdOAJwE3gBeAo4CzwEHVfnfwG/AFvArEAE/AE2fZI8O
+v9v+u1cDJ4DTwDTwtGPbu8BF4EvgF5eGuoFHHJO2OA58C1wB3sNdPMAh1fYK8J2K
+6YyrgQPAp8BPwCmsJ+hJASipmJ+pHJlxMTCK7LfngCGXJBkZAmZVjtGsjbIaeA34
+Hhh31+XMOPAjMJGlchYDE8Bl4HAPolx5BrhEBhPdDIwC39CZDvPkoMqd2p3SDBxA
+TnN5fvM2h5WGxIGdZuAC+fT5bowDHycVJhk4DpwdiBw/PkCu8DtIMnCBwUyVvgwh
+Ne0gzsAJ5MKy1ziF1GYQZ+AM/Vlh+00Bqc3ANvAYcmO2V5lGamxjG5gAhnOT484w
+1uJmG3gzPy3eGBptA15b2pwxNNoGjuYoxBdDoz3XP+sT8Y+z573VPDX/kWsTQ6Nt
+4EkfEeKfBz7NfDE0+h4p9wy2gb92RYUbhka7C91CHiacKDzxeC+CXLmlX9gGtoAX
+XSN6DMRe2NIv7C60nqMQXwyNtoHLOQrxJdIvbANrwL38tDjzJ/IXiza2gX+Bxdzk
+uHMRqbFN3DrwRT5avFiwb8QZ+BlYHrwWZ5aRv6MaJK3Ec8D2QOW4sQ1U4gqSDFwF
+5gcmx515Eqb4tL3Qh0gju806UkssaQYeAO8At/utyIHbyHNw4na32270OvA2cL+P
+orJyX+W+nlYpy3Z6DZgC7vRBVFbuqJxr3SpmPQ+sIV/i5TEmrgKvk0E8uB1oriFN
+fM5gpthtFfsk1o4zDdcT2UPkK6ZXgSXHtmksqZjnVI7M+B4p15G/Vb4MfAX87hHj
+rmr7iorltZUf1IvuY8S/6N6kzy+699mnRwpCCLHbInrBmoVWqQQlKpUSQRDIT2W1
+XdqoafeDgFKtgVZIaUdZg1opIAgqrFoxWmHtmEGpRjvqasUss3MCCINIlItFUSxH
+xnU5EkJEZVEslkVk1A1FtS6EqFdF2KpntxN1UQ1VzHpVhK02otVOjynrhq0KUVkU
+w6qox5UpYgxoCYQQ9WrYMaSEFtsfWbdeDbVEcagvpmgKMGLH3ctgoOtCNnJkDDZu
+0GjUKL2wyPS1Js1mk2ZzmVlW2LypKo4dYSQxyiRnFqaAWeZmkmsZ+YDGjY0ucTOs
+xK0gXFpkZXaOxPwqaXyQGqffH2NhYYO3tDGVlm8EuLm5wtSx59MFxj3qzmNKHgP1
+aiiKrbLUMaDHtOLbY0LvJmllGrFjIAw7/VxvEJW1/h+GpmhrfOiCjfERlY24rS+i
+E7cq6tqYifvomroO4t0hScfOp7CX/p1AY5JPmpMx90eYWWoyo935H7hjrCu5JzSG
+AAAAAElFTkSuQmCC</picture>
 	</commonPicture>
 	<commonPicture name="ПлановыйРасходДС" id="ec200dfc-6633-4656-83aa-3613fc787df1">
 		<synonym>
@@ -1493,25 +1510,29 @@ SUVORK5CYII=</picture>
 				<v8:content>Плановый расход ДС</v8:content>
 			</v8:item>
 		</synonym>
-		<picture>iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADK0lEQVRoge2ZO0wU
-QQCGv3OJokHXR4ixJ5hYyEMMYqdWktBhtaWJMTEYabQgVkZKNaEx9ldpZ5SEGOgU
-ElHODrA3hCCeD0DD5Sxm7tgd9jEzu7dcwVfd3t3MfP/u7MzOLOyzTyoK/oNKuWhb
-z0FgALgCnAc6gTNAm/z9N/ANWAK+ADPAB+CfTWOO69U/pw3QA9wGhoGThmXXgZfA
-c+CzSUF/gAOGjdboAt4A88AtzOUBTsiy88BbWacxpgFagSfAR2AQ5QpaUgCuyzqf
-yja0MQnQgei3o0CLSSOatAD3ZBsduoV0A1wE3gPd5l7GdAOzQL/On3UC9APTQHsK
-KVNOAe/QCJEUoAN4zc5wmCdtsu3Y7hQXoBUxzOV55lXapUPkjR0XYJx8+nwS3cDj
-qB+jAnQBIw3RseMuYobfRVSAcRozVNrSgnDaRViAHsTE0mwMItwChAW4QzYzbNYU
-EG4B1ACHEA9mzcowwrGOGqAfcHPTMcdFmdzUAFfzc7Em4KgGsHqkzZmAoxqgM0cR
-WwKO6lh/2qbGHyOPrG2OTzw0LRJwVAMctZGobmzaFLMl4Gi7pGwa1AC/9sTCjICj
-2oVWEIsJIwpHDqcRMmXFf6AGWALOmdZocSOmYcl/oHahUo4itgQc1QDTOYrYMuM/
-UAPMAeX8XIz5idixqKPeA3+BV8DNPGz8W4SaHAO2/F+E7Y32Irb7csFxPZM92T5g
-XgavAoWwiewTMJWNXjKVclH3Skyxc2KryJMfNRM/ALZT22miEWIbuA/guF5dHqID
-LAATWQnqkBBiAig5rletlIuBbh/3LDSGCJIbESFKwFiYPMQH2ARuAKvZKSajhFgF
-hh3X2wiTh+Sn0a/AEPAnO8VkfCGGHNdbjpIHvcfpOeAasJaRnw5rlXLxkuN6s3Hy
-oL8emEO8xMvjnlgALtfk5agTicmCZhkR4hmNGWK3Zd0Djust1s58UgjTFdkW4hVT
-HzBpaxrCpKxz1HG9TbXbxIWwXVKWEHuVvcAL4LtFHeuy7AVZV+g4XyMqRKNedJ8l
-/EX3IhEvuuPk/agzcbMQe6Nm8P+GYitThb2/FKnP5H9cMswmDww/VwAAAABJRU5E
-rkJggg==</picture>
+		<picture>iVBORw0KGgoAAAANSUhEUgAAADAAAAA6CAYAAAD2mdrhAAAEAklEQVRoge2ZT2hU
+RxzHP+sLqy3WpxYpPXkwURCi8R+pPdkuBFbwlp7eUSgGUeJlPYinUkEPGsghIuSY
+k7lJFRajOVUDxpreki2UPRUR/6ytRh8J62FmN+9N3r+Zfe+5Fj8QyOy8+c33OzNv
+5s0MfOYzHVHwJlYbU6ZxisBR4AdgH7Ab+BbYLPP/A/4BloA/gfvAA8A1qcyynfb/
+nRo4AJwChoHtmmVfAjeB68AfOgW9BjZoVtpiP/AbMA/8jL54gG2y7DxwW8bURtfA
+JuAq8Ag4jtKDhhSAsox5TdaRGB0DvYhxew7o0akkIT3AqKyjN2mhpAaOAL8DA/q6
+tBkAHgKDSR5OYmAQuAfs6ECULl8Dd0lgIs5AL3CLtekwTzbLuiOHU5SBTYhpLs+W
+V9khNYS+2FEGLpHPmI9jAPg1LDPMwH7gTCZyzDiLWOHXEWbgEtlMlab0IDStI8jA
+AcTC0m0cR2jzEWTgNOmssGlTQGjzoRrYiPgw61aGERrbqAYGATs3OfrYKIubauDH
+/LQY49OoGjD6pM0Zn0bVwO4chZji06jO9d+YRHx15hdjNVvHL+oW8WlUDXxlIqL5
+dtmkmCk+jaZbyq5BNfDvR1Ghh0+jOoSeIjYTWhS+/KITQbo89SZUA0vAXt2IBi9i
+Jyx5E+oQWshRiCk+jaqBezkKMeW+N6EamAMa+WnR5jXixKKN+g68B6aBk3mo8R4R
+JmQL8M77Q9DZ6EHEcV8uWLajcyZ7GJiXxptAIWghewxU05EXz2pjKmlPVFlr2Cay
+8cNW4vPASsfqEpLAxApQAbBspy0ewg08AcbTEpiEGBPjwIJlO83VxpRv2Ed9C11A
+GMmNEBMLwIUg8RBtYBn4CXiWnsR4FBPPgGHLdt4GiYf4r9G/gBPAm/QkxuMxccKy
+nVqYeEj2OT0HlIDnKelLwvPVxtR3lu08jBIPyfcDc4hLvDzeiSfA9y3xctYJRWdD
+U0OYGCObKXZFxj5q2c5iq+XjTOjuyN4hrpgOA3dMlQZwR8Y8Z9nOsjpsokyYbikX
+EGeVB4EbwAuDGC9l2UMyVuA83yLMRFYX3XsIvuheJOSiO0q8F3Ul7hYiX9QUns8U
+UzFN+Phd0XFLFprNZld1hy7/u4OtCGapFIsUlb/KrMytrM8rT9YBqE+WA38XMcu0
+k7KOVsyUDQCUmKi5uK6L61YZVXMnajKvxkSppalC30g/VXetXP/IKY/ozsh+CB27
+glvbw+V2DwwxlmL47A3UJyn3TTPs67kZFv9uPTDDSJ+5ucwN1O9OMzN6npM7w56I
+HpZxZG5g565+GLvNrEzXJy+nOoRSuI2fpVIcYowSE7WAZj52hepokaGilF0qUVr/
+lDGf/EL2AZwPLtpHWrSdAAAAAElFTkSuQmCC</picture>
 	</commonPicture>
 	<commonPicture name="ЖелтыйКруг" id="a72affd4-91f5-452c-8e8d-d5c02e0c0902">
 		<synonym>
@@ -1544,39 +1565,44 @@ Fz2OcVNJ0Rq6AAAAAElFTkSuQmCC</picture>
 				<v8:content>Зеленая галочка</v8:content>
 			</v8:item>
 		</synonym>
-		<picture>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
-AAAAAElFTkSuQmCC</picture>
+		<picture>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
+NAAAAABJRU5ErkJggg==</picture>
 	</commonPicture>
 	<commonPicture name="КрасныйКрестик_Объемный" id="e847242f-68ff-4876-9095-bd0be4da7318">
 		<synonym>
@@ -1663,24 +1689,33 @@ BdSK4YBOYJxjPHKvI6oAAAAASUVORK5CYII=</picture>
 				<v8:content>Красный крестик в круге</v8:content>
 			</v8:item>
 		</synonym>
-		<picture>iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADBklEQVRoge2Zv2sU
-QRTHP9FDIyQElSD2R+zMxR+E2KmVAbtY2YsQFIOgf4EpVQio2FvFTjQQJOnUA6N3
-dsb0IiGGGMOpnGAxs+fN3O7emx+31X2r7N6+9z7f7O7Mmx3oq68gDbQf/N155pvn
-ADAFnAdOAmPAcWBI//4T+AqsA5+AVeAt8Men2P6Rq62/Qw1MANeBGeCIY+w2sAg8
-AT66BLYb2OdYNNE48BJYA67hDg9wWMeuAa90Tme5GhgE7gPvgWmsO+ipAeCSzvlA
-1xDLxUAZ9dzOASWXIkKVgFu6RlkaJDVwFngDVNy5nFUB3gGTkoslBiaBFWA0AMpV
-R4HXCEx0M1AGXvB/OCxSQ7p27uOUZ2AQNcwV+Z+3NaoZMl/svJdxnpRnfrdtDE40
-7DkBCnNVgHvA7bQcWXdgHLgRAhI55iZqhu9QloF5HIdKFyAPwyUUU4fSDEygJhZn
-ScB87pbWNIrNUJqBWQJm2DzAAHhQTLP2SdvAQVRjFqQ0UAm8YDCYQTG2ZBuYBEYC
-iwAmcCR4UGzG5GYbuCDJ4mIiInwig9E2IG5pfcf+CHkMRtvAWI+Lx4g3GG0DxwqC
-CDFvMNoGhouACbxzBqPvkrIza6R3wlW2gV3fRD1uJYzw9gPbwDevjL1v5tplMNoG
-1gsE8Y01GG0D9QIAQnMYjLaBlZiFfdoOgVbbD2wDVWAnRsEEPrKJH6gvFi3ZBn4D
-z0ML2dARTSyiGFtKmwceiaplKAs20jzx2D6RZuADsOyTvRtkoIll1HdUQ1kz8V2g
-6ZJdCudpogncSfshy0ANWJBmL6AXWiBjiM/bHzhEcd9D81RHbZ40khPS/YEGcAXY
-7BWZQJuodXAj64Ju3egGcBnYiwgl1Z6uvZF3kaSdrgIXga0IUFJt6ZrVbhdK1wNV
-1HNYC4CSqgacQwAPbguaLygTD3EcYoVq6txTOHTFriuyX6gtpjPAkmNsnpZ0zjld
-QyzfJWUd9a3yFPAU+O6RY1vHnta5nFr5RL3a6D5B+kb3ZyJvdPfVV6D+AbJqzY3P
-7CQMAAAAAElFTkSuQmCC</picture>
+		<picture>iVBORw0KGgoAAAANSUhEUgAAADAAAAA6CAYAAAD2mdrhAAAEr0lEQVRoge2Zz2sc
+ZRzGP9EwVmgpKqV4WiTZ5hSbWiXUU3TDwAa8rSePC5IlKFuEyV9gITnoQqEThD16
+6t7ELCzZdk5qwGrintptkT2JlFpqLdEhEg/v7O7MuzOz7zsz2SLkgYWdd97v832e
+ed95f8wLJzhBKkz5L/598nVSHgO4ArwHvAlcAF4HTnv3/wJ+A+4BvwC3ge8BN0my
+F89+NPif1sAlYBUoAa9qxj4GbgJbwM86gX4DL2gm7eMi8C1wB/gYffEAr3ixd4Bt
+j1MbugZOAV8APwIrSC2YEFNA0eP80suhDB0Ds4h+exWY1kmiiGmg6uWYVQ1SNfAO
+8B2woK9LGwvAD8CiSmUVA4vALeBcClG6eA3YQcHEOAOzwDcMh8NJ4rSXO7Y7xRk4
+hRjmJvnkZZzzNES+2HEv4zVC+vxT3xjcx5mEE6Ai1wLwOfBZGEdUC1wEPkkjJOOY
+TxEz/AiiDFxDc6jUEZTA8DRC0wjCDFxCTCzaUBGWpLU8rCC0BRBmYI0UM2ycwBTi
+QWhakwtlAy8hFmapECZURbzCYFBCaBxANrAInE2ZBAgKzkg8CG2ByU028L4Ki46J
+DMX3EdAoG1Be0iYd+zPgCWiUDVw45uRZxAc0ygbOT0hEGvMBjbKBM5MQk7LlAhqT
+bilHWTN6J3QhG3ialOiYlxKBcP+FbOD3RIzHv5jzI6BRNnBvgkKSxgY0ygb2JyAg
+LUdAo2zgVpaJkyw7FHDbfyEb2AWeZJGwLz5jE38ivlgMIBv4B2ikTSSLztDETYTG
+AcLmgRtK2SIQJTajecKWC8IM/AS0krCPE5nSRAvxHTWAqJl4HTjUYVcVl9DEIWCF
+3YgysAdcV2WfwFroOhFDfNz5wMtM7ntoHPYRhycH/QLV84ED4EPg4XEpU8BDxD74
+IKrCuNXofeAD4FmGolTxzMt9P66SynJ6FygAjzIQpYpHXs7dcRVV9wO7iH64l0KU
+KvaAd1EQD3obmi7CRA3NIVYRhx73FTRWxbo7sr8RR0xvA03N2Dg0Pc6rXg5lJN1S
+7iO+Vb4FfAX8kYDjsRd72ePSWsr3cVwH3XOEH3TfJeOD7hOcICWmjo6Ojp63iDTI
+7MPW88KIgV69iGEYw1+xTo8e9aIRLDcMDMsBHCzDwDAsHB+PY4k6ljMgpuiLHZTj
+YBlF6j3/9fC+rKc4rBhioFdntTJPy3VxXRfX7WJTYbUO5aYoa1WhYHfF/c0lL7CA
+bYPZz+pYmNjYBZ/4fINSd8g7t+E3EQHHIh/Q02K+sorfQ8BAb6dBu7rC0qAkx3Kp
+QPvur2MyActr2B0Ty3GwzA722nKQt1BiORfkrW2PcbC0idudY2PQAiY1qcrYdyA3
+Mw+dB/TGVSRHecumY5p07C3KOel2u0Le1xXylbaPt00lHyJypOVaVGnjf55jDfQe
+dGB+BllPuIcyTdelOaIeqLY8Eb5fs+zxFrADIr3cOw3a1fXRh+FDwEBuuUShtuHr
+Yz12Gm0Kc2+oyI/xtU61Zgb6vGP1B4GYuJl5qG0PBodefWNMF8qV2bLxNWeeCjZb
+cY9ACUtsdm065rALmbR8g0BU2Catag2z3+0aYpfjx/9+IvsPao2iqhA90ikAAAAA
+SUVORK5CYII=</picture>
 	</commonPicture>
 	<commonPicture name="ПереводПланРасходаВФакт" id="b1ca4e0a-3be9-4680-aa5d-6e9fc346844c">
 		<synonym>
@@ -1689,32 +1724,43 @@ QyzfJWUd9a3yFPAU+O6RY1vHnta5nFr5RL3a6D5B+kb3ZyJvdPfVV6D+AbJqzY3P
 				<v8:content>Перевод план расхода в факт</v8:content>
 			</v8:item>
 		</synonym>
-		<picture>iVBORw0KGgoAAAANSUhEUgAAAF8AAAAxCAYAAAC8snXfAAAEiUlEQVR4nO2bT2gd
-RQCHv3XL1pjqiBKkd6k3a5EQ4k3xIiWgkHrZU9SDIL0qUjyJ8SpE1EKLp+2hHvQi
-ShG92RStJr219ayUUHRjXlMf2a6H2ZduJrs7s7uzf176Pggk2dndb38zO2923ixM
-mDBhQqs4Ng4ShYEHzAMvAs8Cx4CjwJGkyBbwF3ADuAb8BFx2hT+0cf5x9awVfhQG
-J4C3gUXgiZK7/w18BXzhCv/3Oh46+upZKfwoDI4Dy8ArVY+RIga+B953hb9e81h7
-6LtnKaEoDB5GXsxp4JANgRQ7wKfIi7tb50Dj4mkcfhQGTyNvv+fqnNCANeCUK/w/
-quw8Lp5gGH4UBrPAt8BM1ROV5DZw0hX+lTI7jYvnCG34URjMAT9wf0TQFlvAy6YX
-Ni6eaQrDT27hn2mvJalsAC/obu1x8VTJDT/50LpM832njjVgPu/DbVw8s3ioYNsy
-3V8QSIePCraPi+c+Mlt+Mj7+FfvDtMq4wt/n2kPPHeB5V/jXTArntfxl+nNBAIR/
-nv8349998zyEdDIiqzWdAK5mbeuarcHdrceOvnHEcRynx54xsvVrpyKyWv479O+C
-AJiePjwNEMdxTH89HaSblj3hR2FwGDn51EscnHTYvfUEFpMsC1Fb/hwgmvGxw73N
-C9zbvLBNhufsRb8Do0wEMstC1PBfasbFOm7ehh5VgDZLNfzjDYnYxiva2JMK0Gap
-hn+sIZHW6UEFaLNUx8hPVTnLP6c/rLIbAI+vfLDnb5uhzV70+eX1YPdvm54GaLNU
-w3+07BkA4jvbVXZrhXQFtOypzbJobufA0IMuKBM1/KxH+LEn3fW0iDZLtdu5BTxZ
-9izOI1Nld2mNdPAte97SFdjzeB6FwdfAq43p1CAmjke/K0+6u6jdS0ctfsQ3rvBf
-KyqgdjtWl27YZDD4bzD6AbSLmDoOHgyyVMP/sSER20RFG3sQPMjVboWo4V8BwmZc
-rBKR49mT4DeBVV2hrPn8c8CbTRipuMJ8COh52TMK2xtf2tKxyXlX+G/pCmV9C/QZ
-LYUfhQGu8IlCfWtVv0b0PC/uafAAn5sU2veQ5Qr/N+CSdZ0cRhVQBs/z4uFw6NCi
-ZwkuucK/alIw7wn3PeSXwa1gUAG7LqngoWVPA3aAd00LZ4bvCn8NWLFlZIKmAlZg
-X/CdeGpYKbOCuWhu5wxyIVBr5FTAOnBGDT5F6545rCNdjMkN3xX+NnAKuRSuNZQK
-2AAWp2aW7uQE35mnwgawmLgYUzirmaw9XAAGNcRKk6qAhamZpZt5wY/oyjNhACxU
-WSpuukR8Drn0uvSkW0VuAyenZpZWdcGn6cqz6hJxo/n85ODztNO3riFX/K4Oh0PH
-87xYu0dCR56VgocSX6a4wr+JvLBPaGZ4t5Mce94V/nWSu7JCBbTpeaPOgeq8EPcx
-8kUzG3zH/RfN4iyvgtFOLg171qYPr4KeTZ6qISf4EVUqoCFPKzT1EvQzZL9cfJ38
-l4sLgx9RtQIseh44jPt0kBXQlMiDRqUgD0IFdL3E2ijAvLl8kKMhazYTHhz+B9xo
-ynR6/sWcAAAAAElFTkSuQmCC</picture>
+		<picture>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</picture>
 	</commonPicture>
 	<commonPicture name="Сумма" id="cbc99ee8-ec3f-4445-b97c-3f236023f111">
 		<synonym>
@@ -2690,9 +2736,9 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 				</v8:item>
 			</synonym>
 			<form>
-				<mf:serverModule version="1" startAddr="199">
-					<bsch:cmdOpCode>1,18,19,1,1,22,1,3,2,12,2,12,12,33,30,2,12,18,21,5,1,6,33,69,16,1,2,12,12,3,16,1,2,12,2,12,12,33,40,1,2,4,16,39,1,2,12,2,12,12,33,40,1,2,4,16,39,1,1,22,1,3,18,51,16,1,3,4,6,18,20,1,1,3,4,4,18,20,1,1,2,12,2,12,12,33,29,40,1,3,17,45,39,39,1,1,3,2,18,21,5,1,16,1,3,2,2,12,18,21,5,1,16,1,3,2,2,12,18,21,5,1,16,1,3,2,3,3,18,21,5,1,16,1,3,3,2,12,24,16,1,3,3,3,25,16,1,3,12,3,4,35,16,1,3,12,3,16,1,3,17,45,39,1,22,1,2,6,16,1,3,4,18,19,5,1,16,1,3,2,12,18,20,1,1,3,2,12,18,20,1,1,3,4,18,19,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>7,0,1,7,9,0,95,0,0,0,1,1,2,0,24,2,3,0,4,0,95,0,0,0,0,97,3,5,6,0,0,99,0,0,1,1,2,0,44,100,4,7,0,57,101,0,0,1,1,8,0,57,102,4,9,0,57,103,105,0,110,0,0,10,0,111,0,12,0,2,11,111,112,0,13,14,2,11,112,114,0,0,1,1,2,0,0,94,115,0,0,0,163,94,116,118,1,5,0,15,0,118,0,120,2,6,0,17,1,16,0,120,0,121,3,6,0,17,1,18,0,121,0,123,4,5,2,3,2,19,0,123,0,125,5,4,0,20,0,0,127,6,5,1,0,0,129,0,12,6,14,0,0,130,0,13,6,0,132,0,0,0,163,134,0,160,7,0,0,162,0,21,1,4,0,162,0,163,0,8,23,1,22,163,164,0,8,24,1,22,164,165,0,21,2,5,165,167,0,0,0</bsch:cmdOperand>
+				<mf:serverModule version="1" startAddr="215">
+					<bsch:cmdOpCode>1,18,19,1,1,22,1,3,2,12,2,12,12,33,30,2,12,18,21,5,1,6,33,69,16,1,2,12,12,3,16,1,2,12,2,12,12,33,40,1,2,4,16,39,1,2,12,2,12,12,33,40,1,2,4,16,39,1,1,2,12,18,21,5,1,40,1,2,2,4,24,16,39,1,1,22,1,3,18,51,16,1,3,4,6,18,20,1,1,3,4,4,18,20,1,1,2,12,2,12,12,33,29,40,1,3,17,45,39,39,1,1,3,2,18,21,5,1,16,1,3,2,2,12,18,21,5,1,16,1,3,2,2,12,18,21,5,1,16,1,3,2,3,3,18,21,5,1,16,1,3,3,2,12,24,16,1,3,3,3,25,16,1,3,12,3,4,35,16,1,3,12,3,16,1,3,17,45,39,1,22,1,2,6,16,1,3,4,18,19,5,1,16,1,3,2,12,18,20,1,1,3,2,12,18,20,1,1,3,4,18,19,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>7,0,1,7,9,0,131,0,0,0,1,1,2,0,24,2,3,0,4,0,131,0,0,0,0,133,3,5,6,0,0,135,0,0,1,1,2,0,44,136,4,7,0,57,137,0,0,1,1,8,0,57,138,4,9,0,57,139,141,2,3,0,4,0,141,73,142,4,4,10,0,0,73,143,145,0,150,0,0,11,0,151,0,13,0,2,12,151,152,0,14,15,2,12,152,154,0,0,1,1,2,0,0,110,155,0,0,0,179,110,156,158,1,5,0,16,0,158,0,160,2,6,0,18,1,17,0,160,0,161,3,6,0,18,1,19,0,161,0,163,4,5,2,3,2,20,0,163,0,165,5,4,0,21,0,0,167,6,5,1,0,0,169,0,13,6,15,0,0,170,0,14,6,0,172,0,0,0,179,174,0,200,7,0,0,202,0,22,1,4,0,202,0,203,0,8,24,1,23,203,204,0,8,25,1,23,204,205,0,22,2,5,205,207,0,0,0</bsch:cmdOperand>
 					<bsch:constant>SВидРасхода</bsch:constant>
 					<bsch:constant>SВидыРасходов</bsch:constant>
 					<bsch:constant>SПланируемый</bsch:constant>
@@ -2703,6 +2749,7 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 					<bsch:constant>SРасход (план)</bsch:constant>
 					<bsch:constant>SФактический</bsch:constant>
 					<bsch:constant>SРасход (факт)</bsch:constant>
+					<bsch:constant>S - новый</bsch:constant>
 					<bsch:constant>SСтруктура</bsch:constant>
 					<bsch:constant>SВставить</bsch:constant>
 					<bsch:constant>SЛимитПревышен</bsch:constant>
@@ -2736,7 +2783,7 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 					<bsch:procedure name="УправлениеФормой" parametersCount="0" startAddr="6">
 						<bsch:variable name="ВидимостьПодтверждения" isLocal="true"/>
 					</bsch:procedure>
-					<bsch:procedure name="ПроверитьПревышениеЛимитаЗаПериод" isFunction="true" parametersCount="0" startAddr="60">
+					<bsch:procedure name="ПроверитьПревышениеЛимитаЗаПериод" isFunction="true" parametersCount="0" startAddr="76">
 						<bsch:variable name="Результат" isLocal="true"/>
 						<bsch:variable name="ЛимитНаПериод" isLocal="true"/>
 						<bsch:variable name="ДатаНачалаПериода" isLocal="true"/>
@@ -2745,36 +2792,47 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 						<bsch:variable name="ПланируемыеРасходыСТекущимПланом" isLocal="true"/>
 						<bsch:variable name="СуммаПревышения" isLocal="true"/>
 					</bsch:procedure>
-					<bsch:procedure name="ВыполнитьПроведениеДокумента" parametersCount="0" startAddr="165">
+					<bsch:procedure name="ВыполнитьПроведениеДокумента" parametersCount="0" startAddr="181">
 						<bsch:variable name="ОбъектДокумента" isLocal="true"/>
 					</bsch:procedure>
 					<bsch:procedure name="РеквизитФормыВЗначение" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
 					<bsch:procedure name="ЗначениеВРеквизитФормы" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
 				</mf:serverModule>
-				<mf:clientModule version="1" startAddr="260">
-					<bsch:cmdOpCode>1,2,12,18,21,5,1,40,1,2,107,4,108,33,40,1,2,12,2,12,12,16,39,1,39,1,1,22,1,2,12,4,18,19,5,1,16,1,18,19,1,1,4,18,19,1,1,22,1,3,18,19,5,1,16,1,3,12,40,1,3,4,18,19,5,1,16,1,3,2,3,2,2,12,18,21,5,1,4,110,2,2,12,18,21,5,1,4,110,3,12,18,21,5,1,16,1,3,4,2,18,51,16,1,3,3,2,12,4,18,19,1,39,1,18,19,1,1,1,22,1,18,19,1,1,22,1,3,6,16,1,2,2,18,20,1,1,22,1,18,19,1,1,22,1,3,2,12,33,40,1,18,19,1,39,1,3,2,12,33,40,1,18,19,1,39,1,1,22,1,18,19,1,1,4,18,19,1,1,2,12,18,19,1,1,18,19,1,1,22,1,3,18,51,16,1,3,12,4,16,1,3,18,21,5,1,40,1,3,7,18,20,1,1,48,49,3,12,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,12,4,33,40,1,2,12,3,12,16,39,1,1,39,50,3,8,16,3,8,16,39,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>14,0,0,0,1,0,14,25,15,1,0,2,0,0,23,16,2,3,1,4,5,0,23,17,25,18,20,0,29,2,6,7,1,2,0,29,0,30,0,3,30,32,8,1,4,32,34,0,39,1,0,6,0,39,0,41,1,9,113,43,2,10,1,7,0,43,0,45,3,3,2,4,2,3,1,12,0,46,13,0,4,2,3,1,14,0,47,13,0,1,15,4,11,0,45,0,50,4,16,5,2,17,0,51,4,3,6,18,19,4,8,51,117,55,0,3,55,57,59,0,64,0,10,64,66,0,75,2,0,0,77,7,8,1,20,77,79,0,84,0,13,84,86,0,139,0,9,21,0,155,140,0,10,140,166,141,0,9,22,0,166,142,0,3,142,166,143,145,0,150,0,15,150,151,23,1,16,151,152,2,24,1,17,152,153,0,10,153,155,0,174,0,0,25,0,175,0,26,27,0,177,0,0,28,0,177,257,178,0,0,1,29,178,179,0,0,0,30,0,0,179,2,0,0,2,0,249,1,2,0,2,0,0,180,1,0,31,0,246,181,2,32,1,33,0,246,182,183,220,1,2,0,0,2,0,0,257,184,188,0,0,0</bsch:cmdOperand>
+				<mf:clientModule version="1" startAddr="367">
+					<bsch:cmdOpCode>1,2,12,18,21,5,1,40,1,2,107,4,108,33,40,1,2,12,2,12,12,16,39,1,39,1,1,22,1,3,4,33,40,1,2,12,3,16,1,18,19,1,39,1,1,22,1,3,18,51,16,1,3,4,4,18,20,1,1,3,4,4,18,20,1,1,3,4,4,18,20,1,1,3,4,18,19,5,1,16,1,3,2,3,2,12,18,21,5,1,16,1,3,4,2,18,51,16,1,3,3,3,4,18,19,1,1,22,1,3,18,19,5,1,16,1,3,12,40,1,3,4,18,19,5,1,16,1,3,2,3,2,2,12,18,21,5,1,4,110,2,2,12,18,21,5,1,4,110,3,12,18,21,5,1,16,1,3,4,2,18,51,16,1,3,3,2,12,4,18,19,1,39,1,18,19,1,1,1,22,1,18,19,1,1,22,1,3,6,16,1,2,2,18,20,1,1,22,1,18,19,1,1,22,1,3,4,33,40,1,18,19,1,39,1,3,4,33,40,1,4,10,2,10,10,10,10,2,12,18,19,1,39,1,1,22,1,2,12,4,18,19,5,1,16,1,18,19,1,1,22,1,3,2,12,33,40,1,18,19,1,39,1,3,2,12,33,40,1,18,19,1,39,1,1,22,1,18,19,1,1,4,18,19,1,1,2,12,18,19,1,1,18,19,1,1,22,1,3,18,51,16,1,3,12,4,16,1,3,18,21,5,1,40,1,3,7,18,20,1,1,48,49,3,12,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,12,4,33,40,1,2,12,3,12,16,39,1,1,39,50,3,8,16,3,8,16,39,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>14,0,0,0,1,0,14,25,15,1,0,2,0,0,23,16,2,3,1,4,5,0,23,17,25,18,20,0,25,0,6,0,43,26,2,7,1,0,27,0,2,27,43,28,30,0,39,1,0,8,0,40,1,10,10,2,9,40,41,1,11,11,2,9,41,42,1,12,13,2,9,42,44,2,14,1,4,0,44,0,45,3,3,2,2,7,2,15,0,45,0,47,4,16,4,2,17,0,48,4,3,1,18,4,5,48,50,0,55,1,0,7,0,55,0,57,1,19,173,59,2,20,1,4,0,59,0,61,3,3,2,5,2,3,1,21,0,62,22,0,5,2,3,1,23,0,63,22,0,1,24,4,15,0,61,0,66,4,25,4,2,17,0,67,4,3,6,26,18,4,5,67,177,71,0,8,71,73,75,0,80,0,10,80,82,0,91,2,0,0,93,7,8,1,27,93,95,0,100,0,13,100,102,0,111,0,10,0,214,112,0,2,112,233,113,0,12,0,233,114,28,0,8,0,0,0,0,9,29,8,15,114,233,116,118,0,123,2,30,31,1,16,0,123,0,124,0,8,124,126,0,179,0,10,32,0,262,180,0,10,180,273,181,0,10,33,0,273,182,0,8,182,273,183,185,0,190,0,18,190,191,34,1,19,191,192,2,35,1,20,192,193,0,10,193,195,0,214,0,0,36,0,215,0,37,38,0,217,0,0,39,0,217,364,218,0,0,1,40,218,219,0,0,0,41,0,0,219,2,0,0,2,0,356,1,2,0,2,0,0,220,1,0,42,0,353,221,2,43,1,44,0,353,222,223,327,1,2,0,0,2,0,0,364,224,228,0,0,0</bsch:cmdOperand>
 					<bsch:constant>SКлюч</bsch:constant>
 					<bsch:constant>SПустая</bsch:constant>
 					<bsch:constant>SТаблицаФормы</bsch:constant>
 					<bsch:constant>SДата</bsch:constant>
 					<bsch:constant>SРодитель</bsch:constant>
 					<bsch:constant>SДатаНачалаПериода</bsch:constant>
-					<bsch:constant>SВидРасхода</bsch:constant>
-					<bsch:constant>SПеречисление.ВидыРасходов.Фактический</bsch:constant>
-					<bsch:constant>SПлановый расход переведен в фактический</bsch:constant>
+					<bsch:constant>SПодтверждениеСуммыРасходаПриПереводеПланаВФакт</bsch:constant>
+					<bsch:constant>SСумма</bsch:constant>
+					<bsch:constant>SСписокЗначений</bsch:constant>
+					<bsch:constant>SДобавить</bsch:constant>
+					<bsch:constant>SПодтвердить</bsch:constant>
+					<bsch:constant>SОтмена</bsch:constant>
+					<bsch:constant>SИзменитьСумму</bsch:constant>
+					<bsch:constant>SИзменить сумму</bsch:constant>
+					<bsch:constant>Sru = 'Подтвердить факт расхода на сумму %1?'</bsch:constant>
+					<bsch:constant>SПодставитьПараметрыВСтроку</bsch:constant>
+					<bsch:constant>SПодтвердитьФактичекийРасходОтветНаВопрос</bsch:constant>
+					<bsch:constant>SОписаниеОповещения</bsch:constant>
+					<bsch:constant>N60</bsch:constant>
 					<bsch:constant>SЛимитПревышен</bsch:constant>
 					<bsch:constant>Sru = 'Лимит денежных средств на период с %1 по %2 превышен на %3. Все равно записать?'</bsch:constant>
-					<bsch:constant>SПодставитьПараметрыВСтроку</bsch:constant>
 					<bsch:constant>SПолучитьДатуНачалаПериода</bsch:constant>
 					<bsch:constant>SДЛФ=DD</bsch:constant>
 					<bsch:constant>SПолучитьДатуОкончанияПериода</bsch:constant>
 					<bsch:constant>SСуммаПревышения</bsch:constant>
 					<bsch:constant>SРезультатВопросаЗаписиДокумента</bsch:constant>
-					<bsch:constant>SОписаниеОповещения</bsch:constant>
 					<bsch:constant>SДаНетОтмена</bsch:constant>
-					<bsch:constant>N60</bsch:constant>
 					<bsch:constant>SОткрытьФормуВыбораДаты</bsch:constant>
+					<bsch:constant>SДокумент.РасходДенежныхСредств.Форма.ФормаИзмененияСуммы</bsch:constant>
+					<bsch:constant>SБлокироватьОкноВладельца</bsch:constant>
+					<bsch:constant>SВидРасхода</bsch:constant>
+					<bsch:constant>SПеречисление.ВидыРасходов.Фактический</bsch:constant>
 					<bsch:constant>SНет</bsch:constant>
 					<bsch:constant>SДа</bsch:constant>
 					<bsch:constant>SИзменениеОстатков</bsch:constant>
@@ -2792,24 +2850,37 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 					<bsch:variable name="ВладелецФормы" isExternal="true"/>
 					<bsch:variable name="Объект" isExternal="true"/>
 					<bsch:variable name="СтроковыеФункцииКлиентСервер" isExternal="true"/>
-					<bsch:variable name="ОбщегоНазначенияКлиентСервер" isExternal="true"/>
 					<bsch:variable name="ЭтотОбъект" isExternal="true"/>
+					<bsch:variable name="ОбщегоНазначенияКлиентСервер" isExternal="true"/>
 					<bsch:variable name="РежимДиалогаВопрос" isExternal="true"/>
 					<bsch:variable name="УчетДенежныхСредствКлиент" isExternal="true"/>
 					<bsch:variable name="ЭтаФорма" isExternal="true"/>
+					<bsch:variable name="РежимОткрытияОкнаФормы" isExternal="true"/>
 					<bsch:variable name="КодВозвратаДиалога" isExternal="true"/>
 					<bsch:procedure name="ПриОткрытии" parametersCount="1" startAddr="0">
 						<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="ПодтвердитьФактическийРасход" parametersCount="1" startAddr="28">
-						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+					<bsch:procedure name="ОбработкаОповещения" parametersCount="3" startAddr="28">
+						<bsch:variable name="ИмяСобытия" isLocal="true" isParam="true"/>
+						<bsch:variable name="Параметр" isLocal="true" isParam="true"/>
+						<bsch:variable name="Источник" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="ПредопределенноеЗначение" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
-					<bsch:procedure name="НачатьЗаписьДокумента" parametersCount="0" startAddr="169"/>
-					<bsch:procedure name="Сообщить" isExternal="true" parametersCount="2" startAddr="0"/>
-					<bsch:procedure name="ЗаписатьДокумент" parametersCount="1" startAddr="48">
+					<bsch:procedure name="ПодтвердитьФактическийРасходЗавершение" parametersCount="0" startAddr="236"/>
+					<bsch:procedure name="ПодтвердитьФактическийРасход" parametersCount="1" startAddr="46">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:variable name="СписокКнопок" isLocal="true"/>
+						<bsch:variable name="ШаблонВопроса" isLocal="true"/>
+						<bsch:variable name="ТекстВопроса" isLocal="true"/>
+						<bsch:variable name="ОписаниеОповещения" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="НСтр" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
+					<bsch:procedure name="ПоказатьВопрос" isExternal="true" parametersCount="7" startAddr="0"/>
+					<bsch:procedure name="ЗаписатьДокумент" parametersCount="1" startAddr="108">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:variable name="Результат" isLocal="true"/>
 						<bsch:variable name="ШаблонВопроса" isLocal="true"/>
@@ -2818,14 +2889,13 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
 					<bsch:procedure name="ПроверитьПревышениеЛимитаЗаПериод" isFunction="true" isExternal="true" parametersCount="0" startAddr="0"/>
-					<bsch:procedure name="НСтр" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
-					<bsch:procedure name="ПоказатьВопрос" isExternal="true" parametersCount="7" startAddr="0"/>
-					<bsch:procedure name="Отмена" parametersCount="1" startAddr="120">
+					<bsch:procedure name="НачатьЗаписьДокумента" parametersCount="0" startAddr="276"/>
+					<bsch:procedure name="Отмена" parametersCount="1" startAddr="180">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
 					<bsch:procedure name="Закрыть" isExternal="true" parametersCount="1" startAddr="0"/>
-					<bsch:procedure name="ДатаНачалоВыбора" parametersCount="3" startAddr="126">
+					<bsch:procedure name="ДатаНачалоВыбора" parametersCount="3" startAddr="186">
 						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
 						<bsch:variable name="ДанныеВыбора" isLocal="true" isParam="true"/>
 						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
@@ -2833,7 +2903,7 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 						<bsch:paramsDefValue/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="НазначениеНачалоВыбора" parametersCount="3" startAddr="138">
+					<bsch:procedure name="НазначениеНачалоВыбора" parametersCount="3" startAddr="198">
 						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
 						<bsch:variable name="ДанныеВыбора" isLocal="true" isParam="true"/>
 						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
@@ -2841,12 +2911,20 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 						<bsch:paramsDefValue/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="ДобавитьГолосовоеНазначение" parametersCount="0" startAddr="190">
+					<bsch:procedure name="ДобавитьГолосовоеНазначение" parametersCount="0" startAddr="297">
 						<bsch:variable name="ЗапсукПриложения" isLocal="true"/>
 						<bsch:variable name="СтрокаДанных" isLocal="true"/>
 						<bsch:variable name="0СтрокаДанных" isLocal="true"/>
 					</bsch:procedure>
-					<bsch:procedure name="РезультатВопросаЗаписиДокумента" isExported="true" parametersCount="2" startAddr="144">
+					<bsch:procedure name="ПодтвердитьФактичекийРасходОтветНаВопрос" isExported="true" parametersCount="2" startAddr="204">
+						<bsch:variable name="РезультатВопроса" isLocal="true" isParam="true"/>
+						<bsch:variable name="ДополнительныеПараметры" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ОткрытьФорму" isFunction="true" isExternal="true" parametersCount="8" startAddr="0"/>
+					<bsch:procedure name="ПредопределенноеЗначение" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
+					<bsch:procedure name="РезультатВопросаЗаписиДокумента" isExported="true" parametersCount="2" startAddr="251">
 						<bsch:variable name="РезультатВопроса" isLocal="true" isParam="true"/>
 						<bsch:variable name="ДополнительныеПараметры" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
@@ -2952,6 +3030,7 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 						<mf:excluded>Write</mf:excluded>
 					</mf:commandsContent>
 					<mf:event handler="ПослеЗаписи" name="AfterWrite"/>
+					<mf:event handler="ОбработкаОповещения" name="NotificationProcessing"/>
 					<mf:event handler="ПриОткрытии" name="OnOpen"/>
 					<mf:event handler="ПередЗаписью" name="BeforeWrite"/>
 					<mf:event handler="ПриСозданииНаСервере" name="OnCreateAtServer"/>
@@ -3029,6 +3108,9 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 								</mf:str>
 							</mf:formattedTitle>
 							<mf:contextMenu name="ДекорацияСуммаКонтекстноеМеню" type="ContextMenu"/>
+							<mf:textData>
+								<mf:horizontalAlign>Center</mf:horizontalAlign>
+							</mf:textData>
 						</mf:decoration>
 						<mf:field name="Сумма" kind="InputField" dataPath="Объект.Сумма">
 							<mf:titleLocation>None</mf:titleLocation>
@@ -3529,6 +3611,154 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 							</mf:field>
 						</mf:group>
 					</mf:table>
+				</mf:mainElement>
+			</form>
+		</form>
+		<form name="ФормаИзмененияСуммы" id="9ee0c8cb-7027-4d74-a560-185817317de1">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма изменения суммы</v8:content>
+				</v8:item>
+			</synonym>
+			<form>
+				<mf:serverModule version="1" startAddr="0">
+					<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0,0</bsch:cmdOperand>
+				</mf:serverModule>
+				<mf:clientModule version="1" startAddr="18">
+					<bsch:cmdOpCode>1,4,2,18,19,1,1,18,19,1,1,22,1,18,19,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>7,0,0,2,1,7,8,0,2,8,10,0,15,0,2,15,17,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SПодтверждениеСуммыРасходаПриПереводеПланаВФакт</bsch:constant>
+					<bsch:variable name="Сумма" isExternal="true"/>
+					<bsch:procedure name="ПодтвердитьСумму" parametersCount="1" startAddr="0">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="Оповестить" isExternal="true" parametersCount="3" startAddr="0"/>
+					<bsch:procedure name="Закрыть" isExternal="true" parametersCount="1" startAddr="0"/>
+					<bsch:procedure name="Отмена" parametersCount="1" startAddr="12">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+				</mf:clientModule>
+				<mf:serverWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:serverWOContextModule>
+				<mf:clientServerWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:clientServerWOContextModule>
+				<mf:attributes>
+					<mf:attribute name="Сумма">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Сумма</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>10</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</mf:type>
+					</mf:attribute>
+				</mf:attributes>
+				<mf:command name="ПодтвердитьСумму">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтвердить сумму</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>ПодтвердитьСумму</mf:handlerName>
+					<mf:picture ref="v8ui:ЗеленаяГалочка"/>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подтвердить сумму</v8:content>
+						</v8:item>
+					</mf:tooltip>
+					<mf:representation>Picture</mf:representation>
+				</mf:command>
+				<mf:command name="Отмена">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отмена</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>Отмена</mf:handlerName>
+					<mf:picture ref="v8ui:КрасныйКрестикВКруге"/>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отмена</v8:content>
+						</v8:item>
+					</mf:tooltip>
+					<mf:representation>Picture</mf:representation>
+				</mf:command>
+				<mf:mainElement>
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Введите сумму расхода</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:autoTitle>false</mf:autoTitle>
+					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
+					<mf:group name="Группа1" type="UsualGroup">
+						<mf:horizontalStretch>true</mf:horizontalStretch>
+						<mf:usualData group="Vertical" representation="None">
+							<mf:showTitle>false</mf:showTitle>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
+						</mf:usualData>
+						<mf:decoration name="Декорация1" type="Label">
+							<mf:formattedTitle>
+								<mf:str>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>сумма факт. расхода</v8:content>
+									</v8:item>
+								</mf:str>
+							</mf:formattedTitle>
+							<mf:contextMenu name="Декорация1КонтекстноеМеню" type="ContextMenu"/>
+						</mf:decoration>
+						<mf:field name="Сумма" kind="InputField" dataPath="Сумма">
+							<mf:titleLocation>None</mf:titleLocation>
+							<mf:contextMenu name="СуммаКонтекстноеМеню" type="ContextMenu"/>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
+							<mf:inputData>
+								<mf:font ref="style:ExtraLargeTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+								<mf:horizontalStretch>true</mf:horizontalStretch>
+							</mf:inputData>
+						</mf:field>
+					</mf:group>
+					<mf:group name="ГруппаКоманды" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа команды</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:tooltip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа команды</v8:content>
+							</v8:item>
+						</mf:tooltip>
+						<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+						<mf:usualData representation="None">
+							<mf:showTitle>false</mf:showTitle>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
+						</mf:usualData>
+						<mf:button name="ПодтвердитьСумму" type="UsualButton" commandName="Form.Command.ПодтвердитьСумму"/>
+						<mf:button name="Отмена" type="UsualButton" commandName="Form.Command.Отмена"/>
+					</mf:group>
 				</mf:mainElement>
 			</form>
 		</form>

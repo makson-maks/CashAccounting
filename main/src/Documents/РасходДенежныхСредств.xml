@@ -347,6 +347,7 @@
 			</Attribute>
 			<Form>ФормаДокумента</Form>
 			<Form>ФормаСписка</Form>
+			<Form>ФормаИзмененияСуммы</Form>
 		</ChildObjects>
 	</Document>
 </MetaDataObject>
