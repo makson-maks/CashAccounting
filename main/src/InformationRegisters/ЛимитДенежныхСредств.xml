@@ -106,6 +106,7 @@
 					<DataHistory>Use</DataHistory>
 				</Properties>
 			</Resource>
+			<Form>ФормаУстановкиЛимитаНаПериод</Form>
 		</ChildObjects>
 	</InformationRegister>
 </MetaDataObject>

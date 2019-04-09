@@ -11,11 +11,17 @@ CommonCommands\ОткрытьСписокПланируемыхРасходов\
 CommonCommands\ОткрытьСписокФактическихРасходов\Ext\CommandModule.bsl-->CommonCommands\ОткрытьСписокФактическихРасходов\Ext\CommandModule.bsl
 CommonCommands\ОткрытьФормуНачальнойСтраницы\Ext\CommandModule.bsl-->CommonCommands\ОткрытьФормуНачальнойСтраницы\Ext\CommandModule.bsl
 CommonForms\ФормаВыбораДаты.xml-->CommonForms\ФормаВыбораДаты.xml
+CommonForms\ФормаНастроек.xml-->CommonForms\ФормаНастроек.xml
 CommonForms\ФормаНачальнойСтраницы.xml-->CommonForms\ФормаНачальнойСтраницы.xml
+CommonForms\ФормаПервогоЗапуска.xml-->CommonForms\ФормаПервогоЗапуска.xml
 CommonForms\ФормаВыбораДаты\Ext\Form.xml-->CommonForms\ФормаВыбораДаты\Ext\Form.xml
 CommonForms\ФормаВыбораДаты\Ext\Form\Module.bsl-->CommonForms\ФормаВыбораДаты\Ext\Form\Module.bsl
+CommonForms\ФормаНастроек\Ext\Form.xml-->CommonForms\ФормаНастроек\Ext\Form.xml
+CommonForms\ФормаНастроек\Ext\Form\Module.bsl-->CommonForms\ФормаНастроек\Ext\Form\Module.bsl
 CommonForms\ФормаНачальнойСтраницы\Ext\Form.xml-->CommonForms\ФормаНачальнойСтраницы\Ext\Form.xml
 CommonForms\ФормаНачальнойСтраницы\Ext\Form\Module.bsl-->CommonForms\ФормаНачальнойСтраницы\Ext\Form\Module.bsl
+CommonForms\ФормаПервогоЗапуска\Ext\Form.xml-->CommonForms\ФормаПервогоЗапуска\Ext\Form.xml
+CommonForms\ФормаПервогоЗапуска\Ext\Form\Module.bsl-->CommonForms\ФормаПервогоЗапуска\Ext\Form\Module.bsl
 CommonModules\ОбщегоНазначенийВызовСервера.xml-->CommonModules\ОбщегоНазначенийВызовСервера.xml
 CommonModules\ОбщегоНазначенияКлиентСервер.xml-->CommonModules\ОбщегоНазначенияКлиентСервер.xml
 CommonModules\ОбщегоНазначенияСервер.xml-->CommonModules\ОбщегоНазначенияСервер.xml
@@ -71,6 +77,7 @@ CommonPictures\Сумма\Ext\Picture\Picture.png-->CommonPictures\Сумма\Ex
 Constants\ДатаТестирования.xml-->Constants\ДатаТестирования.xml
 Constants\ПоследняяДатаРасчетаФактическогоОстаткаЛимита.xml-->Constants\ПоследняяДатаРасчетаФактическогоОстаткаЛимита.xml
 Constants\РежимТестирования.xml-->Constants\РежимТестирования.xml
+Constants\ЭтоНеПервыйЗапуск.xml-->Constants\ЭтоНеПервыйЗапуск.xml
 Documents\ПриходДенежныхСредств.xml-->Documents\ПриходДенежныхСредств.xml
 Documents\РасходДенежныхСредств.xml-->Documents\РасходДенежныхСредств.xml
 Documents\ПриходДенежныхСредств\Ext\ObjectModule.bsl-->Documents\ПриходДенежныхСредств\Ext\ObjectModule.bsl
@@ -97,6 +104,9 @@ Ext\ManagedApplicationModule.bsl-->Ext\ManagedApplicationModule.bsl
 Ext\SessionModule.bsl-->Ext\SessionModule.bsl
 InformationRegisters\ЛимитДенежныхСредств.xml-->InformationRegisters\ЛимитДенежныхСредств.xml
 InformationRegisters\ОстатокЛимитаДенежныхСредств.xml-->InformationRegisters\ОстатокЛимитаДенежныхСредств.xml
+InformationRegisters\ЛимитДенежныхСредств\Forms\ФормаУстановкиЛимитаНаПериод.xml-->InformationRegisters\ЛимитДенежныхСредств\Forms\ФормаУстановкиЛимитаНаПериод.xml
+InformationRegisters\ЛимитДенежныхСредств\Forms\ФормаУстановкиЛимитаНаПериод\Ext\Form.xml-->InformationRegisters\ЛимитДенежныхСредств\Forms\ФормаУстановкиЛимитаНаПериод\Ext\Form.xml
+InformationRegisters\ЛимитДенежныхСредств\Forms\ФормаУстановкиЛимитаНаПериод\Ext\Form\Module.bsl-->InformationRegisters\ЛимитДенежныхСредств\Forms\ФормаУстановкиЛимитаНаПериод\Ext\Form\Module.bsl
 InformationRegisters\ОстатокЛимитаДенежныхСредств\Forms\ФормаРедактированияЛимита.xml-->InformationRegisters\ОстатокЛимитаДенежныхСредств\Forms\ФормаРедактированияЛимита.xml
 InformationRegisters\ОстатокЛимитаДенежныхСредств\Forms\ФормаРедактированияЛимита\Ext\Form.xml-->InformationRegisters\ОстатокЛимитаДенежныхСредств\Forms\ФормаРедактированияЛимита\Ext\Form.xml
 InformationRegisters\ОстатокЛимитаДенежныхСредств\Forms\ФормаРедактированияЛимита\Ext\Form\Module.bsl-->InformationRegisters\ОстатокЛимитаДенежныхСредств\Forms\ФормаРедактированияЛимита\Ext\Form\Module.bsl

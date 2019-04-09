@@ -176,19 +176,6 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаВводПриходаРасходаРасширеннаяПодсказка" id="19"/>
 		</UsualGroup>
-		<Button name="РедактироватьФактическийОстатокЛимита" id="37" DisplayImportance="VeryLow">
-			<Type>UsualButton</Type>
-			<Visible>false</Visible>
-			<Representation>Picture</Representation>
-			<AutoMaxWidth>false</AutoMaxWidth>
-			<AutoMaxHeight>false</AutoMaxHeight>
-			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
-			<CommandName>Form.Command.РедактироватьФактическийОстатокЛимита</CommandName>
-			<Shape>Oval</Shape>
-			<ShapeRepresentation>None</ShapeRepresentation>
-			<PictureLocation>Right</PictureLocation>
-			<ExtendedTooltip name="РедактироватьФактическийОстатокЛимитаРасширеннаяПодсказка" id="38"/>
-		</Button>
 		<UsualGroup name="Группа1" id="48">
 			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 			<HorizontalAlign>Center</HorizontalAlign>
@@ -234,27 +221,11 @@
 			<HorizontalLocation>Right</HorizontalLocation>
 			<ExtendedTooltip name="ГруппаКоманднаяПанельПодвалРасширеннаяПодсказка" id="57"/>
 			<ChildItems>
-				<Popup name="ГруппаПодменю" id="61">
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа подменю</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Picture>
-						<xr:Ref>CommonPicture.Подменю</xr:Ref>
-						<xr:LoadTransparent>true</xr:LoadTransparent>
-					</Picture>
-					<Representation>Picture</Representation>
-					<ExtendedTooltip name="ГруппаПодменюРасширеннаяПодсказка" id="62"/>
-					<ChildItems>
-						<Button name="ИзменитьФактическийЛимит" id="63">
-							<Type>CommandBarButton</Type>
-							<CommandName>Form.Command.ИзменитьФактическийЛимит</CommandName>
-							<ExtendedTooltip name="ИзменитьФактическийЛимитРасширеннаяПодсказка" id="64"/>
-						</Button>
-					</ChildItems>
-				</Popup>
+				<Button name="ОткрытьНастройки" id="61">
+					<Type>CommandBarButton</Type>
+					<CommandName>Form.Command.ОткрытьНастройки</CommandName>
+					<ExtendedTooltip name="ОткрытьНастройкиРасширеннаяПодсказка" id="62"/>
+				</Button>
 			</ChildItems>
 		</CommandBar>
 	</ChildItems>
@@ -389,26 +360,6 @@
 			<Action>ДобавитьПланируемыйРасход</Action>
 			<Representation>Picture</Representation>
 		</Command>
-		<Command name="РедактироватьФактическийОстатокЛимита" id="1">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Редактировать фактический остаток лимита</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Редактировать фактический остаток лимита</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Picture>
-				<xr:Ref>StdPicture.Change</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
-			<Action>РедактироватьФактическийОстатокЛимита</Action>
-			<Representation>Picture</Representation>
-		</Command>
 		<Command name="ИзменитьФактическийЛимит" id="6">
 			<Title>
 				<v8:item>
@@ -424,6 +375,26 @@
 			</ToolTip>
 			<Action>ИзменитьФактическийЛимит</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОткрытьНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ReportSettings</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьНастройки</Action>
+			<Representation>Picture</Representation>
 		</Command>
 	</Commands>
 </Form>

@@ -168,8 +168,11 @@
 			<Constant>ПоследняяДатаРасчетаФактическогоОстаткаЛимита</Constant>
 			<Constant>ДатаТестирования</Constant>
 			<Constant>РежимТестирования</Constant>
+			<Constant>ЭтоНеПервыйЗапуск</Constant>
 			<CommonForm>ФормаНачальнойСтраницы</CommonForm>
 			<CommonForm>ФормаВыбораДаты</CommonForm>
+			<CommonForm>ФормаНастроек</CommonForm>
+			<CommonForm>ФормаПервогоЗапуска</CommonForm>
 			<Document>ПриходДенежныхСредств</Document>
 			<Document>РасходДенежныхСредств</Document>
 			<Enum>ВидыРасходов</Enum>

@@ -39,7 +39,12 @@
 	<ChildItems>
 		<Button name="ПоказатьВесьСписок" id="36">
 			<Type>UsualButton</Type>
+			<HorizontalStretch>true</HorizontalStretch>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 			<CommandName>Form.Command.ПоказатьВесьСписок</CommandName>
+			<BackColor>web:LavenderBlush</BackColor>
+			<BorderColor>web:Black</BorderColor>
+			<Shape>Oval</Shape>
 			<ExtendedTooltip name="ПоказатьВесьСписокРасширеннаяПодсказка" id="37"/>
 		</Button>
 		<UsualGroup name="ОтборПериод" id="25">
@@ -62,7 +67,10 @@
 				<Button name="СдвинутьПериодНазад" id="30">
 					<Type>UsualButton</Type>
 					<CommandName>Form.Command.СдвинутьПериодНазад</CommandName>
+					<BackColor>web:MistyRose</BackColor>
+					<BorderColor>web:Black</BorderColor>
 					<Font ref="style:ExtraLargeTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Shape>Oval</Shape>
 					<ExtendedTooltip name="СдвинутьПериодНазадРасширеннаяПодсказка" id="31"/>
 				</Button>
 				<LabelField name="ПредставлениеПериода" id="27">
@@ -76,7 +84,10 @@
 				<Button name="СдвинутьПериодВперед" id="32">
 					<Type>UsualButton</Type>
 					<CommandName>Form.Command.СдвинутьПериодВперед</CommandName>
+					<BackColor>web:MistyRose</BackColor>
+					<BorderColor>web:Black</BorderColor>
 					<Font ref="style:ExtraLargeTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Shape>Oval</Shape>
 					<ExtendedTooltip name="СдвинутьПериодВпередРасширеннаяПодсказка" id="33"/>
 				</Button>
 			</ChildItems>
@@ -329,7 +340,12 @@
 					<v8:content>Сдвинуть период назад</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveLeft</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>СдвинутьПериодНазад</Action>
+			<Representation>Picture</Representation>
 		</Command>
 		<Command name="СдвинутьПериодВперед" id="2">
 			<Title>
@@ -344,7 +360,12 @@
 					<v8:content>Сдвинуть период вперед</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveRight</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>СдвинутьПериодВперед</Action>
+			<Representation>Picture</Representation>
 		</Command>
 		<Command name="ПоказатьВесьСписок" id="3">
 			<Title>
