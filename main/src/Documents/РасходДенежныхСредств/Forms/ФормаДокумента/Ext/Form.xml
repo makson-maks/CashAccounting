@@ -180,6 +180,58 @@
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
+		<UsualGroup name="ГруппаПовторяемыеСобытия" id="57">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа повторяемые события</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа повторяемые события</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПовторяемыеСобытияРасширеннаяПодсказка" id="58"/>
+			<ChildItems>
+				<CheckBoxField name="ПовторяемоеСобытие" id="49">
+					<DataPath>Объект.ПовторяемоеСобытие</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПовторяемоеСобытиеКонтекстноеМеню" id="50"/>
+					<ExtendedTooltip name="ПовторяемоеСобытиеРасширеннаяПодсказка" id="51"/>
+					<Events>
+						<Event name="OnChange">ПовторяемоеСобытиеПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="КоличествоДнейДляПовторения" id="54">
+					<DataPath>Объект.КоличествоДнейДляПовторения</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>повтор каждые (в днях)</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="КоличествоДнейДляПовторенияКонтекстноеМеню" id="55"/>
+					<ExtendedTooltip name="КоличествоДнейДляПовторенияРасширеннаяПодсказка" id="56"/>
+				</InputField>
+				<InputField name="ДатаОкончанияПовторяемыхСобытий" id="59">
+					<DataPath>Объект.ДатаОкончанияПовторяемыхСобытий</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>до даты</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ДатаОкончанияПовторяемыхСобытийКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="ДатаОкончанияПовторяемыхСобытийРасширеннаяПодсказка" id="61"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="ГруппаКоманды" id="40">
 			<Title>
 				<v8:item>
@@ -201,18 +253,22 @@
 			<ChildItems>
 				<Button name="ЗаписатьДокумент" id="42">
 					<Type>UsualButton</Type>
+					<HorizontalStretch>true</HorizontalStretch>
 					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 					<CommandName>Form.Command.ЗаписатьДокумент</CommandName>
 					<ExtendedTooltip name="ЗаписатьДокументРасширеннаяПодсказка" id="43"/>
 				</Button>
 				<Button name="Отмена" id="44">
 					<Type>UsualButton</Type>
+					<HorizontalStretch>true</HorizontalStretch>
 					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 					<CommandName>Form.Command.Отмена</CommandName>
 					<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="45"/>
 				</Button>
 				<Button name="ПодтвердитьФактическийРасход" id="13">
 					<Type>UsualButton</Type>
+					<HorizontalStretch>true</HorizontalStretch>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 					<CommandName>Form.Command.ПодтвердитьФактическийРасход</CommandName>
 					<ExtendedTooltip name="ПодтвердитьФактическийРасходРасширеннаяПодсказка" id="14"/>
 				</Button>

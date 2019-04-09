@@ -145,11 +145,13 @@
 			<ChildItems>
 				<Button name="ЗаписатьДокумент" id="24">
 					<Type>UsualButton</Type>
+					<HorizontalStretch>true</HorizontalStretch>
 					<CommandName>Form.Command.ЗаписатьДокумент</CommandName>
 					<ExtendedTooltip name="ЗаписатьДокументРасширеннаяПодсказка" id="25"/>
 				</Button>
 				<Button name="Отмена" id="26">
 					<Type>UsualButton</Type>
+					<HorizontalStretch>true</HorizontalStretch>
 					<CommandName>Form.Command.Отмена</CommandName>
 					<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="27"/>
 				</Button>

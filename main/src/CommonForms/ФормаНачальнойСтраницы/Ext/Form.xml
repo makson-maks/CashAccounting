@@ -185,16 +185,19 @@
 			<ChildItems>
 				<Button name="ДобавитьПриход" id="50">
 					<Type>UsualButton</Type>
+					<HorizontalStretch>true</HorizontalStretch>
 					<CommandName>Form.Command.ДобавитьПриход</CommandName>
 					<ExtendedTooltip name="ДобавитьПриходРасширеннаяПодсказка" id="51"/>
 				</Button>
 				<Button name="ДобавитьРасход" id="52">
 					<Type>UsualButton</Type>
+					<HorizontalStretch>true</HorizontalStretch>
 					<CommandName>Form.Command.ДобавитьРасход</CommandName>
 					<ExtendedTooltip name="ДобавитьРасходРасширеннаяПодсказка" id="53"/>
 				</Button>
 				<Button name="ДобавитьПланируемыйРасход" id="54">
 					<Type>UsualButton</Type>
+					<HorizontalStretch>true</HorizontalStretch>
 					<CommandName>Form.Command.ДобавитьПланируемыйРасход</CommandName>
 					<ExtendedTooltip name="ДобавитьПланируемыйРасходРасширеннаяПодсказка" id="55"/>
 				</Button>

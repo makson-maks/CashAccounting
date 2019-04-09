@@ -102,12 +102,14 @@
 			<ChildItems>
 				<Button name="ЗаписатьИЗакрыть" id="19">
 					<Type>UsualButton</Type>
+					<HorizontalStretch>true</HorizontalStretch>
 					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 					<CommandName>Form.Command.ЗаписатьИЗакрыть</CommandName>
 					<ExtendedTooltip name="ЗаписатьИЗакрытьРасширеннаяПодсказка" id="20"/>
 				</Button>
 				<Button name="Отмена" id="21">
 					<Type>UsualButton</Type>
+					<HorizontalStretch>true</HorizontalStretch>
 					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 					<CommandName>Form.Command.Отмена</CommandName>
 					<ExtendedTooltip name="ОтменаРасширеннаяПодсказка" id="22"/>
