@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MobileApp xmlns="http://v8.1c.ru/8.3/mobile-application/app" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:bsch="http://v8.1c.ru/8.2/data/bsl" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:chm="http://v8.1c.ru/8.2/data/chart" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dl="http://v8.1c.ru/8.2/managed-application/dynamic-list" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:mf="http://v8.1c.ru/8.3/mobile-application/form" xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet" xmlns:pl="http://v8.1c.ru/8.3/data/planner" xmlns:role="http://v8.1c.ru/8.2/roles" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="УчетДенежныхСредств" id="eddd66c0-8cf9-41cc-b517-9dc67f52ff59" formatVersion="2" platformVersion="8.3.13.1644" containerID="08cc8678-290f-4ee5-9316-06bf602cf55a" defaultLanguage="Language.Русский" version="1.1.1" scriptVariant="Russian">
+<MobileApp xmlns="http://v8.1c.ru/8.3/mobile-application/app" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:bsch="http://v8.1c.ru/8.2/data/bsl" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:chm="http://v8.1c.ru/8.2/data/chart" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dl="http://v8.1c.ru/8.2/managed-application/dynamic-list" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:mf="http://v8.1c.ru/8.3/mobile-application/form" xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet" xmlns:pl="http://v8.1c.ru/8.3/data/planner" xmlns:role="http://v8.1c.ru/8.2/roles" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="УчетДенежныхСредств" id="eddd66c0-8cf9-41cc-b517-9dc67f52ff59" formatVersion="2" platformVersion="8.3.13.1644" containerID="08cc8678-290f-4ee5-9316-06bf602cf55a" defaultLanguage="Language.Русский" version="1.1.2" scriptVariant="Russian">
 	<synonym>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
@@ -15,9 +15,15 @@
 		</synonym>
 	</language>
 	<vendor>makson_maks</vendor>
-	<mainModule version="1" startAddr="0">
-		<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
-		<bsch:cmdOperand>0,0</bsch:cmdOperand>
+	<mainModule version="1" startAddr="21">
+		<bsch:cmdOpCode>1,2,18,21,5,1,40,1,4,18,19,1,1,2,18,20,1,39,1,1,22,22,22</bsch:cmdOpCode>
+		<bsch:cmdOperand>4,0,0,0,0,4,18,5,1,1,1,5,6,0,0,2,6,18,7,9,0,0,0</bsch:cmdOperand>
+		<bsch:constant>SЭтоПервыйЗапуск</bsch:constant>
+		<bsch:constant>SОбщаяФорма.ФормаПервогоЗапуска</bsch:constant>
+		<bsch:constant>SУстановитьЭтоНеПервыйЗапуск</bsch:constant>
+		<bsch:variable name="УчетДенежныхСредствВызовСервера" isExternal="true"/>
+		<bsch:procedure name="ПриНачалеРаботыСистемы" parametersCount="0" startAddr="0"/>
+		<bsch:procedure name="ОткрытьФорму" isFunction="true" isExternal="true" parametersCount="8" startAddr="0"/>
 	</mainModule>
 	<sessionModule version="1">
 		<bsch:cmdOpCode>22</bsch:cmdOpCode>
@@ -42,9 +48,10 @@
 			</v8:item>
 		</synonym>
 		<serverModule version="1">
-			<bsch:cmdOpCode>1,2,3,3,3,18,21,5,1,17,45,39,1,22,22</bsch:cmdOpCode>
-			<bsch:cmdOperand>4,0,0,1,2,3,0,0,4,0,0,12,6,0,0</bsch:cmdOperand>
+			<bsch:cmdOpCode>1,2,3,3,3,18,21,5,1,17,45,39,1,22,1,2,18,21,5,1,17,45,39,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>4,0,0,1,2,3,0,0,4,0,0,12,6,0,10,0,0,1,0,10,0,0,23,12,0,0</bsch:cmdOperand>
 			<bsch:constant>SДобавитьКДате</bsch:constant>
+			<bsch:constant>SПолучитьИспользуемуюДату</bsch:constant>
 			<bsch:variable name="ОбщегоНазначенияСервер" isExternal="true"/>
 			<bsch:procedure name="ДобавитьКДате" isFunction="true" isExported="true" parametersCount="3" startAddr="0">
 				<bsch:variable name="ДатаНачала" isLocal="true" isParam="true"/>
@@ -54,6 +61,7 @@
 				<bsch:paramsDefValue/>
 				<bsch:paramsDefValue/>
 			</bsch:procedure>
+			<bsch:procedure name="ПолучитьИспользуемуюДату" isFunction="true" isExported="true" parametersCount="0" startAddr="14"/>
 		</serverModule>
 		<serverCall>true</serverCall>
 	</commonModule>
@@ -585,8 +593,14 @@
 			</v8:item>
 		</synonym>
 		<serverModule version="1">
-			<bsch:cmdOpCode>22</bsch:cmdOpCode>
-			<bsch:cmdOperand>0</bsch:cmdOperand>
+			<bsch:cmdOpCode>1,2,12,18,21,5,1,29,17,45,39,1,22,1,2,12,7,18,20,1,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>3,0,0,0,1,0,3,0,0,0,11,4,0,7,0,0,0,1,2,7,8,0,0</bsch:cmdOperand>
+			<bsch:constant>SЭтоНеПервыйЗапуск</bsch:constant>
+			<bsch:constant>SПолучить</bsch:constant>
+			<bsch:constant>SУстановить</bsch:constant>
+			<bsch:variable name="Константы" isExternal="true"/>
+			<bsch:procedure name="ЭтоПервыйЗапуск" isFunction="true" isExported="true" parametersCount="0" startAddr="0"/>
+			<bsch:procedure name="УстановитьЭтоНеПервыйЗапуск" isExported="true" parametersCount="0" startAddr="13"/>
 		</serverModule>
 		<serverCall>true</serverCall>
 	</commonModule>
@@ -598,8 +612,8 @@
 			</v8:item>
 		</synonym>
 		<serverModule version="1">
-			<bsch:cmdOpCode>1,3,18,51,16,1,3,12,4,16,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,18,20,1,1,3,12,18,19,5,1,40,1,3,12,17,45,39,39,1,4,17,45,39,1,1,22,1,3,2,2,18,21,5,1,18,21,5,1,16,1,3,18,51,16,1,3,12,4,16,1,3,4,3,18,20,1,1,3,4,2,18,21,5,1,18,20,1,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,18,20,1,1,3,12,8,33,40,1,3,4,16,39,1,3,3,12,16,1,1,3,17,45,39,1,22,1,3,18,51,16,1,3,12,4,16,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,18,20,1,1,3,12,8,33,40,1,3,4,16,39,1,3,3,12,16,1,1,3,17,45,39,1,22,1,3,2,3,18,21,5,1,16,1,3,2,3,3,4,18,21,5,1,16,1,3,4,33,40,1,4,17,45,39,39,1,1,3,18,19,5,1,16,1,3,3,3,27,66,16,1,3,3,18,103,3,26,17,45,39,1,22,1,3,18,51,16,1,3,12,4,16,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,18,20,1,1,3,12,8,33,40,1,3,4,16,39,1,3,3,12,16,1,1,3,17,45,39,1,22,1,3,18,19,5,1,16,1,3,2,2,18,21,5,1,18,21,5,1,16,1,3,2,12,18,21,5,1,16,1,3,3,33,40,1,3,17,45,39,39,1,1,3,18,19,5,1,16,1,3,18,19,5,1,16,1,3,3,3,24,16,1,3,3,35,40,1,3,3,35,40,1,3,3,25,4,18,19,1,39,1,3,3,36,40,1,3,3,25,4,18,19,1,39,1,39,1,3,3,38,40,1,3,3,25,4,18,19,1,39,1,1,2,12,3,18,20,1,1,3,18,19,5,1,16,1,3,17,45,39,1,22,1,3,8,33,40,1,3,2,2,18,21,5,1,18,21,5,1,16,39,1,1,3,8,33,40,1,3,2,2,18,21,5,1,18,21,5,1,16,39,1,1,3,18,51,16,1,3,12,4,16,1,3,4,3,18,20,1,1,3,4,3,18,20,1,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,18,20,1,1,3,12,8,33,40,1,3,4,16,39,1,3,3,12,16,1,1,3,17,45,39,1,22,1,3,2,18,21,5,1,16,1,3,2,12,18,21,5,1,16,1,3,12,3,3,24,16,1,3,18,20,1,1,22,1,3,2,18,21,5,1,16,1,3,2,12,18,21,5,1,16,1,3,12,3,3,25,16,1,3,18,20,1,1,22,1,3,2,2,18,21,5,1,18,21,5,1,16,1,3,2,2,18,21,5,1,18,21,5,1,16,1,3,2,3,3,4,18,21,5,1,4,24,16,1,3,18,19,5,1,16,1,3,3,3,27,66,16,1,3,17,45,39,1,22,1,3,4,33,40,1,45,39,39,1,1,3,4,33,40,1,3,18,19,1,39,1,3,4,33,40,1,3,18,19,1,39,1,1,22,22</bsch:cmdOpCode>
-			<bsch:cmdOperand>6,0,0,0,0,7,0,1,2,0,13,1,0,0,3,0,13,0,15,2,1,0,4,0,15,0,17,2,0,5,17,19,2,6,1,1,0,19,46,20,2,6,0,0,52,51,22,7,0,0,52,23,25,0,29,0,0,1,0,9,0,29,1,8,0,29,0,31,1,0,0,0,32,1,1,10,0,38,1,12,0,2,11,38,39,1,13,1,0,9,0,39,2,11,39,41,2,1,0,3,0,41,0,43,3,2,0,4,0,43,0,44,3,0,5,44,46,3,14,0,0,127,47,4,7,0,132,49,4,3,14,0,50,52,4,0,0,138,54,0,58,0,0,0,0,59,0,1,15,0,65,1,0,0,3,0,65,0,67,2,1,0,4,0,67,0,69,2,0,5,69,71,2,16,0,0,182,72,3,7,0,187,74,3,2,16,0,75,77,3,0,0,193,79,0,83,2,0,1,1,17,0,83,0,85,3,1,1,2,19,3,18,0,85,0,87,3,7,0,226,88,7,0,0,251,226,89,91,4,0,5,0,91,0,92,5,0,3,0,0,0,94,4,5,2,0,3,0,0,0,251,96,0,100,0,0,0,0,101,0,1,20,0,107,1,0,0,3,0,107,0,109,2,1,0,4,0,109,0,111,2,0,5,111,113,2,6,0,0,295,114,3,7,0,300,116,3,2,6,0,117,119,3,0,0,306,121,0,125,0,0,0,0,125,0,127,1,0,1,0,9,0,127,1,8,0,127,0,129,2,2,21,0,22,0,129,0,131,1,2,0,348,132,0,0,0,438,348,133,135,3,0,3,0,135,0,136,4,0,6,0,136,0,137,5,3,0,0,0,138,5,4,0,404,139,4,0,0,388,140,4,0,0,23,2,8,140,402,141,4,0,0,402,142,0,4,0,24,2,8,142,402,143,418,144,5,4,0,418,145,5,0,0,23,2,8,145,418,146,148,2,21,1,1,25,148,150,0,0,0,0,150,0,152,0,0,0,438,154,0,158,0,0,0,459,159,0,0,1,0,9,0,159,1,8,0,159,0,459,160,162,1,0,0,479,163,1,0,1,0,9,0,163,1,17,0,163,0,479,164,166,2,0,0,0,167,2,1,26,0,173,2,12,0,2,11,173,174,2,13,1,2,11,174,176,3,2,0,3,0,176,0,178,4,3,0,4,0,178,0,179,4,0,5,179,181,4,27,0,0,536,182,5,7,0,541,184,5,4,27,0,185,187,5,0,0,547,189,0,193,1,3,0,28,0,193,0,195,2,4,29,0,30,0,195,0,196,2,16,1,0,0,0,197,2,0,31,197,199,0,203,1,3,0,28,0,203,0,205,2,4,29,0,30,0,205,0,206,2,16,1,0,0,0,207,2,0,31,207,209,0,217,0,0,1,0,9,0,217,1,8,0,217,0,218,1,0,1,0,9,0,218,1,17,0,218,0,220,2,1,0,1,19,3,18,0,220,32,0,0,222,3,0,3,0,222,0,224,4,3,2,0,0,0,226,4,0,0,669,228,0,232,0,7,0,680,233,0,704,680,234,236,1,23,0,692,237,0,1,10,237,703,238,1,24,0,703,239,0,1,11,239,703,240,242,0,0</bsch:cmdOperand>
+			<bsch:cmdOpCode>1,3,18,51,16,1,3,12,4,16,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,18,20,1,1,3,12,18,19,5,1,40,1,3,12,17,45,39,39,1,4,17,45,39,1,1,22,1,3,2,2,18,21,5,1,18,21,5,1,16,1,3,18,51,16,1,3,12,4,16,1,3,4,3,18,20,1,1,3,4,2,18,21,5,1,18,20,1,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,18,20,1,1,3,12,8,33,40,1,3,4,16,39,1,3,3,12,16,1,1,3,17,45,39,1,22,1,3,18,51,16,1,3,12,4,16,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,18,20,1,1,3,12,8,33,40,1,3,4,16,39,1,3,3,12,16,1,1,3,17,45,39,1,22,1,3,2,3,18,21,5,1,16,1,3,2,3,3,4,18,21,5,1,16,1,3,4,33,40,1,4,17,45,39,39,1,1,3,18,19,5,1,16,1,3,3,3,27,66,16,1,3,3,18,103,3,26,17,45,39,1,22,1,3,18,51,16,1,3,12,4,16,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,18,20,1,1,3,12,8,33,40,1,3,4,16,39,1,3,3,12,16,1,1,3,17,45,39,1,22,1,3,18,19,5,1,16,1,3,2,2,18,21,5,1,18,21,5,1,16,1,3,2,12,18,21,5,1,16,1,3,3,33,40,1,3,17,45,39,39,1,1,3,18,19,5,1,16,1,3,18,19,5,1,16,1,3,3,3,24,16,1,3,3,35,40,1,3,3,16,39,1,3,3,16,1,1,3,18,19,1,1,2,12,3,18,20,1,1,3,17,45,39,1,22,1,3,18,19,5,1,16,1,3,4,33,40,1,4,17,45,39,39,1,1,3,18,19,5,1,16,1,3,18,19,5,1,16,1,3,3,3,25,3,18,103,16,1,3,4,33,40,1,4,17,45,39,39,1,1,3,18,19,1,1,3,17,45,39,1,22,1,3,8,33,40,1,3,2,2,18,21,5,1,18,21,5,1,16,39,1,1,3,8,33,40,1,3,2,2,18,21,5,1,18,21,5,1,16,39,1,1,3,18,51,16,1,3,12,4,16,1,3,4,3,18,20,1,1,3,4,3,18,20,1,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,18,20,1,1,3,12,8,33,40,1,3,4,16,39,1,3,3,12,16,1,1,3,17,45,39,1,22,1,3,2,18,21,5,1,16,1,3,2,12,18,21,5,1,16,1,3,12,3,3,24,16,1,3,18,20,1,1,22,1,3,2,18,21,5,1,16,1,3,2,12,18,21,5,1,16,1,3,12,3,3,25,16,1,3,18,20,1,1,22,1,3,2,12,18,21,5,1,16,1,3,12,3,16,1,3,18,20,1,1,22,1,3,2,2,18,21,5,1,18,21,5,1,16,1,3,2,2,18,21,5,1,18,21,5,1,16,1,3,2,3,3,4,18,21,5,1,4,24,16,1,3,18,19,5,1,16,1,3,3,3,27,66,16,1,3,17,45,39,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>6,0,0,0,0,7,0,1,2,0,13,1,0,0,3,0,13,0,15,2,1,0,4,0,15,0,17,2,0,5,17,19,2,6,1,1,0,19,46,20,2,6,0,0,52,51,22,7,0,0,52,23,25,0,29,0,0,1,0,9,0,29,1,8,0,29,0,31,1,0,0,0,32,1,1,10,0,38,1,12,0,2,11,38,39,1,13,1,0,9,0,39,2,11,39,41,2,1,0,3,0,41,0,43,3,2,0,4,0,43,0,44,3,0,5,44,46,3,14,0,0,127,47,4,7,0,132,49,4,3,14,0,50,52,4,0,0,138,54,0,58,0,0,0,0,59,0,1,15,0,65,1,0,0,3,0,65,0,67,2,1,0,4,0,67,0,69,2,0,5,69,71,2,16,0,0,182,72,3,7,0,187,74,3,2,16,0,75,77,3,0,0,193,79,0,83,2,0,1,1,17,0,83,0,85,3,1,1,2,19,3,18,0,85,0,87,3,7,0,226,88,7,0,0,251,226,89,91,4,0,5,0,91,0,92,5,0,3,0,0,0,94,4,5,2,0,3,0,0,0,251,96,0,100,0,0,0,0,101,0,1,20,0,107,1,0,0,3,0,107,0,109,2,1,0,4,0,109,0,111,2,0,5,111,113,2,6,0,0,295,114,3,7,0,300,116,3,2,6,0,117,119,3,0,0,306,121,0,125,0,0,0,0,125,0,127,1,0,1,0,9,0,127,1,8,0,127,0,129,2,2,21,0,22,0,129,0,131,1,2,0,348,132,0,0,0,401,348,133,135,3,0,3,0,135,0,136,4,0,6,0,136,0,137,5,3,0,0,0,139,5,4,0,379,140,0,4,0,383,142,0,5,0,143,145,0,1,8,145,146,2,21,1,1,23,146,148,0,0,0,401,150,0,154,0,0,6,0,154,0,155,0,7,0,421,156,7,0,0,467,421,157,159,1,0,3,0,159,0,160,2,0,2,0,160,0,162,3,1,2,0,0,2,0,0,163,3,7,0,456,164,7,0,0,467,456,165,167,3,1,8,167,169,3,0,0,467,171,0,175,0,0,0,488,176,0,0,1,0,9,0,176,1,8,0,176,0,488,177,179,1,0,0,508,180,1,0,1,0,9,0,180,1,17,0,180,0,508,181,183,2,0,0,0,184,2,1,24,0,190,2,12,0,2,11,190,191,2,13,1,2,11,191,193,3,2,0,3,0,193,0,195,4,3,0,4,0,195,0,196,4,0,5,196,198,4,25,0,0,565,199,5,7,0,570,201,5,4,25,0,202,204,5,0,0,576,206,0,210,1,3,0,26,0,210,0,212,2,4,27,0,28,0,212,0,213,2,16,1,0,0,0,214,2,0,29,214,216,0,220,1,3,0,26,0,220,0,222,2,4,27,0,28,0,222,0,223,2,16,1,0,0,0,224,2,0,29,224,226,0,230,1,4,27,0,28,0,230,0,231,1,16,0,0,232,1,0,29,232,234,0,242,0,0,1,0,9,0,242,1,8,0,242,0,243,1,0,1,0,9,0,243,1,17,0,243,0,245,2,1,0,1,19,3,18,0,245,30,0,0,247,3,0,3,0,247,0,249,4,3,2,0,0,0,251,4,0,0,719,253,0,0</bsch:cmdOperand>
 			<bsch:constant>SЗапрос</bsch:constant>
 			<bsch:constant>SТекст</bsch:constant>
 			<bsch:constant>SВЫБРАТЬ
@@ -635,8 +649,6 @@
 	РегистрНакопления.ДенежныеСредства.Остатки КАК ОстаткиДенежныхСредствОстатки</bsch:constant>
 			<bsch:constant>SПоследняяДатаРасчетаФактическогоОстаткаЛимита</bsch:constant>
 			<bsch:constant>SПолучить</bsch:constant>
-			<bsch:constant>SПриход</bsch:constant>
-			<bsch:constant>SРасход</bsch:constant>
 			<bsch:constant>SУстановить</bsch:constant>
 			<bsch:constant>SВЫБРАТЬ
 	ПланируемыеОстаткиДенежныхСредствОбороты.СуммаОборот КАК СуммаОборот
@@ -682,7 +694,7 @@
 				<bsch:paramsDefValue/>
 				<bsch:paramsDefValue/>
 			</bsch:procedure>
-			<bsch:procedure name="ПолучитьЛимитНаДень" isFunction="true" parametersCount="0" startAddr="611">
+			<bsch:procedure name="ПолучитьЛимитНаДень" isFunction="true" parametersCount="0" startAddr="661">
 				<bsch:variable name="ДатаНачалаПериода" isLocal="true"/>
 				<bsch:variable name="ДатаОкончанияПериода" isLocal="true"/>
 				<bsch:variable name="КоличествоДней" isLocal="true"/>
@@ -703,13 +715,18 @@
 				<bsch:variable name="ТекущийОстаток" isLocal="true"/>
 				<bsch:variable name="НовыйОстатокЛимита" isLocal="true"/>
 			</bsch:procedure>
-			<bsch:procedure name="ДобавитьКорректировкуРегистраОстатокЛимитаДенежныхСредств" parametersCount="2" startAddr="671">
+			<bsch:procedure name="СформироватьЗаписьПоРегиструОстатокЛимитаДенежныхСредств" isExported="true" parametersCount="1" startAddr="640">
 				<bsch:variable name="Сумма" isLocal="true" isParam="true"/>
-				<bsch:variable name="ВидДвижения" isLocal="true" isParam="true"/>
-				<bsch:paramsDefValue/>
+				<bsch:variable name="МенеджерЗаписи" isLocal="true"/>
 				<bsch:paramsDefValue/>
 			</bsch:procedure>
-			<bsch:procedure name="ПолучитьПланируемыеРасходаЗаПериод" isFunction="true" isExported="true" parametersCount="2" startAddr="440">
+			<bsch:procedure name="ПолучитьОстатокЛимитаПриИзмененииЛимитаНаПериод" isFunction="true" isExported="true" parametersCount="0" startAddr="403">
+				<bsch:variable name="ТекущийОстаток" isLocal="true"/>
+				<bsch:variable name="ЛимитДенежныхСредств" isLocal="true"/>
+				<bsch:variable name="РасходыЗаТекущийПериода" isLocal="true"/>
+				<bsch:variable name="НовыйОстатокЛимита" isLocal="true"/>
+			</bsch:procedure>
+			<bsch:procedure name="ПолучитьПланируемыеРасходаЗаПериод" isFunction="true" isExported="true" parametersCount="2" startAddr="469">
 				<bsch:variable name="ДатаНачалаПериода" isLocal="true" isParam="true"/>
 				<bsch:variable name="ДатаОкончанияПериода" isLocal="true" isParam="true"/>
 				<bsch:variable name="Запрос" isLocal="true"/>
@@ -719,13 +736,13 @@
 				<bsch:paramsDefValue>U</bsch:paramsDefValue>
 				<bsch:paramsDefValue>U</bsch:paramsDefValue>
 			</bsch:procedure>
-			<bsch:procedure name="СформироватьПриходПоРегиструОстатокЛимитаДенежныхСредств" isExported="true" parametersCount="1" startAddr="549">
+			<bsch:procedure name="СформироватьПриходПоРегиструОстатокЛимитаДенежныхСредств" isExported="true" parametersCount="1" startAddr="578">
 				<bsch:variable name="Сумма" isLocal="true" isParam="true"/>
 				<bsch:variable name="ОстатокЛимита" isLocal="true"/>
 				<bsch:variable name="МенеджерЗаписи" isLocal="true"/>
 				<bsch:paramsDefValue/>
 			</bsch:procedure>
-			<bsch:procedure name="СформироватьРасходПоРегиструОстатокЛимитаДенежныхСредств" isExported="true" parametersCount="1" startAddr="580">
+			<bsch:procedure name="СформироватьРасходПоРегиструОстатокЛимитаДенежныхСредств" isExported="true" parametersCount="1" startAddr="609">
 				<bsch:variable name="Сумма" isLocal="true" isParam="true"/>
 				<bsch:variable name="ОстатокЛимита" isLocal="true"/>
 				<bsch:variable name="МенеджерЗаписи" isLocal="true"/>
@@ -741,8 +758,8 @@
 			</v8:item>
 		</synonym>
 		<clientModule version="1">
-			<bsch:cmdOpCode>1,3,18,51,16,1,3,4,4,18,19,5,1,18,20,1,1,3,18,51,16,1,3,4,7,18,20,1,1,3,4,3,18,20,1,1,4,3,10,4,18,19,1,1,22,1,3,18,51,16,1,3,4,4,18,19,5,1,18,20,1,1,3,18,51,16,1,3,4,7,18,20,1,1,3,4,3,18,20,1,1,4,3,10,4,18,19,1,1,22,1,3,18,51,16,1,3,4,3,18,20,1,1,3,4,2,3,18,51,16,1,3,18,51,16,1,3,4,3,12,12,18,20,1,1,4,3,10,10,10,10,3,18,19,1,1,22,1,3,18,19,5,1,40,1,3,12,12,12,3,16,39,1,1,22,22</bsch:cmdOpCode>
-			<bsch:cmdOperand>6,0,0,0,0,7,0,2,3,1,1,0,7,2,1,7,9,1,0,0,0,10,1,4,0,2,1,10,11,1,5,0,2,1,11,13,6,1,0,7,4,2,13,15,0,19,0,0,0,0,20,0,2,8,1,1,0,20,2,1,20,22,1,0,0,0,23,1,4,0,2,1,23,24,1,5,0,2,1,24,26,6,1,0,9,4,2,26,28,0,32,1,0,0,0,33,1,10,0,2,1,33,35,2,11,0,1,3,12,0,37,3,0,0,0,38,3,13,0,14,13,2,1,38,40,15,3,0,0,0,0,2,7,2,40,42,0,51,0,1,6,0,51,152,52,1,10,14,13,0,0,152,53,55,0,0</bsch:cmdOperand>
+			<bsch:cmdOpCode>1,3,18,51,16,1,3,4,4,18,19,5,1,18,20,1,1,3,18,51,16,1,3,4,7,18,20,1,1,3,4,3,18,20,1,1,4,3,10,4,18,19,1,1,22,1,3,18,51,16,1,3,4,4,18,19,5,1,18,20,1,1,3,18,51,16,1,3,4,7,18,20,1,1,3,4,3,18,20,1,1,4,3,10,4,18,19,1,1,22,1,3,18,51,16,1,3,4,3,18,20,1,1,3,4,3,18,20,1,1,3,4,3,18,20,1,1,3,4,3,18,20,1,1,3,4,2,3,18,51,16,1,3,18,51,16,1,3,40,1,3,4,3,3,13,18,20,1,39,1,3,4,3,12,3,13,18,20,1,1,1,4,3,10,10,10,10,3,18,19,1,1,22,1,3,18,19,5,1,40,1,3,12,7,33,40,1,3,2,3,18,21,5,1,16,39,1,1,3,12,40,1,3,12,3,12,13,3,16,39,1,3,12,12,3,12,13,3,16,1,39,1,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>6,0,0,0,0,7,0,2,3,1,1,0,7,2,1,7,9,1,0,0,0,10,1,4,0,2,1,10,11,1,5,0,2,1,11,13,6,1,0,7,4,2,13,15,0,19,0,0,0,0,20,0,2,8,1,1,0,20,2,1,20,22,1,0,0,0,23,1,4,0,2,1,23,24,1,5,0,2,1,24,26,6,1,0,9,4,2,26,28,0,32,4,0,0,0,33,4,10,0,2,1,33,34,4,11,1,2,1,34,35,4,12,2,2,1,35,36,4,13,3,2,1,36,38,5,14,0,4,3,15,0,40,6,0,0,0,42,2,149,43,6,16,0,1,0,2,1,43,159,45,6,16,0,17,1,0,2,1,45,46,48,18,6,0,0,0,0,5,7,2,48,50,0,59,0,1,6,0,59,221,61,1,13,0,0,196,62,0,1,0,1,19,0,62,0,196,63,65,1,12,210,66,1,10,1,11,0,0,0,219,68,1,10,17,1,11,0,0,0,69,221,71,73,0,0</bsch:cmdOperand>
 			<bsch:constant>SСтруктура</bsch:constant>
 			<bsch:constant>SВставить</bsch:constant>
 			<bsch:constant>SВидРасхода</bsch:constant>
@@ -754,12 +771,17 @@
 			<bsch:constant>SПеречисление.ВидыРасходов.Фактический</bsch:constant>
 			<bsch:constant>SФактический</bsch:constant>
 			<bsch:constant>SФорма</bsch:constant>
+			<bsch:constant>SИмяРеквизитаДаты</bsch:constant>
+			<bsch:constant>SЭтоРеквизитФормы</bsch:constant>
+			<bsch:constant>SПриводитьКНачалуПериода</bsch:constant>
 			<bsch:constant>SОкончаниеВыбораДаты</bsch:constant>
 			<bsch:constant>SОписаниеОповещения</bsch:constant>
 			<bsch:constant>SДата</bsch:constant>
 			<bsch:constant>SОбъект</bsch:constant>
 			<bsch:constant>SОбщаяФорма.ФормаВыбораДаты</bsch:constant>
+			<bsch:constant>SПолучитьДатуНачалаПериода</bsch:constant>
 			<bsch:variable name="ЭтотОбъект" isExternal="true"/>
+			<bsch:variable name="ОбщегоНазначенияКлиентСервер" isExternal="true"/>
 			<bsch:procedure name="ОткрытьФормуСпискаПланируемыхРасходов" isExported="true" parametersCount="0" startAddr="0">
 				<bsch:variable name="Отбор" isLocal="true"/>
 				<bsch:variable name="ПараметрыФормы" isLocal="true"/>
@@ -770,14 +792,20 @@
 				<bsch:variable name="Отбор" isLocal="true"/>
 				<bsch:variable name="ПараметрыФормы" isLocal="true"/>
 			</bsch:procedure>
-			<bsch:procedure name="ОткрытьФормуВыбораДаты" isExported="true" parametersCount="1" startAddr="90">
+			<bsch:procedure name="ОткрытьФормуВыбораДаты" isExported="true" parametersCount="4" startAddr="90">
 				<bsch:variable name="Форма" isLocal="true" isParam="true"/>
+				<bsch:variable name="ИмяРеквизитаДаты" isLocal="true" isParam="true"/>
+				<bsch:variable name="ЭтоРеквизитФормы" isLocal="true" isParam="true"/>
+				<bsch:variable name="ПриводитьКНачалуПериода" isLocal="true" isParam="true"/>
 				<bsch:variable name="ДополнительныеПараметры" isLocal="true"/>
 				<bsch:variable name="ОповещениеОЗакрытии" isLocal="true"/>
 				<bsch:variable name="ПараметрыФормы" isLocal="true"/>
 				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue>SДата</bsch:paramsDefValue>
+				<bsch:paramsDefValue>Bfalse</bsch:paramsDefValue>
+				<bsch:paramsDefValue>Bfalse</bsch:paramsDefValue>
 			</bsch:procedure>
-			<bsch:procedure name="ОкончаниеВыбораДаты" isExported="true" parametersCount="2" startAddr="137">
+			<bsch:procedure name="ОкончаниеВыбораДаты" isExported="true" parametersCount="2" startAddr="173">
 				<bsch:variable name="РезультатЗакрытия" isLocal="true" isParam="true"/>
 				<bsch:variable name="ДополнительныеПараметры" isLocal="true" isParam="true"/>
 				<bsch:paramsDefValue/>
@@ -794,12 +822,13 @@
 			</v8:item>
 		</synonym>
 		<form>
-			<mf:serverModule version="1" startAddr="38">
-				<bsch:cmdOpCode>1,18,19,1,1,22,1,2,2,18,21,5,1,16,1,2,2,18,21,5,1,16,1,3,2,18,21,5,1,16,1,2,2,3,25,16,1,22,22,22</bsch:cmdOpCode>
-				<bsch:cmdOperand>7,0,1,7,9,0,97,0,1,0,0,0,97,0,98,2,1,0,1,0,98,0,99,0,1,0,2,0,99,0,101,3,2,0,0,0,103,0,0,0</bsch:cmdOperand>
+			<mf:serverModule version="1" startAddr="62">
+				<bsch:cmdOpCode>1,18,19,1,1,22,1,2,2,18,21,5,1,16,1,2,2,18,21,5,1,16,1,3,2,18,21,5,1,16,1,2,2,3,25,16,1,22,1,2,2,18,21,5,1,16,1,3,2,18,21,5,1,16,1,2,2,3,25,16,1,22,22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>7,0,1,7,9,0,99,0,1,0,0,0,99,0,100,2,1,0,1,0,100,0,101,0,1,0,2,0,101,0,103,3,2,0,0,0,105,0,110,2,1,0,3,0,110,0,111,0,1,0,2,0,111,0,113,3,2,0,0,0,115,0,0,0</bsch:cmdOperand>
 				<bsch:constant>SПолучитьОстатокДенежныхСредств</bsch:constant>
 				<bsch:constant>SРассчитатьФактическийОстатокЛимитаДенежныхСредствНаПериод</bsch:constant>
 				<bsch:constant>SПолучитьПланируемыеРасходаЗаПериод</bsch:constant>
+				<bsch:constant>SПолучитьОстатокЛимитаПриИзмененииЛимитаНаПериод</bsch:constant>
 				<bsch:variable name="ТекущийОстатокДенежныхСредств" isExternal="true"/>
 				<bsch:variable name="УчетДенежныхСредствСервер" isExternal="true"/>
 				<bsch:variable name="ФактическийОстатокЛимита" isExternal="true"/>
@@ -813,11 +842,15 @@
 				<bsch:procedure name="ПересчитатьОстатки" parametersCount="0" startAddr="6">
 					<bsch:variable name="ПланируемыеРасходы" isLocal="true"/>
 				</bsch:procedure>
+				<bsch:procedure name="ПересчитатьОстаткиПриИзмененииЛимита" parametersCount="0" startAddr="38">
+					<bsch:variable name="ПланируемыеРасходы" isLocal="true"/>
+				</bsch:procedure>
 			</mf:serverModule>
-			<mf:clientModule version="1" startAddr="111">
-				<bsch:cmdOpCode>1,3,4,33,40,1,18,19,1,39,1,1,22,1,3,6,16,1,2,18,20,1,1,22,1,3,6,16,1,2,18,20,1,1,22,1,18,19,1,1,22,1,4,18,19,1,1,22,1,4,18,19,1,1,22,1,3,18,51,16,1,3,4,4,18,19,5,1,18,20,1,1,3,18,51,16,1,3,4,3,18,20,1,1,4,3,18,19,1,1,22,1,3,18,51,16,1,3,4,2,18,20,1,1,4,3,18,19,1,1,22,22,22</bsch:cmdOpCode>
-				<bsch:cmdOperand>14,0,0,0,10,15,0,1,15,10,16,18,0,27,1,0,0,29,0,0,1,29,31,0,36,1,0,0,38,0,0,2,38,40,0,49,0,1,49,51,0,56,3,1,6,56,58,0,63,4,1,6,63,65,0,70,1,0,5,0,71,1,7,8,1,9,0,71,2,6,71,73,2,0,5,0,74,2,9,1,2,6,74,76,4,2,2,6,76,78,0,83,1,0,5,0,84,1,10,1,2,6,84,86,11,1,2,6,86,88,0,0,0</bsch:cmdOperand>
+			<mf:clientModule version="1" startAddr="122">
+				<bsch:cmdOpCode>1,3,4,33,40,1,18,19,1,39,1,3,4,33,40,1,18,19,1,39,1,1,22,1,3,6,16,1,2,18,20,1,1,22,1,3,6,16,1,2,18,20,1,1,22,1,18,19,1,1,22,1,4,18,19,1,1,22,1,4,18,19,1,1,22,1,3,18,51,16,1,3,4,4,18,19,5,1,18,20,1,1,3,18,51,16,1,3,4,3,18,20,1,1,4,3,18,19,1,1,22,1,3,18,51,16,1,3,4,2,18,20,1,1,4,3,2,18,19,1,1,22,22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>14,0,0,0,10,15,0,1,15,20,16,0,1,0,20,17,0,2,17,20,18,20,0,29,1,0,0,31,0,0,2,31,33,0,38,1,0,0,40,0,0,3,40,42,0,51,0,1,51,53,0,58,4,1,7,58,60,0,65,5,1,7,65,67,0,72,1,0,6,0,73,1,8,9,1,10,0,73,2,7,73,75,2,0,6,0,76,2,10,1,2,7,76,78,5,2,2,7,78,80,0,85,1,0,6,0,86,1,11,1,2,7,86,88,12,1,2,3,7,88,90,0,0,0</bsch:cmdOperand>
 				<bsch:constant>SИзменениеОстатков</bsch:constant>
+				<bsch:constant>SИзменениеЛимитаНаПериод</bsch:constant>
 				<bsch:constant>SОткрытьФормуСпискаФактическихРасходов</bsch:constant>
 				<bsch:constant>SОткрытьФормуСпискаПланируемыхРасходов</bsch:constant>
 				<bsch:constant>SДокумент.ПриходДенежныхСредств.Форма.ФормаДокумента</bsch:constant>
@@ -827,10 +860,11 @@
 				<bsch:constant>SВидРасхода</bsch:constant>
 				<bsch:constant>SПеречисление.ВидыРасходов.Планируемый</bsch:constant>
 				<bsch:constant>SЗначенияЗаполнения</bsch:constant>
-				<bsch:constant>SТекущийОстатокЛимита</bsch:constant>
-				<bsch:constant>SРегистрСведений.ОстатокЛимитаДенежныхСредств.Форма.ФормаРедактированияЛимита</bsch:constant>
+				<bsch:constant>SФактическийОстатокЛимита</bsch:constant>
+				<bsch:constant>SОбщаяФорма.ФормаНастроек</bsch:constant>
 				<bsch:variable name="УчетДенежныхСредствКлиент" isExternal="true"/>
 				<bsch:variable name="ФактическийОстатокЛимита" isExternal="true"/>
+				<bsch:variable name="ЭтаФорма" isExternal="true"/>
 				<bsch:procedure name="ОбработкаОповещения" parametersCount="3" startAddr="0">
 					<bsch:variable name="ИмяСобытия" isLocal="true" isParam="true"/>
 					<bsch:variable name="Параметр" isLocal="true" isParam="true"/>
@@ -840,39 +874,40 @@
 					<bsch:paramsDefValue/>
 				</bsch:procedure>
 				<bsch:procedure name="ПересчитатьОстатки" isExternal="true" parametersCount="0" startAddr="0"/>
-				<bsch:procedure name="ФактическийОстатокЛимитаНажатие" parametersCount="2" startAddr="13">
+				<bsch:procedure name="ПересчитатьОстаткиПриИзмененииЛимита" isExternal="true" parametersCount="0" startAddr="0"/>
+				<bsch:procedure name="ФактическийОстатокЛимитаНажатие" parametersCount="2" startAddr="23">
 					<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
 					<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
 					<bsch:paramsDefValue/>
 					<bsch:paramsDefValue/>
 				</bsch:procedure>
-				<bsch:procedure name="ПлановыйОстатокЛимитаНажатие" parametersCount="2" startAddr="24">
+				<bsch:procedure name="ПлановыйОстатокЛимитаНажатие" parametersCount="2" startAddr="34">
 					<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
 					<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
 					<bsch:paramsDefValue/>
 					<bsch:paramsDefValue/>
 				</bsch:procedure>
-				<bsch:procedure name="ОбновитьТекущийОстатокДенежныхСредств" parametersCount="1" startAddr="35">
+				<bsch:procedure name="ОбновитьТекущийОстатокДенежныхСредств" parametersCount="1" startAddr="45">
 					<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 					<bsch:paramsDefValue/>
 				</bsch:procedure>
-				<bsch:procedure name="ДобавитьПриход" parametersCount="1" startAddr="41">
+				<bsch:procedure name="ДобавитьПриход" parametersCount="1" startAddr="51">
 					<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 					<bsch:paramsDefValue/>
 				</bsch:procedure>
 				<bsch:procedure name="ОткрытьФорму" isFunction="true" isExternal="true" parametersCount="8" startAddr="0"/>
-				<bsch:procedure name="ДобавитьРасход" parametersCount="1" startAddr="48">
+				<bsch:procedure name="ДобавитьРасход" parametersCount="1" startAddr="58">
 					<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 					<bsch:paramsDefValue/>
 				</bsch:procedure>
-				<bsch:procedure name="ДобавитьПланируемыйРасход" parametersCount="1" startAddr="55">
+				<bsch:procedure name="ДобавитьПланируемыйРасход" parametersCount="1" startAddr="65">
 					<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 					<bsch:variable name="ЗначенияЗаполнения" isLocal="true"/>
 					<bsch:variable name="ПараметрыФормы" isLocal="true"/>
 					<bsch:paramsDefValue/>
 				</bsch:procedure>
 				<bsch:procedure name="ПредопределенноеЗначение" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
-				<bsch:procedure name="ИзменитьФактическийЛимит" parametersCount="1" startAddr="91">
+				<bsch:procedure name="ОткрытьНастройки" parametersCount="1" startAddr="101">
 					<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 					<bsch:variable name="ПараметрыФормы" isLocal="true"/>
 					<bsch:paramsDefValue/>
@@ -1004,23 +1039,6 @@
 				</mf:tooltip>
 				<mf:representation>Picture</mf:representation>
 			</mf:command>
-			<mf:command name="РедактироватьФактическийОстатокЛимита">
-				<mf:title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Редактировать фактический остаток лимита</v8:content>
-					</v8:item>
-				</mf:title>
-				<mf:handlerName>РедактироватьФактическийОстатокЛимита</mf:handlerName>
-				<mf:picture ref="v8ui:Change"/>
-				<mf:tooltip>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Редактировать фактический остаток лимита</v8:content>
-					</v8:item>
-				</mf:tooltip>
-				<mf:representation>Picture</mf:representation>
-			</mf:command>
 			<mf:command name="ИзменитьФактическийЛимит">
 				<mf:title>
 					<v8:item>
@@ -1036,6 +1054,23 @@
 					</v8:item>
 				</mf:tooltip>
 				<mf:representation>PictureAndText</mf:representation>
+			</mf:command>
+			<mf:command name="ОткрытьНастройки">
+				<mf:title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Открыть настройки</v8:content>
+					</v8:item>
+				</mf:title>
+				<mf:handlerName>ОткрытьНастройки</mf:handlerName>
+				<mf:picture ref="v8ui:ReportSettings"/>
+				<mf:tooltip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Открыть настройки</v8:content>
+					</v8:item>
+				</mf:tooltip>
+				<mf:representation>Picture</mf:representation>
 			</mf:command>
 			<mf:mainElement>
 				<mf:autoTitle>false</mf:autoTitle>
@@ -1196,26 +1231,21 @@
 						<mf:showTitle>false</mf:showTitle>
 					</mf:usualData>
 				</mf:group>
-				<mf:button name="РедактироватьФактическийОстатокЛимита" type="UsualButton" commandName="Form.Command.РедактироватьФактическийОстатокЛимита">
-					<mf:visible>false</mf:visible>
-					<mf:representation>Picture</mf:representation>
-					<mf:autoMaxWidth>false</mf:autoMaxWidth>
-					<mf:autoMaxHeight>false</mf:autoMaxHeight>
-					<mf:groupHorizontalAlign>Right</mf:groupHorizontalAlign>
-					<mf:shape>Oval</mf:shape>
-					<mf:shapeRepresentation>None</mf:shapeRepresentation>
-					<mf:pictureLocation>Right</mf:pictureLocation>
-					<mf:displayImportance>VeryLow</mf:displayImportance>
-				</mf:button>
 				<mf:group name="Группа1" type="UsualGroup">
 					<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
 					<mf:usualData representation="None">
 						<mf:showTitle>false</mf:showTitle>
 						<mf:horizontalAlign>Center</mf:horizontalAlign>
 					</mf:usualData>
-					<mf:button name="ДобавитьПриход" type="UsualButton" commandName="Form.Command.ДобавитьПриход"/>
-					<mf:button name="ДобавитьРасход" type="UsualButton" commandName="Form.Command.ДобавитьРасход"/>
-					<mf:button name="ДобавитьПланируемыйРасход" type="UsualButton" commandName="Form.Command.ДобавитьПланируемыйРасход"/>
+					<mf:button name="ДобавитьПриход" type="UsualButton" commandName="Form.Command.ДобавитьПриход">
+						<mf:horizontalStretch>true</mf:horizontalStretch>
+					</mf:button>
+					<mf:button name="ДобавитьРасход" type="UsualButton" commandName="Form.Command.ДобавитьРасход">
+						<mf:horizontalStretch>true</mf:horizontalStretch>
+					</mf:button>
+					<mf:button name="ДобавитьПланируемыйРасход" type="UsualButton" commandName="Form.Command.ДобавитьПланируемыйРасход">
+						<mf:horizontalStretch>true</mf:horizontalStretch>
+					</mf:button>
 				</mf:group>
 				<mf:decoration name="Декорация1" type="Picture">
 					<mf:verticalStretch>true</mf:verticalStretch>
@@ -1237,19 +1267,7 @@
 					<mf:menuData>
 						<mf:horizontalAlign>Right</mf:horizontalAlign>
 					</mf:menuData>
-					<mf:group name="ГруппаПодменю" type="Popup">
-						<mf:tooltip>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Группа подменю</v8:content>
-							</v8:item>
-						</mf:tooltip>
-						<mf:subMenuData>
-							<mf:representation>Picture</mf:representation>
-							<mf:picture ref="v8ui:Подменю"/>
-						</mf:subMenuData>
-						<mf:button name="ИзменитьФактическийЛимит" type="CommandBarButton" commandName="Form.Command.ИзменитьФактическийЛимит"/>
-					</mf:group>
+					<mf:button name="ОткрытьНастройки" type="CommandBarButton" commandName="Form.Command.ОткрытьНастройки"/>
 				</mf:group>
 			</mf:mainElement>
 		</form>
@@ -1329,6 +1347,322 @@
 						<mf:event handler="ПолеКалендаряПриАктивизацииДаты" name="OnActivateDate"/>
 					</mf:calendarData>
 				</mf:field>
+			</mf:mainElement>
+		</form>
+		<useStandardCommands>false</useStandardCommands>
+	</commonForm>
+	<commonForm name="ФормаНастроек" id="7a49a70e-fc21-43b5-baa8-2c5fc6a8dfed">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Форма настроек</v8:content>
+			</v8:item>
+		</synonym>
+		<form>
+			<mf:serverModule version="1" startAddr="7">
+				<bsch:cmdOpCode>1,2,2,12,16,1,22,22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>7,0,1,0,0,9,0,0,0</bsch:cmdOperand>
+				<bsch:constant>SФактическийОстатокЛимита</bsch:constant>
+				<bsch:variable name="ФактическийОстатокЛимита" isExternal="true"/>
+				<bsch:variable name="Параметры" isExternal="true"/>
+				<bsch:procedure name="ПриСозданииНаСервере" parametersCount="2" startAddr="0">
+					<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+					<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
+					<bsch:paramsDefValue/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+			</mf:serverModule>
+			<mf:clientModule version="1" startAddr="73">
+				<bsch:cmdOpCode>1,3,18,51,16,1,3,4,2,18,20,1,1,4,3,2,18,19,1,1,22,1,4,10,2,18,19,1,1,22,1,3,4,2,18,51,16,1,3,4,18,19,5,1,2,12,4,2,12,18,19,1,1,22,1,3,2,12,33,40,1,18,19,1,1,4,18,19,1,39,1,1,22,22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>18,1,0,0,0,19,1,2,0,2,1,19,21,3,1,1,3,1,21,23,0,28,4,0,1,3,1,28,30,0,35,1,5,2,2,6,0,36,1,7,1,5,0,37,3,8,9,4,10,5,4,36,42,0,51,0,4,11,0,70,52,0,7,52,53,12,1,8,53,70,54,56,0,0,0</bsch:cmdOperand>
+				<bsch:constant>SСтруктура</bsch:constant>
+				<bsch:constant>SВставить</bsch:constant>
+				<bsch:constant>SФактическийОстатокЛимита</bsch:constant>
+				<bsch:constant>SРегистрСведений.ОстатокЛимитаДенежныхСредств.Форма.ФормаРедактированияЛимита</bsch:constant>
+				<bsch:constant>SРегистрСведений.ЛимитДенежныхСредств.Форма.ФормаУстановкиЛимитаНаПериод</bsch:constant>
+				<bsch:constant>SУдалитьВсеДанныеЗавершение</bsch:constant>
+				<bsch:constant>SОписаниеОповещения</bsch:constant>
+				<bsch:constant>Sru = 'Будут удалены все данные приложения. Продолжить?'</bsch:constant>
+				<bsch:constant>SДаНет</bsch:constant>
+				<bsch:constant>N60</bsch:constant>
+				<bsch:constant>SНет</bsch:constant>
+				<bsch:constant>SДа</bsch:constant>
+				<bsch:constant>SИзменениеОстатков</bsch:constant>
+				<bsch:variable name="ФактическийОстатокЛимита" isExternal="true"/>
+				<bsch:variable name="ЭтаФорма" isExternal="true"/>
+				<bsch:variable name="ЭтотОбъект" isExternal="true"/>
+				<bsch:variable name="РежимДиалогаВопрос" isExternal="true"/>
+				<bsch:variable name="КодВозвратаДиалога" isExternal="true"/>
+				<bsch:procedure name="РедактироватьФактическийОстатокЛимита" parametersCount="1" startAddr="0">
+					<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+					<bsch:variable name="ПараметрыФормы" isLocal="true"/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+				<bsch:procedure name="ОткрытьФорму" isFunction="true" isExternal="true" parametersCount="8" startAddr="0"/>
+				<bsch:procedure name="УстановитьЛимитНаПериод" parametersCount="1" startAddr="21">
+					<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+				<bsch:procedure name="УдалитьВсеДанные" parametersCount="1" startAddr="30">
+					<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+					<bsch:variable name="ОписаниеОповещения" isLocal="true"/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+				<bsch:procedure name="ПоказатьВопрос" isExternal="true" parametersCount="7" startAddr="0"/>
+				<bsch:procedure name="НСтр" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
+				<bsch:procedure name="УдалитьВсеДанныеЗавершение" isExported="true" parametersCount="2" startAddr="54">
+					<bsch:variable name="РезультатВопроса" isLocal="true" isParam="true"/>
+					<bsch:variable name="ДополнительныеПараметры" isLocal="true" isParam="true"/>
+					<bsch:paramsDefValue/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+				<bsch:procedure name="УдалитьВсеДанныеСервер" isExternal="true" parametersCount="0" startAddr="0"/>
+				<bsch:procedure name="Оповестить" isExternal="true" parametersCount="3" startAddr="0"/>
+			</mf:clientModule>
+			<mf:serverWOContextModule version="1">
+				<bsch:cmdOpCode>1,3,18,51,16,1,3,12,4,16,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,18,21,5,1,1,40,1,3,3,12,18,21,5,1,16,1,3,18,20,1,1,39,1,2,12,4,72,18,20,1,1,3,2,12,18,21,5,1,16,1,3,18,20,1,1,3,2,12,18,21,5,1,16,1,3,18,20,1,1,22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>62,0,0,0,0,63,0,1,2,0,76,1,0,0,3,0,76,0,78,2,1,0,4,0,78,0,80,2,0,5,0,80,80,50,81,3,2,6,0,7,0,81,0,82,3,0,8,82,83,26,86,0,9,11,0,1,10,86,89,4,1,12,0,13,0,89,0,90,4,0,14,90,92,4,1,15,0,13,0,92,0,93,4,0,14,93,95,0,0</bsch:cmdOperand>
+				<bsch:constant>SЗапрос</bsch:constant>
+				<bsch:constant>SТекст</bsch:constant>
+				<bsch:constant>SВЫБРАТЬ
+	ПриходДенежныхСредств.Ссылка КАК Ссылка
+ИЗ
+	Документ.ПриходДенежныхСредств КАК ПриходДенежныхСредств
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	РасходДенежныхСредств.Ссылка
+ИЗ
+	Документ.РасходДенежныхСредств КАК РасходДенежныхСредств</bsch:constant>
+				<bsch:constant>SВыполнить</bsch:constant>
+				<bsch:constant>SВыбрать</bsch:constant>
+				<bsch:constant>SСледующий</bsch:constant>
+				<bsch:constant>SСсылка</bsch:constant>
+				<bsch:constant>SПолучитьОбъект</bsch:constant>
+				<bsch:constant>SУдалить</bsch:constant>
+				<bsch:constant>SПоследняяДатаРасчетаФактическогоОстаткаЛимита</bsch:constant>
+				<bsch:constant>SУстановить</bsch:constant>
+				<bsch:constant>S00010101</bsch:constant>
+				<bsch:constant>SЛимитДенежныхСредств</bsch:constant>
+				<bsch:constant>SСоздатьНаборЗаписей</bsch:constant>
+				<bsch:constant>SЗаписать</bsch:constant>
+				<bsch:constant>SОстатокЛимитаДенежныхСредств</bsch:constant>
+				<bsch:variable name="Константы" isExternal="true"/>
+				<bsch:variable name="РегистрыСведений" isExternal="true"/>
+				<bsch:procedure name="УдалитьВсеДанныеСервер" parametersCount="0" startAddr="0">
+					<bsch:variable name="Запрос" isLocal="true"/>
+					<bsch:variable name="РезультатЗапроса" isLocal="true"/>
+					<bsch:variable name="ВыборкаДокумент" isLocal="true"/>
+					<bsch:variable name="ДокОбъект" isLocal="true"/>
+					<bsch:variable name="НаборЗаписей" isLocal="true"/>
+				</bsch:procedure>
+			</mf:serverWOContextModule>
+			<mf:clientServerWOContextModule version="1">
+				<bsch:cmdOpCode>22</bsch:cmdOpCode>
+				<bsch:cmdOperand>0</bsch:cmdOperand>
+			</mf:clientServerWOContextModule>
+			<mf:attributes>
+				<mf:attribute name="ФактическийОстатокЛимита">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фактический остаток лимита</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</mf:type>
+				</mf:attribute>
+			</mf:attributes>
+			<mf:command name="РедактироватьФактическийОстатокЛимита">
+				<mf:title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Изменить факт. остаток лимита</v8:content>
+					</v8:item>
+				</mf:title>
+				<mf:handlerName>РедактироватьФактическийОстатокЛимита</mf:handlerName>
+				<mf:picture ref="v8ui:Change"/>
+				<mf:tooltip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Редактировать фактический остаток лимита</v8:content>
+					</v8:item>
+				</mf:tooltip>
+				<mf:representation>PictureAndText</mf:representation>
+			</mf:command>
+			<mf:command name="УстановитьЛимитНаПериод">
+				<mf:title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Установить лимит на неделю</v8:content>
+					</v8:item>
+				</mf:title>
+				<mf:handlerName>УстановитьЛимитНаПериод</mf:handlerName>
+				<mf:picture ref="v8ui:Enum"/>
+				<mf:tooltip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Установить лимит на период</v8:content>
+					</v8:item>
+				</mf:tooltip>
+				<mf:representation>PictureAndText</mf:representation>
+			</mf:command>
+			<mf:command name="УдалитьВсеДанные">
+				<mf:title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Удалить все данные</v8:content>
+					</v8:item>
+				</mf:title>
+				<mf:handlerName>УдалитьВсеДанные</mf:handlerName>
+				<mf:picture ref="v8ui:DeleteDirectly"/>
+				<mf:tooltip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Удалить все данные</v8:content>
+					</v8:item>
+				</mf:tooltip>
+				<mf:representation>PictureAndText</mf:representation>
+			</mf:command>
+			<mf:mainElement>
+				<mf:title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Настройки</v8:content>
+					</v8:item>
+				</mf:title>
+				<mf:autoTitle>false</mf:autoTitle>
+				<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar">
+					<mf:autoMenuData>
+						<mf:autofill>false</mf:autofill>
+					</mf:autoMenuData>
+				</mf:autoCommandBar>
+				<mf:event handler="ПриСозданииНаСервере" name="OnCreateAtServer"/>
+				<mf:button name="РедактироватьФактическийОстатокЛимита" type="UsualButton" commandName="Form.Command.РедактироватьФактическийОстатокЛимита">
+					<mf:backColor>web:MistyRose</mf:backColor>
+					<mf:borderColor>web:Black</mf:borderColor>
+					<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+					<mf:shape>Oval</mf:shape>
+					<mf:horizontalStretch>true</mf:horizontalStretch>
+				</mf:button>
+				<mf:button name="УстановитьЛимитНаПериод" type="UsualButton" commandName="Form.Command.УстановитьЛимитНаПериод">
+					<mf:backColor>web:MistyRose</mf:backColor>
+					<mf:borderColor>web:Black</mf:borderColor>
+					<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+					<mf:shape>Oval</mf:shape>
+					<mf:horizontalStretch>true</mf:horizontalStretch>
+				</mf:button>
+				<mf:button name="УдалитьВсеДанные" type="UsualButton" commandName="Form.Command.УдалитьВсеДанные">
+					<mf:backColor>web:MistyRose</mf:backColor>
+					<mf:borderColor>web:Black</mf:borderColor>
+					<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+					<mf:shape>Oval</mf:shape>
+					<mf:horizontalStretch>true</mf:horizontalStretch>
+				</mf:button>
+			</mf:mainElement>
+		</form>
+		<useStandardCommands>false</useStandardCommands>
+	</commonForm>
+	<commonForm name="ФормаПервогоЗапуска" id="78780a10-0f48-4817-956d-eb0d0a6ee307">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Форма первого запуска</v8:content>
+			</v8:item>
+		</synonym>
+		<form>
+			<mf:serverModule version="1" startAddr="0">
+				<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>0,0</bsch:cmdOperand>
+			</mf:serverModule>
+			<mf:clientModule version="1" startAddr="13">
+				<bsch:cmdOpCode>1,4,10,2,18,19,1,1,18,19,1,1,22,22,22</bsch:cmdOpCode>
+				<bsch:cmdOperand>11,0,0,0,3,1,11,12,0,2,12,14,0,0,0</bsch:cmdOperand>
+				<bsch:constant>SРегистрСведений.ЛимитДенежныхСредств.Форма.ФормаУстановкиЛимитаНаПериод</bsch:constant>
+				<bsch:variable name="ЭтаФорма" isExternal="true"/>
+				<bsch:procedure name="УстановитьЛимитНаПериод" parametersCount="1" startAddr="0">
+					<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+					<bsch:paramsDefValue/>
+				</bsch:procedure>
+				<bsch:procedure name="ОткрытьФорму" isFunction="true" isExternal="true" parametersCount="8" startAddr="0"/>
+				<bsch:procedure name="Закрыть" isExternal="true" parametersCount="1" startAddr="0"/>
+			</mf:clientModule>
+			<mf:serverWOContextModule version="1">
+				<bsch:cmdOpCode>22</bsch:cmdOpCode>
+				<bsch:cmdOperand>0</bsch:cmdOperand>
+			</mf:serverWOContextModule>
+			<mf:clientServerWOContextModule version="1">
+				<bsch:cmdOpCode>22</bsch:cmdOpCode>
+				<bsch:cmdOperand>0</bsch:cmdOperand>
+			</mf:clientServerWOContextModule>
+			<mf:command name="УстановитьЛимитНаПериод">
+				<mf:title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Установить лимит на неделю</v8:content>
+					</v8:item>
+				</mf:title>
+				<mf:handlerName>УстановитьЛимитНаПериод</mf:handlerName>
+				<mf:picture ref="v8ui:Enum"/>
+				<mf:tooltip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Установить лимит на период</v8:content>
+					</v8:item>
+				</mf:tooltip>
+				<mf:representation>PictureAndText</mf:representation>
+			</mf:command>
+			<mf:mainElement>
+				<mf:autoTitle>false</mf:autoTitle>
+				<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
+				<mf:decoration name="Декорация1" type="Label">
+					<mf:formattedTitle>
+						<mf:str>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>&lt;fontsize 16&gt;&lt;b&gt;&lt;color #0000ff&gt;Добро пожаловать!&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
+							</v8:item>
+						</mf:str>
+						<mf:formatted>true</mf:formatted>
+					</mf:formattedTitle>
+					<mf:horizontalStretch>true</mf:horizontalStretch>
+					<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+					<mf:contextMenu name="Декорация1КонтекстноеМеню" type="ContextMenu"/>
+					<mf:textData>
+						<mf:horizontalAlign>Center</mf:horizontalAlign>
+					</mf:textData>
+				</mf:decoration>
+				<mf:decoration name="Декорация2" type="Label">
+					<mf:formattedTitle>
+						<mf:str>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>&lt;fontsize 12&gt;&lt;b&gt;&lt;colorstyle -3&gt;Данная программа поможет тебе контролировать расходы и не тратить все деньги в первый день зарплаты. Устанавливай максимальную сумму (лимит), которую ты хочешь тратить в неделю&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
+							</v8:item>
+						</mf:str>
+						<mf:formatted>true</mf:formatted>
+					</mf:formattedTitle>
+					<mf:horizontalStretch>true</mf:horizontalStretch>
+					<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+					<mf:contextMenu name="Декорация2КонтекстноеМеню" type="ContextMenu"/>
+					<mf:textData>
+						<mf:horizontalAlign>Center</mf:horizontalAlign>
+					</mf:textData>
+				</mf:decoration>
+				<mf:button name="УстановитьЛимитНаПериод" type="UsualButton" commandName="Form.Command.УстановитьЛимитНаПериод">
+					<mf:backColor>web:MistyRose</mf:backColor>
+					<mf:borderColor>web:Black</mf:borderColor>
+					<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+					<mf:shape>Oval</mf:shape>
+					<mf:horizontalStretch>true</mf:horizontalStretch>
+				</mf:button>
 			</mf:mainElement>
 		</form>
 		<useStandardCommands>false</useStandardCommands>
@@ -1899,6 +2233,29 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 		</valueManagerModule>
 		<useStandardCommands>false</useStandardCommands>
 	</constant>
+	<constant name="ЭтоНеПервыйЗапуск" id="af71feac-cc3c-46d4-8e85-6f8aad92673c">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Это не первый запуск</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="ConstantManager.ЭтоНеПервыйЗапуск" category="Manager">
+			<xr:TypeId>776ff8ff-1d33-4c25-9b57-937bc12090f5</xr:TypeId>
+			<xr:ValueId>50188dba-430a-4493-adaa-3c50071cf3ee</xr:ValueId>
+		</generatedType>
+		<generatedType name="ConstantValueManager.ЭтоНеПервыйЗапуск" category="ValueManager">
+			<xr:TypeId>090ec688-846f-4de4-856a-3dd788e80bd4</xr:TypeId>
+			<xr:ValueId>95971ae7-88d7-4f0c-ad55-f1d5931f0b44</xr:ValueId>
+		</generatedType>
+		<type>
+			<v8:Type>xs:boolean</v8:Type>
+		</type>
+		<valueManagerModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</valueManagerModule>
+	</constant>
 	<document name="ПриходДенежныхСредств" id="ffeb7827-a423-4cbf-a854-ac34dd2d7722">
 		<synonym>
 			<v8:item>
@@ -2100,6 +2457,7 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 					<v8:AllowedSign>Any</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</type>
+			<fillChecking>ShowError</fillChecking>
 		</attribute>
 		<attribute name="СуммаДоНовогоЛимита" id="a12d04fb-92ad-4b5c-9431-8e324fe6fe2d">
 			<synonym>
@@ -2125,24 +2483,36 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 				</v8:item>
 			</synonym>
 			<form>
-				<mf:serverModule version="1" startAddr="34">
-					<bsch:cmdOpCode>1,2,6,16,1,3,4,18,19,5,1,16,1,3,2,12,18,20,1,1,3,2,12,18,20,1,1,3,4,18,19,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>52,0,0,0,54,0,0,1,1,0,54,0,55,0,1,2,1,1,55,56,0,1,3,1,1,56,57,0,0,2,2,57,59,0,0,0</bsch:cmdOperand>
+				<mf:serverModule version="1" startAddr="54">
+					<bsch:cmdOpCode>1,2,12,18,21,5,1,40,1,2,4,16,39,1,2,4,16,1,1,22,1,2,6,16,1,3,4,18,19,5,1,16,1,3,2,12,18,20,1,1,3,2,12,18,20,1,1,3,4,18,19,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>7,0,0,0,1,0,7,13,8,1,2,0,17,10,1,3,0,11,13,0,67,2,0,0,69,0,4,1,2,0,69,0,70,0,3,6,1,5,70,71,0,3,7,1,5,71,72,0,4,2,3,72,74,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SКлюч</bsch:constant>
+					<bsch:constant>SПустая</bsch:constant>
+					<bsch:constant>SПриход - новый</bsch:constant>
+					<bsch:constant>SПриход</bsch:constant>
 					<bsch:constant>SОбъект</bsch:constant>
 					<bsch:constant>SЗаписать</bsch:constant>
 					<bsch:constant>SОтменаПроведения</bsch:constant>
 					<bsch:constant>SПроведение</bsch:constant>
+					<bsch:variable name="Параметры" isExternal="true"/>
+					<bsch:variable name="Заголовок" isExternal="true"/>
 					<bsch:variable name="Модифицированность" isExternal="true"/>
 					<bsch:variable name="РежимЗаписиДокумента" isExternal="true"/>
-					<bsch:procedure name="ВыполнитьПроведениеДокумента" parametersCount="0" startAddr="0">
+					<bsch:procedure name="ПриСозданииНаСервере" parametersCount="2" startAddr="0">
+						<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ВыполнитьПроведениеДокумента" parametersCount="0" startAddr="20">
 						<bsch:variable name="ОбъектДокумента" isLocal="true"/>
 					</bsch:procedure>
 					<bsch:procedure name="РеквизитФормыВЗначение" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
 					<bsch:procedure name="ЗначениеВРеквизитФормы" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
 				</mf:serverModule>
-				<mf:clientModule version="1" startAddr="45">
-					<bsch:cmdOpCode>1,18,19,1,1,22,1,18,19,1,1,22,1,3,6,16,1,2,2,18,20,1,1,22,1,18,19,1,1,4,18,19,1,1,2,12,18,19,1,1,18,19,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>11,0,1,11,13,0,18,0,3,18,20,0,29,2,0,0,31,0,1,1,0,31,33,0,42,0,5,42,43,1,1,6,43,44,2,2,1,7,44,45,0,3,45,47,0,0,0</bsch:cmdOperand>
+				<mf:clientModule version="1" startAddr="57">
+					<bsch:cmdOpCode>1,18,19,5,1,29,40,1,45,39,39,1,1,18,19,1,1,22,1,18,19,1,1,22,1,3,6,16,1,2,2,18,20,1,1,22,1,18,19,1,1,4,18,19,1,1,2,12,18,19,1,1,18,19,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>22,0,1,0,22,0,11,23,0,16,11,24,26,0,2,26,28,0,33,0,4,33,35,0,44,2,0,0,46,0,1,1,0,46,48,0,57,0,6,57,58,1,1,7,58,59,2,2,1,8,59,60,0,4,60,62,0,0,0</bsch:cmdOperand>
 					<bsch:constant>SОткрытьФормуВыбораДаты</bsch:constant>
 					<bsch:constant>SИзменениеОстатков</bsch:constant>
 					<bsch:constant>SСсылка</bsch:constant>
@@ -2153,13 +2523,14 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="НачатьЗаписьДокумента" parametersCount="0" startAddr="24"/>
-					<bsch:procedure name="Отмена" parametersCount="1" startAddr="6">
+					<bsch:procedure name="ПроверитьЗаполнение" isFunction="true" isExternal="true" parametersCount="0" startAddr="0"/>
+					<bsch:procedure name="НачатьЗаписьДокумента" parametersCount="0" startAddr="36"/>
+					<bsch:procedure name="Отмена" parametersCount="1" startAddr="18">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
 					<bsch:procedure name="Закрыть" isExternal="true" parametersCount="1" startAddr="0"/>
-					<bsch:procedure name="ДатаНачалоВыбора" parametersCount="3" startAddr="12">
+					<bsch:procedure name="ДатаНачалоВыбора" parametersCount="3" startAddr="24">
 						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
 						<bsch:variable name="ДанныеВыбора" isLocal="true" isParam="true"/>
 						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
@@ -2224,6 +2595,7 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 					<mf:representation>Picture</mf:representation>
 				</mf:command>
 				<mf:mainElement>
+					<mf:autoTitle>false</mf:autoTitle>
 					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
 					<mf:commandsContent>
 						<mf:excluded>No</mf:excluded>
@@ -2249,6 +2621,7 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 						<mf:excluded>Write</mf:excluded>
 					</mf:commandsContent>
 					<mf:event handler="ПослеЗаписи" name="AfterWrite"/>
+					<mf:event handler="ПриСозданииНаСервере" name="OnCreateAtServer"/>
 					<mf:group name="ГруппаДата" type="UsualGroup">
 						<mf:title>
 							<v8:item>
@@ -2352,8 +2725,12 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 							<mf:showTitle>false</mf:showTitle>
 							<mf:horizontalAlign>Center</mf:horizontalAlign>
 						</mf:usualData>
-						<mf:button name="ЗаписатьДокумент" type="UsualButton" commandName="Form.Command.ЗаписатьДокумент"/>
-						<mf:button name="Отмена" type="UsualButton" commandName="Form.Command.Отмена"/>
+						<mf:button name="ЗаписатьДокумент" type="UsualButton" commandName="Form.Command.ЗаписатьДокумент">
+							<mf:horizontalStretch>true</mf:horizontalStretch>
+						</mf:button>
+						<mf:button name="Отмена" type="UsualButton" commandName="Form.Command.Отмена">
+							<mf:horizontalStretch>true</mf:horizontalStretch>
+						</mf:button>
 					</mf:group>
 				</mf:mainElement>
 			</form>
@@ -2518,12 +2895,44 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 			<xr:ValueId>45f60034-a465-42f0-8d90-e74aa98c9031</xr:ValueId>
 		</generatedType>
 		<managerModule version="1">
-			<bsch:cmdOpCode>22</bsch:cmdOpCode>
-			<bsch:cmdOperand>0</bsch:cmdOperand>
+			<bsch:cmdOpCode>1,3,18,51,16,1,3,12,4,16,1,3,4,2,12,12,18,20,1,1,3,4,3,18,20,1,1,3,4,3,18,20,1,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,18,21,5,1,1,40,1,3,3,12,18,21,5,1,16,1,3,18,20,1,1,39,1,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>4,2,0,0,0,5,2,1,2,0,15,2,4,0,5,6,2,3,15,16,2,7,1,2,3,16,17,2,8,0,2,3,17,19,3,2,0,9,0,19,0,21,4,3,0,10,0,21,0,23,4,0,11,0,23,23,73,24,5,4,7,0,12,0,24,0,25,5,0,13,25,26,49,28,0,0</bsch:cmdOperand>
+			<bsch:constant>SЗапрос</bsch:constant>
+			<bsch:constant>SТекст</bsch:constant>
+			<bsch:constant>SВЫБРАТЬ
+	РасходДенежныхСредств.Ссылка КАК Ссылка
+ИЗ
+	Документ.РасходДенежныхСредств КАК РасходДенежныхСредств
+ГДЕ
+	РасходДенежныхСредств.УИДПовторяемыхСобытий = &amp;УИДПовторяемыхСобытий
+	И РасходДенежныхСредств.Ссылка &lt;&gt; &amp;Ссылка
+	И РасходДенежныхСредств.ВидРасхода = &amp;ВидРасхода</bsch:constant>
+			<bsch:constant>SУстановитьПараметр</bsch:constant>
+			<bsch:constant>SВидРасхода</bsch:constant>
+			<bsch:constant>SВидыРасходов</bsch:constant>
+			<bsch:constant>SПланируемый</bsch:constant>
+			<bsch:constant>SСсылка</bsch:constant>
+			<bsch:constant>SУИДПовторяемыхСобытий</bsch:constant>
+			<bsch:constant>SВыполнить</bsch:constant>
+			<bsch:constant>SВыбрать</bsch:constant>
+			<bsch:constant>SСледующий</bsch:constant>
+			<bsch:constant>SПолучитьОбъект</bsch:constant>
+			<bsch:constant>SУдалить</bsch:constant>
+			<bsch:variable name="Перечисления" isExternal="true"/>
+			<bsch:procedure name="УдалитьВсеПовторяющиеСобытияПоДанномуОснованию" isExported="true" parametersCount="2" startAddr="0">
+				<bsch:variable name="УИДПовторяемыхСобытий" isLocal="true" isParam="true"/>
+				<bsch:variable name="ДокументИсключения" isLocal="true" isParam="true"/>
+				<bsch:variable name="Запрос" isLocal="true"/>
+				<bsch:variable name="РезультатЗапроса" isLocal="true"/>
+				<bsch:variable name="ВыборкаДокумент" isLocal="true"/>
+				<bsch:variable name="ДокОбъект" isLocal="true"/>
+				<bsch:paramsDefValue/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
 		</managerModule>
-		<objectModule version="1" startAddr="180">
-			<bsch:cmdOpCode>1,2,12,40,1,45,39,39,1,1,2,4,18,19,5,1,18,20,1,1,2,4,2,12,18,20,1,1,2,4,2,12,18,20,1,1,22,1,2,2,18,20,1,1,2,2,12,12,33,40,1,18,19,1,1,2,2,18,20,1,39,1,2,2,12,12,33,40,1,18,19,1,39,1,1,22,1,2,12,4,34,40,1,2,2,18,20,1,1,2,12,2,12,12,33,40,1,2,2,12,18,20,1,39,1,39,1,1,22,1,2,2,12,12,33,40,1,2,2,18,20,1,39,1,1,22,1,2,12,12,7,16,1,3,2,12,18,21,5,1,16,1,3,12,2,16,1,3,12,2,16,1,22,1,2,12,12,7,16,1,3,2,12,18,21,5,1,16,1,3,12,2,16,1,3,12,2,16,1,22,22,22</bsch:cmdOpCode>
-			<bsch:cmdOperand>6,0,0,8,7,0,35,8,8,10,1,2,0,1,0,10,2,1,10,11,1,3,2,4,2,1,11,12,1,5,2,6,2,1,12,14,0,18,3,4,1,7,18,20,5,6,8,9,0,61,22,0,3,22,23,7,8,1,10,23,73,25,5,6,8,11,0,73,27,0,4,27,73,29,31,0,35,1,3,12,0,106,37,3,4,1,13,37,39,1,5,6,8,9,0,104,40,7,1,3,1,14,40,104,41,106,43,45,0,49,5,6,8,9,0,123,50,7,8,1,14,50,123,51,53,0,61,9,15,16,0,0,63,0,9,15,0,17,0,63,0,64,0,18,10,0,65,0,4,8,0,67,0,71,9,19,16,0,0,73,0,9,19,0,20,0,73,0,74,0,18,10,0,75,0,4,8,0,77,0,0,0</bsch:cmdOperand>
+		<objectModule version="1" startAddr="377">
+			<bsch:cmdOpCode>1,2,12,40,1,45,39,39,1,1,2,4,18,19,5,1,18,20,1,1,2,4,2,12,18,20,1,1,2,4,2,12,18,20,1,1,22,1,2,2,18,20,1,1,2,2,12,12,33,40,1,18,19,1,1,2,2,18,20,1,39,1,2,2,12,12,33,40,1,18,19,1,1,18,19,1,39,1,1,22,1,2,12,4,34,40,1,2,2,18,20,1,1,2,12,2,12,12,33,40,1,2,2,12,18,20,1,39,1,39,1,1,22,1,2,2,12,12,33,40,1,2,2,18,20,1,39,1,1,22,1,2,12,12,7,16,1,3,2,12,18,21,5,1,16,1,3,12,2,16,1,3,12,2,16,1,22,1,2,12,12,7,16,1,3,2,12,18,21,5,1,16,1,3,12,2,16,1,3,12,2,16,1,22,1,2,40,1,2,12,2,2,18,20,1,1,2,2,12,12,33,30,2,4,34,69,40,1,3,2,2,2,4,18,21,5,1,16,1,3,2,36,1,40,1,3,3,18,19,5,1,16,1,3,2,3,12,2,4,18,21,5,1,16,1,39,39,1,2,2,12,12,33,40,1,3,2,2,4,4,18,21,5,1,16,1,2,94,2,77,33,40,1,3,3,77,16,39,1,1,3,2,36,1,40,1,3,3,18,19,5,1,16,1,3,2,3,12,4,4,18,21,5,1,16,1,2,94,2,77,33,40,1,3,3,77,16,39,1,1,39,39,1,39,1,1,22,1,3,2,12,18,21,5,1,16,1,3,12,3,16,1,3,12,2,12,12,16,1,3,12,2,16,1,3,12,2,16,1,3,12,2,16,1,3,2,12,18,20,1,1,3,17,45,39,1,22,22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>6,0,0,8,7,0,35,8,8,10,1,2,0,1,0,10,2,1,10,11,1,3,2,4,2,1,11,12,1,5,2,6,2,1,12,14,0,18,3,4,1,7,18,20,5,6,8,9,0,61,22,0,3,22,23,7,8,1,10,23,77,25,5,6,8,11,0,77,27,0,4,27,29,0,5,29,77,31,33,0,37,1,3,12,0,110,39,3,4,1,13,39,41,1,5,6,8,9,0,108,42,7,1,3,1,14,42,108,43,110,45,47,0,51,5,6,8,9,0,127,52,7,8,1,14,52,127,53,55,0,63,9,15,16,0,0,65,0,9,15,0,17,0,65,0,66,0,18,10,0,67,0,4,8,0,69,0,73,9,19,16,0,0,75,0,9,19,0,20,0,75,0,76,0,18,10,0,77,0,4,8,0,79,0,83,11,324,85,12,21,13,2,2,22,85,87,14,6,23,24,0,206,15,12,0,0,247,89,0,16,10,15,26,3,25,0,89,0,91,0,17,0,91,246,93,1,0,1,8,0,93,0,95,0,16,1,27,15,26,3,25,0,95,0,100,218,322,102,14,6,23,28,0,322,104,0,16,10,29,30,3,25,0,104,0,105,10,0,10,0,0,278,106,0,0,0,0,278,107,109,0,17,0,109,321,111,1,0,1,8,0,111,0,113,0,16,1,27,29,30,3,25,0,113,0,114,10,0,10,0,0,318,115,0,0,0,0,318,116,118,279,322,120,324,122,124,0,128,1,12,21,0,31,0,128,0,129,1,27,0,0,130,1,6,6,8,11,0,131,1,4,8,0,132,1,32,18,0,133,1,33,13,0,134,1,19,35,1,34,134,136,1,0,0,375,138,0,0,0</bsch:cmdOperand>
 			<bsch:constant>SЗагрузка</bsch:constant>
 			<bsch:constant>SВставить</bsch:constant>
 			<bsch:constant>SЭтоНовый</bsch:constant>
@@ -2545,6 +2954,21 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 			<bsch:constant>SПериод</bsch:constant>
 			<bsch:constant>SПланируемыеОстаткиДенежныхСредств</bsch:constant>
 			<bsch:constant>SДобавить</bsch:constant>
+			<bsch:constant>SРасходДенежныхСредств</bsch:constant>
+			<bsch:constant>SУдалитьВсеПовторяющиеСобытияПоДанномуОснованию</bsch:constant>
+			<bsch:constant>SВидыПовторяемыхСобытий</bsch:constant>
+			<bsch:constant>SПовторятьЧерезНесколькоДней</bsch:constant>
+			<bsch:constant>SДобавитьКДате</bsch:constant>
+			<bsch:constant>SДЕНЬ</bsch:constant>
+			<bsch:constant>SДата</bsch:constant>
+			<bsch:constant>SПовторятьВКонкретнуюДату</bsch:constant>
+			<bsch:constant>N1</bsch:constant>
+			<bsch:constant>SМЕСЯЦ</bsch:constant>
+			<bsch:constant>SСоздатьДокумент</bsch:constant>
+			<bsch:constant>SНазначение</bsch:constant>
+			<bsch:constant>SУИДПовторяемыхСобытий</bsch:constant>
+			<bsch:constant>SЗаписать</bsch:constant>
+			<bsch:constant>SПроведение</bsch:constant>
 			<bsch:variable name="ОбменДанными" isExternal="true"/>
 			<bsch:variable name="ДополнительныеСвойства" isExternal="true"/>
 			<bsch:variable name="Ссылка" isExternal="true"/>
@@ -2556,6 +2980,15 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 			<bsch:variable name="Сумма" isExternal="true"/>
 			<bsch:variable name="Движения" isExternal="true"/>
 			<bsch:variable name="Дата" isExternal="true"/>
+			<bsch:variable name="ПовторяемоеСобытие" isExternal="true"/>
+			<bsch:variable name="Документы" isExternal="true"/>
+			<bsch:variable name="УИДПовторяемыхСобытий" isExternal="true"/>
+			<bsch:variable name="ВидПовторяемогоСобытий" isExternal="true"/>
+			<bsch:variable name="КоличествоДнейДляПовторения" isExternal="true"/>
+			<bsch:variable name="ОбщегоНазначенияСервер" isExternal="true"/>
+			<bsch:variable name="ДатаОкончанияПовторяемыхСобытий" isExternal="true"/>
+			<bsch:variable name="Назначение" isExternal="true"/>
+			<bsch:variable name="РежимЗаписиДокумента" isExternal="true"/>
 			<bsch:procedure name="ПередЗаписью" parametersCount="3" startAddr="0">
 				<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
 				<bsch:variable name="РежимЗаписи" isLocal="true" isParam="true"/>
@@ -2571,18 +3004,27 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 				<bsch:paramsDefValue/>
 				<bsch:paramsDefValue/>
 			</bsch:procedure>
-			<bsch:procedure name="СформироватьДвиженияПоРегиструДенежныеСредства" parametersCount="0" startAddr="126">
+			<bsch:procedure name="СформироватьДвиженияПоРегиструДенежныеСредства" parametersCount="0" startAddr="130">
 				<bsch:variable name="Движение" isLocal="true"/>
 			</bsch:procedure>
-			<bsch:procedure name="СформироватьДвиженияПоРегиструПланируемыеОстаткиДенежныхСредств" parametersCount="0" startAddr="153">
+			<bsch:procedure name="СформироватьДвиженияПоРегиструПланируемыеОстаткиДенежныхСредств" parametersCount="0" startAddr="157">
 				<bsch:variable name="Движение" isLocal="true"/>
 			</bsch:procedure>
-			<bsch:procedure name="ОбработкаУдаленияПроведения" parametersCount="1" startAddr="76">
+			<bsch:procedure name="СоздатьПовторяющиесяСобытия" parametersCount="0" startAddr="184">
+				<bsch:variable name="ДатаСозданияНовогоПовторяемогоСобытия" isLocal="true"/>
+				<bsch:variable name="НовыйДокумент" isLocal="true"/>
+			</bsch:procedure>
+			<bsch:procedure name="ОбработкаУдаленияПроведения" parametersCount="1" startAddr="80">
 				<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
 				<bsch:paramsDefValue/>
 			</bsch:procedure>
-			<bsch:procedure name="ПередУдалением" parametersCount="1" startAddr="109">
+			<bsch:procedure name="ПередУдалением" parametersCount="1" startAddr="113">
 				<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+				<bsch:paramsDefValue/>
+			</bsch:procedure>
+			<bsch:procedure name="СоздатьДокументПоПовторяющемусяСобытию" isFunction="true" parametersCount="1" startAddr="327">
+				<bsch:variable name="ДатаСозданияНовогоПовторяемогоСобытия" isLocal="true" isParam="true"/>
+				<bsch:variable name="НовыйДокумент" isLocal="true"/>
 				<bsch:paramsDefValue/>
 			</bsch:procedure>
 		</objectModule>
@@ -2698,6 +3140,7 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 					<v8:AllowedSign>Any</v8:AllowedSign>
 				</v8:NumberQualifiers>
 			</type>
+			<fillChecking>ShowError</fillChecking>
 		</attribute>
 		<attribute name="ВидРасхода" id="111426c8-d83c-4499-9557-492f64eda52e">
 			<synonym>
@@ -2728,6 +3171,70 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 			</type>
 			<fillingValue xsi:type="xs:string"/>
 		</attribute>
+		<attribute name="ПовторяемоеСобытие" id="0da23107-f165-4ef5-aff3-41aa76ec439c">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Повторяемое событие</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>xs:boolean</v8:Type>
+			</type>
+		</attribute>
+		<attribute name="УИДПовторяемыхСобытий" id="3416f495-d51b-4eea-a741-d4315a603bf0">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>УИДПовторяемых событий</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>v8:UUID</v8:Type>
+			</type>
+			<fullTextSearch>DontUse</fullTextSearch>
+		</attribute>
+		<attribute name="КоличествоДнейДляПовторения" id="33720ffc-d19b-4e50-ad9a-d009c393ca4f">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество дней для повторения</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</type>
+		</attribute>
+		<attribute name="ДатаОкончанияПовторяемыхСобытий" id="2530f325-faeb-417a-b27c-a4eed4822765">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата окончания повторяемых событий</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</type>
+		</attribute>
+		<attribute name="ВидПовторяемогоСобытий" id="cee385d9-a7eb-4316-93aa-44188bf07fe5">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид повторяемого событий</v8:content>
+				</v8:item>
+			</synonym>
+			<type>
+				<v8:Type>cfg:EnumRef.ВидыПовторяемыхСобытий</v8:Type>
+			</type>
+		</attribute>
 		<form name="ФормаДокумента" id="6954f9f0-3a71-48a8-ac16-5c05f644f86c">
 			<synonym>
 				<v8:item>
@@ -2736,20 +3243,27 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 				</v8:item>
 			</synonym>
 			<form>
-				<mf:serverModule version="1" startAddr="215">
-					<bsch:cmdOpCode>1,18,19,1,1,22,1,3,2,12,2,12,12,33,30,2,12,18,21,5,1,6,33,69,16,1,2,12,12,3,16,1,2,12,2,12,12,33,40,1,2,4,16,39,1,2,12,2,12,12,33,40,1,2,4,16,39,1,1,2,12,18,21,5,1,40,1,2,2,4,24,16,39,1,1,22,1,3,18,51,16,1,3,4,6,18,20,1,1,3,4,4,18,20,1,1,2,12,2,12,12,33,29,40,1,3,17,45,39,39,1,1,3,2,18,21,5,1,16,1,3,2,2,12,18,21,5,1,16,1,3,2,2,12,18,21,5,1,16,1,3,2,3,3,18,21,5,1,16,1,3,3,2,12,24,16,1,3,3,3,25,16,1,3,12,3,4,35,16,1,3,12,3,16,1,3,17,45,39,1,22,1,2,6,16,1,3,4,18,19,5,1,16,1,3,2,12,18,20,1,1,3,2,12,18,20,1,1,3,4,18,19,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>7,0,1,7,9,0,131,0,0,0,1,1,2,0,24,2,3,0,4,0,131,0,0,0,0,133,3,5,6,0,0,135,0,0,1,1,2,0,44,136,4,7,0,57,137,0,0,1,1,8,0,57,138,4,9,0,57,139,141,2,3,0,4,0,141,73,142,4,4,10,0,0,73,143,145,0,150,0,0,11,0,151,0,13,0,2,12,151,152,0,14,15,2,12,152,154,0,0,1,1,2,0,0,110,155,0,0,0,179,110,156,158,1,5,0,16,0,158,0,160,2,6,0,18,1,17,0,160,0,161,3,6,0,18,1,19,0,161,0,163,4,5,2,3,2,20,0,163,0,165,5,4,0,21,0,0,167,6,5,1,0,0,169,0,13,6,15,0,0,170,0,14,6,0,172,0,0,0,179,174,0,200,7,0,0,202,0,22,1,4,0,202,0,203,0,8,24,1,23,203,204,0,8,25,1,23,204,205,0,22,2,5,205,207,0,0,0</bsch:cmdOperand>
+				<mf:serverModule version="1" startAddr="269">
+					<bsch:cmdOpCode>1,18,19,1,1,2,12,18,21,5,1,30,2,12,2,12,12,33,69,40,1,2,12,2,12,12,16,39,1,1,22,1,3,2,12,2,12,12,33,16,1,3,2,12,18,21,5,1,16,1,3,2,12,16,1,3,2,12,2,12,12,33,16,1,3,3,30,3,29,69,16,1,2,12,12,3,16,1,3,40,1,2,4,16,39,1,2,4,16,1,1,3,40,1,2,2,4,24,16,39,1,1,2,12,12,3,16,1,2,12,12,3,16,1,2,12,12,3,16,1,2,12,12,3,30,3,69,16,1,22,1,3,18,51,16,1,3,4,6,18,20,1,1,3,4,4,18,20,1,1,2,12,2,12,12,33,29,40,1,3,17,45,39,39,1,1,3,2,18,21,5,1,16,1,3,2,2,12,18,21,5,1,16,1,3,2,2,12,18,21,5,1,16,1,3,2,3,3,18,21,5,1,16,1,3,3,2,12,24,16,1,3,3,3,25,16,1,3,12,3,4,35,16,1,3,12,3,16,1,3,17,45,39,1,22,1,2,6,16,1,3,4,18,19,5,1,16,1,3,2,12,18,20,1,1,3,2,12,18,20,1,1,3,4,18,19,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>7,0,1,7,9,0,0,0,1,0,9,19,1,2,2,3,4,0,0,28,10,1,5,2,6,7,0,28,11,13,0,155,0,1,2,2,3,4,0,0,156,1,0,0,0,1,0,156,0,157,2,1,8,0,158,3,1,5,2,6,7,0,0,160,4,0,70,1,0,0,0,162,3,9,10,4,0,164,0,85,165,4,11,0,89,167,4,12,0,168,170,1,100,171,4,4,13,0,0,100,172,174,3,14,10,0,0,175,3,15,10,2,0,176,3,16,10,2,0,177,3,17,10,2,127,3,0,0,179,0,184,0,0,18,0,185,0,20,0,2,19,185,186,0,21,22,2,19,186,188,1,2,2,3,4,0,0,164,189,0,0,0,233,164,190,192,1,5,0,23,0,192,0,194,2,6,1,25,1,24,0,194,0,195,3,6,1,25,1,26,0,195,0,197,4,5,2,3,2,27,0,197,0,199,5,4,1,28,0,0,201,6,5,1,0,0,203,0,20,6,22,0,0,204,0,21,6,0,206,0,0,0,233,208,0,234,7,0,0,236,0,29,1,4,0,236,0,237,0,8,31,1,30,237,238,0,8,32,1,30,238,239,0,29,2,5,239,241,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SКлюч</bsch:constant>
+					<bsch:constant>SПустая</bsch:constant>
 					<bsch:constant>SВидРасхода</bsch:constant>
 					<bsch:constant>SВидыРасходов</bsch:constant>
 					<bsch:constant>SПланируемый</bsch:constant>
-					<bsch:constant>SКлюч</bsch:constant>
-					<bsch:constant>SПустая</bsch:constant>
+					<bsch:constant>SВидПовторяемогоСобытий</bsch:constant>
+					<bsch:constant>SВидыПовторяемыхСобытий</bsch:constant>
+					<bsch:constant>SПовторятьЧерезНесколькоДней</bsch:constant>
+					<bsch:constant>SПовторяемоеСобытие</bsch:constant>
 					<bsch:constant>SПодтвердитьФактическийРасход</bsch:constant>
 					<bsch:constant>SВидимость</bsch:constant>
 					<bsch:constant>SРасход (план)</bsch:constant>
-					<bsch:constant>SФактический</bsch:constant>
 					<bsch:constant>SРасход (факт)</bsch:constant>
 					<bsch:constant>S - новый</bsch:constant>
+					<bsch:constant>SГруппаПовторяемыеСобытия</bsch:constant>
+					<bsch:constant>SГруппаВидПовторяемогоСобытия</bsch:constant>
+					<bsch:constant>SДатаОкончанияПовторяемыхСобытий</bsch:constant>
+					<bsch:constant>SКоличествоДнейДляПовторения</bsch:constant>
 					<bsch:constant>SСтруктура</bsch:constant>
 					<bsch:constant>SВставить</bsch:constant>
 					<bsch:constant>SЛимитПревышен</bsch:constant>
@@ -2765,9 +3279,9 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 					<bsch:constant>SЗаписать</bsch:constant>
 					<bsch:constant>SОтменаПроведения</bsch:constant>
 					<bsch:constant>SПроведение</bsch:constant>
+					<bsch:variable name="Параметры" isExternal="true"/>
 					<bsch:variable name="Объект" isExternal="true"/>
 					<bsch:variable name="Перечисления" isExternal="true"/>
-					<bsch:variable name="Параметры" isExternal="true"/>
 					<bsch:variable name="Элементы" isExternal="true"/>
 					<bsch:variable name="Заголовок" isExternal="true"/>
 					<bsch:variable name="УчетДенежныхСредствСервер" isExternal="true"/>
@@ -2780,10 +3294,14 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 						<bsch:paramsDefValue/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="УправлениеФормой" parametersCount="0" startAddr="6">
+					<bsch:procedure name="УправлениеФормой" parametersCount="0" startAddr="31">
+						<bsch:variable name="ЭтоПланируемыйРасход" isLocal="true"/>
+						<bsch:variable name="ЭтоНовыйДокумент" isLocal="true"/>
+						<bsch:variable name="ЭтоПовторяемоеСобытие" isLocal="true"/>
+						<bsch:variable name="ЭтоПовторЧерезНесколькоДней" isLocal="true"/>
 						<bsch:variable name="ВидимостьПодтверждения" isLocal="true"/>
 					</bsch:procedure>
-					<bsch:procedure name="ПроверитьПревышениеЛимитаЗаПериод" isFunction="true" parametersCount="0" startAddr="76">
+					<bsch:procedure name="ПроверитьПревышениеЛимитаЗаПериод" isFunction="true" parametersCount="0" startAddr="130">
 						<bsch:variable name="Результат" isLocal="true"/>
 						<bsch:variable name="ЛимитНаПериод" isLocal="true"/>
 						<bsch:variable name="ДатаНачалаПериода" isLocal="true"/>
@@ -2792,15 +3310,15 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 						<bsch:variable name="ПланируемыеРасходыСТекущимПланом" isLocal="true"/>
 						<bsch:variable name="СуммаПревышения" isLocal="true"/>
 					</bsch:procedure>
-					<bsch:procedure name="ВыполнитьПроведениеДокумента" parametersCount="0" startAddr="181">
+					<bsch:procedure name="ВыполнитьПроведениеДокумента" parametersCount="0" startAddr="235">
 						<bsch:variable name="ОбъектДокумента" isLocal="true"/>
 					</bsch:procedure>
 					<bsch:procedure name="РеквизитФормыВЗначение" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
 					<bsch:procedure name="ЗначениеВРеквизитФормы" isFunction="true" isExternal="true" parametersCount="2" startAddr="0"/>
 				</mf:serverModule>
-				<mf:clientModule version="1" startAddr="367">
-					<bsch:cmdOpCode>1,2,12,18,21,5,1,40,1,2,107,4,108,33,40,1,2,12,2,12,12,16,39,1,39,1,1,22,1,3,4,33,40,1,2,12,3,16,1,18,19,1,39,1,1,22,1,3,18,51,16,1,3,4,4,18,20,1,1,3,4,4,18,20,1,1,3,4,4,18,20,1,1,3,4,18,19,5,1,16,1,3,2,3,2,12,18,21,5,1,16,1,3,4,2,18,51,16,1,3,3,3,4,18,19,1,1,22,1,3,18,19,5,1,16,1,3,12,40,1,3,4,18,19,5,1,16,1,3,2,3,2,2,12,18,21,5,1,4,110,2,2,12,18,21,5,1,4,110,3,12,18,21,5,1,16,1,3,4,2,18,51,16,1,3,3,2,12,4,18,19,1,39,1,18,19,1,1,1,22,1,18,19,1,1,22,1,3,6,16,1,2,2,18,20,1,1,22,1,18,19,1,1,22,1,3,4,33,40,1,18,19,1,39,1,3,4,33,40,1,4,10,2,10,10,10,10,2,12,18,19,1,39,1,1,22,1,2,12,4,18,19,5,1,16,1,18,19,1,1,22,1,3,2,12,33,40,1,18,19,1,39,1,3,2,12,33,40,1,18,19,1,39,1,1,22,1,18,19,1,1,4,18,19,1,1,2,12,18,19,1,1,18,19,1,1,22,1,3,18,51,16,1,3,12,4,16,1,3,18,21,5,1,40,1,3,7,18,20,1,1,48,49,3,12,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,12,4,33,40,1,2,12,3,12,16,39,1,1,39,50,3,8,16,3,8,16,39,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>14,0,0,0,1,0,14,25,15,1,0,2,0,0,23,16,2,3,1,4,5,0,23,17,25,18,20,0,25,0,6,0,43,26,2,7,1,0,27,0,2,27,43,28,30,0,39,1,0,8,0,40,1,10,10,2,9,40,41,1,11,11,2,9,41,42,1,12,13,2,9,42,44,2,14,1,4,0,44,0,45,3,3,2,2,7,2,15,0,45,0,47,4,16,4,2,17,0,48,4,3,1,18,4,5,48,50,0,55,1,0,7,0,55,0,57,1,19,173,59,2,20,1,4,0,59,0,61,3,3,2,5,2,3,1,21,0,62,22,0,5,2,3,1,23,0,63,22,0,1,24,4,15,0,61,0,66,4,25,4,2,17,0,67,4,3,6,26,18,4,5,67,177,71,0,8,71,73,75,0,80,0,10,80,82,0,91,2,0,0,93,7,8,1,27,93,95,0,100,0,13,100,102,0,111,0,10,0,214,112,0,2,112,233,113,0,12,0,233,114,28,0,8,0,0,0,0,9,29,8,15,114,233,116,118,0,123,2,30,31,1,16,0,123,0,124,0,8,124,126,0,179,0,10,32,0,262,180,0,10,180,273,181,0,10,33,0,273,182,0,8,182,273,183,185,0,190,0,18,190,191,34,1,19,191,192,2,35,1,20,192,193,0,10,193,195,0,214,0,0,36,0,215,0,37,38,0,217,0,0,39,0,217,364,218,0,0,1,40,218,219,0,0,0,41,0,0,219,2,0,0,2,0,356,1,2,0,2,0,0,220,1,0,42,0,353,221,2,43,1,44,0,353,222,223,327,1,2,0,0,2,0,0,364,224,228,0,0,0</bsch:cmdOperand>
+				<mf:clientModule version="1" startAddr="397">
+					<bsch:cmdOpCode>1,2,12,18,21,5,1,40,1,2,107,4,108,33,40,1,2,12,2,12,12,16,39,1,39,1,1,22,1,3,4,33,40,1,2,12,3,16,1,18,19,1,39,1,1,22,1,3,18,51,16,1,3,4,4,18,20,1,1,3,4,4,18,20,1,1,3,4,4,18,20,1,1,3,4,18,19,5,1,16,1,3,2,3,2,12,18,21,5,1,16,1,3,4,2,18,51,16,1,3,3,3,4,18,19,1,1,22,1,18,19,5,1,29,40,1,45,39,39,1,1,3,18,19,5,1,16,1,3,12,40,1,3,4,18,19,5,1,16,1,3,2,3,2,2,12,18,21,5,1,4,110,2,2,12,18,21,5,1,4,110,3,12,18,21,5,1,16,1,3,4,2,18,51,16,1,3,3,2,12,4,18,19,1,39,1,18,19,1,1,1,22,1,18,19,1,1,22,1,3,6,16,1,2,2,18,20,1,1,22,1,18,19,1,1,22,1,2,12,18,51,16,1,18,19,1,1,22,1,18,19,1,1,22,1,3,4,33,40,1,18,19,1,39,1,3,4,33,40,1,4,10,2,10,10,10,10,2,12,18,19,1,39,1,1,22,1,2,12,4,18,19,5,1,16,1,18,19,1,1,22,1,3,2,12,33,40,1,18,19,1,39,1,3,2,12,33,40,1,18,19,1,39,1,1,22,1,18,19,1,1,4,18,19,1,1,2,12,18,19,1,1,18,19,1,1,22,1,3,18,51,16,1,3,12,4,16,1,3,18,21,5,1,40,1,3,7,18,20,1,1,48,49,3,12,14,16,1,3,49,16,3,15,40,3,3,16,3,8,16,1,3,12,4,33,40,1,2,12,3,12,16,39,1,1,39,50,3,8,16,3,8,16,39,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>18,0,0,0,1,0,18,25,19,1,0,2,0,0,23,20,2,3,1,4,5,0,23,21,25,22,24,0,29,0,6,0,43,30,2,7,1,0,31,0,2,31,43,32,34,0,43,1,0,8,0,44,1,10,10,2,9,44,45,1,11,12,2,9,45,46,1,13,13,2,9,46,48,2,14,1,4,0,48,0,49,3,3,2,2,7,2,15,0,49,0,51,4,16,4,2,17,0,52,4,3,1,18,4,5,52,54,0,59,0,7,0,59,0,119,60,0,190,119,61,63,1,0,8,0,63,0,65,1,19,185,67,2,20,1,4,0,67,0,69,3,3,2,5,2,3,1,21,0,70,22,0,5,2,3,1,23,0,71,22,0,1,24,4,15,0,69,0,74,4,25,4,2,17,0,75,4,3,6,26,18,4,5,75,189,79,0,9,79,81,83,0,88,0,11,88,90,0,99,2,0,0,101,7,8,1,27,101,103,0,108,0,14,108,110,0,115,2,28,0,29,0,117,0,16,117,119,0,124,0,16,124,126,0,135,0,10,0,244,136,0,2,136,263,137,0,11,0,263,138,30,0,8,0,0,0,0,9,31,8,19,138,263,140,142,0,147,2,32,33,1,20,0,147,0,148,0,9,148,150,0,213,0,10,34,0,292,214,0,11,214,303,215,0,10,35,0,303,216,0,9,216,303,217,219,0,224,0,22,224,225,36,1,23,225,226,2,37,1,24,226,227,0,11,227,229,0,248,0,0,38,0,249,0,39,40,0,251,0,0,41,0,251,394,252,0,0,1,42,252,253,0,0,0,43,0,0,253,2,0,0,2,0,386,1,2,0,2,0,0,254,1,0,44,0,383,255,2,45,1,46,0,383,256,257,357,1,2,0,0,2,0,0,394,258,262,0,0,0</bsch:cmdOperand>
 					<bsch:constant>SКлюч</bsch:constant>
 					<bsch:constant>SПустая</bsch:constant>
 					<bsch:constant>SТаблицаФормы</bsch:constant>
@@ -2812,9 +3330,9 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 					<bsch:constant>SСписокЗначений</bsch:constant>
 					<bsch:constant>SДобавить</bsch:constant>
 					<bsch:constant>SПодтвердить</bsch:constant>
-					<bsch:constant>SОтмена</bsch:constant>
 					<bsch:constant>SИзменитьСумму</bsch:constant>
 					<bsch:constant>SИзменить сумму</bsch:constant>
+					<bsch:constant>SОтмена</bsch:constant>
 					<bsch:constant>Sru = 'Подтвердить факт расхода на сумму %1?'</bsch:constant>
 					<bsch:constant>SПодставитьПараметрыВСтроку</bsch:constant>
 					<bsch:constant>SПодтвердитьФактичекийРасходОтветНаВопрос</bsch:constant>
@@ -2829,6 +3347,8 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 					<bsch:constant>SРезультатВопросаЗаписиДокумента</bsch:constant>
 					<bsch:constant>SДаНетОтмена</bsch:constant>
 					<bsch:constant>SОткрытьФормуВыбораДаты</bsch:constant>
+					<bsch:constant>SУИДПовторяемыхСобытий</bsch:constant>
+					<bsch:constant>SУникальныйИдентификатор</bsch:constant>
 					<bsch:constant>SДокумент.РасходДенежныхСредств.Форма.ФормаИзмененияСуммы</bsch:constant>
 					<bsch:constant>SБлокироватьОкноВладельца</bsch:constant>
 					<bsch:constant>SВидРасхода</bsch:constant>
@@ -2869,7 +3389,7 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 						<bsch:paramsDefValue/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="ПодтвердитьФактическийРасходЗавершение" parametersCount="0" startAddr="236"/>
+					<bsch:procedure name="ПодтвердитьФактическийРасходЗавершение" parametersCount="0" startAddr="266"/>
 					<bsch:procedure name="ПодтвердитьФактическийРасход" parametersCount="1" startAddr="46">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:variable name="СписокКнопок" isLocal="true"/>
@@ -2888,14 +3408,15 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 						<bsch:variable name="ОписаниеОповещения" isLocal="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
+					<bsch:procedure name="ПроверитьЗаполнение" isFunction="true" isExternal="true" parametersCount="0" startAddr="0"/>
 					<bsch:procedure name="ПроверитьПревышениеЛимитаЗаПериод" isFunction="true" isExternal="true" parametersCount="0" startAddr="0"/>
-					<bsch:procedure name="НачатьЗаписьДокумента" parametersCount="0" startAddr="276"/>
-					<bsch:procedure name="Отмена" parametersCount="1" startAddr="180">
+					<bsch:procedure name="НачатьЗаписьДокумента" parametersCount="0" startAddr="306"/>
+					<bsch:procedure name="Отмена" parametersCount="1" startAddr="192">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
 					<bsch:procedure name="Закрыть" isExternal="true" parametersCount="1" startAddr="0"/>
-					<bsch:procedure name="ДатаНачалоВыбора" parametersCount="3" startAddr="186">
+					<bsch:procedure name="ДатаНачалоВыбора" parametersCount="3" startAddr="198">
 						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
 						<bsch:variable name="ДанныеВыбора" isLocal="true" isParam="true"/>
 						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
@@ -2903,7 +3424,7 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 						<bsch:paramsDefValue/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="НазначениеНачалоВыбора" parametersCount="3" startAddr="198">
+					<bsch:procedure name="НазначениеНачалоВыбора" parametersCount="3" startAddr="210">
 						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
 						<bsch:variable name="ДанныеВыбора" isLocal="true" isParam="true"/>
 						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
@@ -2911,12 +3432,21 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 						<bsch:paramsDefValue/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="ДобавитьГолосовоеНазначение" parametersCount="0" startAddr="297">
+					<bsch:procedure name="ДобавитьГолосовоеНазначение" parametersCount="0" startAddr="327">
 						<bsch:variable name="ЗапсукПриложения" isLocal="true"/>
 						<bsch:variable name="СтрокаДанных" isLocal="true"/>
 						<bsch:variable name="0СтрокаДанных" isLocal="true"/>
 					</bsch:procedure>
-					<bsch:procedure name="ПодтвердитьФактичекийРасходОтветНаВопрос" isExported="true" parametersCount="2" startAddr="204">
+					<bsch:procedure name="ПовторяемоеСобытиеПриИзменении" parametersCount="1" startAddr="216">
+						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="УправлениеФормой" isExternal="true" parametersCount="0" startAddr="0"/>
+					<bsch:procedure name="ВидПовторяемогоСобытийПриИзменении" parametersCount="1" startAddr="228">
+						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ПодтвердитьФактичекийРасходОтветНаВопрос" isExported="true" parametersCount="2" startAddr="234">
 						<bsch:variable name="РезультатВопроса" isLocal="true" isParam="true"/>
 						<bsch:variable name="ДополнительныеПараметры" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
@@ -2924,7 +3454,7 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 					</bsch:procedure>
 					<bsch:procedure name="ОткрытьФорму" isFunction="true" isExternal="true" parametersCount="8" startAddr="0"/>
 					<bsch:procedure name="ПредопределенноеЗначение" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
-					<bsch:procedure name="РезультатВопросаЗаписиДокумента" isExported="true" parametersCount="2" startAddr="251">
+					<bsch:procedure name="РезультатВопросаЗаписиДокумента" isExported="true" parametersCount="2" startAddr="281">
 						<bsch:variable name="РезультатВопроса" isLocal="true" isParam="true"/>
 						<bsch:variable name="ДополнительныеПараметры" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
@@ -3167,6 +3697,85 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 							</mf:inputData>
 						</mf:field>
 					</mf:group>
+					<mf:group name="ГруппаПовторяемыеСобытия" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа повторяемые события</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:tooltip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа повторяемые события</v8:content>
+							</v8:item>
+						</mf:tooltip>
+						<mf:usualData representation="None">
+							<mf:showTitle>false</mf:showTitle>
+						</mf:usualData>
+						<mf:field name="ПовторяемоеСобытие" kind="CheckBoxField" dataPath="Объект.ПовторяемоеСобытие">
+							<mf:contextMenu name="ПовторяемоеСобытиеКонтекстноеМеню" type="ContextMenu"/>
+							<mf:event handler="ПовторяемоеСобытиеПриИзменении" name="OnChange"/>
+						</mf:field>
+						<mf:group name="ГруппаВидПовторяемогоСобытия" type="UsualGroup">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа вид повторяемого события</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:tooltip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа вид повторяемого события</v8:content>
+								</v8:item>
+							</mf:tooltip>
+							<mf:usualData representation="None">
+								<mf:showTitle>false</mf:showTitle>
+							</mf:usualData>
+							<mf:field name="ВидПовторяемогоСобытий" kind="InputField" dataPath="Объект.ВидПовторяемогоСобытий">
+								<mf:titleLocation>None</mf:titleLocation>
+								<mf:contextMenu name="ВидПовторяемогоСобытийКонтекстноеМеню" type="ContextMenu"/>
+								<mf:event handler="ВидПовторяемогоСобытийПриИзменении" name="OnChange"/>
+								<mf:inputData>
+									<mf:choiceButton>true</mf:choiceButton>
+									<mf:dropListButton>true</mf:dropListButton>
+									<mf:choiceButtonRepresentation>ShowInInputField</mf:choiceButtonRepresentation>
+									<mf:backColor>style:ToolTipBackColor</mf:backColor>
+								</mf:inputData>
+							</mf:field>
+							<mf:field name="КоличествоДнейДляПовторения" kind="InputField" dataPath="Объект.КоличествоДнейДляПовторения">
+								<mf:title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>повтор каждые (в днях)</v8:content>
+									</v8:item>
+								</mf:title>
+								<mf:titleLocation>None</mf:titleLocation>
+								<mf:contextMenu name="КоличествоДнейДляПовторенияКонтекстноеМеню" type="ContextMenu"/>
+								<mf:horizontalAlign>Right</mf:horizontalAlign>
+								<mf:groupHorizontalAlign>Right</mf:groupHorizontalAlign>
+								<mf:inputData>
+									<mf:backColor>style:ToolTipBackColor</mf:backColor>
+									<mf:width>2</mf:width>
+									<mf:autoMaxWidth>false</mf:autoMaxWidth>
+									<mf:horizontalStretch>false</mf:horizontalStretch>
+								</mf:inputData>
+							</mf:field>
+						</mf:group>
+						<mf:field name="ДатаОкончанияПовторяемыхСобытий" kind="InputField" dataPath="Объект.ДатаОкончанияПовторяемыхСобытий">
+							<mf:title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>до даты</v8:content>
+								</v8:item>
+							</mf:title>
+							<mf:contextMenu name="ДатаОкончанияПовторяемыхСобытийКонтекстноеМеню" type="ContextMenu"/>
+							<mf:inputData>
+								<mf:horizontalStretch>true</mf:horizontalStretch>
+							</mf:inputData>
+						</mf:field>
+					</mf:group>
 					<mf:group name="ГруппаКоманды" type="UsualGroup">
 						<mf:title>
 							<v8:item>
@@ -3187,11 +3796,16 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 						</mf:usualData>
 						<mf:button name="ЗаписатьДокумент" type="UsualButton" commandName="Form.Command.ЗаписатьДокумент">
 							<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+							<mf:horizontalStretch>true</mf:horizontalStretch>
 						</mf:button>
 						<mf:button name="Отмена" type="UsualButton" commandName="Form.Command.Отмена">
 							<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+							<mf:horizontalStretch>true</mf:horizontalStretch>
 						</mf:button>
-						<mf:button name="ПодтвердитьФактическийРасход" type="UsualButton" commandName="Form.Command.ПодтвердитьФактическийРасход"/>
+						<mf:button name="ПодтвердитьФактическийРасход" type="UsualButton" commandName="Form.Command.ПодтвердитьФактическийРасход">
+							<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+							<mf:horizontalStretch>true</mf:horizontalStretch>
+						</mf:button>
 					</mf:group>
 				</mf:mainElement>
 			</form>
@@ -3204,9 +3818,9 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 				</v8:item>
 			</synonym>
 			<form>
-				<mf:serverModule version="1" startAddr="267">
-					<bsch:cmdOpCode>1,2,4,18,21,5,1,30,2,12,69,40,1,2,2,99,18,21,5,1,16,1,2,2,99,18,21,5,1,16,1,7,18,19,1,39,1,1,2,12,4,18,21,5,1,40,1,2,2,12,12,16,1,2,2,12,12,33,40,1,2,4,16,39,1,2,2,12,12,33,40,1,2,4,16,39,1,39,1,1,18,19,1,1,22,1,2,12,12,12,12,18,20,1,1,3,4,16,1,2,2,3,2,4,110,2,4,110,18,21,5,1,16,1,2,2,12,12,12,4,2,12,2,10,3,18,20,1,1,2,2,12,12,12,4,2,12,2,10,3,18,20,1,1,22,1,3,18,51,16,1,2,18,19,5,1,40,1,3,2,18,20,1,39,1,3,2,12,12,18,20,1,1,3,2,12,12,18,20,1,1,1,3,4,16,1,3,4,16,1,2,12,12,29,40,1,3,4,16,39,1,1,3,3,3,24,16,1,3,18,51,16,1,3,12,3,16,1,3,4,3,18,20,1,1,3,4,2,18,20,1,1,3,4,2,94,18,20,1,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,18,20,1,1,2,3,12,16,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>7,0,1,1,0,0,7,11,0,1,0,36,8,1,2,0,1,2,0,8,0,9,3,2,0,1,3,0,9,0,10,0,1,1,10,36,11,13,0,4,5,1,0,0,13,78,15,4,0,4,5,0,17,4,5,6,7,0,64,18,6,8,0,76,19,4,5,6,9,0,76,20,6,10,0,76,21,78,23,25,0,2,25,27,0,105,7,11,12,4,13,0,14,105,107,1,15,0,108,8,9,1,1,17,0,3,17,0,3,16,0,108,0,113,2,7,11,12,4,19,10,20,1,0,0,6,18,113,121,2,7,11,12,4,19,10,21,3,0,0,6,18,121,129,0,134,0,0,22,0,135,4,1,3,0,135,164,136,0,4,1,23,136,180,138,0,5,6,7,1,23,138,139,0,5,6,9,1,23,139,140,142,1,24,0,150,2,25,0,151,11,26,27,0,200,152,2,28,0,200,153,155,1,1,2,0,0,157,3,0,29,0,158,3,30,1,0,159,3,32,0,2,31,159,160,3,33,1,2,31,160,161,3,34,3,0,2,31,161,163,4,3,0,35,0,163,0,164,5,4,0,36,0,164,0,165,5,0,37,165,167,12,5,38,0,169,0,0,0</bsch:cmdOperand>
+				<mf:serverModule version="1" startAddr="297">
+					<bsch:cmdOpCode>1,2,4,18,21,5,1,30,2,12,69,40,1,2,2,99,18,21,5,1,16,1,2,2,99,18,21,5,1,16,1,7,18,19,1,39,1,1,2,12,4,18,21,5,1,40,1,2,2,12,12,16,1,2,2,12,12,33,40,1,2,4,16,39,1,2,2,12,12,33,40,1,2,4,16,39,1,39,1,1,18,19,1,1,22,1,2,12,12,12,12,18,20,1,1,3,4,16,1,2,2,3,2,4,110,2,4,110,18,21,5,1,16,1,2,2,12,12,12,4,2,12,2,10,3,18,20,1,1,2,2,12,12,12,4,2,12,2,10,3,18,20,1,1,22,1,3,18,51,16,1,2,18,19,5,1,40,1,3,2,18,20,1,39,1,3,2,12,12,18,20,1,1,3,2,12,12,18,20,1,1,1,3,4,16,1,3,4,16,1,2,12,12,29,40,1,3,4,16,39,1,1,3,3,3,24,16,1,3,18,51,16,1,3,12,3,16,1,3,4,3,18,20,1,1,3,4,2,18,20,1,1,3,4,2,94,18,20,1,1,3,3,18,21,5,1,16,1,3,3,18,21,5,1,16,1,3,18,20,1,1,2,3,12,16,1,22,1,3,2,12,12,16,1,3,8,34,40,1,2,12,3,12,8,18,20,1,1,2,12,18,20,1,39,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>7,0,1,1,0,0,7,11,0,1,0,36,8,1,2,0,1,2,0,8,0,9,3,2,0,1,3,0,9,0,10,0,1,1,10,36,11,13,0,4,5,1,0,0,13,78,15,4,0,4,5,0,17,4,5,6,7,0,64,18,6,8,0,76,19,4,5,6,9,0,76,20,6,10,0,76,21,78,23,25,0,2,25,27,0,121,7,11,12,4,13,0,14,121,123,1,15,0,124,8,9,1,1,17,0,3,17,0,3,16,0,124,0,129,2,7,11,12,4,19,10,20,1,0,0,6,18,129,137,2,7,11,12,4,19,10,21,3,0,0,6,18,137,145,0,150,0,0,22,0,151,4,1,3,0,151,164,152,0,4,1,23,152,180,154,0,5,6,7,1,23,154,155,0,5,6,9,1,23,155,156,158,1,24,0,166,2,25,0,167,11,26,27,0,200,168,2,28,0,200,169,171,1,1,2,0,0,173,3,0,29,0,174,3,30,1,0,175,3,32,0,2,31,175,176,3,33,1,2,31,176,177,3,34,3,0,2,31,177,179,4,3,0,35,0,179,0,180,5,4,0,36,0,180,0,181,5,0,37,181,183,12,5,38,0,185,0,190,0,11,39,40,0,191,0,0,0,294,192,13,41,0,43,0,2,42,192,193,11,39,0,44,193,294,194,196,0,0,0</bsch:cmdOperand>
 					<bsch:constant>SСвойство</bsch:constant>
 					<bsch:constant>SОтборПоДате</bsch:constant>
 					<bsch:constant>SПолучитьДатуНачалаПериода</bsch:constant>
@@ -3251,6 +3865,12 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 					<bsch:constant>SВыбрать</bsch:constant>
 					<bsch:constant>SСледующий</bsch:constant>
 					<bsch:constant>SСумма</bsch:constant>
+					<bsch:constant>SСписок</bsch:constant>
+					<bsch:constant>SТекущаяСтрока</bsch:constant>
+					<bsch:constant>SРасходДенежныхСредств</bsch:constant>
+					<bsch:constant>SУдалитьВсеПовторяющиеСобытияПоДанномуОснованию</bsch:constant>
+					<bsch:constant>SУИДПовторяемыхСобытий</bsch:constant>
+					<bsch:constant>SОбновить</bsch:constant>
 					<bsch:variable name="Параметры" isExternal="true"/>
 					<bsch:variable name="ДатаНачалаПериода" isExternal="true"/>
 					<bsch:variable name="ОбщегоНазначенияКлиентСервер" isExternal="true"/>
@@ -3264,6 +3884,7 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 					<bsch:variable name="ВидСравненияКомпоновкиДанных" isExternal="true"/>
 					<bsch:variable name="Элементы" isExternal="true"/>
 					<bsch:variable name="ИтоговаяСумма" isExternal="true"/>
+					<bsch:variable name="Документы" isExternal="true"/>
 					<bsch:procedure name="ПриСозданииНаСервере" parametersCount="2" startAddr="0">
 						<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
 						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
@@ -3284,10 +3905,13 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 						<bsch:variable name="ВыборкаДетальныеЗаписи" isLocal="true"/>
 					</bsch:procedure>
 					<bsch:procedure name="ЗначениеЗаполнено" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
+					<bsch:procedure name="УдалитьВсеПовторяющиесяСобытияСервер" parametersCount="0" startAddr="267">
+						<bsch:variable name="ТекущаяСтрока" isLocal="true"/>
+					</bsch:procedure>
 				</mf:serverModule>
-				<mf:clientModule version="1" startAddr="126">
-					<bsch:cmdOpCode>1,18,19,1,1,22,1,2,2,4,25,16,1,2,2,2,18,21,5,1,16,1,7,18,19,1,1,18,19,1,1,22,1,2,2,4,24,16,1,2,2,2,18,21,5,1,16,1,7,18,19,1,1,18,19,1,1,22,1,2,12,12,2,12,12,29,16,1,2,12,12,29,18,19,1,1,2,12,12,40,1,2,12,12,4,16,39,1,2,12,12,4,16,1,1,2,12,12,2,12,12,29,16,1,18,19,1,1,22,1,18,19,1,1,4,18,19,1,1,22,1,18,19,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>32,0,1,32,34,0,43,0,1,0,0,0,44,1,2,0,1,1,0,44,0,45,0,1,3,45,46,0,1,46,48,0,53,1,0,0,0,0,54,0,2,1,1,2,0,54,0,55,0,1,3,55,56,0,1,56,58,0,63,3,3,4,3,3,4,0,0,65,3,3,4,0,1,3,65,67,3,3,4,87,68,3,3,5,6,0,93,70,3,3,5,7,0,71,73,3,8,9,3,3,4,0,0,75,0,1,75,77,0,86,0,1,86,87,10,1,7,87,89,0,94,0,1,94,96,0,0,0</bsch:cmdOperand>
+				<mf:clientModule version="1" startAddr="164">
+					<bsch:cmdOpCode>1,18,19,1,1,22,1,2,2,4,25,16,1,2,2,2,18,21,5,1,16,1,7,18,19,1,1,18,19,1,1,22,1,2,2,4,24,16,1,2,2,2,18,21,5,1,16,1,7,18,19,1,1,18,19,1,1,22,1,2,12,12,2,12,12,29,16,1,2,12,12,29,18,19,1,1,2,12,12,40,1,2,12,12,4,16,39,1,2,12,12,4,16,1,1,2,12,12,2,12,12,29,16,1,18,19,1,1,22,1,18,19,1,1,22,1,18,19,1,1,4,18,19,1,1,22,1,18,19,1,1,22,1,3,2,12,12,16,1,3,8,34,40,1,3,3,12,4,18,19,5,1,33,16,1,2,12,12,3,16,39,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>32,0,1,32,34,0,43,0,1,0,0,0,44,1,2,0,1,1,0,44,0,45,0,1,3,45,46,0,1,46,48,0,53,1,0,0,0,0,54,0,2,1,1,2,0,54,0,55,0,1,3,55,56,0,1,56,58,0,63,3,3,4,3,3,4,0,0,65,3,3,4,0,1,3,65,67,3,3,4,87,68,3,3,5,6,0,93,70,3,3,5,7,0,71,73,3,8,9,3,3,4,0,0,75,0,1,75,77,0,81,0,7,81,82,0,91,0,1,91,92,10,1,9,92,94,0,99,0,1,99,101,0,106,1,3,11,12,0,107,1,0,0,161,108,2,1,13,14,1,12,0,108,0,0,109,3,15,9,2,0,161,110,112,0,0,0</bsch:cmdOperand>
 					<bsch:constant>N1</bsch:constant>
 					<bsch:constant>SПолучитьДатуНачалаПериода</bsch:constant>
 					<bsch:constant>SПолучитьДатуОкончанияПериода</bsch:constant>
@@ -3299,6 +3923,11 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 					<bsch:constant>SОтборПериод</bsch:constant>
 					<bsch:constant>SВидимость</bsch:constant>
 					<bsch:constant>SИзменениеОстатков</bsch:constant>
+					<bsch:constant>SСписок</bsch:constant>
+					<bsch:constant>SТекущиеДанные</bsch:constant>
+					<bsch:constant>SВидРасхода</bsch:constant>
+					<bsch:constant>SПеречисление.ВидыРасходов.Планируемый</bsch:constant>
+					<bsch:constant>SСписокКонтекстноеМенюУдалитьВсеПовторяющиесяСобытия</bsch:constant>
 					<bsch:variable name="ДатаОкончанияПериода" isExternal="true"/>
 					<bsch:variable name="ДатаНачалаПериода" isExternal="true"/>
 					<bsch:variable name="ОбщегоНазначенияКлиентСервер" isExternal="true"/>
@@ -3325,12 +3954,24 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
-					<bsch:procedure name="СписокПослеУдаления" parametersCount="1" startAddr="109">
+					<bsch:procedure name="УдалитьВсеПовторяющиесяСобытия" parametersCount="1" startAddr="109">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="УдалитьВсеПовторяющиесяСобытияСервер" isExternal="true" parametersCount="0" startAddr="0"/>
+					<bsch:procedure name="СписокПослеУдаления" parametersCount="1" startAddr="115">
 						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
 					<bsch:procedure name="Оповестить" isExternal="true" parametersCount="3" startAddr="0"/>
-					<bsch:procedure name="СписокОбработкаЗапросаОбновления" parametersCount="0" startAddr="120"/>
+					<bsch:procedure name="СписокОбработкаЗапросаОбновления" parametersCount="0" startAddr="126"/>
+					<bsch:procedure name="СписокПриАктивизацииСтроки" parametersCount="1" startAddr="132">
+						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+						<bsch:variable name="ТекущиеДанные" isLocal="true"/>
+						<bsch:variable name="ЭтоПлановыйРасход" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ПредопределенноеЗначение" isFunction="true" isExternal="true" parametersCount="1" startAddr="0"/>
 				</mf:clientModule>
 				<mf:serverWOContextModule version="1">
 					<bsch:cmdOpCode>22</bsch:cmdOpCode>
@@ -3350,6 +3991,8 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 							<mf:mainTableCategory>1</mf:mainTableCategory>
 							<mf:requiredField>ИтоговаяСумма</mf:requiredField>
 							<mf:requiredField>Ref</mf:requiredField>
+							<mf:requiredField>ВидРасхода</mf:requiredField>
+							<mf:requiredField>УИДПовторяемыхСобытий</mf:requiredField>
 						</mf:extInformation>
 						<mf:main>true</mf:main>
 					</mf:attribute>
@@ -3432,12 +4075,14 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 						</v8:item>
 					</mf:title>
 					<mf:handlerName>СдвинутьПериодНазад</mf:handlerName>
+					<mf:picture ref="v8ui:MoveLeft"/>
 					<mf:tooltip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Сдвинуть период назад</v8:content>
 						</v8:item>
 					</mf:tooltip>
+					<mf:representation>Picture</mf:representation>
 				</mf:command>
 				<mf:command name="СдвинутьПериодВперед">
 					<mf:title>
@@ -3447,12 +4092,14 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 						</v8:item>
 					</mf:title>
 					<mf:handlerName>СдвинутьПериодВперед</mf:handlerName>
+					<mf:picture ref="v8ui:MoveRight"/>
 					<mf:tooltip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Сдвинуть период вперед</v8:content>
 						</v8:item>
 					</mf:tooltip>
+					<mf:representation>Picture</mf:representation>
 				</mf:command>
 				<mf:command name="ПоказатьВесьСписок">
 					<mf:title>
@@ -3468,6 +4115,23 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 							<v8:content>Показать весь список</v8:content>
 						</v8:item>
 					</mf:tooltip>
+				</mf:command>
+				<mf:command name="УдалитьВсеПовторяющиесяСобытия">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Удалить все повторяющиеся события</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>УдалитьВсеПовторяющиесяСобытия</mf:handlerName>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Удалить все повторяющиеся события</v8:content>
+						</v8:item>
+					</mf:tooltip>
+					<mf:currentRowUse>Use</mf:currentRowUse>
+					<mf:associatedTableElementName>Список</mf:associatedTableElementName>
 				</mf:command>
 				<mf:mainElement>
 					<mf:autoTitle>false</mf:autoTitle>
@@ -3504,7 +4168,13 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 					<mf:event handler="ПриОткрытии" name="OnOpen"/>
 					<mf:event handler="ПриСозданииНаСервере" name="OnCreateAtServer"/>
 					<mf:event handler="ПриИзмененииПараметровЭкрана" name="OnChangeDisplaySettings"/>
-					<mf:button name="ПоказатьВесьСписок" type="UsualButton" commandName="Form.Command.ПоказатьВесьСписок"/>
+					<mf:button name="ПоказатьВесьСписок" type="UsualButton" commandName="Form.Command.ПоказатьВесьСписок">
+						<mf:backColor>web:LavenderBlush</mf:backColor>
+						<mf:borderColor>web:Black</mf:borderColor>
+						<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+						<mf:shape>Oval</mf:shape>
+						<mf:horizontalStretch>true</mf:horizontalStretch>
+					</mf:button>
 					<mf:group name="ОтборПериод" type="UsualGroup">
 						<mf:title>
 							<v8:item>
@@ -3522,7 +4192,10 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 							<mf:showTitle>false</mf:showTitle>
 						</mf:usualData>
 						<mf:button name="СдвинутьПериодНазад" type="UsualButton" commandName="Form.Command.СдвинутьПериодНазад">
+							<mf:backColor>web:MistyRose</mf:backColor>
+							<mf:borderColor>web:Black</mf:borderColor>
 							<mf:font ref="style:ExtraLargeTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<mf:shape>Oval</mf:shape>
 						</mf:button>
 						<mf:field name="ПредставлениеПериода" kind="LabelField" dataPath="ПредставлениеПериода">
 							<mf:titleLocation>None</mf:titleLocation>
@@ -3531,7 +4204,10 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 							<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
 						</mf:field>
 						<mf:button name="СдвинутьПериодВперед" type="UsualButton" commandName="Form.Command.СдвинутьПериодВперед">
+							<mf:backColor>web:MistyRose</mf:backColor>
+							<mf:borderColor>web:Black</mf:borderColor>
 							<mf:font ref="style:ExtraLargeTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<mf:shape>Oval</mf:shape>
 						</mf:button>
 					</mf:group>
 					<mf:group name="СписокКомпоновщикНастроекПользовательскиеНастройки" type="UsualGroup">
@@ -3558,7 +4234,12 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 								<mf:autofill>false</mf:autofill>
 							</mf:autoMenuData>
 						</mf:autoCommandBar>
-						<mf:contextMenu name="СписокКонтекстноеМеню" type="ContextMenu"/>
+						<mf:contextMenu name="СписокКонтекстноеМеню" type="ContextMenu">
+							<mf:button name="СписокКонтекстноеМенюУдалитьВсеПовторяющиесяСобытия" type="CommandBarButton" commandName="Form.Command.УдалитьВсеПовторяющиесяСобытия">
+								<mf:onlyInAllActions>true</mf:onlyInAllActions>
+								<mf:representationInContextMenu>AdditionalInContextMenu</mf:representationInContextMenu>
+							</mf:button>
+						</mf:contextMenu>
 						<mf:commandsContent>
 							<mf:excluded>UndoPosting</mf:excluded>
 							<mf:excluded>Copy</mf:excluded>
@@ -3580,6 +4261,7 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 							<mf:excluded>Post</mf:excluded>
 							<mf:excluded>Delete</mf:excluded>
 						</mf:commandsContent>
+						<mf:event handler="СписокПриАктивизацииСтроки" name="OnActivateRow"/>
 						<mf:event handler="СписокОбработкаВыбора" name="ChoiceProcessing"/>
 						<mf:event handler="СписокОбработкаЗаписиНового" name="NewWriteProcessing"/>
 						<mf:event handler="СписокПослеУдаления" name="AfterDeleteRow"/>
@@ -3626,9 +4308,9 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 					<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
 					<bsch:cmdOperand>0,0</bsch:cmdOperand>
 				</mf:serverModule>
-				<mf:clientModule version="1" startAddr="18">
-					<bsch:cmdOpCode>1,4,2,18,19,1,1,18,19,1,1,22,1,18,19,1,1,22,22,22</bsch:cmdOpCode>
-					<bsch:cmdOperand>7,0,0,2,1,7,8,0,2,8,10,0,15,0,2,15,17,0,0,0</bsch:cmdOperand>
+				<mf:clientModule version="1" startAddr="26">
+					<bsch:cmdOpCode>1,4,2,18,19,1,1,18,19,5,1,40,1,18,19,1,39,1,1,22,1,18,19,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>7,0,0,2,1,7,8,0,2,0,8,17,9,0,3,9,17,10,12,0,17,0,3,17,19,0,0,0</bsch:cmdOperand>
 					<bsch:constant>SПодтверждениеСуммыРасходаПриПереводеПланаВФакт</bsch:constant>
 					<bsch:variable name="Сумма" isExternal="true"/>
 					<bsch:procedure name="ПодтвердитьСумму" parametersCount="1" startAddr="0">
@@ -3636,8 +4318,9 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
 					<bsch:procedure name="Оповестить" isExternal="true" parametersCount="3" startAddr="0"/>
+					<bsch:procedure name="Открыта" isFunction="true" isExternal="true" parametersCount="0" startAddr="0"/>
 					<bsch:procedure name="Закрыть" isExternal="true" parametersCount="1" startAddr="0"/>
-					<bsch:procedure name="Отмена" parametersCount="1" startAddr="12">
+					<bsch:procedure name="Отмена" parametersCount="1" startAddr="20">
 						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
 						<bsch:paramsDefValue/>
 					</bsch:procedure>
@@ -3823,6 +4506,257 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 				</v8:NumberQualifiers>
 			</type>
 		</resource>
+		<form name="ФормаУстановкиЛимитаНаПериод" id="b113aa46-146c-4a0e-88c8-0d57f5118e47">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форма установки лимита на период</v8:content>
+				</v8:item>
+			</synonym>
+			<form>
+				<mf:serverModule version="1" startAddr="53">
+					<bsch:cmdOpCode>1,2,2,2,18,21,5,1,18,21,5,1,16,1,22,1,3,2,12,18,21,5,1,16,1,3,12,2,16,1,3,12,2,16,1,2,4,33,40,1,3,18,20,1,39,1,3,18,20,1,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>7,0,1,2,0,1,0,7,1,0,0,7,0,9,0,58,0,3,2,0,3,0,58,0,59,0,4,0,0,60,0,5,4,0,62,4,6,0,45,63,0,0,7,63,50,65,0,0,8,65,66,68,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SПолучитьДатуНачалаПериода</bsch:constant>
+					<bsch:constant>SПолучитьИспользуемуюДату</bsch:constant>
+					<bsch:constant>SЛимитДенежныхСредств</bsch:constant>
+					<bsch:constant>SСоздатьМенеджерЗаписи</bsch:constant>
+					<bsch:constant>SПериод</bsch:constant>
+					<bsch:constant>SСумма</bsch:constant>
+					<bsch:constant>N0</bsch:constant>
+					<bsch:constant>SУдалить</bsch:constant>
+					<bsch:constant>SЗаписать</bsch:constant>
+					<bsch:variable name="ДатаНачала" isExternal="true"/>
+					<bsch:variable name="ОбщегоНазначенияКлиентСервер" isExternal="true"/>
+					<bsch:variable name="ОбщегоНазначенияСервер" isExternal="true"/>
+					<bsch:variable name="РегистрыСведений" isExternal="true"/>
+					<bsch:variable name="Лимит" isExternal="true"/>
+					<bsch:procedure name="ПриСозданииНаСервере" parametersCount="2" startAddr="0">
+						<bsch:variable name="Отказ" isLocal="true" isParam="true"/>
+						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ЗаписатьЛимит" parametersCount="0" startAddr="15">
+						<bsch:variable name="МенеджерЗаписи" isLocal="true"/>
+					</bsch:procedure>
+				</mf:serverModule>
+				<mf:clientModule version="1" startAddr="60">
+					<bsch:cmdOpCode>1,3,6,16,1,2,2,4,7,7,18,20,1,1,22,1,18,19,1,1,3,2,18,21,5,1,16,1,3,2,3,18,21,5,1,16,1,3,2,33,40,1,4,18,19,1,39,1,1,18,19,1,1,22,1,18,19,1,1,22,22,22</bsch:cmdOpCode>
+					<bsch:cmdOperand>18,2,0,0,20,0,1,1,0,0,4,0,20,22,0,31,0,2,31,33,1,2,0,2,0,33,0,34,2,3,1,1,3,0,34,0,36,2,4,0,47,37,4,1,3,37,47,38,40,0,4,40,42,0,47,0,4,47,49,0,0,0</bsch:cmdOperand>
+					<bsch:constant>SОткрытьФормуВыбораДаты</bsch:constant>
+					<bsch:constant>SДатаНачала</bsch:constant>
+					<bsch:constant>SПолучитьИспользуемуюДату</bsch:constant>
+					<bsch:constant>SПолучитьДатуНачалаПериода</bsch:constant>
+					<bsch:constant>SИзменениеЛимитаНаПериод</bsch:constant>
+					<bsch:variable name="УчетДенежныхСредствКлиент" isExternal="true"/>
+					<bsch:variable name="ЭтаФорма" isExternal="true"/>
+					<bsch:variable name="ОбщегоНазначенийВызовСервера" isExternal="true"/>
+					<bsch:variable name="ОбщегоНазначенияКлиентСервер" isExternal="true"/>
+					<bsch:variable name="ДатаНачала" isExternal="true"/>
+					<bsch:procedure name="ДатаНачалаНачалоВыбора" parametersCount="3" startAddr="0">
+						<bsch:variable name="Элемент" isLocal="true" isParam="true"/>
+						<bsch:variable name="ДанныеВыбора" isLocal="true" isParam="true"/>
+						<bsch:variable name="СтандартнаяОбработка" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ЗаписатьИЗакрыть" parametersCount="1" startAddr="15">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:variable name="ИспользуемаяДата" isLocal="true"/>
+						<bsch:variable name="ДатаНачалаТекущегоПериода" isLocal="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+					<bsch:procedure name="ЗаписатьЛимит" isExternal="true" parametersCount="0" startAddr="0"/>
+					<bsch:procedure name="Оповестить" isExternal="true" parametersCount="3" startAddr="0"/>
+					<bsch:procedure name="Закрыть" isExternal="true" parametersCount="1" startAddr="0"/>
+					<bsch:procedure name="Отмена" parametersCount="1" startAddr="54">
+						<bsch:variable name="Команда" isLocal="true" isParam="true"/>
+						<bsch:paramsDefValue/>
+					</bsch:procedure>
+				</mf:clientModule>
+				<mf:serverWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:serverWOContextModule>
+				<mf:clientServerWOContextModule version="1">
+					<bsch:cmdOpCode>22</bsch:cmdOpCode>
+					<bsch:cmdOperand>0</bsch:cmdOperand>
+				</mf:clientServerWOContextModule>
+				<mf:attributes>
+					<mf:attribute name="ДатаНачала">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дата начала</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:dateTime</v8:Type>
+							<v8:DateQualifiers>
+								<v8:DateFractions>Date</v8:DateFractions>
+							</v8:DateQualifiers>
+						</mf:type>
+					</mf:attribute>
+					<mf:attribute name="Лимит">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Лимит</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>10</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</mf:type>
+					</mf:attribute>
+				</mf:attributes>
+				<mf:command name="ЗаписатьИЗакрыть">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Записать</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>ЗаписатьИЗакрыть</mf:handlerName>
+					<mf:picture ref="v8ui:ЗеленаяГалочка"/>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Записать и закрыть</v8:content>
+						</v8:item>
+					</mf:tooltip>
+					<mf:representation>Picture</mf:representation>
+				</mf:command>
+				<mf:command name="Отмена">
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отмена</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:handlerName>Отмена</mf:handlerName>
+					<mf:picture ref="v8ui:КрасныйКрестикВКруге"/>
+					<mf:tooltip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отмена</v8:content>
+						</v8:item>
+					</mf:tooltip>
+					<mf:representation>Picture</mf:representation>
+				</mf:command>
+				<mf:mainElement>
+					<mf:title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Лимит на неделю</v8:content>
+						</v8:item>
+					</mf:title>
+					<mf:autoTitle>false</mf:autoTitle>
+					<mf:autoCommandBar name="ФормаКоманднаяПанель" type="AutoCommandBar"/>
+					<mf:event handler="ПриСозданииНаСервере" name="OnCreateAtServer"/>
+					<mf:group name="Группа1" type="UsualGroup">
+						<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+						<mf:usualData group="Vertical" representation="None">
+							<mf:showTitle>false</mf:showTitle>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
+						</mf:usualData>
+						<mf:decoration name="Декорация1" type="Label">
+							<mf:formattedTitle>
+								<mf:str>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>дата начала</v8:content>
+									</v8:item>
+								</mf:str>
+							</mf:formattedTitle>
+							<mf:horizontalStretch>true</mf:horizontalStretch>
+							<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+							<mf:contextMenu name="Декорация1КонтекстноеМеню" type="ContextMenu"/>
+							<mf:textData>
+								<mf:horizontalAlign>Center</mf:horizontalAlign>
+							</mf:textData>
+						</mf:decoration>
+						<mf:field name="ДатаНачала" kind="InputField" dataPath="ДатаНачала">
+							<mf:titleLocation>None</mf:titleLocation>
+							<mf:contextMenu name="ДатаНачалаКонтекстноеМеню" type="ContextMenu"/>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
+							<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+							<mf:inputData>
+								<mf:font ref="style:LargeTextFont" kind="StyleItem"/>
+								<mf:horizontalStretch>true</mf:horizontalStretch>
+								<mf:event handler="ДатаНачалаНачалоВыбора" name="StartChoice"/>
+							</mf:inputData>
+						</mf:field>
+					</mf:group>
+					<mf:group name="Группа2" type="UsualGroup">
+						<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+						<mf:usualData group="Vertical" representation="None">
+							<mf:showTitle>false</mf:showTitle>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
+						</mf:usualData>
+						<mf:decoration name="Декорация2" type="Label">
+							<mf:formattedTitle>
+								<mf:str>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>лимит на неделю</v8:content>
+									</v8:item>
+								</mf:str>
+							</mf:formattedTitle>
+							<mf:horizontalStretch>true</mf:horizontalStretch>
+							<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+							<mf:contextMenu name="Декорация2КонтекстноеМеню" type="ContextMenu"/>
+							<mf:textData>
+								<mf:horizontalAlign>Center</mf:horizontalAlign>
+							</mf:textData>
+						</mf:decoration>
+						<mf:field name="Лимит" kind="InputField" dataPath="Лимит">
+							<mf:titleLocation>None</mf:titleLocation>
+							<mf:contextMenu name="ЛимитКонтекстноеМеню" type="ContextMenu"/>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
+							<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+							<mf:inputData>
+								<mf:font ref="style:ExtraLargeTextFont" kind="StyleItem"/>
+								<mf:horizontalStretch>true</mf:horizontalStretch>
+							</mf:inputData>
+						</mf:field>
+					</mf:group>
+					<mf:group name="ГруппаКомандныхПанелей" type="UsualGroup">
+						<mf:title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа командных панелей</v8:content>
+							</v8:item>
+						</mf:title>
+						<mf:tooltip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа командных панелей</v8:content>
+							</v8:item>
+						</mf:tooltip>
+						<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+						<mf:usualData representation="None">
+							<mf:showTitle>false</mf:showTitle>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
+						</mf:usualData>
+						<mf:button name="ЗаписатьИЗакрыть" type="UsualButton" commandName="Form.Command.ЗаписатьИЗакрыть">
+							<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+							<mf:horizontalStretch>true</mf:horizontalStretch>
+						</mf:button>
+						<mf:button name="Отмена" type="UsualButton" commandName="Form.Command.Отмена">
+							<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
+							<mf:horizontalStretch>true</mf:horizontalStretch>
+						</mf:button>
+					</mf:group>
+				</mf:mainElement>
+			</form>
+		</form>
 	</informationRegister>
 	<informationRegister name="ОстатокЛимитаДенежныхСредств" id="68537aa7-63b3-4e44-9370-38e5863e9f45">
 		<synonym>
@@ -3895,7 +4829,7 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 				<mf:serverModule version="1" startAddr="7">
 					<bsch:cmdOpCode>1,2,2,12,16,1,22,22,22</bsch:cmdOpCode>
 					<bsch:cmdOperand>7,0,1,0,0,9,0,0,0</bsch:cmdOperand>
-					<bsch:constant>SТекущийОстатокЛимита</bsch:constant>
+					<bsch:constant>SФактическийОстатокЛимита</bsch:constant>
 					<bsch:variable name="НовыйОстатокЛимита" isExternal="true"/>
 					<bsch:variable name="Параметры" isExternal="true"/>
 					<bsch:procedure name="ПриСозданииНаСервере" parametersCount="2" startAddr="0">
@@ -4011,7 +4945,7 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 					<mf:group name="Группа1" type="UsualGroup">
 						<mf:horizontalStretch>true</mf:horizontalStretch>
 						<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
-						<mf:usualData representation="None">
+						<mf:usualData group="Vertical" representation="None">
 							<mf:showTitle>false</mf:showTitle>
 							<mf:horizontalAlign>Center</mf:horizontalAlign>
 						</mf:usualData>
@@ -4033,6 +4967,7 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 						<mf:field name="НовыйОстатокЛимита" kind="InputField" dataPath="НовыйОстатокЛимита">
 							<mf:titleLocation>None</mf:titleLocation>
 							<mf:contextMenu name="НовыйОстатокЛимитаКонтекстноеМеню" type="ContextMenu"/>
+							<mf:horizontalAlign>Center</mf:horizontalAlign>
 							<mf:groupHorizontalAlign>Center</mf:groupHorizontalAlign>
 							<mf:inputData>
 								<mf:font ref="style:ExtraLargeTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
@@ -4058,8 +4993,12 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 							<mf:showTitle>false</mf:showTitle>
 							<mf:horizontalAlign>Center</mf:horizontalAlign>
 						</mf:usualData>
-						<mf:button name="ЗаписатьИЗакрыть" type="UsualButton" commandName="Form.Command.ЗаписатьИЗакрыть"/>
-						<mf:button name="Отмена" type="UsualButton" commandName="Form.Command.Отмена"/>
+						<mf:button name="ЗаписатьИЗакрыть" type="UsualButton" commandName="Form.Command.ЗаписатьИЗакрыть">
+							<mf:horizontalStretch>true</mf:horizontalStretch>
+						</mf:button>
+						<mf:button name="Отмена" type="UsualButton" commandName="Form.Command.Отмена">
+							<mf:horizontalStretch>true</mf:horizontalStretch>
+						</mf:button>
 					</mf:group>
 				</mf:mainElement>
 			</form>
@@ -4278,6 +5217,46 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 			</synonym>
 		</value>
 	</enum>
+	<enum name="ВидыПовторяемыхСобытий" id="c5c6e37c-2691-426e-a54e-d8b788f2ef5b">
+		<synonym>
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Виды повторяемых событий</v8:content>
+			</v8:item>
+		</synonym>
+		<generatedType name="EnumRef.ВидыПовторяемыхСобытий" category="Ref">
+			<xr:TypeId>68d78224-2dac-40c0-9558-aab0e7862931</xr:TypeId>
+			<xr:ValueId>0324ac5b-5b64-480a-bb65-1f014acab915</xr:ValueId>
+		</generatedType>
+		<generatedType name="EnumManager.ВидыПовторяемыхСобытий" category="Manager">
+			<xr:TypeId>733c4d04-518d-4703-8bbd-0e25dae71bb8</xr:TypeId>
+			<xr:ValueId>2c86d5f8-38fe-4e1f-9634-67ee23419f04</xr:ValueId>
+		</generatedType>
+		<generatedType name="EnumList.ВидыПовторяемыхСобытий" category="List">
+			<xr:TypeId>03f1511e-e4e9-48dc-89d8-0e805a70de3d</xr:TypeId>
+			<xr:ValueId>9de52f8c-053c-4138-b4a2-4512b2debe3d</xr:ValueId>
+		</generatedType>
+		<managerModule version="1" startAddr="0">
+			<bsch:cmdOpCode>22,22</bsch:cmdOpCode>
+			<bsch:cmdOperand>0,0</bsch:cmdOperand>
+		</managerModule>
+		<value name="ПовторятьЧерезНесколькоДней" id="236828ac-4029-4478-a81f-1869571e2c23">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>повтор через (в днях)</v8:content>
+				</v8:item>
+			</synonym>
+		</value>
+		<value name="ПовторятьВКонкретнуюДату" id="e6f1d0d1-edaf-45d4-9bfb-92a0ef1c053c">
+			<synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>повтор каждое число месяца</v8:content>
+				</v8:item>
+			</synonym>
+		</value>
+	</enum>
 	<requiredPermission>
 		<permission>Multimedia</permission>
 		<use>false</use>
@@ -4337,7 +5316,16 @@ ALq+oSqJEjXheIQSNaqS5Jcy7j4w1uGKNebNsRYSLRWDYYiWCqvNc4U8zZI8zeIv
 				<mf:common>false</mf:common>
 			</Visibility2>
 		</CommandVisibility>
-		<CommandVisibility name="InformationRegister.ЛимитДенежныхСредств.StandardCommand.OpenList"/>
+		<CommandVisibility name="InformationRegister.ЛимитДенежныхСредств.StandardCommand.OpenList">
+			<Visibility2>
+				<mf:common>false</mf:common>
+			</Visibility2>
+		</CommandVisibility>
+		<CommandVisibility name="Constant.ЭтоНеПервыйЗапуск.StandardCommand.Open">
+			<Visibility2>
+				<mf:common>false</mf:common>
+			</Visibility2>
+		</CommandVisibility>
 		<CommandPlacement>
 			<Command>Document.ПриходДенежныхСредств.StandardCommand.OpenList</Command>
 			<CommandGroup>NavigationPanelImportant</CommandGroup>

@@ -18,6 +18,7 @@
 		<UsualGroup name="Группа1" id="14">
 			<HorizontalStretch>true</HorizontalStretch>
 			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<Group>Vertical</Group>
 			<HorizontalAlign>Center</HorizontalAlign>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>

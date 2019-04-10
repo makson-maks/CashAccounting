@@ -206,18 +206,56 @@
 						<Event name="OnChange">ПовторяемоеСобытиеПриИзменении</Event>
 					</Events>
 				</CheckBoxField>
-				<InputField name="КоличествоДнейДляПовторения" id="54">
-					<DataPath>Объект.КоличествоДнейДляПовторения</DataPath>
+				<UsualGroup name="ГруппаВидПовторяемогоСобытия" id="62">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>повтор каждые (в днях)</v8:content>
+							<v8:content>Группа вид повторяемого события</v8:content>
 						</v8:item>
 					</Title>
-					<HorizontalStretch>true</HorizontalStretch>
-					<ContextMenu name="КоличествоДнейДляПовторенияКонтекстноеМеню" id="55"/>
-					<ExtendedTooltip name="КоличествоДнейДляПовторенияРасширеннаяПодсказка" id="56"/>
-				</InputField>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа вид повторяемого события</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВидПовторяемогоСобытияРасширеннаяПодсказка" id="63"/>
+					<ChildItems>
+						<InputField name="ВидПовторяемогоСобытий" id="64">
+							<DataPath>Объект.ВидПовторяемогоСобытий</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<DropListButton>true</DropListButton>
+							<ChoiceButton>true</ChoiceButton>
+							<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+							<BackColor>style:ToolTipBackColor</BackColor>
+							<ContextMenu name="ВидПовторяемогоСобытийКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="ВидПовторяемогоСобытийРасширеннаяПодсказка" id="66"/>
+							<Events>
+								<Event name="OnChange">ВидПовторяемогоСобытийПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="КоличествоДнейДляПовторения" id="54">
+							<DataPath>Объект.КоличествоДнейДляПовторения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>повтор каждые (в днях)</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>None</TitleLocation>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<Width>2</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<BackColor>style:ToolTipBackColor</BackColor>
+							<ContextMenu name="КоличествоДнейДляПовторенияКонтекстноеМеню" id="55"/>
+							<ExtendedTooltip name="КоличествоДнейДляПовторенияРасширеннаяПодсказка" id="56"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
 				<InputField name="ДатаОкончанияПовторяемыхСобытий" id="59">
 					<DataPath>Объект.ДатаОкончанияПовторяемыхСобытий</DataPath>
 					<Title>

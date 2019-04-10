@@ -176,6 +176,7 @@
 			<Document>ПриходДенежныхСредств</Document>
 			<Document>РасходДенежныхСредств</Document>
 			<Enum>ВидыРасходов</Enum>
+			<Enum>ВидыПовторяемыхСобытий</Enum>
 			<InformationRegister>ЛимитДенежныхСредств</InformationRegister>
 			<InformationRegister>ОстатокЛимитаДенежныхСредств</InformationRegister>
 			<AccumulationRegister>ПланируемыеОстаткиДенежныхСредств</AccumulationRegister>
