@@ -42,7 +42,7 @@
 					<HorizontalAlign>Center</HorizontalAlign>
 					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 					<HorizontalStretch>true</HorizontalStretch>
-					<Font ref="style:ExtraLargeTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Font ref="style:ЭлементСтиляШрифтПолейВвода" kind="StyleItem"/>
 					<ContextMenu name="НовыйОстатокЛимитаКонтекстноеМеню" id="2"/>
 					<ExtendedTooltip name="НовыйОстатокЛимитаРасширеннаяПодсказка" id="3"/>
 				</InputField>

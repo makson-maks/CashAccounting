@@ -6,6 +6,11 @@
 				<xr:Common>true</xr:Common>
 			</Visibility>
 		</Command>
+		<Command name="InformationRegister.ОсатокЛимитаСПрошлогоПериода.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
 		<Command name="InformationRegister.ОстатокЛимитаДенежныхСредств.StandardCommand.OpenList">
 			<Visibility>
 				<xr:Common>false</xr:Common>

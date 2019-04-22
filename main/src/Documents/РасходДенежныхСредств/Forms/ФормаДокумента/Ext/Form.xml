@@ -76,7 +76,7 @@
 					<Width>16</Width>
 					<AutoMaxWidth>false</AutoMaxWidth>
 					<HorizontalStretch>true</HorizontalStretch>
-					<Font ref="style:LargeTextFont" height="14" kind="StyleItem"/>
+					<Font ref="style:ЭлементСтиляШрифтПолейВвода" kind="StyleItem"/>
 					<ContextMenu name="ДатаКонтекстноеМеню" id="30"/>
 					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="31"/>
 					<Events>
@@ -122,7 +122,7 @@
 					<HorizontalAlign>Center</HorizontalAlign>
 					<EditMode>EnterOnInput</EditMode>
 					<HorizontalStretch>true</HorizontalStretch>
-					<Font ref="style:ExtraLargeTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Font ref="style:ЭлементСтиляШрифтПолейВвода" kind="StyleItem"/>
 					<ContextMenu name="СуммаКонтекстноеМеню" id="38"/>
 					<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="39"/>
 				</InputField>

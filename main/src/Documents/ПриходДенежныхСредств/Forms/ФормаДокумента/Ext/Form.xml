@@ -30,6 +30,7 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -73,10 +74,11 @@
 					<Width>16</Width>
 					<AutoMaxWidth>false</AutoMaxWidth>
 					<HorizontalStretch>true</HorizontalStretch>
-					<Font ref="style:LargeTextFont" height="14" kind="StyleItem"/>
+					<Font ref="style:ЭлементСтиляШрифтПолейВвода" kind="StyleItem"/>
 					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
 					<Events>
+						<Event name="OnChange">ДатаПриИзменении</Event>
 						<Event name="StartChoice">ДатаНачалоВыбора</Event>
 					</Events>
 				</InputField>
@@ -118,12 +120,57 @@
 					<HorizontalAlign>Center</HorizontalAlign>
 					<EditMode>EnterOnInput</EditMode>
 					<HorizontalStretch>true</HorizontalStretch>
-					<Font ref="style:ExtraLargeTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Font ref="style:ЭлементСтиляШрифтПолейВвода" kind="StyleItem"/>
 					<ContextMenu name="СуммаКонтекстноеМеню" id="8"/>
 					<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="9"/>
+					<Events>
+						<Event name="OnChange">СуммаПриИзменении</Event>
+					</Events>
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
+		<UsualGroup name="Группа1" id="37">
+			<HorizontalStretch>true</HorizontalStretch>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<Group>Vertical</Group>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="38"/>
+			<ChildItems>
+				<LabelDecoration name="Декорация2" id="34">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>распределять сумму</v8:content>
+						</v8:item>
+					</Title>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<ContextMenu name="Декорация2КонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="36"/>
+				</LabelDecoration>
+				<InputField name="ВидРаспределенияСуммы" id="28">
+					<DataPath>Объект.ВидРаспределенияСуммы</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ContextMenu name="ВидРаспределенияСуммыКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ВидРаспределенияСуммыРасширеннаяПодсказка" id="30"/>
+					<Events>
+						<Event name="OnChange">ВидРаспределенияСуммыПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<LabelDecoration name="Декорация1" id="31">
+			<TextColor>style:BorderColor</TextColor>
+			<Font ref="style:NormalTextFont" bold="false" italic="true" underline="false" strikeout="false" kind="StyleItem"/>
+			<ContextMenu name="Декорация1КонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="33"/>
+		</LabelDecoration>
 		<UsualGroup name="ГруппаКоманды" id="22">
 			<Title>
 				<v8:item>

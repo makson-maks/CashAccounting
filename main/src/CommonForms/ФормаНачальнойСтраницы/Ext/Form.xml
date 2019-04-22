@@ -52,7 +52,8 @@
 					<DataPath>ТекущийОстатокДенежныхСредств</DataPath>
 					<TitleLocation>None</TitleLocation>
 					<HorizontalAlign>Center</HorizontalAlign>
-					<Font ref="style:ExtraLargeTextFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<MarkNegatives>true</MarkNegatives>
+					<Font ref="style:ЭлементСтиляШрифтПолейВвода" kind="StyleItem"/>
 					<ContextMenu name="ТекущийОстатокДенежныхСредствКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="ТекущийОстатокДенежныхСредствРасширеннаяПодсказка" id="6"/>
 				</LabelField>
@@ -95,7 +96,7 @@
 					<HorizontalAlign>Center</HorizontalAlign>
 					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 					<MarkNegatives>true</MarkNegatives>
-					<Font ref="style:ExtraLargeTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Font ref="style:ЭлементСтиляШрифтПолейВвода" kind="StyleItem"/>
 					<ContextMenu name="ФактическийОстатокЛимитаКонтекстноеМеню" id="33"/>
 					<ExtendedTooltip name="ФактическийОстатокЛимитаРасширеннаяПодсказка" id="34"/>
 					<Events>
@@ -148,7 +149,7 @@
 					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 					<HorizontalStretch>false</HorizontalStretch>
 					<MarkNegatives>true</MarkNegatives>
-					<Font ref="style:ExtraLargeTextFont" height="14" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Font ref="style:ЭлементСтиляШрифтПолейВвода" kind="StyleItem"/>
 					<ContextMenu name="ПлановыйОстатокЛимитаКонтекстноеМеню" id="30"/>
 					<ExtendedTooltip name="ПлановыйОстатокЛимитаРасширеннаяПодсказка" id="31"/>
 					<Events>
@@ -306,23 +307,33 @@
 			<ChildItems>
 				<LabelField name="ПлановыеРасходыНаТекущийПериодДата" id="76">
 					<DataPath>ПлановыеРасходыНаТекущийПериод.Дата</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>6</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Format>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM</v8:content>
+						</v8:item>
+					</Format>
 					<ContextMenu name="ПлановыеРасходыНаТекущийПериодДатаКонтекстноеМеню" id="77"/>
 					<ExtendedTooltip name="ПлановыеРасходыНаТекущийПериодДатаРасширеннаяПодсказка" id="78"/>
 				</LabelField>
+				<LabelField name="ПлановыеРасходыНаТекущийПериодСумма" id="85">
+					<DataPath>ПлановыеРасходыНаТекущийПериод.Сумма</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MaxWidth>6</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ПлановыеРасходыНаТекущийПериодСуммаКонтекстноеМеню" id="86"/>
+					<ExtendedTooltip name="ПлановыеРасходыНаТекущийПериодСуммаРасширеннаяПодсказка" id="87"/>
+				</LabelField>
+				<LabelField name="ПлановыеРасходыНаТекущийПериодНазначение" id="79">
+					<DataPath>ПлановыеРасходыНаТекущийПериод.Назначение</DataPath>
+					<ContextMenu name="ПлановыеРасходыНаТекущийПериодНазначениеКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="ПлановыеРасходыНаТекущийПериодНазначениеРасширеннаяПодсказка" id="81"/>
+				</LabelField>
 				<ColumnGroup name="ПлановыеРасходыНаТекущийПериодГруппа1" id="91">
 					<ExtendedTooltip name="ПлановыеРасходыНаТекущийПериодГруппа1РасширеннаяПодсказка" id="92"/>
-					<ChildItems>
-						<LabelField name="ПлановыеРасходыНаТекущийПериодНазначение" id="79">
-							<DataPath>ПлановыеРасходыНаТекущийПериод.Назначение</DataPath>
-							<ContextMenu name="ПлановыеРасходыНаТекущийПериодНазначениеКонтекстноеМеню" id="80"/>
-							<ExtendedTooltip name="ПлановыеРасходыНаТекущийПериодНазначениеРасширеннаяПодсказка" id="81"/>
-						</LabelField>
-						<LabelField name="ПлановыеРасходыНаТекущийПериодСумма" id="85">
-							<DataPath>ПлановыеРасходыНаТекущийПериод.Сумма</DataPath>
-							<ContextMenu name="ПлановыеРасходыНаТекущийПериодСуммаКонтекстноеМеню" id="86"/>
-							<ExtendedTooltip name="ПлановыеРасходыНаТекущийПериодСуммаРасширеннаяПодсказка" id="87"/>
-						</LabelField>
-					</ChildItems>
 				</ColumnGroup>
 			</ChildItems>
 		</Table>

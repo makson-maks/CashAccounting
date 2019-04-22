@@ -32,7 +32,7 @@
 					<TitleLocation>None</TitleLocation>
 					<HorizontalAlign>Center</HorizontalAlign>
 					<HorizontalStretch>true</HorizontalStretch>
-					<Font ref="style:ExtraLargeTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Font ref="style:ЭлементСтиляШрифтПолейВвода" kind="StyleItem"/>
 					<ContextMenu name="СуммаКонтекстноеМеню" id="7"/>
 					<ExtendedTooltip name="СуммаРасширеннаяПодсказка" id="8"/>
 				</InputField>

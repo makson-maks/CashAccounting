@@ -39,7 +39,7 @@
 					<HorizontalAlign>Center</HorizontalAlign>
 					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 					<HorizontalStretch>true</HorizontalStretch>
-					<Font ref="style:LargeTextFont" kind="StyleItem"/>
+					<Font ref="style:ЭлементСтиляШрифтПолейВвода" kind="StyleItem"/>
 					<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="4"/>
 					<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="5"/>
 					<Events>
@@ -75,7 +75,7 @@
 					<HorizontalAlign>Center</HorizontalAlign>
 					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
 					<HorizontalStretch>true</HorizontalStretch>
-					<Font ref="style:ExtraLargeTextFont" kind="StyleItem"/>
+					<Font ref="style:ЭлементСтиляШрифтПолейВвода" kind="StyleItem"/>
 					<ContextMenu name="ЛимитКонтекстноеМеню" id="13"/>
 					<ExtendedTooltip name="ЛимитРасширеннаяПодсказка" id="14"/>
 				</InputField>

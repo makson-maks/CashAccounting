@@ -47,7 +47,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ПолныеПрава</xr:Item>
 			</DefaultRoles>
 			<Vendor>makson_maks</Vendor>
-			<Version>1.1.5</Version>
+			<Version>1.1.6</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -140,6 +140,7 @@
 		</Properties>
 		<ChildObjects>
 			<Language>Русский</Language>
+			<StyleItem>ЭлементСтиляШрифтПолейВвода</StyleItem>
 			<CommonPicture>СделатьАудиоЗапись</CommonPicture>
 			<CommonPicture>ПриходДС</CommonPicture>
 			<CommonPicture>РасходДС</CommonPicture>
@@ -177,8 +178,10 @@
 			<Document>РасходДенежныхСредств</Document>
 			<Enum>ВидыРасходов</Enum>
 			<Enum>ВидыПовторяемыхСобытий</Enum>
+			<Enum>ВидыРаспределенияСумм</Enum>
 			<InformationRegister>ЛимитДенежныхСредств</InformationRegister>
 			<InformationRegister>ОстатокЛимитаДенежныхСредств</InformationRegister>
+			<InformationRegister>ОсатокЛимитаСПрошлогоПериода</InformationRegister>
 			<AccumulationRegister>ПланируемыеОстаткиДенежныхСредств</AccumulationRegister>
 			<AccumulationRegister>ДенежныеСредства</AccumulationRegister>
 		</ChildObjects>
