@@ -78,8 +78,8 @@
 					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
 					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
 					<Events>
-						<Event name="OnChange">ДатаПриИзменении</Event>
 						<Event name="StartChoice">ДатаНачалоВыбора</Event>
+						<Event name="ChoiceProcessing">ДатаОбработкаВыбора</Event>
 					</Events>
 				</InputField>
 			</ChildItems>
