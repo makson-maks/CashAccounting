@@ -37,8 +37,8 @@
 		<Metadata name="CommonModule.УчетДенежныхСредствВызовСервера.Module" id="deafa011-8f3e-4a88-9f1e-ba4e168c01af.0" configVersion="83f1aeeb697c6844ae4d2a9ad2bb1fd100000000"/>
 		<Metadata name="CommonModule.УчетДенежныхСредствКлиент" id="d6aa73f4-615e-4c07-95fc-2e6fdb5feb59" configVersion="5b3c8ce5cad000429e3c26d8fd3037ee00000000"/>
 		<Metadata name="CommonModule.УчетДенежныхСредствКлиент.Module" id="d6aa73f4-615e-4c07-95fc-2e6fdb5feb59.0" configVersion="c08cab8cfd7589478fbc01811b0b4f3600000000"/>
-		<Metadata name="CommonModule.УчетДенежныхСредствСервер" id="4d05c93c-ad5f-4177-a2da-830caffdfed7" configVersion="b3155863732e0740be4c8f3d4f7394de00000000"/>
-		<Metadata name="CommonModule.УчетДенежныхСредствСервер.Module" id="4d05c93c-ad5f-4177-a2da-830caffdfed7.0" configVersion="cce6257b05f4754390941a79f38fd11400000000"/>
+		<Metadata name="CommonModule.УчетДенежныхСредствСервер" id="4d05c93c-ad5f-4177-a2da-830caffdfed7" configVersion="a824ded642d09347a6c425b40f16227f00000000"/>
+		<Metadata name="CommonModule.УчетДенежныхСредствСервер.Module" id="4d05c93c-ad5f-4177-a2da-830caffdfed7.0" configVersion="d4f226d8d2085d42aea5a2ec5992c29100000000"/>
 		<Metadata name="CommonPicture.ЖелтыйКруг" id="a72affd4-91f5-452c-8e8d-d5c02e0c0902" configVersion="c2fbaa4b920f844fb63cdac662370b9e00000000"/>
 		<Metadata name="CommonPicture.ЖелтыйКруг.Picture" id="a72affd4-91f5-452c-8e8d-d5c02e0c0902.0" configVersion="c53c67861d06714da4a105ca40e73d7500000000"/>
 		<Metadata name="CommonPicture.ЗеленаяГалочка" id="1f0f76ce-78c8-4343-909f-9901ea99a275" configVersion="6f2ffddc365197459f2f22b0d8675d8b00000000"/>
