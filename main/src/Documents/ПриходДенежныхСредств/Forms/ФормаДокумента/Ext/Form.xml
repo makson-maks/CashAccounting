@@ -143,7 +143,7 @@
 					<Title formatted="false">
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>распределять сумму</v8:content>
+							<v8:content>распределять сумму на текущую неделю</v8:content>
 						</v8:item>
 					</Title>
 					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
@@ -165,12 +165,24 @@
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
-		<LabelDecoration name="Декорация1" id="31">
-			<TextColor>style:BorderColor</TextColor>
-			<Font ref="style:NormalTextFont" bold="false" italic="true" underline="false" strikeout="false" kind="StyleItem"/>
-			<ContextMenu name="Декорация1КонтекстноеМеню" id="32"/>
-			<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="33"/>
-		</LabelDecoration>
+		<UsualGroup name="Группа2" id="39">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="40"/>
+			<ChildItems>
+				<LabelDecoration name="Декорация1" id="31">
+					<TextColor>style:BorderColor</TextColor>
+					<Font ref="style:NormalTextFont" bold="false" italic="true" underline="false" strikeout="false" kind="StyleItem"/>
+					<ContextMenu name="Декорация1КонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="33"/>
+				</LabelDecoration>
+				<Button name="ИзменитьСуммуДоНовогоЛимита" id="41">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ИзменитьСуммуДоНовогоЛимита</CommandName>
+					<ExtendedTooltip name="ИзменитьСуммуДоНовогоЛимитаРасширеннаяПодсказка" id="42"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
 		<UsualGroup name="ГруппаКоманды" id="22">
 			<Title>
 				<v8:item>
@@ -256,6 +268,26 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>Отмена</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ИзменитьСуммуДоНовогоЛимита" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить сумму до нового лимита</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить сумму до нового лимита</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИзменитьСуммуДоНовогоЛимита</Action>
 			<Representation>Picture</Representation>
 		</Command>
 	</Commands>

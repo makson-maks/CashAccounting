@@ -25,8 +25,8 @@
 		<Metadata name="CommonForm.ФормаПервогоЗапуска.Form" id="78780a10-0f48-4817-956d-eb0d0a6ee307.0" configVersion="405a6f7b8bf952489f579c9ef0331c5f00000000"/>
 		<Metadata name="CommonModule.ОбщегоНазначенийВызовСервера" id="50d0db7f-b1c3-4e41-9e14-75dda3ea8f9f" configVersion="e94607e05063ee4c9fe796a83ac00df700000000"/>
 		<Metadata name="CommonModule.ОбщегоНазначенийВызовСервера.Module" id="50d0db7f-b1c3-4e41-9e14-75dda3ea8f9f.0" configVersion="fb48adcf6f923743bb112457d4d284f500000000"/>
-		<Metadata name="CommonModule.ОбщегоНазначенияКлиентСервер" id="517ef80c-a33b-4101-9251-2eab467ea929" configVersion="ad71f016802f7f4aa464209b2041385e00000000"/>
-		<Metadata name="CommonModule.ОбщегоНазначенияКлиентСервер.Module" id="517ef80c-a33b-4101-9251-2eab467ea929.0" configVersion="1e2ca2a16880094eb79cce0c149a6d2600000000"/>
+		<Metadata name="CommonModule.ОбщегоНазначенияКлиентСервер" id="517ef80c-a33b-4101-9251-2eab467ea929" configVersion="0be4a03587dc8f409daeb6d0d8d85a5a00000000"/>
+		<Metadata name="CommonModule.ОбщегоНазначенияКлиентСервер.Module" id="517ef80c-a33b-4101-9251-2eab467ea929.0" configVersion="e9bdb4d6d569d24f81ddcffcdfd2e09900000000"/>
 		<Metadata name="CommonModule.ОбщегоНазначенияСервер" id="ea0bdeea-5d15-485f-9e10-53ff61264267" configVersion="aff62648ea77a746b07774ab79e6d2fd00000000"/>
 		<Metadata name="CommonModule.ОбщегоНазначенияСервер.Module" id="ea0bdeea-5d15-485f-9e10-53ff61264267.0" configVersion="40fd215e540a0843b5c28c55afd112eb00000000"/>
 		<Metadata name="CommonModule.ПроведениеСервер" id="d25d72c2-8ebe-4b8b-964b-997f04568cb6" configVersion="c40fee6bede83449a561927d6e4187a200000000"/>
@@ -63,7 +63,7 @@
 		<Metadata name="CommonPicture.СделатьАудиоЗапись.Picture" id="f95f4051-e4f2-4022-9124-d84274ee948e.0" configVersion="43914b4d8e280a4f809bab0c6f46360500000000"/>
 		<Metadata name="CommonPicture.Сумма" id="cbc99ee8-ec3f-4445-b97c-3f236023f111" configVersion="bb2afe63eb018b408dee8ba5a790d8bf00000000"/>
 		<Metadata name="CommonPicture.Сумма.Picture" id="cbc99ee8-ec3f-4445-b97c-3f236023f111.0" configVersion="9d4d6fd0011d32428e0f1852e8192bea00000000"/>
-		<Metadata name="Configuration.УчетДенежныхСредств" id="08cc8678-290f-4ee5-9316-06bf602cf55a" configVersion="527f11df485ca5499934b6a3692c146000000000"/>
+		<Metadata name="Configuration.УчетДенежныхСредств" id="08cc8678-290f-4ee5-9316-06bf602cf55a" configVersion="6a1b4da65342234f9a231efb5c4a6b9700000000"/>
 		<Metadata name="Configuration.УчетДенежныхСредств.HomePageWorkArea" id="eddd66c0-8cf9-41cc-b517-9dc67f52ff59.8" configVersion="bfa57c478826324e9f94871a41ac655a00000000"/>
 		<Metadata name="Configuration.УчетДенежныхСредств.MainSectionCommandInterface" id="eddd66c0-8cf9-41cc-b517-9dc67f52ff59.9" configVersion="5cb76465fb25f645a6343a3508ee87f100000000"/>
 		<Metadata name="Configuration.УчетДенежныхСредств.ManagedApplicationModule" id="eddd66c0-8cf9-41cc-b517-9dc67f52ff59.6" configVersion="29f2db2876b7cb4ba5d44d5feb436a1800000000"/>
@@ -77,8 +77,8 @@
 			<Metadata name="Document.ПриходДенежныхСредств.Attribute.Сумма" id="f7827708-01ec-474a-97b0-4bb1af4dd1a1"/>
 			<Metadata name="Document.ПриходДенежныхСредств.Attribute.ВидРаспределенияСуммы" id="f879f031-f7c7-456e-976a-f53baa38b662"/>
 		</Metadata>
-		<Metadata name="Document.ПриходДенежныхСредств.Form.ФормаДокумента" id="9369f3d0-750c-4be1-a942-f4a2daa254c8" configVersion="8d1d85471bb1044e824ec04a25a9627a00000000"/>
-		<Metadata name="Document.ПриходДенежныхСредств.Form.ФормаДокумента.Form" id="9369f3d0-750c-4be1-a942-f4a2daa254c8.0" configVersion="1f24be07dd5bf3438357cf1db8a8149400000000"/>
+		<Metadata name="Document.ПриходДенежныхСредств.Form.ФормаДокумента" id="9369f3d0-750c-4be1-a942-f4a2daa254c8" configVersion="2f42ed024f29f54f9e629f2d301c42c500000000"/>
+		<Metadata name="Document.ПриходДенежныхСредств.Form.ФормаДокумента.Form" id="9369f3d0-750c-4be1-a942-f4a2daa254c8.0" configVersion="b5b3c9288317af4da145628c0ca5e9f600000000"/>
 		<Metadata name="Document.ПриходДенежныхСредств.Form.ФормаСписка" id="24585bb5-4976-402c-9831-35c70359817f" configVersion="2cc8eddc7630d245a26e80729c45d83000000000"/>
 		<Metadata name="Document.ПриходДенежныхСредств.Form.ФормаСписка.Form" id="24585bb5-4976-402c-9831-35c70359817f.0" configVersion="adeafa090d581247ad35039c4b35576100000000"/>
 		<Metadata name="Document.ПриходДенежныхСредств.ManagerModule" id="ffeb7827-a423-4cbf-a854-ac34dd2d7722.2" configVersion="013d4d98910268438a0e04e6ee08889f00000000"/>
