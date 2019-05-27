@@ -21,6 +21,16 @@
 				<xr:Common>false</xr:Common>
 			</Visibility>
 		</Command>
+		<Command name="DataProcessor.РаботаСПокупками.Command.НастройкаПодписки">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.РаботаСПокупками.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
 		<Command name="Constant.ЭтоНеПервыйЗапуск.StandardCommand.Open">
 			<Visibility>
 				<xr:Common>false</xr:Common>

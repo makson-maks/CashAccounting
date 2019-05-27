@@ -47,7 +47,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ПолныеПрава</xr:Item>
 			</DefaultRoles>
 			<Vendor>makson_maks</Vendor>
-			<Version>1.2.2</Version>
+			<Version>1.3.0</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -163,6 +163,7 @@
 			<CommonModule>УчетДенежныхСредствВызовСервера</CommonModule>
 			<CommonModule>УчетДенежныхСредствСервер</CommonModule>
 			<CommonModule>УчетДенежныхСредствКлиент</CommonModule>
+			<CommonModule>РаботаСоВстроеннымиПокупкамиКлиент</CommonModule>
 			<CommonCommand>ОткрытьСписокПланируемыхРасходов</CommonCommand>
 			<CommonCommand>ОткрытьСписокФактическихРасходов</CommonCommand>
 			<CommonCommand>ОткрытьФормуНачальнойСтраницы</CommonCommand>
@@ -179,6 +180,7 @@
 			<Enum>ВидыРасходов</Enum>
 			<Enum>ВидыПовторяемыхСобытий</Enum>
 			<Enum>ВидыРаспределенияСумм</Enum>
+			<DataProcessor>РаботаСПокупками</DataProcessor>
 			<InformationRegister>ЛимитДенежныхСредств</InformationRegister>
 			<InformationRegister>ОстатокЛимитаДенежныхСредств</InformationRegister>
 			<InformationRegister>ОсатокЛимитаСПрошлогоПериода</InformationRegister>

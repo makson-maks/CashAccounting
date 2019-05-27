@@ -44,6 +44,17 @@
 			<Shape>Oval</Shape>
 			<ExtendedTooltip name="УдалитьВсеДанныеРасширеннаяПодсказка" id="6"/>
 		</Button>
+		<Button name="ОбработкаРаботаСПокупкамиНастройкаПодписки" id="7">
+			<Type>UsualButton</Type>
+			<Visible>false</Visible>
+			<HorizontalStretch>true</HorizontalStretch>
+			<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+			<CommandName>DataProcessor.РаботаСПокупками.Command.НастройкаПодписки</CommandName>
+			<BackColor>web:MistyRose</BackColor>
+			<BorderColor>web:Black</BorderColor>
+			<Shape>Oval</Shape>
+			<ExtendedTooltip name="ОбработкаРаботаСПокупкамиНастройкаПодпискиРасширеннаяПодсказка" id="8"/>
+		</Button>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="ФактическийОстатокЛимита" id="1">
