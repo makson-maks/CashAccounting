@@ -4,6 +4,7 @@ AccumulationRegisters\ДенежныеСредства.xml-->AccumulationRegiste
 AccumulationRegisters\ПланируемыеОстаткиДенежныхСредств.xml-->AccumulationRegisters\ПланируемыеОстаткиДенежныхСредств.xml
 AccumulationRegisters\ДенежныеСредства\Ext\RecordSetModule.bsl-->AccumulationRegisters\ДенежныеСредства\Ext\RecordSetModule.bsl
 AccumulationRegisters\ПланируемыеОстаткиДенежныхСредств\Ext\RecordSetModule.bsl-->AccumulationRegisters\ПланируемыеОстаткиДенежныхСредств\Ext\RecordSetModule.bsl
+Catalogs\Номенклатура.xml-->Catalogs\Номенклатура.xml
 CommonCommands\ОткрытьСписокПланируемыхРасходов.xml-->CommonCommands\ОткрытьСписокПланируемыхРасходов.xml
 CommonCommands\ОткрытьСписокФактическихРасходов.xml-->CommonCommands\ОткрытьСписокФактическихРасходов.xml
 CommonCommands\ОткрытьФормуНачальнойСтраницы.xml-->CommonCommands\ОткрытьФормуНачальнойСтраницы.xml
@@ -100,12 +101,15 @@ Documents\РасходДенежныхСредств\Ext\ObjectModule.bsl-->Docu
 Documents\РасходДенежныхСредств\Forms\ФормаДокумента.xml-->Documents\РасходДенежныхСредств\Forms\ФормаДокумента.xml
 Documents\РасходДенежныхСредств\Forms\ФормаИзмененияСуммы.xml-->Documents\РасходДенежныхСредств\Forms\ФормаИзмененияСуммы.xml
 Documents\РасходДенежныхСредств\Forms\ФормаСписка.xml-->Documents\РасходДенежныхСредств\Forms\ФормаСписка.xml
+Documents\РасходДенежныхСредств\Forms\ФормаСписокПокупок.xml-->Documents\РасходДенежныхСредств\Forms\ФормаСписокПокупок.xml
 Documents\РасходДенежныхСредств\Forms\ФормаДокумента\Ext\Form.xml-->Documents\РасходДенежныхСредств\Forms\ФормаДокумента\Ext\Form.xml
 Documents\РасходДенежныхСредств\Forms\ФормаДокумента\Ext\Form\Module.bsl-->Documents\РасходДенежныхСредств\Forms\ФормаДокумента\Ext\Form\Module.bsl
 Documents\РасходДенежныхСредств\Forms\ФормаИзмененияСуммы\Ext\Form.xml-->Documents\РасходДенежныхСредств\Forms\ФормаИзмененияСуммы\Ext\Form.xml
 Documents\РасходДенежныхСредств\Forms\ФормаИзмененияСуммы\Ext\Form\Module.bsl-->Documents\РасходДенежныхСредств\Forms\ФормаИзмененияСуммы\Ext\Form\Module.bsl
 Documents\РасходДенежныхСредств\Forms\ФормаСписка\Ext\Form.xml-->Documents\РасходДенежныхСредств\Forms\ФормаСписка\Ext\Form.xml
 Documents\РасходДенежныхСредств\Forms\ФормаСписка\Ext\Form\Module.bsl-->Documents\РасходДенежныхСредств\Forms\ФормаСписка\Ext\Form\Module.bsl
+Documents\РасходДенежныхСредств\Forms\ФормаСписокПокупок\Ext\Form.xml-->Documents\РасходДенежныхСредств\Forms\ФормаСписокПокупок\Ext\Form.xml
+Documents\РасходДенежныхСредств\Forms\ФормаСписокПокупок\Ext\Form\Module.bsl-->Documents\РасходДенежныхСредств\Forms\ФормаСписокПокупок\Ext\Form\Module.bsl
 Enums\ВидыПовторяемыхСобытий.xml-->Enums\ВидыПовторяемыхСобытий.xml
 Enums\ВидыРаспределенияСумм.xml-->Enums\ВидыРаспределенияСумм.xml
 Enums\ВидыРасходов.xml-->Enums\ВидыРасходов.xml
@@ -116,6 +120,7 @@ Ext\SessionModule.bsl-->Ext\SessionModule.bsl
 InformationRegisters\ЛимитДенежныхСредств.xml-->InformationRegisters\ЛимитДенежныхСредств.xml
 InformationRegisters\ОсатокЛимитаСПрошлогоПериода.xml-->InformationRegisters\ОсатокЛимитаСПрошлогоПериода.xml
 InformationRegisters\ОстатокЛимитаДенежныхСредств.xml-->InformationRegisters\ОстатокЛимитаДенежныхСредств.xml
+InformationRegisters\ЦеныНоменклатуры.xml-->InformationRegisters\ЦеныНоменклатуры.xml
 InformationRegisters\ЛимитДенежныхСредств\Forms\ФормаУстановкиЛимитаНаПериод.xml-->InformationRegisters\ЛимитДенежныхСредств\Forms\ФормаУстановкиЛимитаНаПериод.xml
 InformationRegisters\ЛимитДенежныхСредств\Forms\ФормаУстановкиЛимитаНаПериод\Ext\Form.xml-->InformationRegisters\ЛимитДенежныхСредств\Forms\ФормаУстановкиЛимитаНаПериод\Ext\Form.xml
 InformationRegisters\ЛимитДенежныхСредств\Forms\ФормаУстановкиЛимитаНаПериод\Ext\Form\Module.bsl-->InformationRegisters\ЛимитДенежныхСредств\Forms\ФормаУстановкиЛимитаНаПериод\Ext\Form\Module.bsl

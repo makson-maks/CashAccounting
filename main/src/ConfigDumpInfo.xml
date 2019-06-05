@@ -9,6 +9,7 @@
 			<Metadata name="AccumulationRegister.ПланируемыеОстаткиДенежныхСредств.Resource.Сумма" id="89767c74-eaff-46c7-9306-b0ad0b59631c"/>
 		</Metadata>
 		<Metadata name="AccumulationRegister.ПланируемыеОстаткиДенежныхСредств.RecordSetModule" id="25fe94a5-fed5-464f-9d49-05dd9d803344.1" configVersion="355a5c90362d8644977ad635e6ffdfb000000000"/>
+		<Metadata name="Catalog.Номенклатура" id="198cb3fd-d268-4e95-aea5-ec9dc4d4d2d8" configVersion="6de95a5f9588804cada8f90d1e15189100000000"/>
 		<Metadata name="CommonCommand.ОткрытьСписокПланируемыхРасходов" id="7ec44af3-dba3-4745-8d18-ed4f402a6269" configVersion="6c494a6f20cac546998bb1551726f4fc00000000"/>
 		<Metadata name="CommonCommand.ОткрытьСписокПланируемыхРасходов.CommandModule" id="7ec44af3-dba3-4745-8d18-ed4f402a6269.2" configVersion="908dfba72e4b564e8146382ea61bc00b00000000"/>
 		<Metadata name="CommonCommand.ОткрытьСписокФактическихРасходов" id="06c97d2e-3c43-4495-8a88-3197077e45ef" configVersion="4b8dbf144a63574d93b9888b4e97606400000000"/>
@@ -65,7 +66,7 @@
 		<Metadata name="CommonPicture.СделатьАудиоЗапись.Picture" id="f95f4051-e4f2-4022-9124-d84274ee948e.0" configVersion="43914b4d8e280a4f809bab0c6f46360500000000"/>
 		<Metadata name="CommonPicture.Сумма" id="cbc99ee8-ec3f-4445-b97c-3f236023f111" configVersion="bb2afe63eb018b408dee8ba5a790d8bf00000000"/>
 		<Metadata name="CommonPicture.Сумма.Picture" id="cbc99ee8-ec3f-4445-b97c-3f236023f111.0" configVersion="9d4d6fd0011d32428e0f1852e8192bea00000000"/>
-		<Metadata name="Configuration.УчетДенежныхСредств" id="08cc8678-290f-4ee5-9316-06bf602cf55a" configVersion="9e479a03edd0e843813e5938ade1458b00000000"/>
+		<Metadata name="Configuration.УчетДенежныхСредств" id="08cc8678-290f-4ee5-9316-06bf602cf55a" configVersion="8a5482da2f4b7c45882941c47902c39c00000000"/>
 		<Metadata name="Configuration.УчетДенежныхСредств.HomePageWorkArea" id="eddd66c0-8cf9-41cc-b517-9dc67f52ff59.8" configVersion="bfa57c478826324e9f94871a41ac655a00000000"/>
 		<Metadata name="Configuration.УчетДенежныхСредств.MainSectionCommandInterface" id="eddd66c0-8cf9-41cc-b517-9dc67f52ff59.9" configVersion="6d88eddfc12f7c49bd10a8af8af88df900000000"/>
 		<Metadata name="Configuration.УчетДенежныхСредств.ManagedApplicationModule" id="eddd66c0-8cf9-41cc-b517-9dc67f52ff59.6" configVersion="2c1966fcabc2744389be78f3bcc0fbc700000000"/>
@@ -91,24 +92,32 @@
 		<Metadata name="Document.ПриходДенежныхСредств.Form.ФормаСписка.Form" id="24585bb5-4976-402c-9831-35c70359817f.0" configVersion="adeafa090d581247ad35039c4b35576100000000"/>
 		<Metadata name="Document.ПриходДенежныхСредств.ManagerModule" id="ffeb7827-a423-4cbf-a854-ac34dd2d7722.2" configVersion="013d4d98910268438a0e04e6ee08889f00000000"/>
 		<Metadata name="Document.ПриходДенежныхСредств.ObjectModule" id="ffeb7827-a423-4cbf-a854-ac34dd2d7722.0" configVersion="9bd96fce43e9a842b02470ffd90e9e1700000000"/>
-		<Metadata name="Document.РасходДенежныхСредств" id="34b9f4b5-14b9-489c-9cb3-02747b4b0bec" configVersion="451f410f633a5347b71180240ebe9b2800000000">
+		<Metadata name="Document.РасходДенежныхСредств" id="34b9f4b5-14b9-489c-9cb3-02747b4b0bec" configVersion="2149a3f4e822e8479bd8643088235ea000000000">
+			<Metadata name="Document.РасходДенежныхСредств.TabularSection.СписокПокупок" id="0b22522e-d15e-4423-a981-3a79e4190c9a"/>
 			<Metadata name="Document.РасходДенежныхСредств.Attribute.ПовторяемоеСобытие" id="0da23107-f165-4ef5-aff3-41aa76ec439c"/>
 			<Metadata name="Document.РасходДенежныхСредств.Attribute.ВидРасхода" id="111426c8-d83c-4499-9557-492f64eda52e"/>
 			<Metadata name="Document.РасходДенежныхСредств.Attribute.ДатаОкончанияПовторяемыхСобытий" id="2530f325-faeb-417a-b27c-a4eed4822765"/>
 			<Metadata name="Document.РасходДенежныхСредств.Attribute.КоличествоДнейДляПовторения" id="33720ffc-d19b-4e50-ad9a-d009c393ca4f"/>
 			<Metadata name="Document.РасходДенежныхСредств.Attribute.УИДПовторяемыхСобытий" id="3416f495-d51b-4eea-a741-d4315a603bf0"/>
+			<Metadata name="Document.РасходДенежныхСредств.TabularSection.СписокПокупок.Attribute.Товар" id="7d33e494-153b-4f81-a16a-2957513af496"/>
+			<Metadata name="Document.РасходДенежныхСредств.TabularSection.СписокПокупок.Attribute.Сумма" id="8c73682c-3af1-43f2-be8a-cb5883c47c2f"/>
+			<Metadata name="Document.РасходДенежныхСредств.TabularSection.СписокПокупок.Attribute.Цена" id="923192fd-5e73-42ce-8112-d1ec907eb175"/>
 			<Metadata name="Document.РасходДенежныхСредств.Attribute.Сумма" id="9ec24191-a236-4116-8b1c-09c4ce5a836d"/>
 			<Metadata name="Document.РасходДенежныхСредств.Attribute.Назначение" id="b466e8b8-04ec-406f-8997-bc9387eced09"/>
+			<Metadata name="Document.РасходДенежныхСредств.TabularSection.СписокПокупок.Attribute.Куплено" id="bfc9c374-fcec-492e-b067-be48175fc65b"/>
+			<Metadata name="Document.РасходДенежныхСредств.TabularSection.СписокПокупок.Attribute.Количество" id="c89398d2-027e-4241-ba11-8426b558230e"/>
 			<Metadata name="Document.РасходДенежныхСредств.Attribute.ВидПовторяемогоСобытий" id="cee385d9-a7eb-4316-93aa-44188bf07fe5"/>
 		</Metadata>
-		<Metadata name="Document.РасходДенежныхСредств.Form.ФормаДокумента" id="6954f9f0-3a71-48a8-ac16-5c05f644f86c" configVersion="864c78aed26b1d4dab4c3dadf80bf38300000000"/>
-		<Metadata name="Document.РасходДенежныхСредств.Form.ФормаДокумента.Form" id="6954f9f0-3a71-48a8-ac16-5c05f644f86c.0" configVersion="84ed74e5ddfb744581d88cc53062198400000000"/>
+		<Metadata name="Document.РасходДенежныхСредств.Form.ФормаДокумента" id="6954f9f0-3a71-48a8-ac16-5c05f644f86c" configVersion="3cbb8816b668984dbc6825479b242b2c00000000"/>
+		<Metadata name="Document.РасходДенежныхСредств.Form.ФормаДокумента.Form" id="6954f9f0-3a71-48a8-ac16-5c05f644f86c.0" configVersion="b3ac0824e9439741a5901b0d8987060d00000000"/>
 		<Metadata name="Document.РасходДенежныхСредств.Form.ФормаИзмененияСуммы" id="9ee0c8cb-7027-4d74-a560-185817317de1" configVersion="20985360833b5547a25bc4e5fdab458000000000"/>
 		<Metadata name="Document.РасходДенежныхСредств.Form.ФормаИзмененияСуммы.Form" id="9ee0c8cb-7027-4d74-a560-185817317de1.0" configVersion="3bdb9589aac57d47bd94eaa9a280ba3400000000"/>
 		<Metadata name="Document.РасходДенежныхСредств.Form.ФормаСписка" id="1e04a263-ae0a-415e-be04-2f428402634e" configVersion="827e399de5f34c49913cecdd2e75cab400000000"/>
 		<Metadata name="Document.РасходДенежныхСредств.Form.ФормаСписка.Form" id="1e04a263-ae0a-415e-be04-2f428402634e.0" configVersion="940acc7bc0803949ba37f3b0be3c802000000000"/>
+		<Metadata name="Document.РасходДенежныхСредств.Form.ФормаСписокПокупок" id="e3b68592-06f2-4676-9170-0ddb491cb0d9" configVersion="85c0c163b5dae64b8f6bcfafcad8020600000000"/>
+		<Metadata name="Document.РасходДенежныхСредств.Form.ФормаСписокПокупок.Form" id="e3b68592-06f2-4676-9170-0ddb491cb0d9.0" configVersion="ee99af87052a744989d7968813218b2f00000000"/>
 		<Metadata name="Document.РасходДенежныхСредств.ManagerModule" id="34b9f4b5-14b9-489c-9cb3-02747b4b0bec.2" configVersion="6ce4341c0397a141a186d762925d6d0a00000000"/>
-		<Metadata name="Document.РасходДенежныхСредств.ObjectModule" id="34b9f4b5-14b9-489c-9cb3-02747b4b0bec.0" configVersion="5a71222247a7894bbfdfe847df2fa40900000000"/>
+		<Metadata name="Document.РасходДенежныхСредств.ObjectModule" id="34b9f4b5-14b9-489c-9cb3-02747b4b0bec.0" configVersion="3cc2c4d30bd61640861c0e37dc8c3f0000000000"/>
 		<Metadata name="Enum.ВидыПовторяемыхСобытий" id="c5c6e37c-2691-426e-a54e-d8b788f2ef5b" configVersion="7e821d79ca71b642a89bd574f2ee262d00000000">
 			<Metadata name="Enum.ВидыПовторяемыхСобытий.EnumValue.ПовторятьЧерезНесколькоДней" id="236828ac-4029-4478-a81f-1869571e2c23"/>
 			<Metadata name="Enum.ВидыПовторяемыхСобытий.EnumValue.ПовторятьВКонкретнуюДату" id="e6f1d0d1-edaf-45d4-9bfb-92a0ef1c053c"/>
@@ -134,6 +143,10 @@
 		</Metadata>
 		<Metadata name="InformationRegister.ОстатокЛимитаДенежныхСредств.Form.ФормаРедактированияЛимита" id="38128af4-9ffc-4958-97fa-5bc7ad824596" configVersion="597518eb682a0e4c8896ed946776a86000000000"/>
 		<Metadata name="InformationRegister.ОстатокЛимитаДенежныхСредств.Form.ФормаРедактированияЛимита.Form" id="38128af4-9ffc-4958-97fa-5bc7ad824596.0" configVersion="ee532d4d6338ec409393f34655d1eb9800000000"/>
+		<Metadata name="InformationRegister.ЦеныНоменклатуры" id="b7a33ac9-1f84-40f4-a370-4d929fa7d48b" configVersion="3ccce39acb03c54ab6b21b7335e0d56400000000">
+			<Metadata name="InformationRegister.ЦеныНоменклатуры.Resource.Цена" id="8c77b38c-8823-4e87-b911-219719cf71a0"/>
+			<Metadata name="InformationRegister.ЦеныНоменклатуры.Dimension.Номенклатура" id="94c17bf7-850c-4d38-8da2-14b923e29790"/>
+		</Metadata>
 		<Metadata name="Language.Русский" id="a2e45361-6ee7-466a-b0dd-da1b72a5dba2" configVersion="43ddea63bae73a45a0a74fe0703d89b100000000"/>
 		<Metadata name="Role.ПолныеПрава" id="6a743ef3-5ea6-4014-887e-c43af6403bfd" configVersion="9de7f8c903437d4f92c5277c6a99eeef00000000"/>
 		<Metadata name="Role.ПолныеПрава.Rights" id="6a743ef3-5ea6-4014-887e-c43af6403bfd.0" configVersion="64cd9c50a871cf47abe6b6a228970bff00000000"/>

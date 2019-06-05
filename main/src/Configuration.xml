@@ -47,7 +47,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Role.ПолныеПрава</xr:Item>
 			</DefaultRoles>
 			<Vendor>makson_maks</Vendor>
-			<Version>1.3.0</Version>
+			<Version>1.3.1</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>false</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -175,6 +175,7 @@
 			<CommonForm>ФормаВыбораДаты</CommonForm>
 			<CommonForm>ФормаНастроек</CommonForm>
 			<CommonForm>ФормаПервогоЗапуска</CommonForm>
+			<Catalog>Номенклатура</Catalog>
 			<Document>ПриходДенежныхСредств</Document>
 			<Document>РасходДенежныхСредств</Document>
 			<Enum>ВидыРасходов</Enum>
@@ -184,6 +185,7 @@
 			<InformationRegister>ЛимитДенежныхСредств</InformationRegister>
 			<InformationRegister>ОстатокЛимитаДенежныхСредств</InformationRegister>
 			<InformationRegister>ОсатокЛимитаСПрошлогоПериода</InformationRegister>
+			<InformationRegister>ЦеныНоменклатуры</InformationRegister>
 			<AccumulationRegister>ПланируемыеОстаткиДенежныхСредств</AccumulationRegister>
 			<AccumulationRegister>ДенежныеСредства</AccumulationRegister>
 		</ChildObjects>
