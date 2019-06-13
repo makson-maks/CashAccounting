@@ -177,6 +177,7 @@
 			<Type>
 				<v8:Type>v8:ValueTable</v8:Type>
 			</Type>
+			<SavedData>true</SavedData>
 			<Columns>
 				<Column name="Куплено" id="1">
 					<Title>

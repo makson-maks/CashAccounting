@@ -216,6 +216,19 @@
 				</Button>
 			</ChildItems>
 		</UsualGroup>
+		<LabelDecoration name="Декорация3" id="43">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;fontsize 10&gt;&lt;b&gt;&lt;color #a9a9a9&gt;Для изменения суммы прихода, удалите данный приход и создайте новый&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<GroupVerticalAlign>Center</GroupVerticalAlign>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<ContextMenu name="Декорация3КонтекстноеМеню" id="44"/>
+			<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="45"/>
+		</LabelDecoration>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">

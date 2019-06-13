@@ -86,8 +86,8 @@
 			<Metadata name="Document.ПриходДенежныхСредств.Attribute.Сумма" id="f7827708-01ec-474a-97b0-4bb1af4dd1a1"/>
 			<Metadata name="Document.ПриходДенежныхСредств.Attribute.ВидРаспределенияСуммы" id="f879f031-f7c7-456e-976a-f53baa38b662"/>
 		</Metadata>
-		<Metadata name="Document.ПриходДенежныхСредств.Form.ФормаДокумента" id="9369f3d0-750c-4be1-a942-f4a2daa254c8" configVersion="2f42ed024f29f54f9e629f2d301c42c500000000"/>
-		<Metadata name="Document.ПриходДенежныхСредств.Form.ФормаДокумента.Form" id="9369f3d0-750c-4be1-a942-f4a2daa254c8.0" configVersion="b5b3c9288317af4da145628c0ca5e9f600000000"/>
+		<Metadata name="Document.ПриходДенежныхСредств.Form.ФормаДокумента" id="9369f3d0-750c-4be1-a942-f4a2daa254c8" configVersion="476a651db74e2744998d10c7682f5d5100000000"/>
+		<Metadata name="Document.ПриходДенежныхСредств.Form.ФормаДокумента.Form" id="9369f3d0-750c-4be1-a942-f4a2daa254c8.0" configVersion="5758995157de09478986f13cd717d8ee00000000"/>
 		<Metadata name="Document.ПриходДенежныхСредств.Form.ФормаСписка" id="24585bb5-4976-402c-9831-35c70359817f" configVersion="2cc8eddc7630d245a26e80729c45d83000000000"/>
 		<Metadata name="Document.ПриходДенежныхСредств.Form.ФормаСписка.Form" id="24585bb5-4976-402c-9831-35c70359817f.0" configVersion="adeafa090d581247ad35039c4b35576100000000"/>
 		<Metadata name="Document.ПриходДенежныхСредств.ManagerModule" id="ffeb7827-a423-4cbf-a854-ac34dd2d7722.2" configVersion="013d4d98910268438a0e04e6ee08889f00000000"/>
@@ -114,8 +114,8 @@
 		<Metadata name="Document.РасходДенежныхСредств.Form.ФормаИзмененияСуммы.Form" id="9ee0c8cb-7027-4d74-a560-185817317de1.0" configVersion="3bdb9589aac57d47bd94eaa9a280ba3400000000"/>
 		<Metadata name="Document.РасходДенежныхСредств.Form.ФормаСписка" id="1e04a263-ae0a-415e-be04-2f428402634e" configVersion="827e399de5f34c49913cecdd2e75cab400000000"/>
 		<Metadata name="Document.РасходДенежныхСредств.Form.ФормаСписка.Form" id="1e04a263-ae0a-415e-be04-2f428402634e.0" configVersion="940acc7bc0803949ba37f3b0be3c802000000000"/>
-		<Metadata name="Document.РасходДенежныхСредств.Form.ФормаСписокПокупок" id="e3b68592-06f2-4676-9170-0ddb491cb0d9" configVersion="894283b90f301044aa0acc61c330577500000000"/>
-		<Metadata name="Document.РасходДенежныхСредств.Form.ФормаСписокПокупок.Form" id="e3b68592-06f2-4676-9170-0ddb491cb0d9.0" configVersion="77ce88fd77e3314fb0276aaee0cad8f500000000"/>
+		<Metadata name="Document.РасходДенежныхСредств.Form.ФормаСписокПокупок" id="e3b68592-06f2-4676-9170-0ddb491cb0d9" configVersion="80450b5c2948074eaf34f501df38f00d00000000"/>
+		<Metadata name="Document.РасходДенежныхСредств.Form.ФормаСписокПокупок.Form" id="e3b68592-06f2-4676-9170-0ddb491cb0d9.0" configVersion="22b105ac53e6a34e82541d57fac0c60500000000"/>
 		<Metadata name="Document.РасходДенежныхСредств.ManagerModule" id="34b9f4b5-14b9-489c-9cb3-02747b4b0bec.2" configVersion="6ce4341c0397a141a186d762925d6d0a00000000"/>
 		<Metadata name="Document.РасходДенежныхСредств.ObjectModule" id="34b9f4b5-14b9-489c-9cb3-02747b4b0bec.0" configVersion="3cc2c4d30bd61640861c0e37dc8c3f0000000000"/>
 		<Metadata name="Enum.ВидыПовторяемыхСобытий" id="c5c6e37c-2691-426e-a54e-d8b788f2ef5b" configVersion="7e821d79ca71b642a89bd574f2ee262d00000000">
